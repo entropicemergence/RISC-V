@@ -1,7 +1,14 @@
 |clock
 outc <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-ina => inst.CLK
+ina => inst7.IN0
+ina => out0.DATAIN
 outb <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 outa <= inst.DB_MAX_OUTPUT_PORT_TYPE
+outd <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+oute <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+outf <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+outg <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+outh <= inst18.DB_MAX_OUTPUT_PORT_TYPE
+out0 <= ina.DB_MAX_OUTPUT_PORT_TYPE
 
 

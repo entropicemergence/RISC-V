@@ -24,9 +24,9 @@ VECTOR("D:/SE/RISCV/quartus/db/clock.sim.cvwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 0;
-		NUMERATOR = 0;
-		DENOMINATOR = 0;
+		ZEND = 10000000;
+		NUMERATOR = 1162;
+		DENOMINATOR = 10000000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -46,7 +46,7 @@ VECTOR("D:/SE/RISCV/quartus/db/clock.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "outa";
+		SIGNAL = "out0";
 		INDEX = 1;
 		FORMAT = E;
 		SCALE = 1;
@@ -54,7 +54,7 @@ VECTOR("D:/SE/RISCV/quartus/db/clock.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "outb";
+		SIGNAL = "outa";
 		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
@@ -62,8 +62,56 @@ VECTOR("D:/SE/RISCV/quartus/db/clock.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "outc";
+		SIGNAL = "outb";
 		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outc";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outd";
+		INDEX = 5;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "oute";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outf";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outg";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "outh";
+		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

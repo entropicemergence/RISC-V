@@ -1,5 +1,5 @@
 Analysis & Synthesis report for clock
-Sat Feb 11 21:23:46 2023
+Sat Feb 11 22:07:05 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -39,16 +39,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 11 21:23:46 2023   ;
+; Analysis & Synthesis Status        ; Successful - Sat Feb 11 22:07:05 2023   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; clock                                   ;
 ; Top-level Entity Name              ; clock                                   ;
 ; Family                             ; Cyclone III                             ;
-; Total logic elements               ; 3                                       ;
-;     Total combinational functions  ; 3                                       ;
-;     Dedicated logic registers      ; 3                                       ;
-; Total registers                    ; 3                                       ;
-; Total pins                         ; 4                                       ;
+; Total logic elements               ; 8                                       ;
+;     Total combinational functions  ; 8                                       ;
+;     Dedicated logic registers      ; 8                                       ;
+; Total registers                    ; 8                                       ;
+; Total pins                         ; 10                                      ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                       ;
@@ -148,27 +148,27 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 3     ;
+; Estimated Total logic elements              ; 8     ;
 ;                                             ;       ;
-; Total combinational functions               ; 3     ;
+; Total combinational functions               ; 8     ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 0     ;
 ;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 3     ;
+;     -- <=2 input functions                  ; 8     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 3     ;
+;     -- normal mode                          ; 8     ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 3     ;
-;     -- Dedicated logic registers            ; 3     ;
+; Total registers                             ; 8     ;
+;     -- Dedicated logic registers            ; 8     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 4     ;
-; Maximum fan-out node                        ; inst1 ;
+; I/O pins                                    ; 10    ;
+; Maximum fan-out node                        ; inst2 ;
 ; Maximum fan-out                             ; 3     ;
-; Total fan-out                               ; 16    ;
-; Average fan-out                             ; 1.14  ;
+; Total fan-out                               ; 43    ;
+; Average fan-out                             ; 1.19  ;
 +---------------------------------------------+-------+
 
 
@@ -177,7 +177,7 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |clock                     ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |clock              ; work         ;
+; |clock                     ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |clock              ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -187,7 +187,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3     ;
+; Total registers                              ; 8     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -203,19 +203,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Sat Feb 11 21:23:45 2023
+    Info: Processing started: Sat Feb 11 22:07:05 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off clock -c clock
 Info: Found 1 design units, including 1 entities, in source file clock.bdf
     Info: Found entity 1: clock
 Info: Elaborating entity "clock" for the top level hierarchy
-Info: Implemented 7 device resources after synthesis - the final resource count might be different
+Info: Implemented 18 device resources after synthesis - the final resource count might be different
     Info: Implemented 1 input pins
-    Info: Implemented 3 output pins
-    Info: Implemented 3 logic cells
+    Info: Implemented 9 output pins
+    Info: Implemented 8 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 231 megabytes
-    Info: Processing ended: Sat Feb 11 21:23:46 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sat Feb 11 22:07:05 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 
