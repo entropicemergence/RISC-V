@@ -29,7 +29,27 @@ db|clock.(0).cnf
 # case_insensitive
 # source_file
 clock.bdf
-1a9778312e7cb1ff9ff886aa7565fad
+bbb9bc609289666b4be5b16e81881bb1
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+clock:inst
+}
+# macro_sequence
+
+# end
+# entity
+register32
+# storage
+db|clock.(1).cnf
+db|clock.(1).cnf
+# case_insensitive
+# source_file
+register32.bdf
+f3ab2b10263572243954fbb08c36367e
 26
 # internal_option {
 BLOCK_DESIGN_NAMING

@@ -1,4 +1,15 @@
-|clock
+|register32
+pin_name3 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+ina => clock:inst.ina
+pin_name4 <= clock:inst.outf
+pin_name5 <= clock:inst.outh
+pin_name6 <= clock:inst.outg
+pin_name7 <= clock:inst.out0
+pin_name8 <= clock:inst.outb
+pin_name9 <= clock:inst.outa
+
+
+|register32|clock:inst
 outc <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 ina => inst7.IN0
 ina => out0.DATAIN
