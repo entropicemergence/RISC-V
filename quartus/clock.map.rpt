@@ -1,5 +1,5 @@
 Analysis & Synthesis report for clock
-Sun Feb 12 11:28:27 2023
+Sun Feb 12 19:48:08 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -12,8 +12,9 @@ Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
   4. Analysis & Synthesis Source Files Read
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
-  7. General Register Statistics
-  8. Analysis & Synthesis Messages
+  7. Logic Cells Representing Combinational Loops
+  8. General Register Statistics
+  9. Analysis & Synthesis Messages
 
 
 
@@ -39,16 +40,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Feb 12 11:28:27 2023   ;
+; Analysis & Synthesis Status        ; Successful - Sun Feb 12 19:48:08 2023   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; clock                                   ;
-; Top-level Entity Name              ; register32                              ;
+; Top-level Entity Name              ; clock                                   ;
 ; Family                             ; Cyclone III                             ;
-; Total logic elements               ; 9                                       ;
-;     Total combinational functions  ; 9                                       ;
-;     Dedicated logic registers      ; 8                                       ;
-; Total registers                    ; 8                                       ;
-; Total pins                         ; 8                                       ;
+; Total logic elements               ; 44                                      ;
+;     Total combinational functions  ; 44                                      ;
+;     Dedicated logic registers      ; 24                                      ;
+; Total registers                    ; 24                                      ;
+; Total pins                         ; 30                                      ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                       ;
@@ -62,7 +63,7 @@ applicable agreement for further details.
 ; Option                                                         ; Setting            ; Default Value      ;
 +----------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                         ; EP3C120F780I7      ;                    ;
-; Top-level entity name                                          ; register32         ; clock              ;
+; Top-level entity name                                          ; clock              ; clock              ;
 ; Family name                                                    ; Cyclone III        ; Stratix II         ;
 ; Use Generated Physical Constraints File                        ; Off                ;                    ;
 ; Use smart compilation                                          ; Off                ; Off                ;
@@ -141,47 +142,63 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+------------------------------------+
 ; clock.bdf                        ; yes             ; User Block Diagram/Schematic File  ; D:/SE/RISCV/quartus/clock.bdf      ;
 ; register32.bdf                   ; yes             ; User Block Diagram/Schematic File  ; D:/SE/RISCV/quartus/register32.bdf ;
+; clock8bit.bdf                    ; yes             ; User Block Diagram/Schematic File  ; D:/SE/RISCV/quartus/clock8bit.bdf  ;
+; adder8.bdf                       ; yes             ; User Block Diagram/Schematic File  ; D:/SE/RISCV/quartus/adder8.bdf     ;
 +----------------------------------+-----------------+------------------------------------+------------------------------------+
 
 
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+---------------------------------------------+------------------+
-; Resource                                    ; Usage            ;
-+---------------------------------------------+------------------+
-; Estimated Total logic elements              ; 9                ;
-;                                             ;                  ;
-; Total combinational functions               ; 9                ;
-; Logic element usage by number of LUT inputs ;                  ;
-;     -- 4 input functions                    ; 0                ;
-;     -- 3 input functions                    ; 0                ;
-;     -- <=2 input functions                  ; 9                ;
-;                                             ;                  ;
-; Logic elements by mode                      ;                  ;
-;     -- normal mode                          ; 9                ;
-;     -- arithmetic mode                      ; 0                ;
-;                                             ;                  ;
-; Total registers                             ; 8                ;
-;     -- Dedicated logic registers            ; 8                ;
-;     -- I/O registers                        ; 0                ;
-;                                             ;                  ;
-; I/O pins                                    ; 8                ;
-; Maximum fan-out node                        ; clock:inst|inst2 ;
-; Maximum fan-out                             ; 3                ;
-; Total fan-out                               ; 41               ;
-; Average fan-out                             ; 1.24             ;
-+---------------------------------------------+------------------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 44            ;
+;                                             ;               ;
+; Total combinational functions               ; 44            ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 16            ;
+;     -- 3 input functions                    ; 1             ;
+;     -- <=2 input functions                  ; 27            ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 44            ;
+;     -- arithmetic mode                      ; 0             ;
+;                                             ;               ;
+; Total registers                             ; 24            ;
+;     -- Dedicated logic registers            ; 24            ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 30            ;
+; Maximum fan-out node                        ; read_en~input ;
+; Maximum fan-out                             ; 24            ;
+; Total fan-out                               ; 215           ;
+; Average fan-out                             ; 1.68          ;
++---------------------------------------------+---------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                            ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------+--------------+
-; |register32                ; 9 (1)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 8    ; 0            ; |register32            ; work         ;
-;    |clock:inst|            ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |register32|clock:inst ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
+; |clock                     ; 44 (0)            ; 24 (0)       ; 0           ; 0            ; 0       ; 0         ; 30   ; 0            ; |clock                   ; work         ;
+;    |adder8:inst|           ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock|adder8:inst       ; work         ;
+;    |register32:inst24|     ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock|register32:inst24 ; work         ;
+;    |register32:inst27|     ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock|register32:inst27 ; work         ;
+;    |register32:inst28|     ; 11 (11)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |clock|register32:inst28 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; adder8:inst|inst31~0                                   ;   ;
+; Number of logic cells representing combinational loops ; 1 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -189,8 +206,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 8     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 24    ;
+; Number of registers using Synchronous Clear  ; 5     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -205,21 +222,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Sun Feb 12 11:28:27 2023
+    Info: Processing started: Sun Feb 12 19:48:08 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off clock -c clock
 Info: Found 1 design units, including 1 entities, in source file clock.bdf
     Info: Found entity 1: clock
 Info: Found 1 design units, including 1 entities, in source file register32.bdf
     Info: Found entity 1: register32
-Info: Elaborating entity "register32" for the top level hierarchy
-Info: Elaborating entity "clock" for hierarchy "clock:inst"
-Info: Implemented 17 device resources after synthesis - the final resource count might be different
-    Info: Implemented 1 input pins
-    Info: Implemented 7 output pins
-    Info: Implemented 9 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
+Info: Found 1 design units, including 1 entities, in source file clock8bit.bdf
+    Info: Found entity 1: clock8bit
+Info: Found 1 design units, including 1 entities, in source file adder8.bdf
+    Info: Found entity 1: adder8
+Info: Elaborating entity "clock" for the top level hierarchy
+Info: Elaborating entity "register32" for hierarchy "register32:inst28"
+Info: Elaborating entity "adder8" for hierarchy "adder8:inst"
+Warning: Block or symbol "XOR" of instance "inst2" overlaps another block or symbol
+Warning: Block or symbol "XOR" of instance "inst6" overlaps another block or symbol
+Warning: Block or symbol "XOR" of instance "inst12" overlaps another block or symbol
+Warning: Block or symbol "XOR" of instance "inst17" overlaps another block or symbol
+Warning: Block or symbol "XOR" of instance "inst22" overlaps another block or symbol
+Warning: Block or symbol "XOR" of instance "inst27" overlaps another block or symbol
+Warning: Block or symbol "XOR" of instance "inst32" overlaps another block or symbol
+Warning: Block or symbol "XOR" of instance "inst37" overlaps another block or symbol
+Info: Elaborating entity "clock8bit" for hierarchy "clock8bit:inst26"
+Info: Implemented 74 device resources after synthesis - the final resource count might be different
+    Info: Implemented 19 input pins
+    Info: Implemented 11 output pins
+    Info: Implemented 44 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 230 megabytes
-    Info: Processing ended: Sun Feb 12 11:28:27 2023
+    Info: Processing ended: Sun Feb 12 19:48:08 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

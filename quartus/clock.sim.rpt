@@ -1,5 +1,5 @@
 Simulator report for clock
-Sun Feb 12 11:30:34 2023
+Sun Feb 12 20:05:20 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -44,10 +44,10 @@ applicable agreement for further details.
 ; Type                        ; Value         ;
 +-----------------------------+---------------+
 ; Simulation Start Time       ; 0 ps          ;
-; Simulation End Time         ; 10.0 us       ;
-; Simulation Netlist Size     ; 40 nodes      ;
-; Simulation Coverage         ;      77.50 %  ;
-; Total Number of Transitions ; 1519          ;
+; Simulation End Time         ; 1.0 us        ;
+; Simulation Netlist Size     ; 129 nodes     ;
+; Simulation Coverage         ;      78.29 %  ;
+; Total Number of Transitions ; 5423          ;
 ; Simulation Breakpoints      ; 0             ;
 ; Family                      ; Cyclone III   ;
 ; Device                      ; EP3C120F780I7 ;
@@ -96,69 +96,155 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      77.50 % ;
-; Total nodes checked                                 ; 40           ;
-; Total output ports checked                          ; 40           ;
-; Total output ports with complete 1/0-value coverage ; 31           ;
-; Total output ports with no 1/0-value coverage       ; 4            ;
-; Total output ports with no 1-value coverage         ; 6            ;
-; Total output ports with no 0-value coverage         ; 7            ;
+; Total coverage as a percentage                      ;      78.29 % ;
+; Total nodes checked                                 ; 129          ;
+; Total output ports checked                          ; 129          ;
+; Total output ports with complete 1/0-value coverage ; 101          ;
+; Total output ports with no 1/0-value coverage       ; 22           ;
+; Total output ports with no 1-value coverage         ; 22           ;
+; Total output ports with no 0-value coverage         ; 28           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                    ;
-+--------------------------------------+--------------------------------------+------------------+
-; Node Name                            ; Output Port Name                     ; Output Port Type ;
-+--------------------------------------+--------------------------------------+------------------+
-; |register32|clock:inst|inst2         ; |register32|clock:inst|inst2         ; q                ;
-; |register32|clock:inst|inst6         ; |register32|clock:inst|inst6         ; q                ;
-; |register32|inst1                    ; |register32|inst1                    ; combout          ;
-; |register32|clock:inst|inst10        ; |register32|clock:inst|inst10        ; q                ;
-; |register32|clock:inst|inst1         ; |register32|clock:inst|inst1         ; q                ;
-; |register32|clock:inst|inst          ; |register32|clock:inst|inst          ; q                ;
-; |register32|clock:inst|inst12        ; |register32|clock:inst|inst12        ; q                ;
-; |register32|clock:inst|inst2~2       ; |register32|clock:inst|inst2~2       ; combout          ;
-; |register32|clock:inst|inst6~2       ; |register32|clock:inst|inst6~2       ; combout          ;
-; |register32|clock:inst|inst10~2      ; |register32|clock:inst|inst10~2      ; combout          ;
-; |register32|clock:inst|inst1~2       ; |register32|clock:inst|inst1~2       ; combout          ;
-; |register32|clock:inst|inst~2        ; |register32|clock:inst|inst~2        ; combout          ;
-; |register32|clock:inst|inst12~2      ; |register32|clock:inst|inst12~2      ; combout          ;
-; |register32|pin_name3~output         ; |register32|pin_name3~output         ; o                ;
-; |register32|pin_name3                ; |register32|pin_name3                ; padout           ;
-; |register32|pin_name4~output         ; |register32|pin_name4~output         ; o                ;
-; |register32|pin_name4                ; |register32|pin_name4                ; padout           ;
-; |register32|pin_name7~output         ; |register32|pin_name7~output         ; o                ;
-; |register32|pin_name7                ; |register32|pin_name7                ; padout           ;
-; |register32|pin_name8~output         ; |register32|pin_name8~output         ; o                ;
-; |register32|pin_name8                ; |register32|pin_name8                ; padout           ;
-; |register32|pin_name9~output         ; |register32|pin_name9~output         ; o                ;
-; |register32|pin_name9                ; |register32|pin_name9                ; padout           ;
-; |register32|ina~input                ; |register32|ina~input                ; o                ;
-; |register32|ina                      ; |register32|ina                      ; padout           ;
-; |register32|clock:inst|inst2~feeder  ; |register32|clock:inst|inst2~feeder  ; combout          ;
-; |register32|clock:inst|inst6~feeder  ; |register32|clock:inst|inst6~feeder  ; combout          ;
-; |register32|clock:inst|inst10~feeder ; |register32|clock:inst|inst10~feeder ; combout          ;
-; |register32|clock:inst|inst1~feeder  ; |register32|clock:inst|inst1~feeder  ; combout          ;
-; |register32|clock:inst|inst~feeder   ; |register32|clock:inst|inst~feeder   ; combout          ;
-; |register32|clock:inst|inst12~feeder ; |register32|clock:inst|inst12~feeder ; combout          ;
-+--------------------------------------+--------------------------------------+------------------+
++--------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                          ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |clock|register32:inst28|inst2  ; |clock|register32:inst28|inst2  ; q                ;
+; |clock|register32:inst28|inst8  ; |clock|register32:inst28|inst8  ; q                ;
+; |clock|register32:inst28|inst3  ; |clock|register32:inst28|inst3  ; q                ;
+; |clock|register32:inst28|inst11 ; |clock|register32:inst28|inst11 ; q                ;
+; |clock|register32:inst28|inst14 ; |clock|register32:inst28|inst14 ; q                ;
+; |clock|register32:inst28|inst4  ; |clock|register32:inst28|inst4  ; combout          ;
+; |clock|register32:inst28|inst9  ; |clock|register32:inst28|inst9  ; combout          ;
+; |clock|register32:inst28|inst6  ; |clock|register32:inst28|inst6  ; combout          ;
+; |clock|register32:inst28|inst12 ; |clock|register32:inst28|inst12 ; combout          ;
+; |clock|register32:inst28|inst15 ; |clock|register32:inst28|inst15 ; combout          ;
+; |clock|register32:inst28|inst17 ; |clock|register32:inst28|inst17 ; q                ;
+; |clock|register32:inst28|inst18 ; |clock|register32:inst28|inst18 ; combout          ;
+; |clock|register32:inst28|inst20 ; |clock|register32:inst28|inst20 ; q                ;
+; |clock|register32:inst28|inst21 ; |clock|register32:inst28|inst21 ; combout          ;
+; |clock|register32:inst28|inst23 ; |clock|register32:inst28|inst23 ; q                ;
+; |clock|register32:inst28|inst24 ; |clock|register32:inst28|inst24 ; combout          ;
+; |clock|register32:inst24|inst23 ; |clock|register32:inst24|inst23 ; q                ;
+; |clock|adder8:inst|inst33       ; |clock|adder8:inst|inst33       ; combout          ;
+; |clock|register32:inst24|inst3  ; |clock|register32:inst24|inst3  ; q                ;
+; |clock|register32:inst24|inst2  ; |clock|register32:inst24|inst2  ; q                ;
+; |clock|adder8:inst|inst36       ; |clock|adder8:inst|inst36       ; combout          ;
+; |clock|adder8:inst|inst8~65     ; |clock|adder8:inst|inst8~65     ; combout          ;
+; |clock|adder8:inst|inst8~66     ; |clock|adder8:inst|inst8~66     ; combout          ;
+; |clock|register32:inst24|inst8  ; |clock|register32:inst24|inst8  ; q                ;
+; |clock|adder8:inst|inst11       ; |clock|adder8:inst|inst11       ; combout          ;
+; |clock|register32:inst24|inst11 ; |clock|register32:inst24|inst11 ; q                ;
+; |clock|register32:inst27|inst11 ; |clock|register32:inst27|inst11 ; q                ;
+; |clock|adder8:inst|inst16       ; |clock|adder8:inst|inst16       ; combout          ;
+; |clock|register32:inst24|inst14 ; |clock|register32:inst24|inst14 ; q                ;
+; |clock|adder8:inst|inst21       ; |clock|adder8:inst|inst21       ; combout          ;
+; |clock|register32:inst24|inst17 ; |clock|register32:inst24|inst17 ; q                ;
+; |clock|register32:inst27|inst17 ; |clock|register32:inst27|inst17 ; q                ;
+; |clock|adder8:inst|inst26       ; |clock|adder8:inst|inst26       ; combout          ;
+; |clock|register32:inst24|inst20 ; |clock|register32:inst24|inst20 ; q                ;
+; |clock|adder8:inst|inst28       ; |clock|adder8:inst|inst28       ; combout          ;
+; |clock|adder8:inst|inst23       ; |clock|adder8:inst|inst23       ; combout          ;
+; |clock|adder8:inst|inst38       ; |clock|adder8:inst|inst38       ; combout          ;
+; |clock|adder8:inst|inst7        ; |clock|adder8:inst|inst7        ; combout          ;
+; |clock|adder8:inst|inst41       ; |clock|adder8:inst|inst41       ; combout          ;
+; |clock|adder8:inst|inst3        ; |clock|adder8:inst|inst3        ; combout          ;
+; |clock|adder8:inst|inst13       ; |clock|adder8:inst|inst13       ; combout          ;
+; |clock|adder8:inst|inst18       ; |clock|adder8:inst|inst18       ; combout          ;
+; |clock|register32:inst28|inst19 ; |clock|register32:inst28|inst19 ; combout          ;
+; |clock|register32:inst28|inst22 ; |clock|register32:inst28|inst22 ; combout          ;
+; |clock|register32:inst28|inst25 ; |clock|register32:inst28|inst25 ; combout          ;
+; |clock|adder8:inst|inst31       ; |clock|adder8:inst|inst31       ; combout          ;
+; |clock|register32:inst24|inst25 ; |clock|register32:inst24|inst25 ; combout          ;
+; |clock|register32:inst24|inst7  ; |clock|register32:inst24|inst7  ; combout          ;
+; |clock|register32:inst24|inst5  ; |clock|register32:inst24|inst5  ; combout          ;
+; |clock|register32:inst24|inst10 ; |clock|register32:inst24|inst10 ; combout          ;
+; |clock|register32:inst24|inst13 ; |clock|register32:inst24|inst13 ; combout          ;
+; |clock|register32:inst27|inst13 ; |clock|register32:inst27|inst13 ; combout          ;
+; |clock|register32:inst24|inst16 ; |clock|register32:inst24|inst16 ; combout          ;
+; |clock|register32:inst24|inst19 ; |clock|register32:inst24|inst19 ; combout          ;
+; |clock|register32:inst27|inst19 ; |clock|register32:inst27|inst19 ; combout          ;
+; |clock|register32:inst24|inst22 ; |clock|register32:inst24|inst22 ; combout          ;
+; |clock|outa~output              ; |clock|outa~output              ; o                ;
+; |clock|outa                     ; |clock|outa                     ; padout           ;
+; |clock|outc~output              ; |clock|outc~output              ; o                ;
+; |clock|outc                     ; |clock|outc                     ; padout           ;
+; |clock|outb~output              ; |clock|outb~output              ; o                ;
+; |clock|outb                     ; |clock|outb                     ; padout           ;
+; |clock|outd~output              ; |clock|outd~output              ; o                ;
+; |clock|outd                     ; |clock|outd                     ; padout           ;
+; |clock|oute~output              ; |clock|oute~output              ; o                ;
+; |clock|oute                     ; |clock|oute                     ; padout           ;
+; |clock|outf~output              ; |clock|outf~output              ; o                ;
+; |clock|outf                     ; |clock|outf                     ; padout           ;
+; |clock|outg~output              ; |clock|outg~output              ; o                ;
+; |clock|outg                     ; |clock|outg                     ; padout           ;
+; |clock|outh~output              ; |clock|outh~output              ; o                ;
+; |clock|outh                     ; |clock|outh                     ; padout           ;
+; |clock|probe1~output            ; |clock|probe1~output            ; o                ;
+; |clock|probe1                   ; |clock|probe1                   ; padout           ;
+; |clock|probe2~output            ; |clock|probe2~output            ; o                ;
+; |clock|probe2                   ; |clock|probe2                   ; padout           ;
+; |clock|probe3~output            ; |clock|probe3~output            ; o                ;
+; |clock|probe3                   ; |clock|probe3                   ; padout           ;
+; |clock|clk~input                ; |clock|clk~input                ; o                ;
+; |clock|clk                      ; |clock|clk                      ; padout           ;
+; |clock|in7~input                ; |clock|in7~input                ; o                ;
+; |clock|in7                      ; |clock|in7                      ; padout           ;
+; |clock|in1~input                ; |clock|in1~input                ; o                ;
+; |clock|in1                      ; |clock|in1                      ; padout           ;
+; |clock|in0~input                ; |clock|in0~input                ; o                ;
+; |clock|in0                      ; |clock|in0                      ; padout           ;
+; |clock|in2~input                ; |clock|in2~input                ; o                ;
+; |clock|in2                      ; |clock|in2                      ; padout           ;
+; |clock|in3~input                ; |clock|in3~input                ; o                ;
+; |clock|in3                      ; |clock|in3                      ; padout           ;
+; |clock|inb3~input               ; |clock|inb3~input               ; o                ;
+; |clock|inb3                     ; |clock|inb3                     ; padout           ;
+; |clock|in4~input                ; |clock|in4~input                ; o                ;
+; |clock|in4                      ; |clock|in4                      ; padout           ;
+; |clock|in5~input                ; |clock|in5~input                ; o                ;
+; |clock|in5                      ; |clock|in5                      ; padout           ;
+; |clock|inb5~input               ; |clock|inb5~input               ; o                ;
+; |clock|inb5                     ; |clock|inb5                     ; padout           ;
+; |clock|in6~input                ; |clock|in6~input                ; o                ;
+; |clock|in6                      ; |clock|in6                      ; padout           ;
+; |clock|clk~inputclkctrl         ; |clock|clk~inputclkctrl         ; outclk           ;
++---------------------------------+---------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+------------------------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                                       ;
-+--------------------------------------+--------------------------------------+------------------+
-; Node Name                            ; Output Port Name                     ; Output Port Type ;
-+--------------------------------------+--------------------------------------+------------------+
-; |register32|clock:inst|inst18        ; |register32|clock:inst|inst18        ; q                ;
-; |register32|clock:inst|inst18~2      ; |register32|clock:inst|inst18~2      ; combout          ;
-; |register32|clock:inst|inst17~2      ; |register32|clock:inst|inst17~2      ; combout          ;
-; |register32|pin_name5~output         ; |register32|pin_name5~output         ; o                ;
-; |register32|pin_name5                ; |register32|pin_name5                ; padout           ;
-; |register32|clock:inst|inst17~feeder ; |register32|clock:inst|inst17~feeder ; combout          ;
-+--------------------------------------+--------------------------------------+------------------+
++--------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                             ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |clock|register32:inst27|inst25 ; |clock|register32:inst27|inst25 ; combout          ;
+; |clock|register32:inst27|inst7  ; |clock|register32:inst27|inst7  ; combout          ;
+; |clock|register32:inst27|inst5  ; |clock|register32:inst27|inst5  ; combout          ;
+; |clock|register32:inst27|inst10 ; |clock|register32:inst27|inst10 ; combout          ;
+; |clock|register32:inst27|inst16 ; |clock|register32:inst27|inst16 ; combout          ;
+; |clock|register32:inst27|inst22 ; |clock|register32:inst27|inst22 ; combout          ;
+; |clock|read_en~input            ; |clock|read_en~input            ; o                ;
+; |clock|read_en                  ; |clock|read_en                  ; padout           ;
+; |clock|write_en~input           ; |clock|write_en~input           ; o                ;
+; |clock|write_en                 ; |clock|write_en                 ; padout           ;
+; |clock|inb7~input               ; |clock|inb7~input               ; o                ;
+; |clock|inb7                     ; |clock|inb7                     ; padout           ;
+; |clock|inb1~input               ; |clock|inb1~input               ; o                ;
+; |clock|inb1                     ; |clock|inb1                     ; padout           ;
+; |clock|inb0~input               ; |clock|inb0~input               ; o                ;
+; |clock|inb0                     ; |clock|inb0                     ; padout           ;
+; |clock|inb2~input               ; |clock|inb2~input               ; o                ;
+; |clock|inb2                     ; |clock|inb2                     ; padout           ;
+; |clock|inb4~input               ; |clock|inb4~input               ; o                ;
+; |clock|inb4                     ; |clock|inb4                     ; padout           ;
+; |clock|inb6~input               ; |clock|inb6~input               ; o                ;
+; |clock|inb6                     ; |clock|inb6                     ; padout           ;
++---------------------------------+---------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
@@ -167,13 +253,34 @@ The following table displays output ports that do not toggle to 0 during simulat
 +---------------------------------+---------------------------------+------------------+
 ; Node Name                       ; Output Port Name                ; Output Port Type ;
 +---------------------------------+---------------------------------+------------------+
-; |register32|clock:inst|inst18   ; |register32|clock:inst|inst18   ; q                ;
-; |register32|clock:inst|inst17   ; |register32|clock:inst|inst17   ; q                ;
-; |register32|clock:inst|inst18~2 ; |register32|clock:inst|inst18~2 ; combout          ;
-; |register32|pin_name5~output    ; |register32|pin_name5~output    ; o                ;
-; |register32|pin_name5           ; |register32|pin_name5           ; padout           ;
-; |register32|pin_name6~output    ; |register32|pin_name6~output    ; o                ;
-; |register32|pin_name6           ; |register32|pin_name6           ; padout           ;
+; |clock|register32:inst27|inst23 ; |clock|register32:inst27|inst23 ; q                ;
+; |clock|register32:inst27|inst3  ; |clock|register32:inst27|inst3  ; q                ;
+; |clock|register32:inst27|inst2  ; |clock|register32:inst27|inst2  ; q                ;
+; |clock|register32:inst27|inst8  ; |clock|register32:inst27|inst8  ; q                ;
+; |clock|register32:inst27|inst14 ; |clock|register32:inst27|inst14 ; q                ;
+; |clock|register32:inst27|inst20 ; |clock|register32:inst27|inst20 ; q                ;
+; |clock|register32:inst27|inst25 ; |clock|register32:inst27|inst25 ; combout          ;
+; |clock|register32:inst27|inst7  ; |clock|register32:inst27|inst7  ; combout          ;
+; |clock|register32:inst27|inst5  ; |clock|register32:inst27|inst5  ; combout          ;
+; |clock|register32:inst27|inst10 ; |clock|register32:inst27|inst10 ; combout          ;
+; |clock|register32:inst27|inst16 ; |clock|register32:inst27|inst16 ; combout          ;
+; |clock|register32:inst27|inst22 ; |clock|register32:inst27|inst22 ; combout          ;
+; |clock|read_en~input            ; |clock|read_en~input            ; o                ;
+; |clock|read_en                  ; |clock|read_en                  ; padout           ;
+; |clock|write_en~input           ; |clock|write_en~input           ; o                ;
+; |clock|write_en                 ; |clock|write_en                 ; padout           ;
+; |clock|inb7~input               ; |clock|inb7~input               ; o                ;
+; |clock|inb7                     ; |clock|inb7                     ; padout           ;
+; |clock|inb1~input               ; |clock|inb1~input               ; o                ;
+; |clock|inb1                     ; |clock|inb1                     ; padout           ;
+; |clock|inb0~input               ; |clock|inb0~input               ; o                ;
+; |clock|inb0                     ; |clock|inb0                     ; padout           ;
+; |clock|inb2~input               ; |clock|inb2~input               ; o                ;
+; |clock|inb2                     ; |clock|inb2                     ; padout           ;
+; |clock|inb4~input               ; |clock|inb4~input               ; o                ;
+; |clock|inb4                     ; |clock|inb4                     ; padout           ;
+; |clock|inb6~input               ; |clock|inb6~input               ; o                ;
+; |clock|inb6                     ; |clock|inb6                     ; padout           ;
 +---------------------------------+---------------------------------+------------------+
 
 
@@ -190,26 +297,17 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Sun Feb 12 11:30:34 2023
+    Info: Processing started: Sun Feb 12 20:05:20 2023
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off clock -c clock
 Info: Using vector source file "D:/SE/RISCV/quartus/clock.vwf"
-Warning: Ignored node in vector source file. Can't find corresponding node name "outa" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "outb" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "outc" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out0" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "outd" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "oute" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "outf" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "outg" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "outh" in design.
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      77.50 %
-Info: Number of transitions in simulation is 1519
-Info: Quartus II Simulator was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 162 megabytes
-    Info: Processing ended: Sun Feb 12 11:30:34 2023
+Info: Simulation coverage is      78.29 %
+Info: Number of transitions in simulation is 5423
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 163 megabytes
+    Info: Processing ended: Sun Feb 12 20:05:20 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

@@ -2,196 +2,28 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 100C Model Setup 'clock:inst|inst6'
-Slack : -0.160
-TNS   : -0.160
+Type  : Slow 1200mV 100C Model Setup 'clk'
+Slack : -6.435
+TNS   : -49.806
 
-Type  : Slow 1200mV 100C Model Setup 'ina'
-Slack : -0.102
-TNS   : -0.102
-
-Type  : Slow 1200mV 100C Model Setup 'clock:inst|inst10'
-Slack : -0.004
-TNS   : -0.004
-
-Type  : Slow 1200mV 100C Model Setup 'clock:inst|inst2'
-Slack : 0.046
+Type  : Slow 1200mV 100C Model Hold 'clk'
+Slack : 0.571
 TNS   : 0.000
 
-Type  : Slow 1200mV 100C Model Setup 'clock:inst|inst'
-Slack : 0.058
+Type  : Slow 1200mV -40C Model Setup 'clk'
+Slack : -5.559
+TNS   : -42.335
+
+Type  : Slow 1200mV -40C Model Hold 'clk'
+Slack : 0.499
 TNS   : 0.000
 
-Type  : Slow 1200mV 100C Model Setup 'clock:inst|inst1'
-Slack : 0.085
-TNS   : 0.000
+Type  : Fast 1200mV -40C Model Setup 'clk'
+Slack : -2.442
+TNS   : -18.743
 
-Type  : Slow 1200mV 100C Model Setup 'clock:inst|inst17'
-Slack : 0.186
-TNS   : 0.000
-
-Type  : Slow 1200mV 100C Model Setup 'clock:inst|inst12'
-Slack : 0.259
-TNS   : 0.000
-
-Type  : Slow 1200mV 100C Model Hold 'clock:inst|inst1'
-Slack : -0.032
-TNS   : -0.032
-
-Type  : Slow 1200mV 100C Model Hold 'clock:inst|inst12'
-Slack : -0.023
-TNS   : -0.023
-
-Type  : Slow 1200mV 100C Model Hold 'clock:inst|inst10'
-Slack : 0.054
-TNS   : 0.000
-
-Type  : Slow 1200mV 100C Model Hold 'ina'
-Slack : 0.076
-TNS   : 0.000
-
-Type  : Slow 1200mV 100C Model Hold 'clock:inst|inst2'
-Slack : 0.118
-TNS   : 0.000
-
-Type  : Slow 1200mV 100C Model Hold 'clock:inst|inst'
-Slack : 0.191
-TNS   : 0.000
-
-Type  : Slow 1200mV 100C Model Hold 'clock:inst|inst6'
-Slack : 0.217
-TNS   : 0.000
-
-Type  : Slow 1200mV 100C Model Hold 'clock:inst|inst17'
-Slack : 0.432
-TNS   : 0.000
-
-Type  : Slow 1200mV -40C Model Setup 'clock:inst|inst6'
-Slack : -0.069
-TNS   : -0.069
-
-Type  : Slow 1200mV -40C Model Setup 'ina'
-Slack : 0.042
-TNS   : 0.000
-
-Type  : Slow 1200mV -40C Model Setup 'clock:inst|inst10'
-Slack : 0.063
-TNS   : 0.000
-
-Type  : Slow 1200mV -40C Model Setup 'clock:inst|inst2'
-Slack : 0.098
-TNS   : 0.000
-
-Type  : Slow 1200mV -40C Model Setup 'clock:inst|inst'
-Slack : 0.104
-TNS   : 0.000
-
-Type  : Slow 1200mV -40C Model Setup 'clock:inst|inst1'
-Slack : 0.137
-TNS   : 0.000
-
-Type  : Slow 1200mV -40C Model Setup 'clock:inst|inst12'
-Slack : 0.278
-TNS   : 0.000
-
-Type  : Slow 1200mV -40C Model Setup 'clock:inst|inst17'
-Slack : 0.307
-TNS   : 0.000
-
-Type  : Slow 1200mV -40C Model Hold 'clock:inst|inst1'
-Slack : -0.020
-TNS   : -0.020
-
-Type  : Slow 1200mV -40C Model Hold 'ina'
-Slack : -0.001
-TNS   : -0.001
-
-Type  : Slow 1200mV -40C Model Hold 'clock:inst|inst12'
-Slack : 0.020
-TNS   : 0.000
-
-Type  : Slow 1200mV -40C Model Hold 'clock:inst|inst10'
-Slack : 0.053
-TNS   : 0.000
-
-Type  : Slow 1200mV -40C Model Hold 'clock:inst|inst2'
-Slack : 0.103
-TNS   : 0.000
-
-Type  : Slow 1200mV -40C Model Hold 'clock:inst|inst6'
-Slack : 0.186
-TNS   : 0.000
-
-Type  : Slow 1200mV -40C Model Hold 'clock:inst|inst'
-Slack : 0.196
-TNS   : 0.000
-
-Type  : Slow 1200mV -40C Model Hold 'clock:inst|inst17'
-Slack : 0.369
-TNS   : 0.000
-
-Type  : Fast 1200mV -40C Model Setup 'clock:inst|inst6'
-Slack : 0.231
-TNS   : 0.000
-
-Type  : Fast 1200mV -40C Model Setup 'clock:inst|inst10'
-Slack : 0.303
-TNS   : 0.000
-
-Type  : Fast 1200mV -40C Model Setup 'clock:inst|inst2'
-Slack : 0.328
-TNS   : 0.000
-
-Type  : Fast 1200mV -40C Model Setup 'clock:inst|inst'
-Slack : 0.339
-TNS   : 0.000
-
-Type  : Fast 1200mV -40C Model Setup 'clock:inst|inst1'
-Slack : 0.348
-TNS   : 0.000
-
-Type  : Fast 1200mV -40C Model Setup 'clock:inst|inst12'
-Slack : 0.431
-TNS   : 0.000
-
-Type  : Fast 1200mV -40C Model Setup 'ina'
-Slack : 0.607
-TNS   : 0.000
-
-Type  : Fast 1200mV -40C Model Setup 'clock:inst|inst17'
-Slack : 0.635
-TNS   : 0.000
-
-Type  : Fast 1200mV -40C Model Hold 'ina'
-Slack : -0.354
-TNS   : -0.354
-
-Type  : Fast 1200mV -40C Model Hold 'clock:inst|inst12'
-Slack : -0.061
-TNS   : -0.061
-
-Type  : Fast 1200mV -40C Model Hold 'clock:inst|inst1'
-Slack : -0.059
-TNS   : -0.059
-
-Type  : Fast 1200mV -40C Model Hold 'clock:inst|inst10'
-Slack : -0.012
-TNS   : -0.012
-
-Type  : Fast 1200mV -40C Model Hold 'clock:inst|inst2'
-Slack : 0.020
-TNS   : 0.000
-
-Type  : Fast 1200mV -40C Model Hold 'clock:inst|inst'
-Slack : 0.042
-TNS   : 0.000
-
-Type  : Fast 1200mV -40C Model Hold 'clock:inst|inst6'
-Slack : 0.066
-TNS   : 0.000
-
-Type  : Fast 1200mV -40C Model Hold 'clock:inst|inst17'
-Slack : 0.190
+Type  : Fast 1200mV -40C Model Hold 'clk'
+Slack : 0.245
 TNS   : 0.000
 
 ------------------------------------------------------------

@@ -22,21 +22,41 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-clock
+clock8bit
 # storage
-db|clock.(0).cnf
-db|clock.(0).cnf
+db|clock.(2).cnf
+db|clock.(2).cnf
 # case_insensitive
 # source_file
-clock.bdf
-bbb9bc609289666b4be5b16e81881bb1
+clock8bit.bdf
+91bf2c6fd5669313f81cfd4d278e2c69
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
 }
 # hierarchies {
-clock:inst
+clock8bit:inst26
+}
+# macro_sequence
+
+# end
+# entity
+adder8
+# storage
+db|clock.(3).cnf
+db|clock.(3).cnf
+# case_insensitive
+# source_file
+adder8.bdf
+754ffa1ba07c5b727eb03c53d7722e4
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+adder8:inst
 }
 # macro_sequence
 
@@ -49,7 +69,29 @@ db|clock.(1).cnf
 # case_insensitive
 # source_file
 register32.bdf
-f3ab2b10263572243954fbb08c36367e
+b3287441895a68f1a5c734fae656a5a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+register32:inst28
+register32:inst24
+register32:inst27
+}
+# macro_sequence
+
+# end
+# entity
+clock
+# storage
+db|clock.(0).cnf
+db|clock.(0).cnf
+# case_insensitive
+# source_file
+clock.bdf
+3964de9b49f11580e418ea885fc2b1
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
