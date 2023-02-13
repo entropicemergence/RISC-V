@@ -1,5 +1,5 @@
 Flow report for clock
-Sun Feb 12 19:48:26 2023
+Mon Feb 13 13:05:06 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -38,19 +38,19 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +------------------------------------+-----------------------------------------+
-; Flow Status                        ; Successful - Sun Feb 12 19:48:23 2023   ;
+; Flow Status                        ; Successful - Mon Feb 13 13:05:04 2023   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; clock                                   ;
-; Top-level Entity Name              ; clock                                   ;
+; Top-level Entity Name              ; all_gates_a                             ;
 ; Family                             ; Cyclone III                             ;
 ; Device                             ; EP3C120F780I7                           ;
 ; Timing Models                      ; Final                                   ;
 ; Met timing requirements            ; N/A                                     ;
-; Total logic elements               ; 44 / 119,088 ( < 1 % )                  ;
-;     Total combinational functions  ; 44 / 119,088 ( < 1 % )                  ;
-;     Dedicated logic registers      ; 24 / 119,088 ( < 1 % )                  ;
-; Total registers                    ; 24                                      ;
-; Total pins                         ; 30 / 532 ( 6 % )                        ;
+; Total logic elements               ; 4 / 119,088 ( < 1 % )                   ;
+;     Total combinational functions  ; 4 / 119,088 ( < 1 % )                   ;
+;     Dedicated logic registers      ; 0 / 119,088 ( 0 % )                     ;
+; Total registers                    ; 0                                       ;
+; Total pins                         ; 22 / 532 ( 4 % )                        ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                   ;
 ; Embedded Multiplier 9-bit elements ; 0 / 576 ( 0 % )                         ;
@@ -63,25 +63,34 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/12/2023 19:48:08 ;
+; Start date & time ; 02/13/2023 13:04:49 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; clock               ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                    ;
-+------------------------------------+---------------------------------+---------------+-------------+----------------+
-; Assignment Name                    ; Value                           ; Default Value ; Entity Name ; Section Id     ;
-+------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 277302806789726.167620608810712 ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 100                             ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; -40                             ; --            ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE        ; 1.2V                            ; --            ; --          ; --             ;
-; PARTITION_COLOR                    ; 16764057                        ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                          ; --            ; --          ; Top            ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                             ; --            ; --          ; eda_blast_fpga ;
-+------------------------------------+---------------------------------+---------------+-------------+----------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 277302806789726.167626828900440 ; --            ; --          ; --             ;
+; ENABLE_ADVANCED_IO_TIMING           ; On                              ; --            ; --          ; --             ;
+; IP_TOOL_NAME                        ; PARALLEL_ADD                    ; --            ; --          ; --             ;
+; IP_TOOL_VERSION                     ; 8.1                             ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 100                             ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; -40                             ; --            ; --          ; --             ;
+; MISC_FILE                           ; D:/SE/RISCV/quartus/clock.dpf   ; --            ; --          ; --             ;
+; MISC_FILE                           ; parallel_add0.tdf               ; --            ; --          ; --             ;
+; MISC_FILE                           ; parallel_add0.bsf               ; --            ; --          ; --             ;
+; MISC_FILE                           ; parallel_add0.inc               ; --            ; --          ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                            ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; all_gates_a ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; all_gates_a ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; all_gates_a ; Top            ;
+; TOP_LEVEL_ENTITY                    ; all_gates_a                     ; clock         ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS  ; Off                             ; --            ; --          ; eda_blast_fpga ;
++-------------------------------------+---------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -89,11 +98,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:00     ; 1.0                     ; 221 MB              ; 00:00:00                           ;
-; Fitter                    ; 00:00:10     ; 1.0                     ; 388 MB              ; 00:00:09                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 441 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 280 MB              ; 00:00:02                           ;
-; Total                     ; 00:00:16     ; --                      ; --                  ; 00:00:14                           ;
+; Analysis & Synthesis      ; 00:00:00     ; 1.0                     ; 222 MB              ; 00:00:00                           ;
+; Fitter                    ; 00:00:10     ; 1.0                     ; 391 MB              ; 00:00:10                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 441 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 279 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:14     ; --                      ; --                  ; 00:00:14                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

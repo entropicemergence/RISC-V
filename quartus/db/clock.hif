@@ -22,46 +22,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-clock8bit
-# storage
-db|clock.(2).cnf
-db|clock.(2).cnf
-# case_insensitive
-# source_file
-clock8bit.bdf
-91bf2c6fd5669313f81cfd4d278e2c69
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-clock8bit:inst26
-}
-# macro_sequence
-
-# end
-# entity
-adder8
-# storage
-db|clock.(3).cnf
-db|clock.(3).cnf
-# case_insensitive
-# source_file
-adder8.bdf
-754ffa1ba07c5b727eb03c53d7722e4
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-adder8:inst
-}
-# macro_sequence
-
-# end
-# entity
 register32
 # storage
 db|clock.(1).cnf
@@ -75,27 +35,89 @@ b3287441895a68f1a5c734fae656a5a
 BLOCK_DESIGN_NAMING
 AUTO
 }
-# hierarchies {
-register32:inst28
-register32:inst24
-register32:inst27
+# macro_sequence
+
+# end
+# entity
+adder8
+# storage
+db|clock.(2).cnf
+db|clock.(2).cnf
+# case_insensitive
+# source_file
+adder8.bdf
+754ffa1ba07c5b727eb03c53d7722e4
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
 }
 # macro_sequence
 
 # end
 # entity
-clock
+register32_1
 # storage
-db|clock.(0).cnf
-db|clock.(0).cnf
+db|clock.(3).cnf
+db|clock.(3).cnf
 # case_insensitive
 # source_file
-clock.bdf
-3964de9b49f11580e418ea885fc2b1
+register32_1.bdf
+745cae88f82318e849b62142086b3bf
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
+}
+# macro_sequence
+
+# end
+# entity
+clock8bit
+# storage
+db|clock.(4).cnf
+db|clock.(4).cnf
+# case_insensitive
+# source_file
+clock8bit.bdf
+91bf2c6fd5669313f81cfd4d278e2c69
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+all_gates_a
+# storage
+db|clock.(5).cnf
+db|clock.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+adder32_2.v
+4c5e8021e91d706eb148951a7ee1cced
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
 }
 # hierarchies {
 |
