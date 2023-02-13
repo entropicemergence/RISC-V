@@ -92,8 +92,8 @@ AUTO
 # entity
 all_gates_a
 # storage
-db|clock.(5).cnf
-db|clock.(5).cnf
+db|clock.(0).cnf
+db|clock.(0).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -101,7 +101,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-4c5e8021e91d706eb148951a7ee1cced
+5fa4326e2804998e7696a11e44f4e82
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

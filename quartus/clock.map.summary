@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon Feb 13 13:04:49 2023
+Analysis & Synthesis Status : Successful - Mon Feb 13 21:23:55 2023
 Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
 Revision Name : clock
 Top-level Entity Name : all_gates_a
 Family : Cyclone III
-Total logic elements : 4
-    Total combinational functions : 4
+Total logic elements : 17
+    Total combinational functions : 17
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 22
+Total pins : 25
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

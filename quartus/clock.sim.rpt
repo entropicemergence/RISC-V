@@ -1,5 +1,5 @@
 Simulator report for clock
-Mon Feb 13 13:09:19 2023
+Mon Feb 13 21:20:11 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+---------------+
 ; Simulation Start Time       ; 0 ps          ;
 ; Simulation End Time         ; 1.0 us        ;
-; Simulation Netlist Size     ; 48 nodes      ;
-; Simulation Coverage         ;     100.00 %  ;
-; Total Number of Transitions ; 830           ;
+; Simulation Netlist Size     ; 67 nodes      ;
+; Simulation Coverage         ;      91.04 %  ;
+; Total Number of Transitions ; 4072          ;
 ; Simulation Breakpoints      ; 0             ;
 ; Family                      ; Cyclone III   ;
 ; Device                      ; EP3C120F780I7 ;
@@ -96,75 +96,112 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;     100.00 % ;
-; Total nodes checked                                 ; 48           ;
-; Total output ports checked                          ; 36           ;
-; Total output ports with complete 1/0-value coverage ; 36           ;
-; Total output ports with no 1/0-value coverage       ; 0            ;
-; Total output ports with no 1-value coverage         ; 0            ;
-; Total output ports with no 0-value coverage         ; 0            ;
+; Total coverage as a percentage                      ;      91.04 % ;
+; Total nodes checked                                 ; 67           ;
+; Total output ports checked                          ; 67           ;
+; Total output ports with complete 1/0-value coverage ; 61           ;
+; Total output ports with no 1/0-value coverage       ; 4            ;
+; Total output ports with no 1-value coverage         ; 4            ;
+; Total output ports with no 0-value coverage         ; 6            ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+--------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                              ;
-+---------------------------+---------------------------+------------------+
-; Node Name                 ; Output Port Name          ; Output Port Type ;
-+---------------------------+---------------------------+------------------+
-; |all_gates_a|WideAnd0     ; |all_gates_a|WideAnd0     ; combout          ;
-; |all_gates_a|WideOr0~34   ; |all_gates_a|WideOr0~34   ; combout          ;
-; |all_gates_a|WideXor0~13  ; |all_gates_a|WideXor0~13  ; combout          ;
-; |all_gates_a|WideNand0~21 ; |all_gates_a|WideNand0~21 ; combout          ;
-; |all_gates_a|a[4]         ; |all_gates_a|a[4]         ; padout           ;
-; |all_gates_a|a[5]         ; |all_gates_a|a[5]         ; padout           ;
-; |all_gates_a|a[6]         ; |all_gates_a|a[6]         ; padout           ;
-; |all_gates_a|a[7]         ; |all_gates_a|a[7]         ; padout           ;
-; |all_gates_a|b[0]         ; |all_gates_a|b[0]         ; padout           ;
-; |all_gates_a|b[1]         ; |all_gates_a|b[1]         ; padout           ;
-; |all_gates_a|b[2]         ; |all_gates_a|b[2]         ; padout           ;
-; |all_gates_a|b[3]         ; |all_gates_a|b[3]         ; padout           ;
-; |all_gates_a|b[4]         ; |all_gates_a|b[4]         ; padout           ;
-; |all_gates_a|b[5]         ; |all_gates_a|b[5]         ; padout           ;
-; |all_gates_a|b[6]         ; |all_gates_a|b[6]         ; padout           ;
-; |all_gates_a|b[7]         ; |all_gates_a|b[7]         ; padout           ;
-; |all_gates_a|x1~output    ; |all_gates_a|x1~output    ; o                ;
-; |all_gates_a|x1           ; |all_gates_a|x1           ; padout           ;
-; |all_gates_a|y1~output    ; |all_gates_a|y1~output    ; o                ;
-; |all_gates_a|y1           ; |all_gates_a|y1           ; padout           ;
-; |all_gates_a|z1~output    ; |all_gates_a|z1~output    ; o                ;
-; |all_gates_a|z1           ; |all_gates_a|z1           ; padout           ;
-; |all_gates_a|x2~output    ; |all_gates_a|x2~output    ; o                ;
-; |all_gates_a|x2           ; |all_gates_a|x2           ; padout           ;
-; |all_gates_a|y2~output    ; |all_gates_a|y2~output    ; o                ;
-; |all_gates_a|y2           ; |all_gates_a|y2           ; padout           ;
-; |all_gates_a|z2~output    ; |all_gates_a|z2~output    ; o                ;
-; |all_gates_a|z2           ; |all_gates_a|z2           ; padout           ;
-; |all_gates_a|a[0]~input   ; |all_gates_a|a[0]~input   ; o                ;
-; |all_gates_a|a[0]         ; |all_gates_a|a[0]         ; padout           ;
-; |all_gates_a|a[3]~input   ; |all_gates_a|a[3]~input   ; o                ;
-; |all_gates_a|a[3]         ; |all_gates_a|a[3]         ; padout           ;
-; |all_gates_a|a[1]~input   ; |all_gates_a|a[1]~input   ; o                ;
-; |all_gates_a|a[1]         ; |all_gates_a|a[1]         ; padout           ;
-; |all_gates_a|a[2]~input   ; |all_gates_a|a[2]~input   ; o                ;
-; |all_gates_a|a[2]         ; |all_gates_a|a[2]         ; padout           ;
-+---------------------------+---------------------------+------------------+
++----------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                ;
++----------------------------+----------------------------+------------------+
+; Node Name                  ; Output Port Name           ; Output Port Type ;
++----------------------------+----------------------------+------------------+
+; |all_gates_a|out~1038      ; |all_gates_a|out~1038      ; combout          ;
+; |all_gates_a|carw[2]~302   ; |all_gates_a|carw[2]~302   ; combout          ;
+; |all_gates_a|out~3         ; |all_gates_a|out~3         ; combout          ;
+; |all_gates_a|bus1[1]~62    ; |all_gates_a|bus1[1]~62    ; combout          ;
+; |all_gates_a|out~1039      ; |all_gates_a|out~1039      ; combout          ;
+; |all_gates_a|out~5         ; |all_gates_a|out~5         ; combout          ;
+; |all_gates_a|out~1040      ; |all_gates_a|out~1040      ; combout          ;
+; |all_gates_a|out~1041      ; |all_gates_a|out~1041      ; combout          ;
+; |all_gates_a|out~1042      ; |all_gates_a|out~1042      ; combout          ;
+; |all_gates_a|out~1043      ; |all_gates_a|out~1043      ; combout          ;
+; |all_gates_a|out~1044      ; |all_gates_a|out~1044      ; combout          ;
+; |all_gates_a|out~1045      ; |all_gates_a|out~1045      ; combout          ;
+; |all_gates_a|out~1046      ; |all_gates_a|out~1046      ; combout          ;
+; |all_gates_a|out~1047      ; |all_gates_a|out~1047      ; combout          ;
+; |all_gates_a|out~1048      ; |all_gates_a|out~1048      ; combout          ;
+; |all_gates_a|out~1049      ; |all_gates_a|out~1049      ; combout          ;
+; |all_gates_a|out~1050      ; |all_gates_a|out~1050      ; combout          ;
+; |all_gates_a|out[0]~output ; |all_gates_a|out[0]~output ; o                ;
+; |all_gates_a|out[0]        ; |all_gates_a|out[0]        ; padout           ;
+; |all_gates_a|out[1]~output ; |all_gates_a|out[1]~output ; o                ;
+; |all_gates_a|out[1]        ; |all_gates_a|out[1]        ; padout           ;
+; |all_gates_a|out[2]~output ; |all_gates_a|out[2]~output ; o                ;
+; |all_gates_a|out[2]        ; |all_gates_a|out[2]        ; padout           ;
+; |all_gates_a|out[3]~output ; |all_gates_a|out[3]~output ; o                ;
+; |all_gates_a|out[3]        ; |all_gates_a|out[3]        ; padout           ;
+; |all_gates_a|out[4]~output ; |all_gates_a|out[4]~output ; o                ;
+; |all_gates_a|out[4]        ; |all_gates_a|out[4]        ; padout           ;
+; |all_gates_a|out[5]~output ; |all_gates_a|out[5]~output ; o                ;
+; |all_gates_a|out[5]        ; |all_gates_a|out[5]        ; padout           ;
+; |all_gates_a|out[6]~output ; |all_gates_a|out[6]~output ; o                ;
+; |all_gates_a|out[6]        ; |all_gates_a|out[6]        ; padout           ;
+; |all_gates_a|out[7]~output ; |all_gates_a|out[7]~output ; o                ;
+; |all_gates_a|out[7]        ; |all_gates_a|out[7]        ; padout           ;
+; |all_gates_a|a[0]~input    ; |all_gates_a|a[0]~input    ; o                ;
+; |all_gates_a|a[0]          ; |all_gates_a|a[0]          ; padout           ;
+; |all_gates_a|b[0]~input    ; |all_gates_a|b[0]~input    ; o                ;
+; |all_gates_a|b[0]          ; |all_gates_a|b[0]          ; padout           ;
+; |all_gates_a|a[1]~input    ; |all_gates_a|a[1]~input    ; o                ;
+; |all_gates_a|a[1]          ; |all_gates_a|a[1]          ; padout           ;
+; |all_gates_a|b[1]~input    ; |all_gates_a|b[1]~input    ; o                ;
+; |all_gates_a|b[1]          ; |all_gates_a|b[1]          ; padout           ;
+; |all_gates_a|a[2]~input    ; |all_gates_a|a[2]~input    ; o                ;
+; |all_gates_a|a[2]          ; |all_gates_a|a[2]          ; padout           ;
+; |all_gates_a|b[2]~input    ; |all_gates_a|b[2]~input    ; o                ;
+; |all_gates_a|b[2]          ; |all_gates_a|b[2]          ; padout           ;
+; |all_gates_a|a[3]~input    ; |all_gates_a|a[3]~input    ; o                ;
+; |all_gates_a|a[3]          ; |all_gates_a|a[3]          ; padout           ;
+; |all_gates_a|b[3]~input    ; |all_gates_a|b[3]~input    ; o                ;
+; |all_gates_a|b[3]          ; |all_gates_a|b[3]          ; padout           ;
+; |all_gates_a|a[4]~input    ; |all_gates_a|a[4]~input    ; o                ;
+; |all_gates_a|a[4]          ; |all_gates_a|a[4]          ; padout           ;
+; |all_gates_a|b[4]~input    ; |all_gates_a|b[4]~input    ; o                ;
+; |all_gates_a|b[4]          ; |all_gates_a|b[4]          ; padout           ;
+; |all_gates_a|a[5]~input    ; |all_gates_a|a[5]~input    ; o                ;
+; |all_gates_a|a[5]          ; |all_gates_a|a[5]          ; padout           ;
+; |all_gates_a|b[5]~input    ; |all_gates_a|b[5]~input    ; o                ;
+; |all_gates_a|b[5]          ; |all_gates_a|b[5]          ; padout           ;
+; |all_gates_a|b[6]~input    ; |all_gates_a|b[6]~input    ; o                ;
+; |all_gates_a|b[6]          ; |all_gates_a|b[6]          ; padout           ;
+; |all_gates_a|b[7]~input    ; |all_gates_a|b[7]~input    ; o                ;
+; |all_gates_a|b[7]          ; |all_gates_a|b[7]          ; padout           ;
++----------------------------+----------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+-------------------------------------------------+
-; Missing 1-Value Coverage                        ;
-+-----------+------------------+------------------+
-; Node Name ; Output Port Name ; Output Port Type ;
-+-----------+------------------+------------------+
++----------------------------------------------------------------------+
+; Missing 1-Value Coverage                                             ;
++-------------------------+-------------------------+------------------+
+; Node Name               ; Output Port Name        ; Output Port Type ;
++-------------------------+-------------------------+------------------+
+; |all_gates_a|car~input  ; |all_gates_a|car~input  ; o                ;
+; |all_gates_a|car        ; |all_gates_a|car        ; padout           ;
+; |all_gates_a|a[7]~input ; |all_gates_a|a[7]~input ; o                ;
+; |all_gates_a|a[7]       ; |all_gates_a|a[7]       ; padout           ;
++-------------------------+-------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+-------------------------------------------------+
-; Missing 0-Value Coverage                        ;
-+-----------+------------------+------------------+
-; Node Name ; Output Port Name ; Output Port Type ;
-+-----------+------------------+------------------+
++----------------------------------------------------------------------+
+; Missing 0-Value Coverage                                             ;
++-------------------------+-------------------------+------------------+
+; Node Name               ; Output Port Name        ; Output Port Type ;
++-------------------------+-------------------------+------------------+
+; |all_gates_a|car~input  ; |all_gates_a|car~input  ; o                ;
+; |all_gates_a|car        ; |all_gates_a|car        ; padout           ;
+; |all_gates_a|a[6]~input ; |all_gates_a|a[6]~input ; o                ;
+; |all_gates_a|a[6]       ; |all_gates_a|a[6]       ; padout           ;
+; |all_gates_a|a[7]~input ; |all_gates_a|a[7]~input ; o                ;
+; |all_gates_a|a[7]       ; |all_gates_a|a[7]       ; padout           ;
++-------------------------+-------------------------+------------------+
 
 
 +---------------------+
@@ -180,39 +217,9 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Mon Feb 13 13:09:19 2023
+    Info: Processing started: Mon Feb 13 21:20:11 2023
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off clock -c clock
 Info: Using vector source file "D:/SE/RISCV/quartus/clock.vwf"
-Warning: Ignored node in vector source file. Can't find corresponding node name "clk" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "in0" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "in1" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "in2" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "in3" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "in4" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "in5" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "in6" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "in7" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "inb0" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "inb1" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "inb2" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "inb3" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "inb4" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "inb5" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "inb6" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "inb7" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "outa" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "outb" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "outc" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "outd" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "oute" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "outf" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "outg" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "outh" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "read_en" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "write_en" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "probe1" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "probe2" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "probe3" in design.
 Warning: Ignored node in vector source file. Can't find corresponding node name "inr_a[31]" in design.
 Warning: Ignored node in vector source file. Can't find corresponding node name "inr_a[30]" in design.
 Warning: Ignored node in vector source file. Can't find corresponding node name "inr_a[29]" in design.
@@ -304,11 +311,11 @@ Warning: Ignored node in vector source file. Can't find corresponding node name 
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is     100.00 %
-Info: Number of transitions in simulation is 830
-Info: Quartus II Simulator was successful. 0 errors, 118 warnings
-    Info: Peak virtual memory: 162 megabytes
-    Info: Processing ended: Mon Feb 13 13:09:19 2023
+Info: Simulation coverage is      91.04 %
+Info: Number of transitions in simulation is 4072
+Info: Quartus II Simulator was successful. 0 errors, 88 warnings
+    Info: Peak virtual memory: 163 megabytes
+    Info: Processing ended: Mon Feb 13 21:20:11 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
