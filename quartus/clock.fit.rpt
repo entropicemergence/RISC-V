@@ -1,5 +1,5 @@
 Fitter report for clock
-Tue Feb 14 14:28:33 2023
+Tue Feb 14 16:48:09 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -58,15 +58,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Fitter Summary                                                               ;
 +------------------------------------+-----------------------------------------+
-; Fitter Status                      ; Successful - Tue Feb 14 14:28:33 2023   ;
+; Fitter Status                      ; Successful - Tue Feb 14 16:48:09 2023   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; clock                                   ;
 ; Top-level Entity Name              ; tutorial_a                              ;
 ; Family                             ; Cyclone III                             ;
 ; Device                             ; EP3C120F780I7                           ;
 ; Timing Models                      ; Final                                   ;
-; Total logic elements               ; 24 / 119,088 ( < 1 % )                  ;
-;     Total combinational functions  ; 24 / 119,088 ( < 1 % )                  ;
+; Total logic elements               ; 22 / 119,088 ( < 1 % )                  ;
+;     Total combinational functions  ; 22 / 119,088 ( < 1 % )                  ;
 ;     Dedicated logic registers      ; 0 / 119,088 ( 0 % )                     ;
 ; Total registers                    ; 0                                       ;
 ; Total pins                         ; 48 / 532 ( 9 % )                        ;
@@ -161,22 +161,22 @@ applicable agreement for further details.
 ; f[5]     ; Incomplete set of assignments ;
 ; f[6]     ; Incomplete set of assignments ;
 ; f[7]     ; Incomplete set of assignments ;
-; a[6]     ; Incomplete set of assignments ;
-; a[0]     ; Incomplete set of assignments ;
-; a[7]     ; Incomplete set of assignments ;
-; a[2]     ; Incomplete set of assignments ;
-; a[4]     ; Incomplete set of assignments ;
-; a[3]     ; Incomplete set of assignments ;
 ; a[1]     ; Incomplete set of assignments ;
+; a[7]     ; Incomplete set of assignments ;
+; a[0]     ; Incomplete set of assignments ;
 ; a[5]     ; Incomplete set of assignments ;
-; b[6]     ; Incomplete set of assignments ;
-; b[0]     ; Incomplete set of assignments ;
-; b[7]     ; Incomplete set of assignments ;
-; b[2]     ; Incomplete set of assignments ;
-; b[4]     ; Incomplete set of assignments ;
-; b[3]     ; Incomplete set of assignments ;
+; a[3]     ; Incomplete set of assignments ;
+; a[4]     ; Incomplete set of assignments ;
+; a[6]     ; Incomplete set of assignments ;
+; a[2]     ; Incomplete set of assignments ;
 ; b[1]     ; Incomplete set of assignments ;
+; b[7]     ; Incomplete set of assignments ;
+; b[0]     ; Incomplete set of assignments ;
 ; b[5]     ; Incomplete set of assignments ;
+; b[3]     ; Incomplete set of assignments ;
+; b[4]     ; Incomplete set of assignments ;
+; b[6]     ; Incomplete set of assignments ;
+; b[2]     ; Incomplete set of assignments ;
 ; c[6]     ; Incomplete set of assignments ;
 ; c[0]     ; Incomplete set of assignments ;
 ; c[7]     ; Incomplete set of assignments ;
@@ -194,8 +194,8 @@ applicable agreement for further details.
 ; Type                    ; Value              ;
 +-------------------------+--------------------+
 ; Placement               ;                    ;
-;     -- Requested        ; 0 / 120 ( 0.00 % ) ;
-;     -- Achieved         ; 0 / 120 ( 0.00 % ) ;
+;     -- Requested        ; 0 / 118 ( 0.00 % ) ;
+;     -- Achieved         ; 0 / 118 ( 0.00 % ) ;
 ;                         ;                    ;
 ; Routing (by Connection) ;                    ;
 ;     -- Requested        ; 0 / 0 ( 0.00 % )   ;
@@ -217,7 +217,7 @@ applicable agreement for further details.
 +----------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +----------------+---------+-------------------+-------------------------+-------------------+
-; Top            ; 120     ; 0                 ; N/A                     ; Source File       ;
+; Top            ; 118     ; 0                 ; N/A                     ; Source File       ;
 +----------------+---------+-------------------+-------------------------+-------------------+
 
 
@@ -232,19 +232,19 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 24 / 119,088 ( < 1 % ) ;
-;     -- Combinational with no register       ; 24                     ;
+; Total logic elements                        ; 22 / 119,088 ( < 1 % ) ;
+;     -- Combinational with no register       ; 22                     ;
 ;     -- Register only                        ; 0                      ;
 ;     -- Combinational with a register        ; 0                      ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
 ;     -- 4 input functions                    ; 8                      ;
 ;     -- 3 input functions                    ; 2                      ;
-;     -- <=2 input functions                  ; 14                     ;
+;     -- <=2 input functions                  ; 12                     ;
 ;     -- Register only                        ; 0                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 24                     ;
+;     -- normal mode                          ; 22                     ;
 ;     -- arithmetic mode                      ; 0                      ;
 ;                                             ;                        ;
 ; Total registers*                            ; 0 / 122,205 ( 0 % )    ;
@@ -269,13 +269,13 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%           ;
-; Peak interconnect usage (total/H/V)         ; 0% / 0% / 1%           ;
+; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%           ;
 ; Maximum fan-out node                        ; b[0]~input             ;
-; Maximum fan-out                             ; 5                      ;
+; Maximum fan-out                             ; 6                      ;
 ; Highest non-global fan-out signal           ; b[0]~input             ;
-; Highest non-global fan-out                  ; 5                      ;
-; Total fan-out                               ; 136                    ;
-; Average fan-out                             ; 1.05                   ;
+; Highest non-global fan-out                  ; 6                      ;
+; Total fan-out                               ; 130                    ;
+; Average fan-out                             ; 1.02                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -286,30 +286,30 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
-; a[0] ; AA6   ; 2        ; 0            ; 10           ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; a[1] ; AD4   ; 3        ; 1            ; 0            ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; a[2] ; AA7   ; 2        ; 0            ; 9            ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; a[3] ; AC4   ; 2        ; 0            ; 4            ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; a[4] ; AE2   ; 2        ; 0            ; 17           ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; a[5] ; AE1   ; 2        ; 0            ; 16           ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; a[6] ; AE6   ; 3        ; 1            ; 0            ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; a[7] ; W8    ; 2        ; 0            ; 11           ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; b[0] ; AF4   ; 3        ; 1            ; 0            ; 0            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; b[1] ; AC5   ; 2        ; 0            ; 5            ; 14           ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; b[2] ; AE3   ; 2        ; 0            ; 7            ; 7            ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; b[3] ; AG3   ; 3        ; 3            ; 0            ; 14           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; b[4] ; Y6    ; 2        ; 0            ; 13           ; 7            ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; b[5] ; W4    ; 2        ; 0            ; 14           ; 7            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; b[6] ; AD7   ; 3        ; 3            ; 0            ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; b[7] ; AE4   ; 3        ; 3            ; 0            ; 21           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; c[0] ; C24   ; 7        ; 98           ; 73           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; c[1] ; C23   ; 7        ; 100          ; 73           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; c[2] ; D21   ; 7        ; 96           ; 73           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; c[3] ; H22   ; 6        ; 115          ; 69           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; c[4] ; C22   ; 7        ; 96           ; 73           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; c[5] ; D24   ; 7        ; 98           ; 73           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; c[6] ; G24   ; 6        ; 115          ; 69           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
-; c[7] ; D23   ; 7        ; 100          ; 73           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; a[0] ; AD7   ; 3        ; 3            ; 0            ; 0            ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; a[1] ; AB6   ; 2        ; 0            ; 4            ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; a[2] ; AH3   ; 3        ; 5            ; 0            ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; a[3] ; AE6   ; 3        ; 1            ; 0            ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; a[4] ; AA6   ; 2        ; 0            ; 10           ; 14           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; a[5] ; AD4   ; 3        ; 1            ; 0            ; 7            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; a[6] ; AB4   ; 2        ; 0            ; 8            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; a[7] ; AF4   ; 3        ; 1            ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; b[0] ; AG4   ; 3        ; 9            ; 0            ; 21           ; 6                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; b[1] ; AF3   ; 3        ; 7            ; 0            ; 21           ; 5                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; b[2] ; AD5   ; 3        ; 1            ; 0            ; 21           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; b[3] ; AE4   ; 3        ; 3            ; 0            ; 21           ; 3                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; b[4] ; Y7    ; 2        ; 0            ; 11           ; 21           ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; b[5] ; Y10   ; 3        ; 7            ; 0            ; 7            ; 4                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; b[6] ; AG3   ; 3        ; 3            ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; b[7] ; AD8   ; 3        ; 9            ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; c[0] ; AB22  ; 4        ; 107          ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; c[1] ; AA19  ; 4        ; 107          ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; c[2] ; AD21  ; 4        ; 102          ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; c[3] ; AF23  ; 4        ; 105          ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; c[4] ; AD24  ; 4        ; 105          ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; c[5] ; Y19   ; 4        ; 105          ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; c[6] ; AC25  ; 5        ; 115          ; 4            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
+; c[7] ; AE23  ; 4        ; 105          ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ;
 +------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -318,30 +318,30 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 +------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Load ;
 +------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+------+
-; d[0] ; Y7    ; 2        ; 0            ; 11           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; d[1] ; Y5    ; 2        ; 0            ; 12           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; d[2] ; AA8   ; 3        ; 18           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; d[3] ; E19   ; 7        ; 94           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; d[4] ; AA5   ; 2        ; 0            ; 10           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; d[5] ; B11   ; 8        ; 42           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; d[6] ; AD25  ; 4        ; 100          ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; d[7] ; M1    ; 1        ; 0            ; 44           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; e[0] ; V6    ; 2        ; 0            ; 16           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; e[1] ; AD5   ; 3        ; 1            ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; e[2] ; AB6   ; 2        ; 0            ; 4            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; e[3] ; W3    ; 2        ; 0            ; 13           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; e[4] ; U8    ; 2        ; 0            ; 18           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; e[5] ; V5    ; 2        ; 0            ; 15           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; e[6] ; W7    ; 2        ; 0            ; 12           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; e[7] ; AB5   ; 2        ; 0            ; 4            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; f[0] ; AF2   ; 2        ; 0            ; 6            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; f[1] ; AB4   ; 2        ; 0            ; 8            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; f[2] ; V7    ; 2        ; 0            ; 14           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; f[3] ; V8    ; 2        ; 0            ; 15           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; f[4] ; U7    ; 2        ; 0            ; 18           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; f[5] ; C19   ; 7        ; 83           ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; f[6] ; D19   ; 7        ; 83           ; 73           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
-; f[7] ; J25   ; 6        ; 115          ; 51           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; d[0] ; AF5   ; 3        ; 5            ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; d[1] ; W7    ; 2        ; 0            ; 12           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; d[2] ; AD25  ; 4        ; 100          ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; d[3] ; AC24  ; 5        ; 115          ; 4            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; d[4] ; AC5   ; 2        ; 0            ; 5            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; d[5] ; AF12  ; 3        ; 33           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; d[6] ; Y17   ; 4        ; 96           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; d[7] ; AD1   ; 2        ; 0            ; 21           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; e[0] ; AC4   ; 2        ; 0            ; 4            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; e[1] ; W8    ; 2        ; 0            ; 11           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; e[2] ; AE3   ; 2        ; 0            ; 7            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; e[3] ; Y5    ; 2        ; 0            ; 12           ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; e[4] ; Y6    ; 2        ; 0            ; 13           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; e[5] ; AF2   ; 2        ; 0            ; 6            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; e[6] ; C25   ; 7        ; 105          ; 73           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; e[7] ; R21   ; 5        ; 115          ; 36           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; f[0] ; AF6   ; 3        ; 7            ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; f[1] ; AE5   ; 3        ; 5            ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; f[2] ; AA5   ; 2        ; 0            ; 10           ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; f[3] ; AA7   ; 2        ; 0            ; 9            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; f[4] ; AB5   ; 2        ; 0            ; 4            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; f[5] ; AE10  ; 3        ; 29           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; f[6] ; P21   ; 5        ; 115          ; 36           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
+; f[7] ; AA24  ; 5        ; 115          ; 9            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; 0 pF ;
 +------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+------+
 
 
@@ -350,14 +350,14 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 5 / 58 ( 9 % )   ; 2.5V          ; --           ;
-; 2        ; 25 / 63 ( 40 % ) ; 2.5V          ; --           ;
-; 3        ; 8 / 73 ( 11 % )  ; 2.5V          ; --           ;
-; 4        ; 1 / 71 ( 1 % )   ; 2.5V          ; --           ;
-; 5        ; 0 / 65 ( 0 % )   ; 2.5V          ; --           ;
-; 6        ; 4 / 58 ( 7 % )   ; 2.5V          ; --           ;
-; 7        ; 9 / 72 ( 13 % )  ; 2.5V          ; --           ;
-; 8        ; 1 / 72 ( 1 % )   ; 2.5V          ; --           ;
+; 1        ; 4 / 58 ( 7 % )   ; 2.5V          ; --           ;
+; 2        ; 16 / 63 ( 25 % ) ; 2.5V          ; --           ;
+; 3        ; 17 / 73 ( 23 % ) ; 2.5V          ; --           ;
+; 4        ; 9 / 71 ( 13 % )  ; 2.5V          ; --           ;
+; 5        ; 5 / 65 ( 8 % )   ; 2.5V          ; --           ;
+; 6        ; 1 / 58 ( 2 % )   ; 2.5V          ; --           ;
+; 7        ; 1 / 72 ( 1 % )   ; 2.5V          ; --           ;
+; 8        ; 0 / 72 ( 0 % )   ; 2.5V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -396,10 +396,10 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; AA2      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA3      ; 102        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AA4      ; 101        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; AA5      ; 119        ; 2        ; d[4]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; AA6      ; 118        ; 2        ; a[0]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; AA7      ; 120        ; 2        ; a[2]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; AA8      ; 154        ; 3        ; d[2]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA5      ; 119        ; 2        ; f[2]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AA6      ; 118        ; 2        ; a[4]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AA7      ; 120        ; 2        ; f[3]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AA8      ; 154        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA9      ;            ;          ; GNDA                                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA10     ; 155        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA11     ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -410,12 +410,12 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; AA16     ; 211        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA17     ; 241        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA18     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; AA19     ; 264        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AA19     ; 264        ; 4        ; c[1]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA20     ;            ;          ; GNDA                                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA21     ; 269        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA22     ; 275        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AA23     ; 280        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; AA24     ; 279        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; AA24     ; 279        ; 5        ; f[7]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AA25     ; 294        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AA26     ; 293        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AA27     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -423,9 +423,9 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; AB1      ; 86         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AB2      ; 85         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AB3      ; 99         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; AB4      ; 121        ; 2        ; f[1]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; AB5      ; 127        ; 2        ; e[7]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; AB6      ; 126        ; 2        ; e[2]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AB4      ; 121        ; 2        ; a[6]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AB5      ; 127        ; 2        ; f[4]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AB6      ; 126        ; 2        ; a[1]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AB7      ; 152        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB8      ; 148        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB9      ; 147        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -441,7 +441,7 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; AB19     ; 253        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB20     ; 257        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB21     ; 266        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AB22     ; 265        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AB22     ; 265        ; 4        ; c[0]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AB23     ; 276        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AB24     ; 274        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AB25     ; 292        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -451,8 +451,8 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; AC1      ; 94         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AC2      ; 93         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AC3      ; 95         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; AC4      ; 125        ; 2        ; a[3]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; AC5      ; 124        ; 2        ; b[1]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AC4      ; 125        ; 2        ; e[0]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AC5      ; 124        ; 2        ; d[4]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AC6      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC7      ; 144        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC8      ; 153        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -471,19 +471,19 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; AC21     ; 258        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC22     ; 267        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC23     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AC24     ; 273        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; AC25     ; 272        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; AC24     ; 273        ; 5        ; d[3]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AC25     ; 272        ; 5        ; c[6]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AC26     ; 282        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AC27     ; 290        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AC28     ; 289        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; AD1      ; 98         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; AD1      ; 98         ; 2        ; d[7]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; AD2      ; 97         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AD3      ; 96         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; AD4      ; 130        ; 3        ; a[1]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AD5      ; 128        ; 3        ; e[1]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD4      ; 130        ; 3        ; a[5]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD5      ; 128        ; 3        ; b[2]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD6      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; AD7      ; 134        ; 3        ; b[6]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AD8      ; 143        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AD7      ; 134        ; 3        ; a[0]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD8      ; 143        ; 3        ; b[7]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD9      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AD10     ; 149        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD11     ; 186        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -496,24 +496,24 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; AD18     ; 237        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD19     ; 248        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD20     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; AD21     ; 259        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AD21     ; 259        ; 4        ; c[2]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD22     ; 268        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD23     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; AD24     ; 260        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AD25     ; 255        ; 4        ; d[6]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD24     ; 260        ; 4        ; c[4]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD25     ; 255        ; 4        ; d[2]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD26     ; 281        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AD27     ; 286        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AD28     ; 285        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; AE1      ; 106        ; 2        ; a[5]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; AE2      ; 105        ; 2        ; a[4]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; AE3      ; 122        ; 2        ; b[2]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; AE4      ; 132        ; 3        ; b[7]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AE5      ; 135        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AE6      ; 129        ; 3        ; a[6]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE1      ; 106        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; AE2      ; 105        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; AE3      ; 122        ; 2        ; e[2]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AE4      ; 132        ; 3        ; b[3]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE5      ; 135        ; 3        ; f[1]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE6      ; 129        ; 3        ; a[3]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE7      ; 158        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE8      ; 161        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE9      ; 163        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AE10     ; 165        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AE10     ; 165        ; 3        ; f[5]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE11     ; 171        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE12     ; 169        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE13     ; 177        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -526,24 +526,24 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; AE20     ; 235        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE21     ; 238        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE22     ; 251        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AE23     ; 261        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AE23     ; 261        ; 4        ; c[7]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE24     ; 256        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE25     ; 243        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE26     ; 278        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AE27     ; 284        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AE28     ; 283        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AF1      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AF2      ; 123        ; 2        ; f[0]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; AF3      ; 138        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF4      ; 131        ; 3        ; b[0]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AF5      ; 136        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF6      ; 139        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AF2      ; 123        ; 2        ; e[5]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; AF3      ; 138        ; 3        ; b[1]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF4      ; 131        ; 3        ; a[7]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF5      ; 136        ; 3        ; d[0]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF6      ; 139        ; 3        ; f[0]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF7      ; 159        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF8      ; 162        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF9      ; 160        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF10     ; 166        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF11     ; 172        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF12     ; 170        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AF12     ; 170        ; 3        ; d[5]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF13     ; 178        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF14     ; 184        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF15     ; 206        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -554,7 +554,7 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; AF20     ; 236        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF21     ; 239        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF22     ; 252        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF23     ; 262        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AF23     ; 262        ; 4        ; c[3]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF24     ; 233        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF25     ; 234        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF26     ; 244        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -562,8 +562,8 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; AF28     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG1      ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AG2      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AG3      ; 133        ; 3        ; b[3]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; AG4      ; 141        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AG3      ; 133        ; 3        ; b[6]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG4      ; 141        ; 3        ; b[0]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AG5      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG6      ; 145        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG7      ; 150        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -589,7 +589,7 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; AG27     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG28     ;            ; 5        ; VCCIO5                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AH2      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; AH3      ; 137        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AH3      ; 137        ; 3        ; a[2]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AH4      ; 142        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH5      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; AH6      ; 146        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -624,7 +624,7 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; B8       ; 518        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B10      ; 492        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B11      ; 488        ; 8        ; d[5]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; B11      ; 488        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B12      ; 483        ; 8        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B13      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B14      ; 473        ; 8        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -660,13 +660,13 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; C16      ; 460        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C17      ; 438        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C18      ; 429        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; C19      ; 435        ; 7        ; f[5]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; C19      ; 435        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C20      ; 431        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C21      ; 422        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; C22      ; 418        ; 7        ; c[4]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; C23      ; 415        ; 7        ; c[1]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; C24      ; 416        ; 7        ; c[0]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; C25      ; 411        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C22      ; 418        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C23      ; 415        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C24      ; 416        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; C25      ; 411        ; 7        ; e[6]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C26      ; 400        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; C27      ; 382        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; C28      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -688,12 +688,12 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; D16      ; 461        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D17      ; 439        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D18      ; 430        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D19      ; 436        ; 7        ; f[6]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D19      ; 436        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D20      ; 432        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D21      ; 419        ; 7        ; c[2]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D21      ; 419        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D22      ; 402        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; D23      ; 414        ; 7        ; c[7]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; D24      ; 417        ; 7        ; c[5]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; D23      ; 414        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; D24      ; 417        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D25      ; 410        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D26      ; 383        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D27      ; 381        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -716,7 +716,7 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; E16      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; E17      ; 456        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E18      ; 427        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; E19      ; 421        ; 7        ; d[3]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
+; E19      ; 421        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E20      ;            ; 7        ; VCCIO7                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; E21      ; 407        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; E22      ; 403        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -777,7 +777,7 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; G21      ; 445        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G22      ; 449        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; G23      ; 398        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; G24      ; 397        ; 6        ; c[6]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G24      ; 397        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G25      ; 393        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G26      ; 392        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G27      ; 367        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -803,7 +803,7 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; H19      ; 446        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; H20      ;            ;          ; GNDA                                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; H21      ; 448        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; H22      ; 399        ; 6        ; c[3]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H22      ; 399        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H23      ; 391        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H24      ; 390        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; H25      ; 377        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -834,7 +834,7 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; J22      ; 394        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J23      ; 387        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J24      ; 386        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; J25      ; 365        ; 6        ; f[7]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J25      ; 365        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J26      ; 364        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; J27      ; 338        ; 6        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; J28      ; 337        ; 6        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -894,7 +894,7 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; L26      ; 363        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L27      ; 358        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; L28      ; 357        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; M1       ; 51         ; 1        ; d[7]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; M1       ; 51         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M2       ; 50         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M3       ; 34         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; M4       ; 33         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -970,7 +970,7 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; P18      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; P19      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; P20      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; P21      ; 334        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; P21      ; 334        ; 5        ; f[6]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P22      ; 343        ; 6        ; ^MSEL3                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P23      ; 341        ; 6        ; ^MSEL1                                                    ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; P24      ; 339        ; 6        ; ^CONF_DONE                                                ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -998,7 +998,7 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; R18      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; R19      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; R20      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; R21      ; 333        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; R21      ; 333        ; 5        ; e[7]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; R22      ; 332        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R23      ; 331        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; R24      ; 330        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1040,8 +1040,8 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; U4       ; 72         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U5       ; 90         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U6       ; 89         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; U7       ; 103        ; 2        ; f[4]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U8       ; 104        ; 2        ; e[4]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U7       ; 103        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; U8       ; 104        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; U9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; U10      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U11      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1066,10 +1066,10 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; V2       ; 83         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; V3       ; 82         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; V4       ; 81         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; V5       ; 108        ; 2        ; e[5]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; V6       ; 107        ; 2        ; e[0]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; V7       ; 110        ; 2        ; f[2]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; V8       ; 109        ; 2        ; f[3]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; V5       ; 108        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; V6       ; 107        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; V7       ; 110        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; V8       ; 109        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; V9       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; V10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V11      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -1092,12 +1092,12 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; V28      ; 303        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; W1       ; 88         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; W2       ; 87         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; W3       ; 112        ; 2        ; e[3]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; W4       ; 111        ; 2        ; b[5]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W3       ; 112        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; W4       ; 111        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; W5       ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; W6       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; W7       ; 115        ; 2        ; e[6]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; W8       ; 116        ; 2        ; a[7]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W7       ; 115        ; 2        ; d[1]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W8       ; 116        ; 2        ; e[1]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; W9       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; W10      ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; W11      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1122,21 +1122,21 @@ The pin-out file can be found in D:/SE/RISCV/quartus/clock.pin.
 ; Y2       ; 65         ; 2        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; Y3       ; 92         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y4       ; 91         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; Y5       ; 114        ; 2        ; d[1]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; Y6       ; 113        ; 2        ; b[4]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; Y7       ; 117        ; 2        ; d[0]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y5       ; 114        ; 2        ; e[3]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y6       ; 113        ; 2        ; e[4]                                                      ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y7       ; 117        ; 2        ; b[4]                                                      ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; Y8       ;            ; --       ; VCCA1                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; Y9       ;            ;          ; VCCD_PLL1                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; Y10      ; 140        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; Y10      ; 140        ; 3        ; b[5]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; Y11      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; Y12      ; 187        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y13      ; 189        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y14      ; 197        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y15      ; 198        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; Y16      ; 250        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; Y17      ; 249        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; Y17      ; 249        ; 4        ; d[6]                                                      ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; Y18      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; Y19      ; 263        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; Y19      ; 263        ; 4        ; c[5]                                                      ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; Y20      ;            ;          ; VCCD_PLL4                                                 ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; Y21      ;            ; --       ; VCCA4                                                     ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; Y22      ; 320        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1200,13 +1200,14 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                           ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
-; |tutorial_a                ; 24 (24)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 48   ; 0            ; 24 (24)      ; 0 (0)             ; 0 (0)            ; |tutorial_a         ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                  ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name        ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------+--------------+
+; |tutorial_a                ; 22 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 48   ; 0            ; 22 (16)      ; 0 (0)             ; 0 (0)            ; |tutorial_a                ; work         ;
+;    |ma123:ma1ssdad|        ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; |tutorial_a|ma123:ma1ssdad ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1239,118 +1240,114 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; f[5] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; f[6] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; f[7] ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; a[6] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
-; a[0] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; a[1] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
 ; a[7] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
-; a[2] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
-; a[4] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
-; a[3] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
-; a[1] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; a[0] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
 ; a[5] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
-; b[6] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
-; b[0] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
-; b[7] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
-; b[2] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
-; b[4] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
-; b[3] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
+; a[3] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; a[4] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; a[6] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
+; a[2] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
 ; b[1] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
-; b[5] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
+; b[7] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; b[0] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; b[5] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; b[3] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; b[4] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
+; b[6] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; b[2] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
 ; c[6] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
 ; c[0] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
-; c[7] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
-; c[2] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
-; c[4] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; c[7] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
+; c[2] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; c[4] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
 ; c[3] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
 ; c[1] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
-; c[5] ; Input    ; 6             ; --            ; --                    ; --  ; --   ;
+; c[5] ; Input    ; --            ; 6             ; --                    ; --  ; --   ;
 +------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+---------------------------------------------------+
-; Pad To Core Delay Chain Fanout                    ;
-+---------------------+-------------------+---------+
-; Source Pin / Fanout ; Pad To Core Index ; Setting ;
-+---------------------+-------------------+---------+
-; a[6]                ;                   ;         ;
-;      - WideAnd0~46  ; 0                 ; 6       ;
-;      - e~6          ; 0                 ; 6       ;
-; a[0]                ;                   ;         ;
-;      - WideAnd0~46  ; 0                 ; 6       ;
-;      - comb~0       ; 0                 ; 6       ;
-;      - e~0          ; 0                 ; 6       ;
-; a[7]                ;                   ;         ;
-;      - WideAnd0     ; 1                 ; 6       ;
-;      - e~7          ; 1                 ; 6       ;
-; a[2]                ;                   ;         ;
-;      - WideAnd0     ; 1                 ; 6       ;
-;      - e~2          ; 1                 ; 6       ;
-; a[4]                ;                   ;         ;
-;      - WideAnd0~47  ; 0                 ; 6       ;
-;      - e~4          ; 0                 ; 6       ;
-; a[3]                ;                   ;         ;
-;      - WideAnd0~47  ; 0                 ; 6       ;
-;      - e~3          ; 0                 ; 6       ;
-; a[1]                ;                   ;         ;
-;      - WideAnd0~47  ; 0                 ; 6       ;
-;      - e~1          ; 0                 ; 6       ;
-; a[5]                ;                   ;         ;
-;      - WideAnd0~47  ; 0                 ; 6       ;
-;      - e~5          ; 0                 ; 6       ;
-; b[6]                ;                   ;         ;
-;      - WideOr0~95   ; 0                 ; 6       ;
-;      - e~6          ; 0                 ; 6       ;
-; b[0]                ;                   ;         ;
-;      - WideOr0~95   ; 1                 ; 6       ;
-;      - e~0          ; 1                 ; 6       ;
-;      - WideAnd1~8   ; 1                 ; 6       ;
-;      - WideAnd2~8   ; 1                 ; 6       ;
-;      - WideAnd5~9   ; 1                 ; 6       ;
-; b[7]                ;                   ;         ;
-;      - WideOr0      ; 1                 ; 6       ;
-;      - comb~35      ; 1                 ; 6       ;
-;      - e~7          ; 1                 ; 6       ;
-; b[2]                ;                   ;         ;
-;      - WideOr0      ; 1                 ; 6       ;
-;      - comb~35      ; 1                 ; 6       ;
-;      - e~2          ; 1                 ; 6       ;
-;      - WideAnd2~8   ; 1                 ; 6       ;
-;      - WideAnd5~9   ; 1                 ; 6       ;
-; b[4]                ;                   ;         ;
-;      - WideOr0~96   ; 1                 ; 6       ;
-;      - e~4          ; 1                 ; 6       ;
-;      - WideAnd5~10  ; 1                 ; 6       ;
-;      - WideAnd5     ; 1                 ; 6       ;
-; b[3]                ;                   ;         ;
-;      - WideOr0~96   ; 1                 ; 6       ;
-;      - e~3          ; 1                 ; 6       ;
-;      - WideAnd5~9   ; 1                 ; 6       ;
-; b[1]                ;                   ;         ;
-;      - WideOr0~96   ; 1                 ; 6       ;
-;      - e~1          ; 1                 ; 6       ;
-;      - WideAnd1~8   ; 1                 ; 6       ;
-;      - WideAnd2~8   ; 1                 ; 6       ;
-;      - WideAnd5~9   ; 1                 ; 6       ;
-; b[5]                ;                   ;         ;
-;      - WideOr0~96   ; 1                 ; 6       ;
-;      - e~5          ; 1                 ; 6       ;
-;      - WideAnd5     ; 1                 ; 6       ;
-; c[6]                ;                   ;         ;
-;      - WideXor0~39  ; 0                 ; 6       ;
-; c[0]                ;                   ;         ;
-;      - WideXor0~39  ; 0                 ; 6       ;
-; c[7]                ;                   ;         ;
-;      - WideXor0~39  ; 0                 ; 6       ;
-; c[2]                ;                   ;         ;
-;      - WideXor0~39  ; 1                 ; 6       ;
-; c[4]                ;                   ;         ;
-;      - WideXor0~40  ; 0                 ; 6       ;
-; c[3]                ;                   ;         ;
-;      - WideXor0~40  ; 0                 ; 6       ;
-; c[1]                ;                   ;         ;
-;      - WideXor0     ; 0                 ; 6       ;
-; c[5]                ;                   ;         ;
-;      - WideXor0     ; 0                 ; 6       ;
-+---------------------+-------------------+---------+
++-----------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                            ;
++-----------------------------+-------------------+---------+
+; Source Pin / Fanout         ; Pad To Core Index ; Setting ;
++-----------------------------+-------------------+---------+
+; a[1]                        ;                   ;         ;
+;      - WideAnd0~46          ; 1                 ; 6       ;
+;      - ma123:ma1ssdad|cc[1] ; 1                 ; 6       ;
+; a[7]                        ;                   ;         ;
+;      - WideAnd0~46          ; 1                 ; 6       ;
+; a[0]                        ;                   ;         ;
+;      - WideAnd0             ; 1                 ; 6       ;
+;      - comb~0               ; 1                 ; 6       ;
+;      - ma123:ma1ssdad|cc[0] ; 1                 ; 6       ;
+; a[5]                        ;                   ;         ;
+;      - WideAnd0             ; 0                 ; 6       ;
+;      - ma123:ma1ssdad|cc[5] ; 0                 ; 6       ;
+; a[3]                        ;                   ;         ;
+;      - WideAnd0~47          ; 0                 ; 6       ;
+;      - ma123:ma1ssdad|cc[3] ; 0                 ; 6       ;
+; a[4]                        ;                   ;         ;
+;      - WideAnd0~47          ; 0                 ; 6       ;
+;      - ma123:ma1ssdad|cc[4] ; 0                 ; 6       ;
+; a[6]                        ;                   ;         ;
+;      - WideAnd0~47          ; 1                 ; 6       ;
+; a[2]                        ;                   ;         ;
+;      - WideAnd0~47          ; 1                 ; 6       ;
+;      - ma123:ma1ssdad|cc[2] ; 1                 ; 6       ;
+; b[1]                        ;                   ;         ;
+;      - WideOr0~95           ; 1                 ; 6       ;
+;      - ma123:ma1ssdad|cc[1] ; 1                 ; 6       ;
+;      - WideAnd1~8           ; 1                 ; 6       ;
+;      - WideAnd2~8           ; 1                 ; 6       ;
+;      - WideAnd5~9           ; 1                 ; 6       ;
+; b[7]                        ;                   ;         ;
+;      - WideOr0~95           ; 0                 ; 6       ;
+; b[0]                        ;                   ;         ;
+;      - WideOr0              ; 0                 ; 6       ;
+;      - comb~35              ; 0                 ; 6       ;
+;      - ma123:ma1ssdad|cc[0] ; 0                 ; 6       ;
+;      - WideAnd1~8           ; 0                 ; 6       ;
+;      - WideAnd2~8           ; 0                 ; 6       ;
+;      - WideAnd5~9           ; 0                 ; 6       ;
+; b[5]                        ;                   ;         ;
+;      - WideOr0              ; 0                 ; 6       ;
+;      - comb~35              ; 0                 ; 6       ;
+;      - ma123:ma1ssdad|cc[5] ; 0                 ; 6       ;
+;      - WideAnd5             ; 0                 ; 6       ;
+; b[3]                        ;                   ;         ;
+;      - WideOr0~96           ; 0                 ; 6       ;
+;      - ma123:ma1ssdad|cc[3] ; 0                 ; 6       ;
+;      - WideAnd5~9           ; 0                 ; 6       ;
+; b[4]                        ;                   ;         ;
+;      - WideOr0~96           ; 1                 ; 6       ;
+;      - ma123:ma1ssdad|cc[4] ; 1                 ; 6       ;
+;      - WideAnd5~10          ; 1                 ; 6       ;
+;      - WideAnd5             ; 1                 ; 6       ;
+; b[6]                        ;                   ;         ;
+;      - WideOr0~96           ; 0                 ; 6       ;
+; b[2]                        ;                   ;         ;
+;      - WideOr0~96           ; 0                 ; 6       ;
+;      - ma123:ma1ssdad|cc[2] ; 0                 ; 6       ;
+;      - WideAnd2~8           ; 0                 ; 6       ;
+;      - WideAnd5~9           ; 0                 ; 6       ;
+; c[6]                        ;                   ;         ;
+;      - WideXor0~39          ; 0                 ; 6       ;
+; c[0]                        ;                   ;         ;
+;      - WideXor0~39          ; 0                 ; 6       ;
+; c[7]                        ;                   ;         ;
+;      - WideXor0~39          ; 1                 ; 6       ;
+; c[2]                        ;                   ;         ;
+;      - WideXor0~39          ; 0                 ; 6       ;
+; c[4]                        ;                   ;         ;
+;      - WideXor0~40          ; 1                 ; 6       ;
+; c[3]                        ;                   ;         ;
+;      - WideXor0~40          ; 0                 ; 6       ;
+; c[1]                        ;                   ;         ;
+;      - WideXor0             ; 0                 ; 6       ;
+; c[5]                        ;                   ;         ;
+;      - WideXor0             ; 1                 ; 6       ;
++-----------------------------+-------------------+---------+
 
 
 +-----------------------------------+
@@ -1358,23 +1355,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------+---------+
 ; Name                    ; Fan-Out ;
 +-------------------------+---------+
+; b[0]~input              ; 6       ;
 ; b[1]~input              ; 5       ;
-; b[2]~input              ; 5       ;
-; b[0]~input              ; 5       ;
+; b[2]~input              ; 4       ;
 ; b[4]~input              ; 4       ;
-; b[5]~input              ; 3       ;
+; b[5]~input              ; 4       ;
 ; b[3]~input              ; 3       ;
-; b[7]~input              ; 3       ;
 ; a[0]~input              ; 3       ;
 ; WideAnd5~9              ; 3       ;
-; b[6]~input              ; 2       ;
+; a[2]~input              ; 2       ;
+; a[4]~input              ; 2       ;
+; a[3]~input              ; 2       ;
 ; a[5]~input              ; 2       ;
 ; a[1]~input              ; 2       ;
-; a[3]~input              ; 2       ;
-; a[4]~input              ; 2       ;
-; a[2]~input              ; 2       ;
-; a[7]~input              ; 2       ;
-; a[6]~input              ; 2       ;
 ; WideOr0~96              ; 2       ;
 ; WideOr0~95              ; 2       ;
 ; ~ALTERA_nCEO~~obuf      ; 1       ;
@@ -1398,16 +1391,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; c[0]~input              ; 1       ;
 ; c[6]                    ; 1       ;
 ; c[6]~input              ; 1       ;
-; b[5]                    ; 1       ;
-; b[1]                    ; 1       ;
-; b[3]                    ; 1       ;
-; b[4]                    ; 1       ;
 ; b[2]                    ; 1       ;
-; b[7]                    ; 1       ;
-; b[0]                    ; 1       ;
 ; b[6]                    ; 1       ;
-; a[5]                    ; 1       ;
-; a[1]                    ; 1       ;
+; b[6]~input              ; 1       ;
+; b[4]                    ; 1       ;
+; b[3]                    ; 1       ;
+; b[5]                    ; 1       ;
+; b[0]                    ; 1       ;
+; b[7]                    ; 1       ;
+; b[7]~input              ; 1       ;
+; b[1]                    ; 1       ;
+; a[2]                    ; 1       ;
+; a[6]                    ; 1       ;
+; a[6]~input              ; 1       ;
+; a[4]                    ; 1       ;
 +-------------------------+---------+
 
 
@@ -1416,26 +1413,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+------------------------+
 ; Interconnect Resource Type ; Usage                  ;
 +----------------------------+------------------------+
-; Block interconnects        ; 48 / 342,891 ( < 1 % ) ;
-; C16 interconnects          ; 6 / 10,120 ( < 1 % )   ;
-; C4 interconnects           ; 43 / 209,544 ( < 1 % ) ;
+; Block interconnects        ; 46 / 342,891 ( < 1 % ) ;
+; C16 interconnects          ; 0 / 10,120 ( 0 % )     ;
+; C4 interconnects           ; 39 / 209,544 ( < 1 % ) ;
 ; Direct links               ; 4 / 342,891 ( < 1 % )  ;
 ; Global clocks              ; 0 / 20 ( 0 % )         ;
-; Local interconnects        ; 7 / 119,088 ( < 1 % )  ;
-; R24 interconnects          ; 2 / 9,963 ( < 1 % )    ;
-; R4 interconnects           ; 9 / 289,782 ( < 1 % )  ;
+; Local interconnects        ; 8 / 119,088 ( < 1 % )  ;
+; R24 interconnects          ; 1 / 9,963 ( < 1 % )    ;
+; R4 interconnects           ; 20 / 289,782 ( < 1 % ) ;
 +----------------------------+------------------------+
 
 
 +--------------------------------------------------------------------------+
 ; LAB Logic Elements                                                       ;
 +--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 6.00) ; Number of LABs  (Total = 4) ;
+; Number of Logic Elements  (Average = 5.50) ; Number of LABs  (Total = 4) ;
 +--------------------------------------------+-----------------------------+
 ; 1                                          ; 1                           ;
-; 2                                          ; 0                           ;
+; 2                                          ; 1                           ;
 ; 3                                          ; 1                           ;
-; 4                                          ; 1                           ;
+; 4                                          ; 0                           ;
 ; 5                                          ; 0                           ;
 ; 6                                          ; 0                           ;
 ; 7                                          ; 0                           ;
@@ -1454,13 +1451,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 6.00) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced  (Average = 5.50) ; Number of LABs  (Total = 4) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 1                           ;
-; 2                                           ; 0                           ;
+; 2                                           ; 1                           ;
 ; 3                                           ; 1                           ;
-; 4                                           ; 1                           ;
+; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
 ; 7                                           ; 0                           ;
@@ -1479,13 +1476,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                       ;
 +-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 4.25) ; Number of LABs  (Total = 4) ;
+; Number of Signals Sourced Out  (Average = 3.75) ; Number of LABs  (Total = 4) ;
 +-------------------------------------------------+-----------------------------+
 ; 0                                               ; 0                           ;
 ; 1                                               ; 2                           ;
-; 2                                               ; 0                           ;
+; 2                                               ; 1                           ;
 ; 3                                               ; 0                           ;
-; 4                                               ; 1                           ;
+; 4                                               ; 0                           ;
 ; 5                                               ; 0                           ;
 ; 6                                               ; 0                           ;
 ; 7                                               ; 0                           ;
@@ -1499,14 +1496,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 7.75) ; Number of LABs  (Total = 4) ;
+; Number of Distinct Inputs  (Average = 7.25) ; Number of LABs  (Total = 4) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
 ; 2                                           ; 1                           ;
-; 3                                           ; 0                           ;
+; 3                                           ; 1                           ;
 ; 4                                           ; 0                           ;
-; 5                                           ; 1                           ;
+; 5                                           ; 0                           ;
 ; 6                                           ; 0                           ;
 ; 7                                           ; 0                           ;
 ; 8                                           ; 1                           ;
@@ -1570,7 +1567,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Tue Feb 14 14:28:24 2023
+    Info: Processing started: Tue Feb 14 16:48:00 2023
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off clock -c clock
 Info: Selected device EP3C120F780I7 for design "clock"
 Info: Core supply voltage is 1.2V
@@ -1618,22 +1615,22 @@ Warning: No exact pin location assignment(s) for 48 pins of 48 total pins
     Info: Pin f[5] not assigned to an exact location on the device
     Info: Pin f[6] not assigned to an exact location on the device
     Info: Pin f[7] not assigned to an exact location on the device
-    Info: Pin a[6] not assigned to an exact location on the device
-    Info: Pin a[0] not assigned to an exact location on the device
-    Info: Pin a[7] not assigned to an exact location on the device
-    Info: Pin a[2] not assigned to an exact location on the device
-    Info: Pin a[4] not assigned to an exact location on the device
-    Info: Pin a[3] not assigned to an exact location on the device
     Info: Pin a[1] not assigned to an exact location on the device
+    Info: Pin a[7] not assigned to an exact location on the device
+    Info: Pin a[0] not assigned to an exact location on the device
     Info: Pin a[5] not assigned to an exact location on the device
-    Info: Pin b[6] not assigned to an exact location on the device
-    Info: Pin b[0] not assigned to an exact location on the device
-    Info: Pin b[7] not assigned to an exact location on the device
-    Info: Pin b[2] not assigned to an exact location on the device
-    Info: Pin b[4] not assigned to an exact location on the device
-    Info: Pin b[3] not assigned to an exact location on the device
+    Info: Pin a[3] not assigned to an exact location on the device
+    Info: Pin a[4] not assigned to an exact location on the device
+    Info: Pin a[6] not assigned to an exact location on the device
+    Info: Pin a[2] not assigned to an exact location on the device
     Info: Pin b[1] not assigned to an exact location on the device
+    Info: Pin b[7] not assigned to an exact location on the device
+    Info: Pin b[0] not assigned to an exact location on the device
     Info: Pin b[5] not assigned to an exact location on the device
+    Info: Pin b[3] not assigned to an exact location on the device
+    Info: Pin b[4] not assigned to an exact location on the device
+    Info: Pin b[6] not assigned to an exact location on the device
+    Info: Pin b[2] not assigned to an exact location on the device
     Info: Pin c[6] not assigned to an exact location on the device
     Info: Pin c[0] not assigned to an exact location on the device
     Info: Pin c[7] not assigned to an exact location on the device
@@ -1687,18 +1684,20 @@ Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
-Warning: Following 7 pins have nothing, GND, or VCC driving datain port -- changes to this connectivity may change fitting results
+Warning: Following 9 pins have nothing, GND, or VCC driving datain port -- changes to this connectivity may change fitting results
     Info: Pin d[2] has GND driving its datain port
     Info: Pin d[5] has GND driving its datain port
     Info: Pin d[6] has GND driving its datain port
     Info: Pin d[7] has GND driving its datain port
+    Info: Pin e[6] has GND driving its datain port
+    Info: Pin e[7] has GND driving its datain port
     Info: Pin f[5] has GND driving its datain port
     Info: Pin f[6] has GND driving its datain port
     Info: Pin f[7] has GND driving its datain port
 Info: Quartus II Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 391 megabytes
-    Info: Processing ended: Tue Feb 14 14:28:33 2023
-    Info: Elapsed time: 00:00:09
+    Info: Peak virtual memory: 392 megabytes
+    Info: Processing ended: Tue Feb 14 16:48:10 2023
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:09
 
 

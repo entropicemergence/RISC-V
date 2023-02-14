@@ -118,7 +118,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-4e639446acf78a35816ccd6078f8ad9
+46e5e5db2b20dabda6ee61e11c306670
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -138,6 +138,52 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 |
+}
+# macro_sequence
+
+# end
+# entity
+ma123
+# storage
+db|clock.(6).cnf
+db|clock.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+adder32_2.v
+46e5e5db2b20dabda6ee61e11c306670
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+n
+7
+PARAMETER_SIGNED_DEC
+USR
+k
+5
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+ma123:ma1ssdad
 }
 # macro_sequence
 

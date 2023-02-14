@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Feb 14 14:28:23 2023
+Analysis & Synthesis Status : Successful - Tue Feb 14 16:47:59 2023
 Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
 Revision Name : clock
 Top-level Entity Name : tutorial_a
 Family : Cyclone III
-Total logic elements : 24
-    Total combinational functions : 24
+Total logic elements : 22
+    Total combinational functions : 22
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 48
