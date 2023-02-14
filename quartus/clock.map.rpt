@@ -1,5 +1,5 @@
 Analysis & Synthesis report for clock
-Mon Feb 13 21:23:55 2023
+Tue Feb 14 14:28:23 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -39,16 +39,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Feb 13 21:23:55 2023   ;
+; Analysis & Synthesis Status        ; Successful - Tue Feb 14 14:28:23 2023   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; clock                                   ;
-; Top-level Entity Name              ; all_gates_a                             ;
+; Top-level Entity Name              ; tutorial_a                              ;
 ; Family                             ; Cyclone III                             ;
-; Total logic elements               ; 17                                      ;
-;     Total combinational functions  ; 17                                      ;
+; Total logic elements               ; 24                                      ;
+;     Total combinational functions  ; 24                                      ;
 ;     Dedicated logic registers      ; 0                                       ;
 ; Total registers                    ; 0                                       ;
-; Total pins                         ; 25                                      ;
+; Total pins                         ; 48                                      ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                       ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 ; Option                                                         ; Setting            ; Default Value      ;
 +----------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                         ; EP3C120F780I7      ;                    ;
-; Top-level entity name                                          ; all_gates_a        ; clock              ;
+; Top-level entity name                                          ; tutorial_a         ; clock              ;
 ; Family name                                                    ; Cyclone III        ; Cyclone IV GX      ;
 ; Use Generated Physical Constraints File                        ; Off                ;                    ;
 ; Use smart compilation                                          ; Off                ; Off                ;
@@ -143,33 +143,33 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+---------------------------------+
 
 
-+--------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary            ;
-+---------------------------------------------+----------+
-; Resource                                    ; Usage    ;
-+---------------------------------------------+----------+
-; Estimated Total logic elements              ; 17       ;
-;                                             ;          ;
-; Total combinational functions               ; 17       ;
-; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 3        ;
-;     -- 3 input functions                    ; 12       ;
-;     -- <=2 input functions                  ; 2        ;
-;                                             ;          ;
-; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 17       ;
-;     -- arithmetic mode                      ; 0        ;
-;                                             ;          ;
-; Total registers                             ; 0        ;
-;     -- Dedicated logic registers            ; 0        ;
-;     -- I/O registers                        ; 0        ;
-;                                             ;          ;
-; I/O pins                                    ; 25       ;
-; Maximum fan-out node                        ; out~1040 ;
-; Maximum fan-out                             ; 3        ;
-; Total fan-out                               ; 85       ;
-; Average fan-out                             ; 1.27     ;
-+---------------------------------------------+----------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 24         ;
+;                                             ;            ;
+; Total combinational functions               ; 24         ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 8          ;
+;     -- 3 input functions                    ; 2          ;
+;     -- <=2 input functions                  ; 14         ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 24         ;
+;     -- arithmetic mode                      ; 0          ;
+;                                             ;            ;
+; Total registers                             ; 0          ;
+;     -- Dedicated logic registers            ; 0          ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 48         ;
+; Maximum fan-out node                        ; b[0]~input ;
+; Maximum fan-out                             ; 5          ;
+; Total fan-out                               ; 131        ;
+; Average fan-out                             ; 1.09       ;
++---------------------------------------------+------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -177,7 +177,7 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |all_gates_a               ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |all_gates_a        ; work         ;
+; |tutorial_a                ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 48   ; 0            ; |tutorial_a         ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -203,7 +203,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Mon Feb 13 21:23:54 2023
+    Info: Processing started: Tue Feb 14 14:28:23 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off clock -c clock
 Info: Found 1 design units, including 1 entities, in source file clock.bdf
     Info: Found entity 1: clock
@@ -220,17 +220,37 @@ Info: Found 1 design units, including 1 entities, in source file adder32_1.bdf
 Info: Found 2 design units, including 2 entities, in source file Verilog1.v
     Info: Found entity 1: combo
     Info: Found entity 2: all_gates
-Info: Found 1 design units, including 1 entities, in source file adder32_2.v
-    Info: Found entity 1: all_gates_a
-Info: Elaborating entity "all_gates_a" for the top level hierarchy
-Info: Implemented 42 device resources after synthesis - the final resource count might be different
-    Info: Implemented 17 input pins
-    Info: Implemented 8 output pins
-    Info: Implemented 17 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 230 megabytes
-    Info: Processing ended: Mon Feb 13 21:23:55 2023
-    Info: Elapsed time: 00:00:01
+Warning: Entity "dff" will be ignored because it conflicts with Quartus II primitive name
+Info: Found 4 design units, including 4 entities, in source file adder32_2.v
+    Info: Found entity 1: adder_b
+    Info: Found entity 2: adder
+    Info: Found entity 3: tutorial_a
+Info: Found 1 design units, including 1 entities, in source file modules.v
+    Info: Found entity 1: counter
+Info: Elaborating entity "tutorial_a" for the top level hierarchy
+Warning (10034): Output port "d[7]" at adder32_2.v(326) has no driver
+Warning (10034): Output port "d[6]" at adder32_2.v(326) has no driver
+Warning (10034): Output port "d[5]" at adder32_2.v(326) has no driver
+Warning (10034): Output port "d[2]" at adder32_2.v(326) has no driver
+Warning (10034): Output port "f[7]" at adder32_2.v(328) has no driver
+Warning (10034): Output port "f[6]" at adder32_2.v(328) has no driver
+Warning (10034): Output port "f[5]" at adder32_2.v(328) has no driver
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "d[2]" is stuck at GND
+    Warning (13410): Pin "d[5]" is stuck at GND
+    Warning (13410): Pin "d[6]" is stuck at GND
+    Warning (13410): Pin "d[7]" is stuck at GND
+    Warning (13410): Pin "f[5]" is stuck at GND
+    Warning (13410): Pin "f[6]" is stuck at GND
+    Warning (13410): Pin "f[7]" is stuck at GND
+Info: Implemented 72 device resources after synthesis - the final resource count might be different
+    Info: Implemented 24 input pins
+    Info: Implemented 24 output pins
+    Info: Implemented 24 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 231 megabytes
+    Info: Processing ended: Tue Feb 14 14:28:23 2023
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

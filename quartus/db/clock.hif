@@ -90,7 +90,24 @@ AUTO
 
 # end
 # entity
-all_gates_a
+clock
+# storage
+db|clock.(5).cnf
+db|clock.(5).cnf
+# case_insensitive
+# source_file
+clock.bdf
+3b773eb63a47da82684de72ce7bb8bc
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+tutorial_a
 # storage
 db|clock.(0).cnf
 db|clock.(0).cnf
@@ -101,7 +118,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-5fa4326e2804998e7696a11e44f4e82
+4e639446acf78a35816ccd6078f8ad9
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
