@@ -1,5 +1,5 @@
 Analysis & Synthesis report for clock
-Tue Feb 14 16:47:59 2023
+Thu Feb 16 00:09:08 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -13,8 +13,21 @@ Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
   7. General Register Statistics
-  8. Parameter Settings for User Entity Instance: ma123:ma1ssdad
-  9. Analysis & Synthesis Messages
+  8. Parameter Settings for User Entity Instance: Top-level Entity: |adder_b
+  9. Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[3].add_submodule_a
+ 10. Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[4].add_submodule_a
+ 11. Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[5].add_submodule_a
+ 12. Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[6].add_submodule_a
+ 13. Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[7].add_submodule_a
+ 14. Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[8].add_submodule_a
+ 15. Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[9].add_submodule_a
+ 16. Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[10].add_submodule_a
+ 17. Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[11].add_submodule_a
+ 18. Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[12].add_submodule_a
+ 19. Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[13].add_submodule_a
+ 20. Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[14].add_submodule_a
+ 21. Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[15].add_submodule_a
+ 22. Analysis & Synthesis Messages
 
 
 
@@ -40,16 +53,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 14 16:47:59 2023   ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb 16 00:09:08 2023   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; clock                                   ;
-; Top-level Entity Name              ; tutorial_a                              ;
+; Top-level Entity Name              ; adder_b                                 ;
 ; Family                             ; Cyclone III                             ;
-; Total logic elements               ; 22                                      ;
-;     Total combinational functions  ; 22                                      ;
+; Total logic elements               ; 57                                      ;
+;     Total combinational functions  ; 57                                      ;
 ;     Dedicated logic registers      ; 0                                       ;
 ; Total registers                    ; 0                                       ;
-; Total pins                         ; 48                                      ;
+; Total pins                         ; 49                                      ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                       ;
@@ -63,7 +76,7 @@ applicable agreement for further details.
 ; Option                                                         ; Setting            ; Default Value      ;
 +----------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                         ; EP3C120F780I7      ;                    ;
-; Top-level entity name                                          ; tutorial_a         ; clock              ;
+; Top-level entity name                                          ; adder_b            ; clock              ;
 ; Family name                                                    ; Cyclone III        ; Cyclone IV GX      ;
 ; Use Generated Physical Constraints File                        ; Off                ;                    ;
 ; Use smart compilation                                          ; Off                ; Off                ;
@@ -144,43 +157,43 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+---------------------------------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimated Total logic elements              ; 22         ;
-;                                             ;            ;
-; Total combinational functions               ; 22         ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 8          ;
-;     -- 3 input functions                    ; 2          ;
-;     -- <=2 input functions                  ; 12         ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 22         ;
-;     -- arithmetic mode                      ; 0          ;
-;                                             ;            ;
-; Total registers                             ; 0          ;
-;     -- Dedicated logic registers            ; 0          ;
-;     -- I/O registers                        ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 48         ;
-; Maximum fan-out node                        ; b[0]~input ;
-; Maximum fan-out                             ; 6          ;
-; Total fan-out                               ; 125        ;
-; Average fan-out                             ; 1.06       ;
-+---------------------------------------------+------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 57          ;
+;                                             ;             ;
+; Total combinational functions               ; 57          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 27          ;
+;     -- 3 input functions                    ; 23          ;
+;     -- <=2 input functions                  ; 7           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 57          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 49          ;
+; Maximum fan-out node                        ; a[12]~input ;
+; Maximum fan-out                             ; 7           ;
+; Total fan-out                               ; 256         ;
+; Average fan-out                             ; 1.65        ;
++---------------------------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
-; |tutorial_a                ; 22 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 48   ; 0            ; |tutorial_a                ; work         ;
-;    |ma123:ma1ssdad|        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |tutorial_a|ma123:ma1ssdad ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                      ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Library Name ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
+; |adder_b                                            ; 57 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 49   ; 0            ; |adder_b                                                ; work         ;
+;    |add_submodule_a:ASSIGN_GEN[15].add_submodule_a| ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a ; work         ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -199,14 +212,156 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ma123:ma1ssdad ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; n              ; 7     ; Signed Integer                     ;
-; k              ; 5     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |adder_b ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; n_bit          ; 15    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[3].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; n              ; 3     ; Signed Integer                                                    ;
+; k              ; 0     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[4].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                    ;
+; k              ; 0     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[5].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; n              ; 5     ; Signed Integer                                                    ;
+; k              ; 0     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[6].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; n              ; 6     ; Signed Integer                                                    ;
+; k              ; 0     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[7].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; n              ; 7     ; Signed Integer                                                    ;
+; k              ; 0     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[8].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                    ;
+; k              ; 0     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[9].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; n              ; 9     ; Signed Integer                                                    ;
+; k              ; 0     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[10].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; n              ; 10    ; Signed Integer                                                     ;
+; k              ; 0     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[11].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; n              ; 11    ; Signed Integer                                                     ;
+; k              ; 0     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[12].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; n              ; 12    ; Signed Integer                                                     ;
+; k              ; 0     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[13].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; n              ; 13    ; Signed Integer                                                     ;
+; k              ; 0     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[14].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; n              ; 14    ; Signed Integer                                                     ;
+; k              ; 0     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: add_submodule_a:ASSIGN_GEN[15].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; n              ; 15    ; Signed Integer                                                     ;
+; k              ; 0     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -216,7 +371,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Tue Feb 14 16:47:59 2023
+    Info: Processing started: Thu Feb 16 00:09:07 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off clock -c clock
 Info: Found 1 design units, including 1 entities, in source file clock.bdf
     Info: Found entity 1: clock
@@ -234,42 +389,36 @@ Info: Found 2 design units, including 2 entities, in source file Verilog1.v
     Info: Found entity 1: combo
     Info: Found entity 2: all_gates
 Warning: Entity "dff" will be ignored because it conflicts with Quartus II primitive name
-Info: Found 5 design units, including 5 entities, in source file adder32_2.v
+Info: Found 6 design units, including 6 entities, in source file adder32_2.v
     Info: Found entity 1: adder_b
-    Info: Found entity 2: ma123
-    Info: Found entity 3: tutorial_a
-    Info: Found entity 4: adder
+    Info: Found entity 2: add_submodule_a
+    Info: Found entity 3: ma123
+    Info: Found entity 4: tutorial_a
+    Info: Found entity 5: adder
 Info: Found 1 design units, including 1 entities, in source file modules.v
     Info: Found entity 1: counter
-Info: Elaborating entity "tutorial_a" for the top level hierarchy
-Warning (10034): Output port "d[7]" at adder32_2.v(107) has no driver
-Warning (10034): Output port "d[6]" at adder32_2.v(107) has no driver
-Warning (10034): Output port "d[5]" at adder32_2.v(107) has no driver
-Warning (10034): Output port "d[2]" at adder32_2.v(107) has no driver
-Warning (10034): Output port "f[7]" at adder32_2.v(109) has no driver
-Warning (10034): Output port "f[6]" at adder32_2.v(109) has no driver
-Warning (10034): Output port "f[5]" at adder32_2.v(109) has no driver
-Info: Elaborating entity "ma123" for hierarchy "ma123:ma1ssdad"
-Warning (10034): Output port "cc[7]" at adder32_2.v(98) has no driver
-Warning (10034): Output port "cc[6]" at adder32_2.v(98) has no driver
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "d[2]" is stuck at GND
-    Warning (13410): Pin "d[5]" is stuck at GND
-    Warning (13410): Pin "d[6]" is stuck at GND
-    Warning (13410): Pin "d[7]" is stuck at GND
-    Warning (13410): Pin "e[6]" is stuck at GND
-    Warning (13410): Pin "e[7]" is stuck at GND
-    Warning (13410): Pin "f[5]" is stuck at GND
-    Warning (13410): Pin "f[6]" is stuck at GND
-    Warning (13410): Pin "f[7]" is stuck at GND
-Info: Implemented 70 device resources after synthesis - the final resource count might be different
-    Info: Implemented 24 input pins
-    Info: Implemented 24 output pins
-    Info: Implemented 22 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 231 megabytes
-    Info: Processing ended: Tue Feb 14 16:47:59 2023
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+Info: Elaborating entity "adder_b" for the top level hierarchy
+Info: Elaborating entity "add_submodule_a" for hierarchy "add_submodule_a:ASSIGN_GEN[3].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "add_submodule_a:ASSIGN_GEN[4].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "add_submodule_a:ASSIGN_GEN[5].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "add_submodule_a:ASSIGN_GEN[6].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "add_submodule_a:ASSIGN_GEN[7].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "add_submodule_a:ASSIGN_GEN[8].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "add_submodule_a:ASSIGN_GEN[9].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "add_submodule_a:ASSIGN_GEN[10].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "add_submodule_a:ASSIGN_GEN[11].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "add_submodule_a:ASSIGN_GEN[12].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "add_submodule_a:ASSIGN_GEN[13].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "add_submodule_a:ASSIGN_GEN[14].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "add_submodule_a:ASSIGN_GEN[15].add_submodule_a"
+Info: Implemented 106 device resources after synthesis - the final resource count might be different
+    Info: Implemented 33 input pins
+    Info: Implemented 16 output pins
+    Info: Implemented 57 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 230 megabytes
+    Info: Processing ended: Thu Feb 16 00:09:08 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,5 +1,5 @@
 Assembler report for clock
-Tue Feb 14 16:48:14 2023
+Thu Feb 16 00:09:23 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -37,9 +37,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Feb 14 16:48:14 2023 ;
+; Assembler Status      ; Successful - Thu Feb 16 00:09:23 2023 ;
 ; Revision Name         ; clock                                 ;
-; Top-level Entity Name ; tutorial_a                            ;
+; Top-level Entity Name ; adder_b                               ;
 ; Family                ; Cyclone III                           ;
 ; Device                ; EP3C120F780I7                         ;
 +-----------------------+---------------------------------------+
@@ -86,8 +86,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                ;
 +----------------+----------------------------------------+
 ; Device         ; EP3C120F780I7                          ;
-; JTAG usercode  ; 0x00566F0F                             ;
-; Checksum       ; 0x00566F0F                             ;
+; JTAG usercode  ; 0x0056C92C                             ;
+; Checksum       ; 0x0056C92C                             ;
 +----------------+----------------------------------------+
 
 
@@ -97,13 +97,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Tue Feb 14 16:48:10 2023
+    Info: Processing started: Thu Feb 16 00:09:19 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off clock -c clock
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 442 megabytes
-    Info: Processing ended: Tue Feb 14 16:48:14 2023
+    Info: Peak virtual memory: 441 megabytes
+    Info: Processing ended: Thu Feb 16 00:09:23 2023
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 

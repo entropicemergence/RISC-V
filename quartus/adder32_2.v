@@ -1,92 +1,71 @@
 
     
     
-    
-	module adder_b (a, b, out,car); 
-		input [7:0]a;
-		input [7:0]b;
+	module adder_b #( parameter n_bit=15 )
+		(a, b, out,car); 
+		input [n_bit:0]a;
+		input [n_bit:0]b;
 		input car;
-		output [7:0]out;
+		output [n_bit:0]out;
 		
-		wire [16:0]bus1;
-		wire [7:0]carw;
+		wire [n_bit:0]bus1;
+		wire [n_bit:0]bus2;
+		wire [n_bit:0]carw;
 		
-		assign bus1[7:0]=a[7:0]&b[7:0];
-		assign bus1[15:8]=a[7:0] | b[7:0];
-
-		assign bus1[16] = car;
+		assign bus1[n_bit:0]=a[n_bit:0] & b[n_bit:0];
+		assign bus2[n_bit:0]=a[n_bit:0] | b[n_bit:0];
 		
-
 		
-		assign carw[0]=bus1[16];
+		assign carw[0]=car;
 		
 		wire a1;
-		and (a1,bus1[16],bus1[8]);
+		and (a1,car,bus2[0]);
 		assign carw[1]=a1|bus1[0];
 		
 		wire [1:0]a2;
-		and (a2[0],bus1[16],bus1[8],bus1[9]);
-		and (a2[1],bus1[0],bus1[9]);
-		
+		and (a2[0],car,bus2[0],bus2[1]);
+		and (a2[1],bus1[0],bus2[1]);
 		or (carw[2], |a2[1:0], bus1[1]);
-//		assign carw[2]=a2[0]|(a2[1])|bus1[1];
 		
-		wire [2:0]a3;
-		and (a3[0],bus1[16],bus1[8],bus1[9],bus1[10]);
-		and (a3[1],bus1[0],bus1[9],bus1[10]);
-		and (a3[2],bus1[1],bus1[10]);
+//		add_submodule_a #(.n(6),.k(0)) add_submodule_a_6 (.bus_a(bus1[5:0]), .bus_b(bus2[5:0]), .cary_1(carw[6]), .cary_2(car));
+//		add_submodule_a #(.n(7),.k(0)) add_submodule_a_7 (.bus_a(bus1[6:0]), .bus_b(bus2[6:0]), .cary_1(carw[7]), .cary_2(car));
 		
-		or (carw[3], |a3[2:0], bus1[2]);
-//		assign carw[3]=(a3[0])|(a3[1])|(a3[2])|bus1[2];
+		genvar i;
+		generate
+		for(i = 3;i < n_bit+1; i = i + 1) begin : ASSIGN_GEN
+			add_submodule_a #(.n(i),.k(0)) add_submodule_a (.bus_a(bus1[i-1:0]), .bus_b(bus2[i-1:0]), .cary_1(carw[i]), .cary_2(car));
+		end
+		endgenerate
 		
-		wire [3:0]a4;
-		and (a4[0],bus1[16],bus1[8],bus1[9],bus1[10],bus1[11]);
-		and (a4[1],bus1[0],bus1[9],bus1[10],bus1[11]);
-		and (a4[2],bus1[1],bus1[10],bus1[11]);
-		and (a4[3],bus1[2],bus1[11]);
+		assign out[n_bit:0]=(~bus1[n_bit:0] & bus2[n_bit:0])^carw[n_bit:0];
 		
-		or (carw[4], |a4[3:0], bus1[3]);
-//		assign carw[4]=(a4[0])|(a4[1])|(a4[2])|(a4[3])|(bus1[3]);
-		
-		
-		wire [4:0]a5;
-		and (a5[0],bus1[16],bus1[8],bus1[9],bus1[10],bus1[11],bus1[12]);
-		and (a5[1],bus1[0],bus1[9],bus1[10],bus1[11],bus1[12]);
-		and (a5[2],bus1[1],bus1[10],bus1[11],bus1[12]);
-		and (a5[3],bus1[2],bus1[11],bus1[12]);
-		and (a5[4],bus1[3],bus1[12]);
-		
-		or (carw[5], |a5[4:0], bus1[4]);
-//		assign carw[5]=(a5[0])|(a5[1])|(a5[2])|(a5[3])|(a5[4])|(bus1[4]);
-		
-		
-		wire [5:0]a6;
-		and (a6[0],bus1[16],bus1[8],bus1[9],bus1[10],bus1[11],bus1[12],bus1[13]);
-		and (a6[1],bus1[0],bus1[9],bus1[10],bus1[11],bus1[12],bus1[13]);
-		and (a6[2],bus1[1],bus1[10],bus1[11],bus1[12],bus1[13]);
-		and (a6[3],bus1[2],bus1[11],bus1[12],bus1[13]);
-		and (a6[4],bus1[3],bus1[12],bus1[13]);
-		and (a6[5],bus1[4],bus1[13]);
-		
-		or (carw[6], |a6[5:0], bus1[5]);
-//		assign carw[6]=(a6[0])|(a6[1])|(a6[2])|(a6[3])|(a6[4])|(a6[5])|(bus1[5]);
-		
-		wire [6:0]a7;
-		and (a7[0],bus1[16],bus1[8],bus1[9],bus1[10],bus1[11],bus1[12],bus1[13],bus1[14]);
-		and (a7[1],bus1[0],bus1[9],bus1[10],bus1[11],bus1[12],bus1[13],bus1[14]);
-		and (a7[2],bus1[1],bus1[10],bus1[11],bus1[12],bus1[13],bus1[14]);
-		and (a7[3],bus1[2],bus1[11],bus1[12],bus1[13],bus1[14]);
-		and (a7[4],bus1[3],bus1[12],bus1[13],bus1[14]);
-		and (a7[5],bus1[4],bus1[13],bus1[14]);
-		and (a7[6],bus1[5],bus1[14]);
-		
-		or (carw[7], |a7[6:0], bus1[6]);
-//		assign carw[7]=(a7[0])|(a7[1])|(a7[2])|(a7[3])|(a7[4])|(a7[5])|(a7[6])|(bus1[6]);
-		
-		assign out[7:0]=(~bus1[7:0]&bus1[15:8])^carw[7:0];
-		
-      
     endmodule 
+    
+	module add_submodule_a #(	parameter n=7,
+								parameter k=7)
+		(bus_a,bus_b,cary_1,cary_2);
+		input [n-1:0]bus_a;
+		input [n-1:0]bus_b;
+		input cary_2;
+		output cary_1;
+		
+		wire [n-1:0]a;
+		and (a[0], cary_2, &bus_b[n-1:0]);
+		and (a[n-1],bus_a[n-2],bus_b[n-1]);
+
+		genvar i;
+		generate
+		for(i = 1;i < (n-1); i = i + 1) begin : ASSIGN_GEN
+			assign a[i]= bus_a[i-1] & (&bus_b[n-1:i]);
+		end
+		endgenerate
+		
+		or (cary_1, |a[n-1:0], bus_a[n-1]);
+
+	endmodule
+
+
+
 
 //	module car_bus
 
@@ -124,10 +103,6 @@
 		end
 		endgenerate
 		
-//		ma #(.n(7)) ma1 (aa.(a[7:0]),
-//								bb.(b[7:0]),
-//								cc.(e[7:0]));
-
 		ma123 #(.n(7),.k(5)) ma1ssdad (.aa(a), 
 								.bb(b),
 								.cc(e));
