@@ -1,5 +1,5 @@
 Simulator report for clock
-Thu Feb 16 00:12:25 2023
+Fri Feb 17 19:33:52 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+---------------+
 ; Simulation Start Time       ; 0 ps          ;
 ; Simulation End Time         ; 10.0 us       ;
-; Simulation Netlist Size     ; 155 nodes     ;
-; Simulation Coverage         ;      98.71 %  ;
-; Total Number of Transitions ; 61848         ;
+; Simulation Netlist Size     ; 96 nodes      ;
+; Simulation Coverage         ;     100.00 %  ;
+; Total Number of Transitions ; 28880         ;
 ; Simulation Breakpoints      ; 0             ;
 ; Family                      ; Cyclone III   ;
 ; Device                      ; EP3C120F780I7 ;
@@ -96,198 +96,135 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      98.71 % ;
-; Total nodes checked                                 ; 155          ;
-; Total output ports checked                          ; 155          ;
-; Total output ports with complete 1/0-value coverage ; 153          ;
-; Total output ports with no 1/0-value coverage       ; 2            ;
-; Total output ports with no 1-value coverage         ; 2            ;
-; Total output ports with no 0-value coverage         ; 2            ;
+; Total coverage as a percentage                      ;     100.00 % ;
+; Total nodes checked                                 ; 96           ;
+; Total output ports checked                          ; 96           ;
+; Total output ports with complete 1/0-value coverage ; 96           ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 0            ;
+; Total output ports with no 0-value coverage         ; 0            ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                                                                                  ;
-+---------------------------------------------------------------------+---------------------------------------------------------------------+------------------+
-; Node Name                                                           ; Output Port Name                                                    ; Output Port Type ;
-+---------------------------------------------------------------------+---------------------------------------------------------------------+------------------+
-; |adder_b|out~1427                                                   ; |adder_b|out~1427                                                   ; combout          ;
-; |adder_b|carw[2]~160                                                ; |adder_b|carw[2]~160                                                ; combout          ;
-; |adder_b|out~17                                                     ; |adder_b|out~17                                                     ; combout          ;
-; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1311 ; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1311 ; combout          ;
-; |adder_b|out~18                                                     ; |adder_b|out~18                                                     ; combout          ;
-; |adder_b|out~1428                                                   ; |adder_b|out~1428                                                   ; combout          ;
-; |adder_b|out~1429                                                   ; |adder_b|out~1429                                                   ; combout          ;
-; |adder_b|out~1430                                                   ; |adder_b|out~1430                                                   ; combout          ;
-; |adder_b|out~1431                                                   ; |adder_b|out~1431                                                   ; combout          ;
-; |adder_b|out~1432                                                   ; |adder_b|out~1432                                                   ; combout          ;
-; |adder_b|out~1433                                                   ; |adder_b|out~1433                                                   ; combout          ;
-; |adder_b|out~1434                                                   ; |adder_b|out~1434                                                   ; combout          ;
-; |adder_b|out~1435                                                   ; |adder_b|out~1435                                                   ; combout          ;
-; |adder_b|out~1436                                                   ; |adder_b|out~1436                                                   ; combout          ;
-; |adder_b|out~1437                                                   ; |adder_b|out~1437                                                   ; combout          ;
-; |adder_b|out~1438                                                   ; |adder_b|out~1438                                                   ; combout          ;
-; |adder_b|out~1439                                                   ; |adder_b|out~1439                                                   ; combout          ;
-; |adder_b|out~1440                                                   ; |adder_b|out~1440                                                   ; combout          ;
-; |adder_b|out~1441                                                   ; |adder_b|out~1441                                                   ; combout          ;
-; |adder_b|out~1442                                                   ; |adder_b|out~1442                                                   ; combout          ;
-; |adder_b|bus1[3]~158                                                ; |adder_b|bus1[3]~158                                                ; combout          ;
-; |adder_b|bus2[3]                                                    ; |adder_b|bus2[3]                                                    ; combout          ;
-; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1312 ; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1312 ; combout          ;
-; |adder_b|out~1443                                                   ; |adder_b|out~1443                                                   ; combout          ;
-; |adder_b|out~1444                                                   ; |adder_b|out~1444                                                   ; combout          ;
-; |adder_b|out~1445                                                   ; |adder_b|out~1445                                                   ; combout          ;
-; |adder_b|out~1446                                                   ; |adder_b|out~1446                                                   ; combout          ;
-; |adder_b|out~1447                                                   ; |adder_b|out~1447                                                   ; combout          ;
-; |adder_b|out~1448                                                   ; |adder_b|out~1448                                                   ; combout          ;
-; |adder_b|out~1449                                                   ; |adder_b|out~1449                                                   ; combout          ;
-; |adder_b|out~1450                                                   ; |adder_b|out~1450                                                   ; combout          ;
-; |adder_b|out~1451                                                   ; |adder_b|out~1451                                                   ; combout          ;
-; |adder_b|out~1452                                                   ; |adder_b|out~1452                                                   ; combout          ;
-; |adder_b|bus1[10]~159                                               ; |adder_b|bus1[10]~159                                               ; combout          ;
-; |adder_b|out~1453                                                   ; |adder_b|out~1453                                                   ; combout          ;
-; |adder_b|out~1454                                                   ; |adder_b|out~1454                                                   ; combout          ;
-; |adder_b|out~1455                                                   ; |adder_b|out~1455                                                   ; combout          ;
-; |adder_b|bus2[12]                                                   ; |adder_b|bus2[12]                                                   ; combout          ;
-; |adder_b|out~1456                                                   ; |adder_b|out~1456                                                   ; combout          ;
-; |adder_b|out~1457                                                   ; |adder_b|out~1457                                                   ; combout          ;
-; |adder_b|bus1[12]~160                                               ; |adder_b|bus1[12]~160                                               ; combout          ;
-; |adder_b|out~1458                                                   ; |adder_b|out~1458                                                   ; combout          ;
-; |adder_b|out~1459                                                   ; |adder_b|out~1459                                                   ; combout          ;
-; |adder_b|out~1460                                                   ; |adder_b|out~1460                                                   ; combout          ;
-; |adder_b|out~1461                                                   ; |adder_b|out~1461                                                   ; combout          ;
-; |adder_b|out~1462                                                   ; |adder_b|out~1462                                                   ; combout          ;
-; |adder_b|out~1463                                                   ; |adder_b|out~1463                                                   ; combout          ;
-; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1313 ; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1313 ; combout          ;
-; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1314 ; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1314 ; combout          ;
-; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1315 ; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1315 ; combout          ;
-; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1316 ; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1316 ; combout          ;
-; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1317 ; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1317 ; combout          ;
-; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1318 ; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1318 ; combout          ;
-; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|a[14]~93    ; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|a[14]~93    ; combout          ;
-; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1319 ; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1319 ; combout          ;
-; |adder_b|out~31                                                     ; |adder_b|out~31                                                     ; combout          ;
-; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1320 ; |adder_b|add_submodule_a:ASSIGN_GEN[15].add_submodule_a|cary_1~1320 ; combout          ;
-; |adder_b|out[0]~output                                              ; |adder_b|out[0]~output                                              ; o                ;
-; |adder_b|out[0]                                                     ; |adder_b|out[0]                                                     ; padout           ;
-; |adder_b|out[1]~output                                              ; |adder_b|out[1]~output                                              ; o                ;
-; |adder_b|out[1]                                                     ; |adder_b|out[1]                                                     ; padout           ;
-; |adder_b|out[2]~output                                              ; |adder_b|out[2]~output                                              ; o                ;
-; |adder_b|out[2]                                                     ; |adder_b|out[2]                                                     ; padout           ;
-; |adder_b|out[3]~output                                              ; |adder_b|out[3]~output                                              ; o                ;
-; |adder_b|out[3]                                                     ; |adder_b|out[3]                                                     ; padout           ;
-; |adder_b|out[4]~output                                              ; |adder_b|out[4]~output                                              ; o                ;
-; |adder_b|out[4]                                                     ; |adder_b|out[4]                                                     ; padout           ;
-; |adder_b|out[5]~output                                              ; |adder_b|out[5]~output                                              ; o                ;
-; |adder_b|out[5]                                                     ; |adder_b|out[5]                                                     ; padout           ;
-; |adder_b|out[6]~output                                              ; |adder_b|out[6]~output                                              ; o                ;
-; |adder_b|out[6]                                                     ; |adder_b|out[6]                                                     ; padout           ;
-; |adder_b|out[7]~output                                              ; |adder_b|out[7]~output                                              ; o                ;
-; |adder_b|out[7]                                                     ; |adder_b|out[7]                                                     ; padout           ;
-; |adder_b|out[8]~output                                              ; |adder_b|out[8]~output                                              ; o                ;
-; |adder_b|out[8]                                                     ; |adder_b|out[8]                                                     ; padout           ;
-; |adder_b|out[9]~output                                              ; |adder_b|out[9]~output                                              ; o                ;
-; |adder_b|out[9]                                                     ; |adder_b|out[9]                                                     ; padout           ;
-; |adder_b|out[10]~output                                             ; |adder_b|out[10]~output                                             ; o                ;
-; |adder_b|out[10]                                                    ; |adder_b|out[10]                                                    ; padout           ;
-; |adder_b|out[11]~output                                             ; |adder_b|out[11]~output                                             ; o                ;
-; |adder_b|out[11]                                                    ; |adder_b|out[11]                                                    ; padout           ;
-; |adder_b|out[12]~output                                             ; |adder_b|out[12]~output                                             ; o                ;
-; |adder_b|out[12]                                                    ; |adder_b|out[12]                                                    ; padout           ;
-; |adder_b|out[13]~output                                             ; |adder_b|out[13]~output                                             ; o                ;
-; |adder_b|out[13]                                                    ; |adder_b|out[13]                                                    ; padout           ;
-; |adder_b|out[14]~output                                             ; |adder_b|out[14]~output                                             ; o                ;
-; |adder_b|out[14]                                                    ; |adder_b|out[14]                                                    ; padout           ;
-; |adder_b|out[15]~output                                             ; |adder_b|out[15]~output                                             ; o                ;
-; |adder_b|out[15]                                                    ; |adder_b|out[15]                                                    ; padout           ;
-; |adder_b|a[0]~input                                                 ; |adder_b|a[0]~input                                                 ; o                ;
-; |adder_b|a[0]                                                       ; |adder_b|a[0]                                                       ; padout           ;
-; |adder_b|b[0]~input                                                 ; |adder_b|b[0]~input                                                 ; o                ;
-; |adder_b|b[0]                                                       ; |adder_b|b[0]                                                       ; padout           ;
-; |adder_b|a[1]~input                                                 ; |adder_b|a[1]~input                                                 ; o                ;
-; |adder_b|a[1]                                                       ; |adder_b|a[1]                                                       ; padout           ;
-; |adder_b|b[1]~input                                                 ; |adder_b|b[1]~input                                                 ; o                ;
-; |adder_b|b[1]                                                       ; |adder_b|b[1]                                                       ; padout           ;
-; |adder_b|a[2]~input                                                 ; |adder_b|a[2]~input                                                 ; o                ;
-; |adder_b|a[2]                                                       ; |adder_b|a[2]                                                       ; padout           ;
-; |adder_b|b[2]~input                                                 ; |adder_b|b[2]~input                                                 ; o                ;
-; |adder_b|b[2]                                                       ; |adder_b|b[2]                                                       ; padout           ;
-; |adder_b|a[3]~input                                                 ; |adder_b|a[3]~input                                                 ; o                ;
-; |adder_b|a[3]                                                       ; |adder_b|a[3]                                                       ; padout           ;
-; |adder_b|b[3]~input                                                 ; |adder_b|b[3]~input                                                 ; o                ;
-; |adder_b|b[3]                                                       ; |adder_b|b[3]                                                       ; padout           ;
-; |adder_b|a[4]~input                                                 ; |adder_b|a[4]~input                                                 ; o                ;
-; |adder_b|a[4]                                                       ; |adder_b|a[4]                                                       ; padout           ;
-; |adder_b|b[4]~input                                                 ; |adder_b|b[4]~input                                                 ; o                ;
-; |adder_b|b[4]                                                       ; |adder_b|b[4]                                                       ; padout           ;
-; |adder_b|a[5]~input                                                 ; |adder_b|a[5]~input                                                 ; o                ;
-; |adder_b|a[5]                                                       ; |adder_b|a[5]                                                       ; padout           ;
-; |adder_b|b[5]~input                                                 ; |adder_b|b[5]~input                                                 ; o                ;
-; |adder_b|b[5]                                                       ; |adder_b|b[5]                                                       ; padout           ;
-; |adder_b|a[6]~input                                                 ; |adder_b|a[6]~input                                                 ; o                ;
-; |adder_b|a[6]                                                       ; |adder_b|a[6]                                                       ; padout           ;
-; |adder_b|b[6]~input                                                 ; |adder_b|b[6]~input                                                 ; o                ;
-; |adder_b|b[6]                                                       ; |adder_b|b[6]                                                       ; padout           ;
-; |adder_b|a[7]~input                                                 ; |adder_b|a[7]~input                                                 ; o                ;
-; |adder_b|a[7]                                                       ; |adder_b|a[7]                                                       ; padout           ;
-; |adder_b|b[7]~input                                                 ; |adder_b|b[7]~input                                                 ; o                ;
-; |adder_b|b[7]                                                       ; |adder_b|b[7]                                                       ; padout           ;
-; |adder_b|a[8]~input                                                 ; |adder_b|a[8]~input                                                 ; o                ;
-; |adder_b|a[8]                                                       ; |adder_b|a[8]                                                       ; padout           ;
-; |adder_b|b[8]~input                                                 ; |adder_b|b[8]~input                                                 ; o                ;
-; |adder_b|b[8]                                                       ; |adder_b|b[8]                                                       ; padout           ;
-; |adder_b|a[9]~input                                                 ; |adder_b|a[9]~input                                                 ; o                ;
-; |adder_b|a[9]                                                       ; |adder_b|a[9]                                                       ; padout           ;
-; |adder_b|b[9]~input                                                 ; |adder_b|b[9]~input                                                 ; o                ;
-; |adder_b|b[9]                                                       ; |adder_b|b[9]                                                       ; padout           ;
-; |adder_b|a[10]~input                                                ; |adder_b|a[10]~input                                                ; o                ;
-; |adder_b|a[10]                                                      ; |adder_b|a[10]                                                      ; padout           ;
-; |adder_b|b[10]~input                                                ; |adder_b|b[10]~input                                                ; o                ;
-; |adder_b|b[10]                                                      ; |adder_b|b[10]                                                      ; padout           ;
-; |adder_b|a[11]~input                                                ; |adder_b|a[11]~input                                                ; o                ;
-; |adder_b|a[11]                                                      ; |adder_b|a[11]                                                      ; padout           ;
-; |adder_b|b[11]~input                                                ; |adder_b|b[11]~input                                                ; o                ;
-; |adder_b|b[11]                                                      ; |adder_b|b[11]                                                      ; padout           ;
-; |adder_b|a[12]~input                                                ; |adder_b|a[12]~input                                                ; o                ;
-; |adder_b|a[12]                                                      ; |adder_b|a[12]                                                      ; padout           ;
-; |adder_b|b[12]~input                                                ; |adder_b|b[12]~input                                                ; o                ;
-; |adder_b|b[12]                                                      ; |adder_b|b[12]                                                      ; padout           ;
-; |adder_b|a[13]~input                                                ; |adder_b|a[13]~input                                                ; o                ;
-; |adder_b|a[13]                                                      ; |adder_b|a[13]                                                      ; padout           ;
-; |adder_b|b[13]~input                                                ; |adder_b|b[13]~input                                                ; o                ;
-; |adder_b|b[13]                                                      ; |adder_b|b[13]                                                      ; padout           ;
-; |adder_b|a[14]~input                                                ; |adder_b|a[14]~input                                                ; o                ;
-; |adder_b|a[14]                                                      ; |adder_b|a[14]                                                      ; padout           ;
-; |adder_b|b[14]~input                                                ; |adder_b|b[14]~input                                                ; o                ;
-; |adder_b|b[14]                                                      ; |adder_b|b[14]                                                      ; padout           ;
-; |adder_b|a[15]~input                                                ; |adder_b|a[15]~input                                                ; o                ;
-; |adder_b|a[15]                                                      ; |adder_b|a[15]                                                      ; padout           ;
-; |adder_b|b[15]~input                                                ; |adder_b|b[15]~input                                                ; o                ;
-; |adder_b|b[15]                                                      ; |adder_b|b[15]                                                      ; padout           ;
-+---------------------------------------------------------------------+---------------------------------------------------------------------+------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                            ;
++------------------------------------------------------------------+------------------------------------------------------------------+------------------+
+; Node Name                                                        ; Output Port Name                                                 ; Output Port Type ;
++------------------------------------------------------------------+------------------------------------------------------------------+------------------+
+; |full_adder|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out~16  ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~16  ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~16  ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out~16  ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out~16  ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[5].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[5].fa_single|fa_out~16  ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[6].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[6].fa_single|fa_out~16  ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[7].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[7].fa_single|fa_out~16  ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~78 ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~78 ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~78 ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[3].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[3].fa_single|fa_cary~78 ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[4].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[4].fa_single|fa_cary~78 ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[5].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[5].fa_single|fa_cary~78 ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[6].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[6].fa_single|fa_cary~78 ; combout          ;
+; |full_adder|full_adder_single:ASSIGN_GEN[7].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[7].fa_single|fa_cary~78 ; combout          ;
+; |full_adder|out[0]~output                                        ; |full_adder|out[0]~output                                        ; o                ;
+; |full_adder|out[0]                                               ; |full_adder|out[0]                                               ; padout           ;
+; |full_adder|out[1]~output                                        ; |full_adder|out[1]~output                                        ; o                ;
+; |full_adder|out[1]                                               ; |full_adder|out[1]                                               ; padout           ;
+; |full_adder|out[2]~output                                        ; |full_adder|out[2]~output                                        ; o                ;
+; |full_adder|out[2]                                               ; |full_adder|out[2]                                               ; padout           ;
+; |full_adder|out[3]~output                                        ; |full_adder|out[3]~output                                        ; o                ;
+; |full_adder|out[3]                                               ; |full_adder|out[3]                                               ; padout           ;
+; |full_adder|out[4]~output                                        ; |full_adder|out[4]~output                                        ; o                ;
+; |full_adder|out[4]                                               ; |full_adder|out[4]                                               ; padout           ;
+; |full_adder|out[5]~output                                        ; |full_adder|out[5]~output                                        ; o                ;
+; |full_adder|out[5]                                               ; |full_adder|out[5]                                               ; padout           ;
+; |full_adder|out[6]~output                                        ; |full_adder|out[6]~output                                        ; o                ;
+; |full_adder|out[6]                                               ; |full_adder|out[6]                                               ; padout           ;
+; |full_adder|out[7]~output                                        ; |full_adder|out[7]~output                                        ; o                ;
+; |full_adder|out[7]                                               ; |full_adder|out[7]                                               ; padout           ;
+; |full_adder|cary_out[0]~output                                   ; |full_adder|cary_out[0]~output                                   ; o                ;
+; |full_adder|cary_out[0]                                          ; |full_adder|cary_out[0]                                          ; padout           ;
+; |full_adder|cary_out[1]~output                                   ; |full_adder|cary_out[1]~output                                   ; o                ;
+; |full_adder|cary_out[1]                                          ; |full_adder|cary_out[1]                                          ; padout           ;
+; |full_adder|cary_out[2]~output                                   ; |full_adder|cary_out[2]~output                                   ; o                ;
+; |full_adder|cary_out[2]                                          ; |full_adder|cary_out[2]                                          ; padout           ;
+; |full_adder|cary_out[3]~output                                   ; |full_adder|cary_out[3]~output                                   ; o                ;
+; |full_adder|cary_out[3]                                          ; |full_adder|cary_out[3]                                          ; padout           ;
+; |full_adder|cary_out[4]~output                                   ; |full_adder|cary_out[4]~output                                   ; o                ;
+; |full_adder|cary_out[4]                                          ; |full_adder|cary_out[4]                                          ; padout           ;
+; |full_adder|cary_out[5]~output                                   ; |full_adder|cary_out[5]~output                                   ; o                ;
+; |full_adder|cary_out[5]                                          ; |full_adder|cary_out[5]                                          ; padout           ;
+; |full_adder|cary_out[6]~output                                   ; |full_adder|cary_out[6]~output                                   ; o                ;
+; |full_adder|cary_out[6]                                          ; |full_adder|cary_out[6]                                          ; padout           ;
+; |full_adder|cary_out[7]~output                                   ; |full_adder|cary_out[7]~output                                   ; o                ;
+; |full_adder|cary_out[7]                                          ; |full_adder|cary_out[7]                                          ; padout           ;
+; |full_adder|z[0]~input                                           ; |full_adder|z[0]~input                                           ; o                ;
+; |full_adder|z[0]                                                 ; |full_adder|z[0]                                                 ; padout           ;
+; |full_adder|x[0]~input                                           ; |full_adder|x[0]~input                                           ; o                ;
+; |full_adder|x[0]                                                 ; |full_adder|x[0]                                                 ; padout           ;
+; |full_adder|y[0]~input                                           ; |full_adder|y[0]~input                                           ; o                ;
+; |full_adder|y[0]                                                 ; |full_adder|y[0]                                                 ; padout           ;
+; |full_adder|z[1]~input                                           ; |full_adder|z[1]~input                                           ; o                ;
+; |full_adder|z[1]                                                 ; |full_adder|z[1]                                                 ; padout           ;
+; |full_adder|x[1]~input                                           ; |full_adder|x[1]~input                                           ; o                ;
+; |full_adder|x[1]                                                 ; |full_adder|x[1]                                                 ; padout           ;
+; |full_adder|y[1]~input                                           ; |full_adder|y[1]~input                                           ; o                ;
+; |full_adder|y[1]                                                 ; |full_adder|y[1]                                                 ; padout           ;
+; |full_adder|z[2]~input                                           ; |full_adder|z[2]~input                                           ; o                ;
+; |full_adder|z[2]                                                 ; |full_adder|z[2]                                                 ; padout           ;
+; |full_adder|x[2]~input                                           ; |full_adder|x[2]~input                                           ; o                ;
+; |full_adder|x[2]                                                 ; |full_adder|x[2]                                                 ; padout           ;
+; |full_adder|y[2]~input                                           ; |full_adder|y[2]~input                                           ; o                ;
+; |full_adder|y[2]                                                 ; |full_adder|y[2]                                                 ; padout           ;
+; |full_adder|z[3]~input                                           ; |full_adder|z[3]~input                                           ; o                ;
+; |full_adder|z[3]                                                 ; |full_adder|z[3]                                                 ; padout           ;
+; |full_adder|x[3]~input                                           ; |full_adder|x[3]~input                                           ; o                ;
+; |full_adder|x[3]                                                 ; |full_adder|x[3]                                                 ; padout           ;
+; |full_adder|y[3]~input                                           ; |full_adder|y[3]~input                                           ; o                ;
+; |full_adder|y[3]                                                 ; |full_adder|y[3]                                                 ; padout           ;
+; |full_adder|z[4]~input                                           ; |full_adder|z[4]~input                                           ; o                ;
+; |full_adder|z[4]                                                 ; |full_adder|z[4]                                                 ; padout           ;
+; |full_adder|x[4]~input                                           ; |full_adder|x[4]~input                                           ; o                ;
+; |full_adder|x[4]                                                 ; |full_adder|x[4]                                                 ; padout           ;
+; |full_adder|y[4]~input                                           ; |full_adder|y[4]~input                                           ; o                ;
+; |full_adder|y[4]                                                 ; |full_adder|y[4]                                                 ; padout           ;
+; |full_adder|z[5]~input                                           ; |full_adder|z[5]~input                                           ; o                ;
+; |full_adder|z[5]                                                 ; |full_adder|z[5]                                                 ; padout           ;
+; |full_adder|x[5]~input                                           ; |full_adder|x[5]~input                                           ; o                ;
+; |full_adder|x[5]                                                 ; |full_adder|x[5]                                                 ; padout           ;
+; |full_adder|y[5]~input                                           ; |full_adder|y[5]~input                                           ; o                ;
+; |full_adder|y[5]                                                 ; |full_adder|y[5]                                                 ; padout           ;
+; |full_adder|z[6]~input                                           ; |full_adder|z[6]~input                                           ; o                ;
+; |full_adder|z[6]                                                 ; |full_adder|z[6]                                                 ; padout           ;
+; |full_adder|x[6]~input                                           ; |full_adder|x[6]~input                                           ; o                ;
+; |full_adder|x[6]                                                 ; |full_adder|x[6]                                                 ; padout           ;
+; |full_adder|y[6]~input                                           ; |full_adder|y[6]~input                                           ; o                ;
+; |full_adder|y[6]                                                 ; |full_adder|y[6]                                                 ; padout           ;
+; |full_adder|z[7]~input                                           ; |full_adder|z[7]~input                                           ; o                ;
+; |full_adder|z[7]                                                 ; |full_adder|z[7]                                                 ; padout           ;
+; |full_adder|x[7]~input                                           ; |full_adder|x[7]~input                                           ; o                ;
+; |full_adder|x[7]                                                 ; |full_adder|x[7]                                                 ; padout           ;
+; |full_adder|y[7]~input                                           ; |full_adder|y[7]~input                                           ; o                ;
+; |full_adder|y[7]                                                 ; |full_adder|y[7]                                                 ; padout           ;
++------------------------------------------------------------------+------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+------------------------------------------------------------+
-; Missing 1-Value Coverage                                   ;
-+--------------------+--------------------+------------------+
-; Node Name          ; Output Port Name   ; Output Port Type ;
-+--------------------+--------------------+------------------+
-; |adder_b|car~input ; |adder_b|car~input ; o                ;
-; |adder_b|car       ; |adder_b|car       ; padout           ;
-+--------------------+--------------------+------------------+
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+------------------------------------------------------------+
-; Missing 0-Value Coverage                                   ;
-+--------------------+--------------------+------------------+
-; Node Name          ; Output Port Name   ; Output Port Type ;
-+--------------------+--------------------+------------------+
-; |adder_b|car~input ; |adder_b|car~input ; o                ;
-; |adder_b|car       ; |adder_b|car       ; padout           ;
-+--------------------+--------------------+------------------+
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
 
 
 +---------------------+
@@ -303,17 +240,17 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Thu Feb 16 00:12:25 2023
+    Info: Processing started: Fri Feb 17 19:33:52 2023
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off clock -c clock
 Info: Using vector source file "D:/SE/RISCV/quartus/clock.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      98.71 %
-Info: Number of transitions in simulation is 61848
+Info: Simulation coverage is     100.00 %
+Info: Number of transitions in simulation is 28880
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 162 megabytes
-    Info: Processing ended: Thu Feb 16 00:12:25 2023
+    Info: Peak virtual memory: 163 megabytes
+    Info: Processing ended: Fri Feb 17 19:33:52 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

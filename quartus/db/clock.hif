@@ -109,8 +109,8 @@ AUTO
 # entity
 adder_b
 # storage
-db|clock.(0).cnf
-db|clock.(0).cnf
+db|clock.(6).cnf
+db|clock.(6).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -118,7 +118,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -142,17 +142,14 @@ n_bit
 PARAMETER_SIGNED_DEC
 DEF
 }
-# hierarchies {
-|
-}
 # macro_sequence
 
 # end
 # entity
 add_submodule_a
 # storage
-db|clock.(6).cnf
-db|clock.(6).cnf
+db|clock.(7).cnf
+db|clock.(7).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -160,7 +157,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -189,7 +186,7 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-add_submodule_a:ASSIGN_GEN[3].add_submodule_a
+adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
 }
 # macro_sequence
 
@@ -197,8 +194,8 @@ add_submodule_a:ASSIGN_GEN[3].add_submodule_a
 # entity
 add_submodule_a
 # storage
-db|clock.(7).cnf
-db|clock.(7).cnf
+db|clock.(8).cnf
+db|clock.(8).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -206,7 +203,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -235,7 +232,7 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-add_submodule_a:ASSIGN_GEN[4].add_submodule_a
+adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a
 }
 # macro_sequence
 
@@ -243,8 +240,8 @@ add_submodule_a:ASSIGN_GEN[4].add_submodule_a
 # entity
 add_submodule_a
 # storage
-db|clock.(8).cnf
-db|clock.(8).cnf
+db|clock.(9).cnf
+db|clock.(9).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -252,7 +249,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -281,7 +278,7 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-add_submodule_a:ASSIGN_GEN[5].add_submodule_a
+adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a
 }
 # macro_sequence
 
@@ -289,8 +286,8 @@ add_submodule_a:ASSIGN_GEN[5].add_submodule_a
 # entity
 add_submodule_a
 # storage
-db|clock.(9).cnf
-db|clock.(9).cnf
+db|clock.(10).cnf
+db|clock.(10).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -298,7 +295,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -327,7 +324,7 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-add_submodule_a:ASSIGN_GEN[6].add_submodule_a
+adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a
 }
 # macro_sequence
 
@@ -335,8 +332,8 @@ add_submodule_a:ASSIGN_GEN[6].add_submodule_a
 # entity
 add_submodule_a
 # storage
-db|clock.(10).cnf
-db|clock.(10).cnf
+db|clock.(11).cnf
+db|clock.(11).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -344,7 +341,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -373,7 +370,7 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-add_submodule_a:ASSIGN_GEN[7].add_submodule_a
+adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a
 }
 # macro_sequence
 
@@ -381,8 +378,8 @@ add_submodule_a:ASSIGN_GEN[7].add_submodule_a
 # entity
 add_submodule_a
 # storage
-db|clock.(11).cnf
-db|clock.(11).cnf
+db|clock.(12).cnf
+db|clock.(12).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -390,7 +387,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -419,7 +416,7 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-add_submodule_a:ASSIGN_GEN[8].add_submodule_a
+adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a
 }
 # macro_sequence
 
@@ -427,8 +424,8 @@ add_submodule_a:ASSIGN_GEN[8].add_submodule_a
 # entity
 add_submodule_a
 # storage
-db|clock.(12).cnf
-db|clock.(12).cnf
+db|clock.(13).cnf
+db|clock.(13).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -436,7 +433,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -465,7 +462,7 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-add_submodule_a:ASSIGN_GEN[9].add_submodule_a
+adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a
 }
 # macro_sequence
 
@@ -473,8 +470,8 @@ add_submodule_a:ASSIGN_GEN[9].add_submodule_a
 # entity
 add_submodule_a
 # storage
-db|clock.(13).cnf
-db|clock.(13).cnf
+db|clock.(14).cnf
+db|clock.(14).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -482,7 +479,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -511,7 +508,7 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-add_submodule_a:ASSIGN_GEN[10].add_submodule_a
+adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a
 }
 # macro_sequence
 
@@ -519,8 +516,8 @@ add_submodule_a:ASSIGN_GEN[10].add_submodule_a
 # entity
 add_submodule_a
 # storage
-db|clock.(14).cnf
-db|clock.(14).cnf
+db|clock.(15).cnf
+db|clock.(15).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -528,7 +525,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -557,7 +554,7 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-add_submodule_a:ASSIGN_GEN[11].add_submodule_a
+adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a
 }
 # macro_sequence
 
@@ -565,8 +562,8 @@ add_submodule_a:ASSIGN_GEN[11].add_submodule_a
 # entity
 add_submodule_a
 # storage
-db|clock.(15).cnf
-db|clock.(15).cnf
+db|clock.(16).cnf
+db|clock.(16).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -574,7 +571,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -603,7 +600,7 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-add_submodule_a:ASSIGN_GEN[12].add_submodule_a
+adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a
 }
 # macro_sequence
 
@@ -611,8 +608,8 @@ add_submodule_a:ASSIGN_GEN[12].add_submodule_a
 # entity
 add_submodule_a
 # storage
-db|clock.(16).cnf
-db|clock.(16).cnf
+db|clock.(17).cnf
+db|clock.(17).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -620,7 +617,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -649,7 +646,7 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-add_submodule_a:ASSIGN_GEN[13].add_submodule_a
+adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a
 }
 # macro_sequence
 
@@ -657,8 +654,8 @@ add_submodule_a:ASSIGN_GEN[13].add_submodule_a
 # entity
 add_submodule_a
 # storage
-db|clock.(17).cnf
-db|clock.(17).cnf
+db|clock.(18).cnf
+db|clock.(18).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -666,7 +663,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -695,7 +692,7 @@ PARAMETER_SIGNED_DEC
 USR
 }
 # hierarchies {
-add_submodule_a:ASSIGN_GEN[14].add_submodule_a
+adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[14].add_submodule_a
 }
 # macro_sequence
 
@@ -703,8 +700,8 @@ add_submodule_a:ASSIGN_GEN[14].add_submodule_a
 # entity
 add_submodule_a
 # storage
-db|clock.(18).cnf
-db|clock.(18).cnf
+db|clock.(19).cnf
+db|clock.(19).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -712,7 +709,7 @@ ON
 # case_sensitive
 # source_file
 adder32_2.v
-b233d821c8a9fce9c97e3f66d691e44
+3fa73263e7fcd713144bb53d7ace3147
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -740,8 +737,228 @@ k
 PARAMETER_SIGNED_DEC
 USR
 }
+# macro_sequence
+
+# end
+# entity
+adder_b
+# storage
+db|clock.(20).cnf
+db|clock.(20).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+adder32_2.v
+3fa73263e7fcd713144bb53d7ace3147
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+n_bit
+14
+PARAMETER_SIGNED_DEC
+USR
+}
 # hierarchies {
-add_submodule_a:ASSIGN_GEN[15].add_submodule_a
+adder_b:fast_adder_final
+}
+# macro_sequence
+
+# end
+# entity
+full_adder
+# storage
+db|clock.(0).cnf
+db|clock.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+877fb4fe0a2798ad9fd88f56ac19
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+unit
+8
+PARAMETER_SIGNED_DEC
+DEF
+}
+# macro_sequence
+
+# end
+# entity
+full_adder_single
+# storage
+db|clock.(21).cnf
+db|clock.(21).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+877fb4fe0a2798ad9fd88f56ac19
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single
+full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single
+full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single
+full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[3].fa_single
+full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[4].fa_single
+full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[5].fa_single
+full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[6].fa_single
+full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[7].fa_single
+full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[8].fa_single
+full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single
+full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single
+}
+# macro_sequence
+
+# end
+# entity
+bfp16_mul
+# storage
+db|clock.(22).cnf
+db|clock.(22).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+877fb4fe0a2798ad9fd88f56ac19
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+n_bit
+16
+PARAMETER_SIGNED_DEC
+DEF
+manti
+8
+PARAMETER_SIGNED_DEC
+DEF
+expo
+8
+PARAMETER_SIGNED_DEC
+DEF
+tree_width
+15
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+full_adder
+# storage
+db|clock.(23).cnf
+db|clock.(23).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+877fb4fe0a2798ad9fd88f56ac19
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+unit
+11
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+full_adder:full_adder_e
 }
 # macro_sequence
 

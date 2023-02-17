@@ -1,12 +1,12 @@
 
-    
-    
+
 	module adder_b #( parameter n_bit=15 )
-		(a, b, out,car); 
+		(a, b, out,car, car_out); 
 		input [n_bit:0]a;
 		input [n_bit:0]b;
 		input car;
 		output [n_bit:0]out;
+		output car_out;
 		
 		wire [n_bit:0]bus1;
 		wire [n_bit:0]bus2;
@@ -38,6 +38,7 @@
 		endgenerate
 		
 		assign out[n_bit:0]=(~bus1[n_bit:0] & bus2[n_bit:0])^carw[n_bit:0];
+		assign car_out=(~bus1[n_bit] & bus2[n_bit]) & carw[n_bit];
 		
     endmodule 
     

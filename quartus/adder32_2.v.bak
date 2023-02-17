@@ -1,12 +1,12 @@
 
-    
-    
+
 	module adder_b #( parameter n_bit=15 )
-		(a, b, out,car); 
+		(a, b, out,car, car_out); 
 		input [n_bit:0]a;
 		input [n_bit:0]b;
 		input car;
 		output [n_bit:0]out;
+		output car_out;
 		
 		wire [n_bit:0]bus1;
 		wire [n_bit:0]bus2;
@@ -27,10 +27,6 @@
 		and (a2[1],bus1[0],bus2[1]);
 		or (carw[2], |a2[1:0], bus1[1]);
 		
-
-//		add_submodule_a #(.n(3),.k(0)) add_submodule_a_3 (.bus_a(bus1[2:0]), .bus_b(bus2[2:0]), .cary_1(carw[3]), .cary_2(car));
-//		add_submodule_a #(.n(4),.k(0)) add_submodule_a_4 (.bus_a(bus1[3:0]), .bus_b(bus2[3:0]), .cary_1(carw[4]), .cary_2(car));
-//		add_submodule_a #(.n(5),.k(0)) add_submodule_a_5 (.bus_a(bus1[4:0]), .bus_b(bus2[4:0]), .cary_1(carw[5]), .cary_2(car));
 //		add_submodule_a #(.n(6),.k(0)) add_submodule_a_6 (.bus_a(bus1[5:0]), .bus_b(bus2[5:0]), .cary_1(carw[6]), .cary_2(car));
 //		add_submodule_a #(.n(7),.k(0)) add_submodule_a_7 (.bus_a(bus1[6:0]), .bus_b(bus2[6:0]), .cary_1(carw[7]), .cary_2(car));
 		
@@ -42,6 +38,7 @@
 		endgenerate
 		
 		assign out[n_bit:0]=(~bus1[n_bit:0] & bus2[n_bit:0])^carw[n_bit:0];
+		assign car_out=(~bus1[n_bit] & bus2[n_bit]) & carw[n_bit];
 		
     endmodule 
     
