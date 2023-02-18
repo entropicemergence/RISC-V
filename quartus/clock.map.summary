@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Feb 17 19:48:33 2023
+Analysis & Synthesis Status : Successful - Sat Feb 18 14:01:30 2023
 Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
 Revision Name : clock
 Top-level Entity Name : bfp16_mul
 Family : Cyclone III
-Total logic elements : 7
-    Total combinational functions : 7
+Total logic elements : 29
+    Total combinational functions : 29
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 64

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for clock
-Fri Feb 17 19:48:33 2023
+Sat Feb 18 14:01:30 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -14,21 +14,23 @@ Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
   6. Analysis & Synthesis Resource Utilization by Entity
   7. General Register Statistics
   8. Parameter Settings for User Entity Instance: Top-level Entity: |bfp16_mul
-  9. Parameter Settings for User Entity Instance: full_adder:full_adder_e
- 10. Parameter Settings for User Entity Instance: adder_b:fast_adder_final
- 11. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
- 12. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a
- 13. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a
- 14. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a
- 15. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a
- 16. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a
- 17. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a
- 18. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a
- 19. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a
- 20. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a
- 21. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a
- 22. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[14].add_submodule_a
- 23. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: full_adder:full_adder_c1
+ 10. Parameter Settings for User Entity Instance: full_adder:full_adder_c2
+ 11. Parameter Settings for User Entity Instance: full_adder:full_adder_d
+ 12. Parameter Settings for User Entity Instance: full_adder:full_adder_e
+ 13. Parameter Settings for User Entity Instance: adder_b:fast_adder_final
+ 14. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
+ 15. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a
+ 16. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a
+ 17. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a
+ 18. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a
+ 19. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a
+ 20. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a
+ 21. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a
+ 22. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a
+ 23. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a
+ 24. Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a
+ 25. Analysis & Synthesis Messages
 
 
 
@@ -54,13 +56,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Feb 17 19:48:33 2023   ;
+; Analysis & Synthesis Status        ; Successful - Sat Feb 18 14:01:30 2023   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; clock                                   ;
 ; Top-level Entity Name              ; bfp16_mul                               ;
 ; Family                             ; Cyclone III                             ;
-; Total logic elements               ; 7                                       ;
-;     Total combinational functions  ; 7                                       ;
+; Total logic elements               ; 29                                      ;
+;     Total combinational functions  ; 29                                      ;
 ;     Dedicated logic registers      ; 0                                       ;
 ; Total registers                    ; 0                                       ;
 ; Total pins                         ; 64                                      ;
@@ -164,16 +166,16 @@ applicable agreement for further details.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 7          ;
+; Estimated Total logic elements              ; 29         ;
 ;                                             ;            ;
-; Total combinational functions               ; 7          ;
+; Total combinational functions               ; 29         ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 0          ;
-;     -- 3 input functions                    ; 0          ;
-;     -- <=2 input functions                  ; 7          ;
+;     -- 4 input functions                    ; 17         ;
+;     -- 3 input functions                    ; 4          ;
+;     -- <=2 input functions                  ; 8          ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 7          ;
+;     -- normal mode                          ; 29         ;
 ;     -- arithmetic mode                      ; 0          ;
 ;                                             ;            ;
 ; Total registers                             ; 0          ;
@@ -181,20 +183,30 @@ applicable agreement for further details.
 ;     -- I/O registers                        ; 0          ;
 ;                                             ;            ;
 ; I/O pins                                    ; 64         ;
-; Maximum fan-out node                        ; b[0]~input ;
-; Maximum fan-out                             ; 8          ;
-; Total fan-out                               ; 92         ;
-; Average fan-out                             ; 0.68       ;
+; Maximum fan-out node                        ; a[0]~input ;
+; Maximum fan-out                             ; 9          ;
+; Total fan-out                               ; 170        ;
+; Average fan-out                             ; 1.08       ;
 +---------------------------------------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |bfp16_mul                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 64   ; 0            ; |bfp16_mul          ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                  ;
++-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                               ; Library Name ;
++-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
+; |bfp16_mul                                            ; 29 (6)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 64   ; 0            ; |bfp16_mul                                                                        ; work         ;
+;    |adder_b:fast_adder_final|                         ; 11 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfp16_mul|adder_b:fast_adder_final                                               ; work         ;
+;       |add_submodule_a:ASSIGN_GEN[6].add_submodule_a| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfp16_mul|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a ; work         ;
+;    |full_adder:full_adder_d|                          ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfp16_mul|full_adder:full_adder_d                                                ; work         ;
+;       |full_adder_single:ASSIGN_GEN[0].fa_single|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfp16_mul|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[0].fa_single      ; work         ;
+;    |full_adder:full_adder_e|                          ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfp16_mul|full_adder:full_adder_e                                                ; work         ;
+;       |full_adder_single:ASSIGN_GEN[0].fa_single|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfp16_mul|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single      ; work         ;
+;       |full_adder_single:ASSIGN_GEN[10].fa_single|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfp16_mul|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single     ; work         ;
+;       |full_adder_single:ASSIGN_GEN[1].fa_single|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfp16_mul|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single      ; work         ;
+;    |half_adder_single:half_adder_d1|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfp16_mul|half_adder_single:half_adder_d1                                        ; work         ;
+;    |half_adder_single:half_adder_e1|                  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfp16_mul|half_adder_single:half_adder_e1                                        ; work         ;
++-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -226,6 +238,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: full_adder:full_adder_c1 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; unit           ; 7     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: full_adder:full_adder_c2 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; unit           ; 5     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: full_adder:full_adder_d ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; unit           ; 9     ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: full_adder:full_adder_e ;
 +----------------+-------+---------------------------------------------+
@@ -241,7 +283,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------+
 ; Parameter Name ; Value ; Type                                         ;
 +----------------+-------+----------------------------------------------+
-; n_bit          ; 14    ; Signed Integer                               ;
+; n_bit          ; 13    ; Signed Integer                               ;
 +----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -367,38 +409,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[14].add_submodule_a ;
-+----------------+-------+---------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                        ;
-+----------------+-------+---------------------------------------------------------------------------------------------+
-; n              ; 14    ; Signed Integer                                                                              ;
-; k              ; 0     ; Signed Integer                                                                              ;
-+----------------+-------+---------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Fri Feb 17 19:48:33 2023
+    Info: Processing started: Sat Feb 18 14:01:29 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off clock -c clock
-Warning: Ignored assignments for entity "bfp16_mul" -- entity does not exist in design
-    Warning: Assignment of entity set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region" is ignored
-    Warning: Assignment of entity set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region" is ignored
-    Warning: Assignment of entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top is ignored
-    Warning: Assignment of entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top is ignored
-    Warning: Assignment of entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top is ignored
-    Warning: Assignment of entity set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top is ignored
-    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -section_id Top is ignored
-    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -section_id Top is ignored
-    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -section_id Top is ignored
-    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -section_id Top is ignored
-    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -section_id Top is ignored
-    Warning: Assignment of entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -section_id Top is ignored
 Info: Found 1 design units, including 1 entities, in source file clock.bdf
     Info: Found entity 1: clock
 Info: Found 1 design units, including 1 entities, in source file register32.bdf
@@ -423,24 +441,40 @@ Info: Found 6 design units, including 6 entities, in source file adder32_2.v
     Info: Found entity 5: adder
 Info: Found 1 design units, including 1 entities, in source file modules.v
     Info: Found entity 1: counter
-Info: Found 3 design units, including 3 entities, in source file float_mul_1.v
+Info: Found 4 design units, including 4 entities, in source file float_mul_1.v
     Info: Found entity 1: bfp16_mul
     Info: Found entity 2: full_adder
     Info: Found entity 3: full_adder_single
+    Info: Found entity 4: half_adder_single
 Info: Elaborating entity "bfp16_mul" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at float_mul_1.v(9): object "h" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at float_mul_1.v(11): object "h3" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at float_mul_1.v(22): object "bus2" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at float_mul_1.v(23): object "bus3" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at float_mul_1.v(24): object "bus4" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at float_mul_1.v(25): object "bus5" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at float_mul_1.v(26): object "bus6" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at float_mul_1.v(27): object "bus7" assigned a value but never read
 Warning (10036): Verilog HDL or VHDL warning at float_mul_1.v(28): object "bus8" assigned a value but never read
 Warning (10855): Verilog HDL warning at float_mul_1.v(34): initial value for variable h3 should be constant
 Warning (10034): Output port "out[15]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[14]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[13]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[12]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[11]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[10]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[9]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[8]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[7]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[6]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[5]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[4]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[3]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[2]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[1]" at float_mul_1.v(15) has no driver
+Warning (10034): Output port "out[0]" at float_mul_1.v(15) has no driver
+Warning (10030): Net "bus_c_4[9]" at float_mul_1.v(78) has no driver or initial value, using a default initial value '0'
+Info: Elaborating entity "half_adder_single" for hierarchy "half_adder_single:half_adder_c1"
+Info: Elaborating entity "full_adder" for hierarchy "full_adder:full_adder_c1"
+Info: Elaborating entity "full_adder_single" for hierarchy "full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[0].fa_single"
+Info: Elaborating entity "full_adder" for hierarchy "full_adder:full_adder_c2"
+Info: Elaborating entity "full_adder" for hierarchy "full_adder:full_adder_d"
 Info: Elaborating entity "full_adder" for hierarchy "full_adder:full_adder_e"
-Info: Elaborating entity "full_adder_single" for hierarchy "full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single"
 Info: Elaborating entity "adder_b" for hierarchy "adder_b:fast_adder_final"
 Info: Elaborating entity "add_submodule_a" for hierarchy "adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a"
 Info: Elaborating entity "add_submodule_a" for hierarchy "adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a"
@@ -453,27 +487,32 @@ Info: Elaborating entity "add_submodule_a" for hierarchy "adder_b:fast_adder_fin
 Info: Elaborating entity "add_submodule_a" for hierarchy "adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a"
 Info: Elaborating entity "add_submodule_a" for hierarchy "adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a"
 Info: Elaborating entity "add_submodule_a" for hierarchy "adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a"
-Info: Elaborating entity "add_submodule_a" for hierarchy "adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[14].add_submodule_a"
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "out[14]" is stuck at VCC
+    Warning (13410): Pin "out[0]" is stuck at GND
+    Warning (13410): Pin "out[1]" is stuck at GND
+    Warning (13410): Pin "out[2]" is stuck at GND
+    Warning (13410): Pin "out[3]" is stuck at GND
+    Warning (13410): Pin "out[4]" is stuck at GND
+    Warning (13410): Pin "out[5]" is stuck at GND
+    Warning (13410): Pin "out[6]" is stuck at GND
+    Warning (13410): Pin "out[7]" is stuck at GND
+    Warning (13410): Pin "out[8]" is stuck at GND
+    Warning (13410): Pin "out[9]" is stuck at GND
+    Warning (13410): Pin "out[10]" is stuck at GND
+    Warning (13410): Pin "out[11]" is stuck at GND
+    Warning (13410): Pin "out[12]" is stuck at GND
+    Warning (13410): Pin "out[13]" is stuck at GND
+    Warning (13410): Pin "out[14]" is stuck at GND
     Warning (13410): Pin "out[15]" is stuck at GND
-    Warning (13410): Pin "outb[0]" is stuck at GND
-    Warning (13410): Pin "outb[1]" is stuck at GND
-    Warning (13410): Pin "outb[2]" is stuck at GND
-    Warning (13410): Pin "outb[3]" is stuck at GND
-    Warning (13410): Pin "outb[4]" is stuck at GND
-    Warning (13410): Pin "outb[5]" is stuck at GND
-    Warning (13410): Pin "outb[6]" is stuck at GND
-    Warning (13410): Pin "outb[7]" is stuck at GND
     Warning (13410): Pin "outb[8]" is stuck at GND
     Warning (13410): Pin "outb[9]" is stuck at GND
     Warning (13410): Pin "outb[10]" is stuck at GND
     Warning (13410): Pin "outb[11]" is stuck at GND
     Warning (13410): Pin "outb[12]" is stuck at GND
-    Warning (13410): Pin "outb[13]" is stuck at GND
-    Warning (13410): Pin "outb[14]" is stuck at GND
     Warning (13410): Pin "outb[15]" is stuck at GND
-Warning: Design contains 18 input pin(s) that do not drive logic
+Warning: Design contains 20 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "a[4]"
+    Warning (15610): No output dependent on input pin "a[5]"
     Warning (15610): No output dependent on input pin "a[7]"
     Warning (15610): No output dependent on input pin "a[8]"
     Warning (15610): No output dependent on input pin "a[9]"
@@ -492,14 +531,14 @@ Warning: Design contains 18 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "b[13]"
     Warning (15610): No output dependent on input pin "b[14]"
     Warning (15610): No output dependent on input pin "b[15]"
-Info: Implemented 71 device resources after synthesis - the final resource count might be different
+Info: Implemented 93 device resources after synthesis - the final resource count might be different
     Info: Implemented 32 input pins
     Info: Implemented 32 output pins
-    Info: Implemented 7 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 63 warnings
-    Info: Peak virtual memory: 230 megabytes
-    Info: Processing ended: Fri Feb 17 19:48:33 2023
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Implemented 29 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 67 warnings
+    Info: Peak virtual memory: 231 megabytes
+    Info: Processing ended: Sat Feb 18 14:01:30 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

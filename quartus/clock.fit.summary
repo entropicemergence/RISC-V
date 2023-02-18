@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Feb 17 19:48:45 2023
+Fitter Status : Successful - Sat Feb 18 14:01:40 2023
 Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
 Revision Name : clock
 Top-level Entity Name : bfp16_mul
 Family : Cyclone III
 Device : EP3C120F780I7
 Timing Models : Final
-Total logic elements : 7 / 119,088 ( < 1 % )
-    Total combinational functions : 7 / 119,088 ( < 1 % )
+Total logic elements : 29 / 119,088 ( < 1 % )
+    Total combinational functions : 29 / 119,088 ( < 1 % )
     Dedicated logic registers : 0 / 119,088 ( 0 % )
 Total registers : 0
 Total pins : 64 / 532 ( 12 % )

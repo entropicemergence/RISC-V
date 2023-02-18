@@ -59,11 +59,35 @@
 		assign bus7[2:2]= {1{x[1]}} & y[7:7] ;
 		assign bus8[0:0]= x[0:0] & {1{y[7]}} ;
 		
-		assign out[7:0]=bus1[7:0];
-		assign out[14:8]=bus1[14:8];
+//		assign out[7:0]=bus1[7:0];
+//		assign out[14:8]=bus1[14:8];
+		
+		
+		wire [14:0]bus_b_1;
+		wire [12:0]bus_b_2;
+		wire [10:0]bus_b_3;
+		wire [8:0]bus_b_4;
+		wire [6:0]bus_b_5;
+		wire [5:0]bus_b_6;
 		
 		
 		
+		wire [14:0]bus_c_1;
+		wire [12:0]bus_c_2;
+		wire [10:0]bus_c_3;
+		wire [9:0]bus_c_4;
+		
+		assign bus_c_1[3]=bus1[3];
+		assign bus_c_2[2]=bus2[2];
+		assign bus_c_2[3]=bus3[2];
+		assign bus_c_3[2]=bus4[1];
+		
+		
+		
+		half_adder_single half_adder_c1 (.xx(bus_b_1[4]) , .yy(bus_b_2[3]), .ha_out(bus_c_1[4]), .ha_cary(bus_c_2[4]));
+		half_adder_single half_adder_c2 (.xx(bus_b_4[2]) , .yy(bus_b_5[1]), .ha_out(bus_c_3[3]), .ha_cary(bus_c_4[3]));
+		full_adder #(.unit(7)) full_adder_c1 (.x(bus_b_1[11:5]) , .y(bus_b_2[10:4]), .z(bus_b_3[9:3]), .out(bus_c_1[11:5]), .cary_out(bus_c_2[11:5]));
+		full_adder #(.unit(5)) full_adder_c2 (.x(bus_b_4[7:3]) , .y(bus_b_5[6:2]), .z(bus_b_6[5:1]), .out(bus_c_3[8:4]), .cary_out(bus_c_4[8:4]));
 		
 		
 		
@@ -71,16 +95,39 @@
 		wire [12:0]bus_d_2;
 		wire [11:0]bus_d_3;
 		
-		wire [14:0]bus_e_1;
-		wire [14:0]bus_e_2;
+		assign bus_d_1[2]=bus1[2];
+		assign bus_d_1[13]=bus1[13];
+		assign bus_d_2[1]=bus2[1];
+		assign bus_d_2[2]=bus3[1];
+		assign bus_d_3[1]=bus4[0];
+		assign bus_d_3[2]=bus5[0];
+		assign bus_d_3[3]=bus6[0];
+		assign bus_d_3[11]=bus2[12];
+		assign bus_d_3[10:4]=bus_c_4[9:3];
 		
+		half_adder_single half_adder_d1 (.xx(bus_c_1[3]) , .yy(bus_c_2[2]), .ha_out(bus_d_1[3]), .ha_cary(bus_d_2[3]));
+		full_adder #(.unit(9)) full_adder_d (.x(bus_c_1[12:4]) , .y(bus_c_2[11:3]), .z(bus_c_3[10:2]), .out(bus_d_1[12:4]), .cary_out(bus_d_2[12:4]));
+		
+
+		
+		wire [14:0]bus_e_1;
+		wire [13:0]bus_e_2;
+		assign bus_e_1[14]=bus1[14];
+		assign bus_e_1[1]=bus1[1];
+		assign bus_e_2[0]=bus2[0];
+		assign bus_e_2[1]=bus3[0];
+		
+//		half_adder_single (xx , yy, ha_out, ha_cary);	
+		half_adder_single half_adder_e1 (.xx(bus_d_1[2]) , .yy(bus_d_2[1]), .ha_out(bus_e_1[2]), .ha_cary(bus_e_2[2]));
 //		(x , y, z, out, cary_out);
-		full_adder #(.unit(11)) full_adder_e (.x(bus_d_1[13:3]) , .y(bus_d_2[12:2]), .z(bus_d_3[11:1]), .out(bus_e_1[13:3]), .cary_out(bus_e_2[14:4]));
+		full_adder #(.unit(11)) full_adder_e (.x(bus_d_1[13:3]) , .y(bus_d_2[12:2]), .z(bus_d_3[11:1]), .out(bus_e_1[13:3]), .cary_out(bus_e_2[13:3]));
+		
 		
 		
 //		input [n_bit:0]a;	input [n_bit:0]b; 	input car; 	output [n_bit:0]out; 	output car_out;
-		adder_b #(.n_bit(14)) fast_adder_final (.a(bus_e_1[14:0]), .b(bus_e_2[14:0]), .car(h2), .out(outb[14:0]) , .car_out(outb[15]));
-//		assign outb[15:0]=bus_e_out[15:0];
+		assign outb[0]=bus1[0];
+		adder_b #(.n_bit(13)) fast_adder_final (.a(bus_e_1[14:1]), .b(bus_e_2[13:0]), .car(h2), .out(outb[14:1]) , .car_out(outb[15]));
+
 
 
 
@@ -163,6 +210,22 @@
 
 	endmodule
 	
+	module half_adder_single (xx , yy, ha_out, ha_cary);
+		input xx;
+		input yy;
+		output ha_out;
+		output ha_cary;
+		
+		wire w1;
+		wire w2;
+		
+		assign w1 = xx & yy;
+		assign w2 = xx | yy;
+		
+		assign ha_out = (!w1 & w2);
+		assign ha_cary= w1;
+
+	endmodule
 	
 	
 	
