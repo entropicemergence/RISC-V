@@ -2,13 +2,6 @@
 
 
 
-
-
-
-
-
-
-
 	module mul_16bit (ax, by, out);
 		localparam manti=16;
 		localparam n_bit = manti*2;

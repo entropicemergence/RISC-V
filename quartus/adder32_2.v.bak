@@ -38,7 +38,8 @@
 		endgenerate
 		
 		assign out[n_bit:0]=(~bus1[n_bit:0] & bus2[n_bit:0])^carw[n_bit:0];
-		assign car_out=(~bus1[n_bit] & bus2[n_bit]) & carw[n_bit];
+//		assign car_out=(~bus1[n_bit] & bus2[n_bit]) & carw[n_bit];
+		assign car_out= bus1[n_bit] | (bus2[n_bit]&carw[n_bit])
 		
     endmodule 
     

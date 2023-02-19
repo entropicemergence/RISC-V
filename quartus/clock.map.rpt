@@ -1,5 +1,5 @@
 Analysis & Synthesis report for clock
-Sun Feb 19 14:39:12 2023
+Sun Feb 19 20:45:48 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -126,13 +126,13 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Feb 19 14:39:12 2023   ;
+; Analysis & Synthesis Status        ; Successful - Sun Feb 19 20:45:48 2023   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; clock                                   ;
 ; Top-level Entity Name              ; mul_16bit                               ;
 ; Family                             ; Cyclone III                             ;
-; Total logic elements               ; 730                                     ;
-;     Total combinational functions  ; 730                                     ;
+; Total logic elements               ; 754                                     ;
+;     Total combinational functions  ; 754                                     ;
 ;     Dedicated logic registers      ; 0                                       ;
 ; Total registers                    ; 0                                       ;
 ; Total pins                         ; 64                                      ;
@@ -236,16 +236,16 @@ applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 730         ;
+; Estimated Total logic elements              ; 754         ;
 ;                                             ;             ;
-; Total combinational functions               ; 730         ;
+; Total combinational functions               ; 754         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 435         ;
-;     -- 3 input functions                    ; 88          ;
-;     -- <=2 input functions                  ; 207         ;
+;     -- 4 input functions                    ; 455         ;
+;     -- 3 input functions                    ; 81          ;
+;     -- <=2 input functions                  ; 218         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 730         ;
+;     -- normal mode                          ; 754         ;
 ;     -- arithmetic mode                      ; 0           ;
 ;                                             ;             ;
 ; Total registers                             ; 0           ;
@@ -255,8 +255,8 @@ applicable agreement for further details.
 ; I/O pins                                    ; 64          ;
 ; Maximum fan-out node                        ; ax[3]~input ;
 ; Maximum fan-out                             ; 36          ;
-; Total fan-out                               ; 2514        ;
-; Average fan-out                             ; 2.93        ;
+; Total fan-out                               ; 2595        ;
+; Average fan-out                             ; 2.94        ;
 +---------------------------------------------+-------------+
 
 
@@ -265,22 +265,21 @@ applicable agreement for further details.
 +-----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                 ; Library Name ;
 +-----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
-; |mul_16bit                                                ; 730 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 64   ; 0            ; |mul_16bit                                                                                          ; work         ;
-;    |adder_b:fast_adder|                                   ; 49 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|adder_b:fast_adder                                                                       ; work         ;
-;       |add_submodule_a:ASSIGN_GEN[10].add_submodule_a|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[10].add_submodule_a                        ; work         ;
-;       |add_submodule_a:ASSIGN_GEN[14].add_submodule_a|    ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[14].add_submodule_a                        ; work         ;
+; |mul_16bit                                                ; 754 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 64   ; 0            ; |mul_16bit                                                                                          ; work         ;
+;    |adder_b:fast_adder|                                   ; 55 (38)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|adder_b:fast_adder                                                                       ; work         ;
+;       |add_submodule_a:ASSIGN_GEN[14].add_submodule_a|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[14].add_submodule_a                        ; work         ;
 ;    |carry_adder:carry_adder|                              ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|carry_adder:carry_adder                                                                  ; work         ;
-;    |full_adder:full_adder|                                ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder                                                                    ; work         ;
-;       |full_adder_single:ASSIGN_GEN[0].fa_single|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[0].fa_single                          ; work         ;
+;    |full_adder:full_adder|                                ; 38 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder                                                                    ; work         ;
+;       |full_adder_single:ASSIGN_GEN[0].fa_single|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[0].fa_single                          ; work         ;
 ;       |full_adder_single:ASSIGN_GEN[10].fa_single|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[10].fa_single                         ; work         ;
 ;       |full_adder_single:ASSIGN_GEN[11].fa_single|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[11].fa_single                         ; work         ;
 ;       |full_adder_single:ASSIGN_GEN[12].fa_single|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[12].fa_single                         ; work         ;
 ;       |full_adder_single:ASSIGN_GEN[13].fa_single|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[13].fa_single                         ; work         ;
 ;       |full_adder_single:ASSIGN_GEN[14].fa_single|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[14].fa_single                         ; work         ;
-;       |full_adder_single:ASSIGN_GEN[15].fa_single|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[15].fa_single                         ; work         ;
+;       |full_adder_single:ASSIGN_GEN[15].fa_single|        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[15].fa_single                         ; work         ;
 ;       |full_adder_single:ASSIGN_GEN[1].fa_single|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[1].fa_single                          ; work         ;
-;       |full_adder_single:ASSIGN_GEN[2].fa_single|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[2].fa_single                          ; work         ;
-;       |full_adder_single:ASSIGN_GEN[3].fa_single|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[3].fa_single                          ; work         ;
+;       |full_adder_single:ASSIGN_GEN[2].fa_single|         ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[2].fa_single                          ; work         ;
+;       |full_adder_single:ASSIGN_GEN[3].fa_single|         ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[3].fa_single                          ; work         ;
 ;       |full_adder_single:ASSIGN_GEN[4].fa_single|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[4].fa_single                          ; work         ;
 ;       |full_adder_single:ASSIGN_GEN[5].fa_single|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[5].fa_single                          ; work         ;
 ;       |full_adder_single:ASSIGN_GEN[6].fa_single|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[6].fa_single                          ; work         ;
@@ -288,15 +287,16 @@ applicable agreement for further details.
 ;       |full_adder_single:ASSIGN_GEN[8].fa_single|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[8].fa_single                          ; work         ;
 ;       |full_adder_single:ASSIGN_GEN[9].fa_single|         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[9].fa_single                          ; work         ;
 ;    |half_adder_single:half_adder|                         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|half_adder_single:half_adder                                                             ; work         ;
-;    |mul_8bit:mul8_ab|                                     ; 150 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab                                                                         ; work         ;
-;       |adder_b:fast_adder_final|                          ; 27 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final                                                ; work         ;
+;    |mul_8bit:mul8_ab|                                     ; 153 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab                                                                         ; work         ;
+;       |adder_b:fast_adder_final|                          ; 29 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final                                                ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[10].add_submodule_a| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[11].add_submodule_a| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[11].add_submodule_a| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[12].add_submodule_a| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[13].add_submodule_a| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[4].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a  ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[5].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a  ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[6].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a  ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[7].add_submodule_a|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a  ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[7].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a  ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[9].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a  ; work         ;
 ;       |full_adder:full_adder_b|                           ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_b                                                 ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[0].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single       ; work         ;
@@ -344,18 +344,17 @@ applicable agreement for further details.
 ;       |half_adder_single:half_adder_c1|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|half_adder_single:half_adder_c1                                         ; work         ;
 ;       |half_adder_single:half_adder_d1|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|half_adder_single:half_adder_d1                                         ; work         ;
 ;       |half_adder_single:half_adder_e1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|half_adder_single:half_adder_e1                                         ; work         ;
-;       |tree_builder:tree_builder|                         ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|tree_builder:tree_builder                                               ; work         ;
-;    |mul_8bit:mul8_ay|                                     ; 157 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay                                                                         ; work         ;
-;       |adder_b:fast_adder_final|                          ; 31 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final                                                ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[10].add_submodule_a| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[11].add_submodule_a| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[12].add_submodule_a| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[13].add_submodule_a| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a ; work         ;
+;       |tree_builder:tree_builder|                         ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ab|tree_builder:tree_builder                                               ; work         ;
+;    |mul_8bit:mul8_ay|                                     ; 165 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay                                                                         ; work         ;
+;       |adder_b:fast_adder_final|                          ; 38 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final                                                ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[11].add_submodule_a| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[12].add_submodule_a| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[13].add_submodule_a| ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[4].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a  ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[5].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a  ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[6].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a  ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[7].add_submodule_a|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a  ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[9].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a  ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[8].add_submodule_a|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a  ; work         ;
 ;       |full_adder:full_adder_b|                           ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_b                                                 ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[0].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single       ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[1].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[1].fa_single       ; work         ;
@@ -384,7 +383,7 @@ applicable agreement for further details.
 ;          |full_adder_single:ASSIGN_GEN[6].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[6].fa_single       ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[7].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[7].fa_single       ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[8].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[8].fa_single       ; work         ;
-;       |full_adder:full_adder_e|                           ; 23 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e                                                 ; work         ;
+;       |full_adder:full_adder_e|                           ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e                                                 ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[0].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single       ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[10].fa_single|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single      ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[1].fa_single|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single       ; work         ;
@@ -395,7 +394,7 @@ applicable agreement for further details.
 ;          |full_adder_single:ASSIGN_GEN[6].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[6].fa_single       ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[7].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[7].fa_single       ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[8].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[8].fa_single       ; work         ;
-;          |full_adder_single:ASSIGN_GEN[9].fa_single|      ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[9].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single       ; work         ;
 ;       |half_adder_single:half_adder_b1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|half_adder_single:half_adder_b1                                         ; work         ;
 ;       |half_adder_single:half_adder_b2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|half_adder_single:half_adder_b2                                         ; work         ;
 ;       |half_adder_single:half_adder_b3|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|half_adder_single:half_adder_b3                                         ; work         ;
@@ -403,16 +402,16 @@ applicable agreement for further details.
 ;       |half_adder_single:half_adder_d1|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|half_adder_single:half_adder_d1                                         ; work         ;
 ;       |half_adder_single:half_adder_e1|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|half_adder_single:half_adder_e1                                         ; work         ;
 ;       |tree_builder:tree_builder|                         ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_ay|tree_builder:tree_builder                                               ; work         ;
-;    |mul_8bit:mul8_xb|                                     ; 154 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb                                                                         ; work         ;
-;       |adder_b:fast_adder_final|                          ; 29 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final                                                ; work         ;
+;    |mul_8bit:mul8_xb|                                     ; 159 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb                                                                         ; work         ;
+;       |adder_b:fast_adder_final|                          ; 33 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final                                                ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[10].add_submodule_a| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[11].add_submodule_a| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[12].add_submodule_a| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[13].add_submodule_a| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[11].add_submodule_a| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[12].add_submodule_a| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[13].add_submodule_a| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[4].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a  ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[5].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a  ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[6].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a  ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[7].add_submodule_a|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a  ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[7].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a  ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[9].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a  ; work         ;
 ;       |full_adder:full_adder_b|                           ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_b                                                 ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[0].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single       ; work         ;
@@ -459,15 +458,15 @@ applicable agreement for further details.
 ;       |half_adder_single:half_adder_b3|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|half_adder_single:half_adder_b3                                         ; work         ;
 ;       |half_adder_single:half_adder_c1|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|half_adder_single:half_adder_c1                                         ; work         ;
 ;       |half_adder_single:half_adder_d1|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|half_adder_single:half_adder_d1                                         ; work         ;
-;       |tree_builder:tree_builder|                         ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|tree_builder:tree_builder                                               ; work         ;
-;    |mul_8bit:mul8_xy|                                     ; 177 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy                                                                         ; work         ;
-;       |adder_b:fast_adder_final|                          ; 51 (31)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final                                                ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[10].add_submodule_a| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[11].add_submodule_a| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a ; work         ;
+;       |tree_builder:tree_builder|                         ; 42 (42)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xb|tree_builder:tree_builder                                               ; work         ;
+;    |mul_8bit:mul8_xy|                                     ; 174 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy                                                                         ; work         ;
+;       |adder_b:fast_adder_final|                          ; 48 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final                                                ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[10].add_submodule_a| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a ; work         ;
 ;          |add_submodule_a:ASSIGN_GEN[12].add_submodule_a| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[13].add_submodule_a| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[7].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a  ; work         ;
-;          |add_submodule_a:ASSIGN_GEN[8].add_submodule_a|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a  ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[13].add_submodule_a| ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[7].add_submodule_a|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a  ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[8].add_submodule_a|  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a  ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[9].add_submodule_a|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a  ; work         ;
 ;       |full_adder:full_adder_b|                           ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_b                                                 ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[0].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single       ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[1].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[1].fa_single       ; work         ;
@@ -496,11 +495,11 @@ applicable agreement for further details.
 ;          |full_adder_single:ASSIGN_GEN[6].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[6].fa_single       ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[7].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[7].fa_single       ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[8].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[8].fa_single       ; work         ;
-;       |full_adder:full_adder_e|                           ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e                                                 ; work         ;
+;       |full_adder:full_adder_e|                           ; 23 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e                                                 ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[0].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single       ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[10].fa_single|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single      ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[1].fa_single|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single       ; work         ;
-;          |full_adder_single:ASSIGN_GEN[2].fa_single|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[2].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single       ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[3].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[3].fa_single       ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[4].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[4].fa_single       ; work         ;
 ;          |full_adder_single:ASSIGN_GEN[5].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[5].fa_single       ; work         ;
@@ -514,7 +513,7 @@ applicable agreement for further details.
 ;       |half_adder_single:half_adder_c1|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|half_adder_single:half_adder_c1                                         ; work         ;
 ;       |half_adder_single:half_adder_d1|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|half_adder_single:half_adder_d1                                         ; work         ;
 ;       |half_adder_single:half_adder_e1|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|half_adder_single:half_adder_e1                                         ; work         ;
-;       |tree_builder:tree_builder|                         ; 40 (40)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|tree_builder:tree_builder                                               ; work         ;
+;       |tree_builder:tree_builder|                         ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |mul_16bit|mul_8bit:mul8_xy|tree_builder:tree_builder                                               ; work         ;
 +-----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1470,8 +1469,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Sun Feb 19 14:39:08 2023
+    Info: Processing started: Sun Feb 19 20:45:44 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off clock -c clock
+Warning: Ignored assignments for entity "mul_16bit" -- entity does not exist in design
+    Warning: Assignment of entity set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region" is ignored
+    Warning: Assignment of entity set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region" is ignored
+    Warning: Assignment of entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -section_id Top is ignored
+    Warning: Assignment of entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -section_id Top is ignored
 Info: Found 1 design units, including 1 entities, in source file clock.bdf
     Info: Found entity 1: clock
 Info: Found 1 design units, including 1 entities, in source file register32.bdf
@@ -1504,9 +1516,8 @@ Info: Found 7 design units, including 7 entities, in source file float_mul_1.v
     Info: Found entity 5: full_adder
     Info: Found entity 6: full_adder_single
     Info: Found entity 7: half_adder_single
-Warning (10236): Verilog HDL Implicit Net warning at float_mul_1.v(257): created implicit net for "h2"
+Warning (10236): Verilog HDL Implicit Net warning at float_mul_1.v(250): created implicit net for "h2"
 Info: Elaborating entity "mul_16bit" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at float_mul_1.v(41): truncated value with size 16 to match size of target (15)
 Info: Elaborating entity "mul_8bit" for hierarchy "mul_8bit:mul8_xy"
 Info: Elaborating entity "tree_builder" for hierarchy "mul_8bit:mul8_xy|tree_builder:tree_builder"
 Info: Elaborating entity "half_adder_single" for hierarchy "mul_8bit:mul8_xy|half_adder_single:half_adder_b1"
@@ -1532,13 +1543,13 @@ Info: Elaborating entity "full_adder" for hierarchy "full_adder:full_adder"
 Info: Elaborating entity "adder_b" for hierarchy "adder_b:fast_adder"
 Info: Elaborating entity "add_submodule_a" for hierarchy "adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[14].add_submodule_a"
 Info: Elaborating entity "carry_adder" for hierarchy "carry_adder:carry_adder"
-Info: Implemented 794 device resources after synthesis - the final resource count might be different
+Info: Implemented 818 device resources after synthesis - the final resource count might be different
     Info: Implemented 32 input pins
     Info: Implemented 32 output pins
-    Info: Implemented 730 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Implemented 754 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 15 warnings
     Info: Peak virtual memory: 232 megabytes
-    Info: Processing ended: Sun Feb 19 14:39:12 2023
+    Info: Processing ended: Sun Feb 19 20:45:48 2023
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 

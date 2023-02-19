@@ -1,5 +1,5 @@
 Flow report for clock
-Sun Feb 19 14:39:30 2023
+Sun Feb 19 20:46:07 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +------------------------------------+-----------------------------------------+
-; Flow Status                        ; Successful - Sun Feb 19 14:39:28 2023   ;
+; Flow Status                        ; Successful - Sun Feb 19 20:46:05 2023   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; clock                                   ;
 ; Top-level Entity Name              ; mul_16bit                               ;
@@ -46,8 +46,8 @@ applicable agreement for further details.
 ; Device                             ; EP3C120F780I7                           ;
 ; Timing Models                      ; Final                                   ;
 ; Met timing requirements            ; N/A                                     ;
-; Total logic elements               ; 730 / 119,088 ( < 1 % )                 ;
-;     Total combinational functions  ; 730 / 119,088 ( < 1 % )                 ;
+; Total logic elements               ; 754 / 119,088 ( < 1 % )                 ;
+;     Total combinational functions  ; 754 / 119,088 ( < 1 % )                 ;
 ;     Dedicated logic registers      ; 0 / 119,088 ( 0 % )                     ;
 ; Total registers                    ; 0                                       ;
 ; Total pins                         ; 64 / 532 ( 12 % )                       ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/19/2023 14:39:08 ;
+; Start date & time ; 02/19/2023 20:45:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; clock               ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 277302806789726.167679234810568 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 277302806789726.167681434415588 ; --            ; --          ; --             ;
 ; ENABLE_ADVANCED_IO_TIMING           ; On                              ; --            ; --          ; --             ;
 ; IP_TOOL_NAME                        ; PARALLEL_ADD                    ; --            ; --          ; --             ;
 ; IP_TOOL_VERSION                     ; 8.1                             ; --            ; --          ; --             ;
@@ -98,11 +98,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:04     ; 1.0                     ; 232 MB              ; 00:00:04                           ;
-; Fitter                    ; 00:00:11     ; 1.0                     ; 395 MB              ; 00:00:11                           ;
+; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 231 MB              ; 00:00:03                           ;
+; Fitter                    ; 00:00:12     ; 1.0                     ; 395 MB              ; 00:00:12                           ;
 ; Assembler                 ; 00:00:04     ; 1.0                     ; 443 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 283 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:21     ; --                      ; --                  ; 00:00:19                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 283 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:19                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

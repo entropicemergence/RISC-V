@@ -31,7 +31,7 @@
 		
 		wire [15:0]bus2;
 		
-		assign bus2[14:0]=bus1_out[15:0];
+		assign bus2[14:0]=bus1_out[15:1];
 		assign bus2[15]=x_y_a_b[24];
 		
 		wire cary_1;

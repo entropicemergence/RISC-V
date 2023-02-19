@@ -39,7 +39,7 @@ out[4] <= mul_8bit:mul8_xy.out
 out[5] <= mul_8bit:mul8_xy.out
 out[6] <= mul_8bit:mul8_xy.out
 out[7] <= mul_8bit:mul8_xy.out
-out[8] <= bus1_out[0].DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= full_adder:full_adder.out
 out[9] <= half_adder_single:half_adder.ha_out
 out[10] <= adder_b:fast_adder.out
 out[11] <= adder_b:fast_adder.out
@@ -1005,7 +1005,7 @@ out[11] <= out~25.DB_MAX_OUTPUT_PORT_TYPE
 out[12] <= out~26.DB_MAX_OUTPUT_PORT_TYPE
 out[13] <= out~27.DB_MAX_OUTPUT_PORT_TYPE
 car => car~0.IN11
-car_out <= car_out~0.DB_MAX_OUTPUT_PORT_TYPE
+car_out <= car_out~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
@@ -2542,7 +2542,7 @@ out[11] <= out~25.DB_MAX_OUTPUT_PORT_TYPE
 out[12] <= out~26.DB_MAX_OUTPUT_PORT_TYPE
 out[13] <= out~27.DB_MAX_OUTPUT_PORT_TYPE
 car => car~0.IN11
-car_out <= car_out~0.DB_MAX_OUTPUT_PORT_TYPE
+car_out <= car_out~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
@@ -4079,7 +4079,7 @@ out[11] <= out~25.DB_MAX_OUTPUT_PORT_TYPE
 out[12] <= out~26.DB_MAX_OUTPUT_PORT_TYPE
 out[13] <= out~27.DB_MAX_OUTPUT_PORT_TYPE
 car => car~0.IN11
-car_out <= car_out~0.DB_MAX_OUTPUT_PORT_TYPE
+car_out <= car_out~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
@@ -5616,7 +5616,7 @@ out[11] <= out~25.DB_MAX_OUTPUT_PORT_TYPE
 out[12] <= out~26.DB_MAX_OUTPUT_PORT_TYPE
 out[13] <= out~27.DB_MAX_OUTPUT_PORT_TYPE
 car => car~0.IN11
-car_out <= car_out~0.DB_MAX_OUTPUT_PORT_TYPE
+car_out <= car_out~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
@@ -6558,7 +6558,7 @@ out[12] <= out~27.DB_MAX_OUTPUT_PORT_TYPE
 out[13] <= out~28.DB_MAX_OUTPUT_PORT_TYPE
 out[14] <= out~29.DB_MAX_OUTPUT_PORT_TYPE
 car => car~0.IN12
-car_out <= car_out~0.DB_MAX_OUTPUT_PORT_TYPE
+car_out <= car_out~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
