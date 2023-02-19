@@ -1,4 +1,71 @@
-|mul_8bit
+|mul_16bit
+ax[0] => ax[0]~15.IN2
+ax[1] => ax[1]~14.IN2
+ax[2] => ax[2]~13.IN2
+ax[3] => ax[3]~12.IN2
+ax[4] => ax[4]~11.IN2
+ax[5] => ax[5]~10.IN2
+ax[6] => ax[6]~9.IN2
+ax[7] => ax[7]~8.IN2
+ax[8] => ax[8]~7.IN2
+ax[9] => ax[9]~6.IN2
+ax[10] => ax[10]~5.IN2
+ax[11] => ax[11]~4.IN2
+ax[12] => ax[12]~3.IN2
+ax[13] => ax[13]~2.IN2
+ax[14] => ax[14]~1.IN2
+ax[15] => ax[15]~0.IN2
+by[0] => by[0]~15.IN2
+by[1] => by[1]~14.IN2
+by[2] => by[2]~13.IN2
+by[3] => by[3]~12.IN2
+by[4] => by[4]~11.IN2
+by[5] => by[5]~10.IN2
+by[6] => by[6]~9.IN2
+by[7] => by[7]~8.IN2
+by[8] => by[8]~7.IN2
+by[9] => by[9]~6.IN2
+by[10] => by[10]~5.IN2
+by[11] => by[11]~4.IN2
+by[12] => by[12]~3.IN2
+by[13] => by[13]~2.IN2
+by[14] => by[14]~1.IN2
+by[15] => by[15]~0.IN2
+out[0] <= mul_8bit:mul8_xy.out
+out[1] <= mul_8bit:mul8_xy.out
+out[2] <= mul_8bit:mul8_xy.out
+out[3] <= mul_8bit:mul8_xy.out
+out[4] <= mul_8bit:mul8_xy.out
+out[5] <= mul_8bit:mul8_xy.out
+out[6] <= mul_8bit:mul8_xy.out
+out[7] <= mul_8bit:mul8_xy.out
+out[8] <= bus1_out[0].DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= half_adder_single:half_adder.ha_out
+out[10] <= adder_b:fast_adder.out
+out[11] <= adder_b:fast_adder.out
+out[12] <= adder_b:fast_adder.out
+out[13] <= adder_b:fast_adder.out
+out[14] <= adder_b:fast_adder.out
+out[15] <= adder_b:fast_adder.out
+out[16] <= adder_b:fast_adder.out
+out[17] <= adder_b:fast_adder.out
+out[18] <= adder_b:fast_adder.out
+out[19] <= adder_b:fast_adder.out
+out[20] <= adder_b:fast_adder.out
+out[21] <= adder_b:fast_adder.out
+out[22] <= adder_b:fast_adder.out
+out[23] <= adder_b:fast_adder.out
+out[24] <= adder_b:fast_adder.out
+out[25] <= carry_adder:carry_adder.out
+out[26] <= carry_adder:carry_adder.out
+out[27] <= carry_adder:carry_adder.out
+out[28] <= carry_adder:carry_adder.out
+out[29] <= carry_adder:carry_adder.out
+out[30] <= carry_adder:carry_adder.out
+out[31] <= carry_adder:carry_adder.out
+
+
+|mul_16bit|mul_8bit:mul8_xy
 a[0] => x[0].IN1
 a[1] => x[1].IN1
 a[2] => x[2].IN1
@@ -33,7 +100,7 @@ out[14] <= adder_b:fast_adder_final.out
 out[15] <= adder_b:fast_adder_final.car_out
 
 
-|mul_8bit|tree_builder:tree_builder
+|mul_16bit|mul_8bit:mul8_xy|tree_builder:tree_builder
 x[0] => bus8~0.IN0
 x[0] => bus7~0.IN0
 x[0] => bus6~0.IN0
@@ -228,7 +295,7 @@ bus7[2] <= bus7~2.DB_MAX_OUTPUT_PORT_TYPE
 bus8[0] <= bus8~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|half_adder_single:half_adder_b1
+|mul_16bit|mul_8bit:mul8_xy|half_adder_single:half_adder_b1
 xx => w2.IN0
 xx => w1~0.IN0
 yy => w2.IN1
@@ -237,7 +304,7 @@ ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
 ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_b
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_b
 x[0] => x[0]~2.IN1
 x[1] => x[1]~1.IN1
 x[2] => x[2]~0.IN1
@@ -255,7 +322,7 @@ cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
 cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
 
 
-|mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -266,7 +333,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[1].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[1].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -277,7 +344,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[2].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[2].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -288,7 +355,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|half_adder_single:half_adder_b2
+|mul_16bit|mul_8bit:mul8_xy|half_adder_single:half_adder_b2
 xx => w2.IN0
 xx => w1~0.IN0
 yy => w2.IN1
@@ -297,7 +364,7 @@ ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
 ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|half_adder_single:half_adder_b3
+|mul_16bit|mul_8bit:mul8_xy|half_adder_single:half_adder_b3
 xx => w2.IN0
 xx => w1~0.IN0
 yy => w2.IN1
@@ -306,7 +373,7 @@ ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
 ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|half_adder_single:half_adder_c1
+|mul_16bit|mul_8bit:mul8_xy|half_adder_single:half_adder_c1
 xx => w2.IN0
 xx => w1~0.IN0
 yy => w2.IN1
@@ -315,7 +382,7 @@ ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
 ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|half_adder_single:half_adder_c2
+|mul_16bit|mul_8bit:mul8_xy|half_adder_single:half_adder_c2
 xx => w2.IN0
 xx => w1~0.IN0
 yy => w2.IN1
@@ -324,7 +391,7 @@ ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
 ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_c1
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c1
 x[0] => x[0]~6.IN1
 x[1] => x[1]~5.IN1
 x[2] => x[2]~4.IN1
@@ -362,7 +429,7 @@ cary_out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_cary
 cary_out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_cary
 
 
-|mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[0].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[0].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -373,7 +440,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[1].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[1].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -384,7 +451,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[2].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[2].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -395,7 +462,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[3].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[3].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -406,7 +473,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[4].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[4].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -417,7 +484,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[5].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[5].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -428,7 +495,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[6].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[6].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -439,7 +506,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_c2
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c2
 x[0] => x[0]~4.IN1
 x[1] => x[1]~3.IN1
 x[2] => x[2]~2.IN1
@@ -467,7 +534,7 @@ cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
 cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
 
 
-|mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[0].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[0].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -478,7 +545,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[1].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[1].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -489,7 +556,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[2].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[2].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -500,7 +567,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[3].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[3].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -511,7 +578,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[4].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[4].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -522,7 +589,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|half_adder_single:half_adder_d1
+|mul_16bit|mul_8bit:mul8_xy|half_adder_single:half_adder_d1
 xx => w2.IN0
 xx => w1~0.IN0
 yy => w2.IN1
@@ -531,7 +598,7 @@ ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
 ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_d
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_d
 x[0] => x[0]~8.IN1
 x[1] => x[1]~7.IN1
 x[2] => x[2]~6.IN1
@@ -579,7 +646,7 @@ cary_out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_cary
 cary_out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_cary
 
 
-|mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[0].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[0].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -590,7 +657,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[1].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[1].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -601,7 +668,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[2].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[2].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -612,7 +679,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[3].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[3].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -623,7 +690,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[4].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[4].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -634,7 +701,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[5].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[5].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -645,7 +712,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[6].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[6].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -656,7 +723,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[7].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[7].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -667,7 +734,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[8].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[8].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -678,7 +745,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|half_adder_single:half_adder_e1
+|mul_16bit|mul_8bit:mul8_xy|half_adder_single:half_adder_e1
 xx => w2.IN0
 xx => w1~0.IN0
 yy => w2.IN1
@@ -687,7 +754,7 @@ ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
 ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_e
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e
 x[0] => x[0]~10.IN1
 x[1] => x[1]~9.IN1
 x[2] => x[2]~8.IN1
@@ -745,7 +812,7 @@ cary_out[9] <= full_adder_single:ASSIGN_GEN[9].fa_single.fa_cary
 cary_out[10] <= full_adder_single:ASSIGN_GEN[10].fa_single.fa_cary
 
 
-|mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -756,7 +823,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -767,7 +834,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -778,7 +845,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[3].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[3].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -789,7 +856,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[4].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[4].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -800,7 +867,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[5].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[5].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -811,7 +878,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[6].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[6].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -822,7 +889,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[7].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[7].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -833,7 +900,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[8].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[8].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -844,7 +911,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -855,7 +922,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single
+|mul_16bit|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single
 xx => w2.IN0
 xx => w1.IN0
 yy => w2.IN1
@@ -866,7 +933,7 @@ fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
 fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|adder_b:fast_adder_final
+|mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final
 a[0] => bus2~0.IN0
 a[0] => bus1~0.IN0
 a[1] => bus2~1.IN0
@@ -941,7 +1008,7 @@ car => car~0.IN11
 car_out <= car_out~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
+|mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
 bus_a[0] => a[1].IN1
 bus_a[1] => a[2].IN0
 bus_a[2] => comb~0.IN1
@@ -955,7 +1022,7 @@ cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
 cary_2 => a[0].IN1
 
 
-|mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a
+|mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a
 bus_a[0] => a[1].IN1
 bus_a[1] => a[2].IN1
 bus_a[2] => a[3].IN0
@@ -974,7 +1041,7 @@ cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
 cary_2 => a[0].IN1
 
 
-|mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a
+|mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a
 bus_a[0] => a[1].IN1
 bus_a[1] => a[2].IN1
 bus_a[2] => a[3].IN1
@@ -999,7 +1066,7 @@ cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
 cary_2 => a[0].IN1
 
 
-|mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a
+|mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a
 bus_a[0] => a[1].IN1
 bus_a[1] => a[2].IN1
 bus_a[2] => a[3].IN1
@@ -1031,7 +1098,7 @@ cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
 cary_2 => a[0].IN1
 
 
-|mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a
+|mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a
 bus_a[0] => a[1].IN1
 bus_a[1] => a[2].IN1
 bus_a[2] => a[3].IN1
@@ -1071,7 +1138,7 @@ cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
 cary_2 => a[0].IN1
 
 
-|mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a
+|mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a
 bus_a[0] => a[1].IN1
 bus_a[1] => a[2].IN1
 bus_a[2] => a[3].IN1
@@ -1120,7 +1187,7 @@ cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
 cary_2 => a[0].IN1
 
 
-|mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a
+|mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a
 bus_a[0] => a[1].IN1
 bus_a[1] => a[2].IN1
 bus_a[2] => a[3].IN1
@@ -1179,7 +1246,7 @@ cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
 cary_2 => a[0].IN1
 
 
-|mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a
+|mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a
 bus_a[0] => a[1].IN1
 bus_a[1] => a[2].IN1
 bus_a[2] => a[3].IN1
@@ -1249,7 +1316,7 @@ cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
 cary_2 => a[0].IN1
 
 
-|mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a
+|mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a
 bus_a[0] => a[1].IN1
 bus_a[1] => a[2].IN1
 bus_a[2] => a[3].IN1
@@ -1331,7 +1398,7 @@ cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
 cary_2 => a[0].IN1
 
 
-|mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a
+|mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a
 bus_a[0] => a[1].IN1
 bus_a[1] => a[2].IN1
 bus_a[2] => a[3].IN1
@@ -1426,7 +1493,7 @@ cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
 cary_2 => a[0].IN1
 
 
-|mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a
+|mul_16bit|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a
 bus_a[0] => a[1].IN1
 bus_a[1] => a[2].IN1
 bus_a[2] => a[3].IN1
@@ -1533,5 +1600,5736 @@ bus_b[12] => a[12].IN1
 bus_b[12] => WideAnd0.IN0
 cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
 cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ay
+a[0] => x[0].IN1
+a[1] => x[1].IN1
+a[2] => x[2].IN1
+a[3] => x[3].IN1
+a[4] => x[4].IN1
+a[5] => x[5].IN1
+a[6] => x[6].IN1
+a[7] => x[7].IN1
+b[0] => y[0].IN1
+b[1] => y[1].IN1
+b[2] => y[2].IN1
+b[3] => y[3].IN1
+b[4] => y[4].IN1
+b[5] => y[5].IN1
+b[6] => y[6].IN1
+b[7] => y[7].IN1
+out[0] <= tree_builder:tree_builder.bus1
+out[1] <= adder_b:fast_adder_final.out
+out[2] <= adder_b:fast_adder_final.out
+out[3] <= adder_b:fast_adder_final.out
+out[4] <= adder_b:fast_adder_final.out
+out[5] <= adder_b:fast_adder_final.out
+out[6] <= adder_b:fast_adder_final.out
+out[7] <= adder_b:fast_adder_final.out
+out[8] <= adder_b:fast_adder_final.out
+out[9] <= adder_b:fast_adder_final.out
+out[10] <= adder_b:fast_adder_final.out
+out[11] <= adder_b:fast_adder_final.out
+out[12] <= adder_b:fast_adder_final.out
+out[13] <= adder_b:fast_adder_final.out
+out[14] <= adder_b:fast_adder_final.out
+out[15] <= adder_b:fast_adder_final.car_out
+
+
+|mul_16bit|mul_8bit:mul8_ay|tree_builder:tree_builder
+x[0] => bus8~0.IN0
+x[0] => bus7~0.IN0
+x[0] => bus6~0.IN0
+x[0] => bus5~0.IN0
+x[0] => bus4~0.IN0
+x[0] => bus3~0.IN0
+x[0] => bus2~0.IN0
+x[0] => bus1~0.IN0
+x[1] => bus7~2.IN0
+x[1] => bus7~1.IN0
+x[1] => bus6~1.IN0
+x[1] => bus5~1.IN0
+x[1] => bus4~1.IN0
+x[1] => bus3~1.IN0
+x[1] => bus2~1.IN0
+x[1] => bus1~1.IN1
+x[2] => bus6~4.IN0
+x[2] => bus6~3.IN0
+x[2] => bus6~2.IN0
+x[2] => bus5~2.IN0
+x[2] => bus4~2.IN0
+x[2] => bus3~2.IN0
+x[2] => bus2~2.IN0
+x[2] => bus1~2.IN1
+x[3] => bus5~6.IN0
+x[3] => bus5~5.IN0
+x[3] => bus5~4.IN0
+x[3] => bus5~3.IN0
+x[3] => bus4~3.IN0
+x[3] => bus3~3.IN0
+x[3] => bus2~3.IN0
+x[3] => bus1~3.IN1
+x[4] => bus4~8.IN0
+x[4] => bus4~7.IN0
+x[4] => bus4~6.IN0
+x[4] => bus4~5.IN0
+x[4] => bus4~4.IN0
+x[4] => bus3~4.IN0
+x[4] => bus2~4.IN0
+x[4] => bus1~4.IN1
+x[5] => bus3~10.IN0
+x[5] => bus3~9.IN0
+x[5] => bus3~8.IN0
+x[5] => bus3~7.IN0
+x[5] => bus3~6.IN0
+x[5] => bus3~5.IN0
+x[5] => bus2~5.IN0
+x[5] => bus1~5.IN1
+x[6] => bus2~12.IN0
+x[6] => bus2~11.IN0
+x[6] => bus2~10.IN0
+x[6] => bus2~9.IN0
+x[6] => bus2~8.IN0
+x[6] => bus2~7.IN0
+x[6] => bus2~6.IN0
+x[6] => bus1~6.IN1
+x[7] => bus1~14.IN0
+x[7] => bus1~13.IN0
+x[7] => bus1~12.IN0
+x[7] => bus1~11.IN0
+x[7] => bus1~10.IN0
+x[7] => bus1~9.IN0
+x[7] => bus1~8.IN0
+x[7] => bus1~7.IN1
+y[0] => bus1~7.IN0
+y[0] => bus1~6.IN0
+y[0] => bus1~5.IN0
+y[0] => bus1~4.IN0
+y[0] => bus1~3.IN0
+y[0] => bus1~2.IN0
+y[0] => bus1~1.IN0
+y[0] => bus1~0.IN1
+y[1] => bus2~6.IN1
+y[1] => bus2~5.IN1
+y[1] => bus2~4.IN1
+y[1] => bus2~3.IN1
+y[1] => bus2~2.IN1
+y[1] => bus2~1.IN1
+y[1] => bus2~0.IN1
+y[1] => bus1~8.IN1
+y[2] => bus3~5.IN1
+y[2] => bus3~4.IN1
+y[2] => bus3~3.IN1
+y[2] => bus3~2.IN1
+y[2] => bus3~1.IN1
+y[2] => bus3~0.IN1
+y[2] => bus2~7.IN1
+y[2] => bus1~9.IN1
+y[3] => bus4~4.IN1
+y[3] => bus4~3.IN1
+y[3] => bus4~2.IN1
+y[3] => bus4~1.IN1
+y[3] => bus4~0.IN1
+y[3] => bus3~6.IN1
+y[3] => bus2~8.IN1
+y[3] => bus1~10.IN1
+y[4] => bus5~3.IN1
+y[4] => bus5~2.IN1
+y[4] => bus5~1.IN1
+y[4] => bus5~0.IN1
+y[4] => bus4~5.IN1
+y[4] => bus3~7.IN1
+y[4] => bus2~9.IN1
+y[4] => bus1~11.IN1
+y[5] => bus6~2.IN1
+y[5] => bus6~1.IN1
+y[5] => bus6~0.IN1
+y[5] => bus5~4.IN1
+y[5] => bus4~6.IN1
+y[5] => bus3~8.IN1
+y[5] => bus2~10.IN1
+y[5] => bus1~12.IN1
+y[6] => bus7~1.IN1
+y[6] => bus7~0.IN1
+y[6] => bus6~3.IN1
+y[6] => bus5~5.IN1
+y[6] => bus4~7.IN1
+y[6] => bus3~9.IN1
+y[6] => bus2~11.IN1
+y[6] => bus1~13.IN1
+y[7] => bus8~0.IN1
+y[7] => bus7~2.IN1
+y[7] => bus6~4.IN1
+y[7] => bus5~6.IN1
+y[7] => bus4~8.IN1
+y[7] => bus3~10.IN1
+y[7] => bus2~12.IN1
+y[7] => bus1~14.IN1
+bus1[0] <= bus1~0.DB_MAX_OUTPUT_PORT_TYPE
+bus1[1] <= bus1~1.DB_MAX_OUTPUT_PORT_TYPE
+bus1[2] <= bus1~2.DB_MAX_OUTPUT_PORT_TYPE
+bus1[3] <= bus1~3.DB_MAX_OUTPUT_PORT_TYPE
+bus1[4] <= bus1~4.DB_MAX_OUTPUT_PORT_TYPE
+bus1[5] <= bus1~5.DB_MAX_OUTPUT_PORT_TYPE
+bus1[6] <= bus1~6.DB_MAX_OUTPUT_PORT_TYPE
+bus1[7] <= bus1~7.DB_MAX_OUTPUT_PORT_TYPE
+bus1[8] <= bus1~8.DB_MAX_OUTPUT_PORT_TYPE
+bus1[9] <= bus1~9.DB_MAX_OUTPUT_PORT_TYPE
+bus1[10] <= bus1~10.DB_MAX_OUTPUT_PORT_TYPE
+bus1[11] <= bus1~11.DB_MAX_OUTPUT_PORT_TYPE
+bus1[12] <= bus1~12.DB_MAX_OUTPUT_PORT_TYPE
+bus1[13] <= bus1~13.DB_MAX_OUTPUT_PORT_TYPE
+bus1[14] <= bus1~14.DB_MAX_OUTPUT_PORT_TYPE
+bus2[0] <= bus2~0.DB_MAX_OUTPUT_PORT_TYPE
+bus2[1] <= bus2~1.DB_MAX_OUTPUT_PORT_TYPE
+bus2[2] <= bus2~2.DB_MAX_OUTPUT_PORT_TYPE
+bus2[3] <= bus2~3.DB_MAX_OUTPUT_PORT_TYPE
+bus2[4] <= bus2~4.DB_MAX_OUTPUT_PORT_TYPE
+bus2[5] <= bus2~5.DB_MAX_OUTPUT_PORT_TYPE
+bus2[6] <= bus2~6.DB_MAX_OUTPUT_PORT_TYPE
+bus2[7] <= bus2~7.DB_MAX_OUTPUT_PORT_TYPE
+bus2[8] <= bus2~8.DB_MAX_OUTPUT_PORT_TYPE
+bus2[9] <= bus2~9.DB_MAX_OUTPUT_PORT_TYPE
+bus2[10] <= bus2~10.DB_MAX_OUTPUT_PORT_TYPE
+bus2[11] <= bus2~11.DB_MAX_OUTPUT_PORT_TYPE
+bus2[12] <= bus2~12.DB_MAX_OUTPUT_PORT_TYPE
+bus3[0] <= bus3~0.DB_MAX_OUTPUT_PORT_TYPE
+bus3[1] <= bus3~1.DB_MAX_OUTPUT_PORT_TYPE
+bus3[2] <= bus3~2.DB_MAX_OUTPUT_PORT_TYPE
+bus3[3] <= bus3~3.DB_MAX_OUTPUT_PORT_TYPE
+bus3[4] <= bus3~4.DB_MAX_OUTPUT_PORT_TYPE
+bus3[5] <= bus3~5.DB_MAX_OUTPUT_PORT_TYPE
+bus3[6] <= bus3~6.DB_MAX_OUTPUT_PORT_TYPE
+bus3[7] <= bus3~7.DB_MAX_OUTPUT_PORT_TYPE
+bus3[8] <= bus3~8.DB_MAX_OUTPUT_PORT_TYPE
+bus3[9] <= bus3~9.DB_MAX_OUTPUT_PORT_TYPE
+bus3[10] <= bus3~10.DB_MAX_OUTPUT_PORT_TYPE
+bus4[0] <= bus4~0.DB_MAX_OUTPUT_PORT_TYPE
+bus4[1] <= bus4~1.DB_MAX_OUTPUT_PORT_TYPE
+bus4[2] <= bus4~2.DB_MAX_OUTPUT_PORT_TYPE
+bus4[3] <= bus4~3.DB_MAX_OUTPUT_PORT_TYPE
+bus4[4] <= bus4~4.DB_MAX_OUTPUT_PORT_TYPE
+bus4[5] <= bus4~5.DB_MAX_OUTPUT_PORT_TYPE
+bus4[6] <= bus4~6.DB_MAX_OUTPUT_PORT_TYPE
+bus4[7] <= bus4~7.DB_MAX_OUTPUT_PORT_TYPE
+bus4[8] <= bus4~8.DB_MAX_OUTPUT_PORT_TYPE
+bus5[0] <= bus5~0.DB_MAX_OUTPUT_PORT_TYPE
+bus5[1] <= bus5~1.DB_MAX_OUTPUT_PORT_TYPE
+bus5[2] <= bus5~2.DB_MAX_OUTPUT_PORT_TYPE
+bus5[3] <= bus5~3.DB_MAX_OUTPUT_PORT_TYPE
+bus5[4] <= bus5~4.DB_MAX_OUTPUT_PORT_TYPE
+bus5[5] <= bus5~5.DB_MAX_OUTPUT_PORT_TYPE
+bus5[6] <= bus5~6.DB_MAX_OUTPUT_PORT_TYPE
+bus6[0] <= bus6~0.DB_MAX_OUTPUT_PORT_TYPE
+bus6[1] <= bus6~1.DB_MAX_OUTPUT_PORT_TYPE
+bus6[2] <= bus6~2.DB_MAX_OUTPUT_PORT_TYPE
+bus6[3] <= bus6~3.DB_MAX_OUTPUT_PORT_TYPE
+bus6[4] <= bus6~4.DB_MAX_OUTPUT_PORT_TYPE
+bus7[0] <= bus7~0.DB_MAX_OUTPUT_PORT_TYPE
+bus7[1] <= bus7~1.DB_MAX_OUTPUT_PORT_TYPE
+bus7[2] <= bus7~2.DB_MAX_OUTPUT_PORT_TYPE
+bus8[0] <= bus8~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|half_adder_single:half_adder_b1
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_b
+x[0] => x[0]~2.IN1
+x[1] => x[1]~1.IN1
+x[2] => x[2]~0.IN1
+y[0] => y[0]~2.IN1
+y[1] => y[1]~1.IN1
+y[2] => y[2]~0.IN1
+z[0] => z[0]~2.IN1
+z[1] => z[1]~1.IN1
+z[2] => z[2]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|half_adder_single:half_adder_b2
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|half_adder_single:half_adder_b3
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|half_adder_single:half_adder_c1
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|half_adder_single:half_adder_c2
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c1
+x[0] => x[0]~6.IN1
+x[1] => x[1]~5.IN1
+x[2] => x[2]~4.IN1
+x[3] => x[3]~3.IN1
+x[4] => x[4]~2.IN1
+x[5] => x[5]~1.IN1
+x[6] => x[6]~0.IN1
+y[0] => y[0]~6.IN1
+y[1] => y[1]~5.IN1
+y[2] => y[2]~4.IN1
+y[3] => y[3]~3.IN1
+y[4] => y[4]~2.IN1
+y[5] => y[5]~1.IN1
+y[6] => y[6]~0.IN1
+z[0] => z[0]~6.IN1
+z[1] => z[1]~5.IN1
+z[2] => z[2]~4.IN1
+z[3] => z[3]~3.IN1
+z[4] => z[4]~2.IN1
+z[5] => z[5]~1.IN1
+z[6] => z[6]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_out
+out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_out
+out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_out
+out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
+cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
+cary_out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_cary
+cary_out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[3].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[4].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[5].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[6].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c2
+x[0] => x[0]~4.IN1
+x[1] => x[1]~3.IN1
+x[2] => x[2]~2.IN1
+x[3] => x[3]~1.IN1
+x[4] => x[4]~0.IN1
+y[0] => y[0]~4.IN1
+y[1] => y[1]~3.IN1
+y[2] => y[2]~2.IN1
+y[3] => y[3]~1.IN1
+y[4] => y[4]~0.IN1
+z[0] => z[0]~4.IN1
+z[1] => z[1]~3.IN1
+z[2] => z[2]~2.IN1
+z[3] => z[3]~1.IN1
+z[4] => z[4]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_out
+out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
+cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[3].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[4].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|half_adder_single:half_adder_d1
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_d
+x[0] => x[0]~8.IN1
+x[1] => x[1]~7.IN1
+x[2] => x[2]~6.IN1
+x[3] => x[3]~5.IN1
+x[4] => x[4]~4.IN1
+x[5] => x[5]~3.IN1
+x[6] => x[6]~2.IN1
+x[7] => x[7]~1.IN1
+x[8] => x[8]~0.IN1
+y[0] => y[0]~8.IN1
+y[1] => y[1]~7.IN1
+y[2] => y[2]~6.IN1
+y[3] => y[3]~5.IN1
+y[4] => y[4]~4.IN1
+y[5] => y[5]~3.IN1
+y[6] => y[6]~2.IN1
+y[7] => y[7]~1.IN1
+y[8] => y[8]~0.IN1
+z[0] => z[0]~8.IN1
+z[1] => z[1]~7.IN1
+z[2] => z[2]~6.IN1
+z[3] => z[3]~5.IN1
+z[4] => z[4]~4.IN1
+z[5] => z[5]~3.IN1
+z[6] => z[6]~2.IN1
+z[7] => z[7]~1.IN1
+z[8] => z[8]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_out
+out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_out
+out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_out
+out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_out
+out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_out
+out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
+cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
+cary_out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_cary
+cary_out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_cary
+cary_out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_cary
+cary_out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[3].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[4].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[5].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[6].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[7].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[8].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|half_adder_single:half_adder_e1
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e
+x[0] => x[0]~10.IN1
+x[1] => x[1]~9.IN1
+x[2] => x[2]~8.IN1
+x[3] => x[3]~7.IN1
+x[4] => x[4]~6.IN1
+x[5] => x[5]~5.IN1
+x[6] => x[6]~4.IN1
+x[7] => x[7]~3.IN1
+x[8] => x[8]~2.IN1
+x[9] => x[9]~1.IN1
+x[10] => x[10]~0.IN1
+y[0] => y[0]~10.IN1
+y[1] => y[1]~9.IN1
+y[2] => y[2]~8.IN1
+y[3] => y[3]~7.IN1
+y[4] => y[4]~6.IN1
+y[5] => y[5]~5.IN1
+y[6] => y[6]~4.IN1
+y[7] => y[7]~3.IN1
+y[8] => y[8]~2.IN1
+y[9] => y[9]~1.IN1
+y[10] => y[10]~0.IN1
+z[0] => z[0]~10.IN1
+z[1] => z[1]~9.IN1
+z[2] => z[2]~8.IN1
+z[3] => z[3]~7.IN1
+z[4] => z[4]~6.IN1
+z[5] => z[5]~5.IN1
+z[6] => z[6]~4.IN1
+z[7] => z[7]~3.IN1
+z[8] => z[8]~2.IN1
+z[9] => z[9]~1.IN1
+z[10] => z[10]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_out
+out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_out
+out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_out
+out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_out
+out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_out
+out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_out
+out[9] <= full_adder_single:ASSIGN_GEN[9].fa_single.fa_out
+out[10] <= full_adder_single:ASSIGN_GEN[10].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
+cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
+cary_out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_cary
+cary_out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_cary
+cary_out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_cary
+cary_out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_cary
+cary_out[9] <= full_adder_single:ASSIGN_GEN[9].fa_single.fa_cary
+cary_out[10] <= full_adder_single:ASSIGN_GEN[10].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[3].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[4].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[5].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[6].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[7].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[8].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final
+a[0] => bus2~0.IN0
+a[0] => bus1~0.IN0
+a[1] => bus2~1.IN0
+a[1] => bus1~1.IN0
+a[2] => bus2~2.IN0
+a[2] => bus1~2.IN0
+a[3] => bus2~3.IN0
+a[3] => bus1~3.IN0
+a[4] => bus2~4.IN0
+a[4] => bus1~4.IN0
+a[5] => bus2~5.IN0
+a[5] => bus1~5.IN0
+a[6] => bus2~6.IN0
+a[6] => bus1~6.IN0
+a[7] => bus2~7.IN0
+a[7] => bus1~7.IN0
+a[8] => bus2~8.IN0
+a[8] => bus1~8.IN0
+a[9] => bus2~9.IN0
+a[9] => bus1~9.IN0
+a[10] => bus2~10.IN0
+a[10] => bus1~10.IN0
+a[11] => bus2~11.IN0
+a[11] => bus1~11.IN0
+a[12] => bus2~12.IN0
+a[12] => bus1~12.IN0
+a[13] => bus2[13].IN0
+a[13] => bus1[13].IN0
+b[0] => bus2~0.IN1
+b[0] => bus1~0.IN1
+b[1] => bus2~1.IN1
+b[1] => bus1~1.IN1
+b[2] => bus2~2.IN1
+b[2] => bus1~2.IN1
+b[3] => bus2~3.IN1
+b[3] => bus1~3.IN1
+b[4] => bus2~4.IN1
+b[4] => bus1~4.IN1
+b[5] => bus2~5.IN1
+b[5] => bus1~5.IN1
+b[6] => bus2~6.IN1
+b[6] => bus1~6.IN1
+b[7] => bus2~7.IN1
+b[7] => bus1~7.IN1
+b[8] => bus2~8.IN1
+b[8] => bus1~8.IN1
+b[9] => bus2~9.IN1
+b[9] => bus1~9.IN1
+b[10] => bus2~10.IN1
+b[10] => bus1~10.IN1
+b[11] => bus2~11.IN1
+b[11] => bus1~11.IN1
+b[12] => bus2~12.IN1
+b[12] => bus1~12.IN1
+b[13] => bus2[13].IN1
+b[13] => bus1[13].IN1
+out[0] <= out~14.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out~15.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~16.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out~17.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out~18.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out~19.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out~20.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out~21.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out~22.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out~23.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out~24.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out~25.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out~26.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out~27.DB_MAX_OUTPUT_PORT_TYPE
+car => car~0.IN11
+car_out <= car_out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN0
+bus_a[2] => comb~0.IN1
+bus_b[0] => WideAnd0.IN2
+bus_b[1] => WideAnd1.IN1
+bus_b[1] => WideAnd0.IN1
+bus_b[2] => WideAnd1.IN0
+bus_b[2] => a[2].IN1
+bus_b[2] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN0
+bus_a[3] => comb~0.IN1
+bus_b[0] => WideAnd0.IN3
+bus_b[1] => WideAnd1.IN2
+bus_b[1] => WideAnd0.IN2
+bus_b[2] => WideAnd2.IN1
+bus_b[2] => WideAnd1.IN1
+bus_b[2] => WideAnd0.IN1
+bus_b[3] => WideAnd2.IN0
+bus_b[3] => WideAnd1.IN0
+bus_b[3] => a[3].IN1
+bus_b[3] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN0
+bus_a[4] => comb~0.IN1
+bus_b[0] => WideAnd0.IN4
+bus_b[1] => WideAnd1.IN3
+bus_b[1] => WideAnd0.IN3
+bus_b[2] => WideAnd2.IN2
+bus_b[2] => WideAnd1.IN2
+bus_b[2] => WideAnd0.IN2
+bus_b[3] => WideAnd3.IN1
+bus_b[3] => WideAnd2.IN1
+bus_b[3] => WideAnd1.IN1
+bus_b[3] => WideAnd0.IN1
+bus_b[4] => WideAnd3.IN0
+bus_b[4] => WideAnd2.IN0
+bus_b[4] => WideAnd1.IN0
+bus_b[4] => a[4].IN1
+bus_b[4] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN0
+bus_a[5] => comb~0.IN1
+bus_b[0] => WideAnd0.IN5
+bus_b[1] => WideAnd1.IN4
+bus_b[1] => WideAnd0.IN4
+bus_b[2] => WideAnd2.IN3
+bus_b[2] => WideAnd1.IN3
+bus_b[2] => WideAnd0.IN3
+bus_b[3] => WideAnd3.IN2
+bus_b[3] => WideAnd2.IN2
+bus_b[3] => WideAnd1.IN2
+bus_b[3] => WideAnd0.IN2
+bus_b[4] => WideAnd4.IN1
+bus_b[4] => WideAnd3.IN1
+bus_b[4] => WideAnd2.IN1
+bus_b[4] => WideAnd1.IN1
+bus_b[4] => WideAnd0.IN1
+bus_b[5] => WideAnd4.IN0
+bus_b[5] => WideAnd3.IN0
+bus_b[5] => WideAnd2.IN0
+bus_b[5] => WideAnd1.IN0
+bus_b[5] => a[5].IN1
+bus_b[5] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN0
+bus_a[6] => comb~0.IN1
+bus_b[0] => WideAnd0.IN6
+bus_b[1] => WideAnd1.IN5
+bus_b[1] => WideAnd0.IN5
+bus_b[2] => WideAnd2.IN4
+bus_b[2] => WideAnd1.IN4
+bus_b[2] => WideAnd0.IN4
+bus_b[3] => WideAnd3.IN3
+bus_b[3] => WideAnd2.IN3
+bus_b[3] => WideAnd1.IN3
+bus_b[3] => WideAnd0.IN3
+bus_b[4] => WideAnd4.IN2
+bus_b[4] => WideAnd3.IN2
+bus_b[4] => WideAnd2.IN2
+bus_b[4] => WideAnd1.IN2
+bus_b[4] => WideAnd0.IN2
+bus_b[5] => WideAnd5.IN1
+bus_b[5] => WideAnd4.IN1
+bus_b[5] => WideAnd3.IN1
+bus_b[5] => WideAnd2.IN1
+bus_b[5] => WideAnd1.IN1
+bus_b[5] => WideAnd0.IN1
+bus_b[6] => WideAnd5.IN0
+bus_b[6] => WideAnd4.IN0
+bus_b[6] => WideAnd3.IN0
+bus_b[6] => WideAnd2.IN0
+bus_b[6] => WideAnd1.IN0
+bus_b[6] => a[6].IN1
+bus_b[6] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN0
+bus_a[7] => comb~0.IN1
+bus_b[0] => WideAnd0.IN7
+bus_b[1] => WideAnd1.IN6
+bus_b[1] => WideAnd0.IN6
+bus_b[2] => WideAnd2.IN5
+bus_b[2] => WideAnd1.IN5
+bus_b[2] => WideAnd0.IN5
+bus_b[3] => WideAnd3.IN4
+bus_b[3] => WideAnd2.IN4
+bus_b[3] => WideAnd1.IN4
+bus_b[3] => WideAnd0.IN4
+bus_b[4] => WideAnd4.IN3
+bus_b[4] => WideAnd3.IN3
+bus_b[4] => WideAnd2.IN3
+bus_b[4] => WideAnd1.IN3
+bus_b[4] => WideAnd0.IN3
+bus_b[5] => WideAnd5.IN2
+bus_b[5] => WideAnd4.IN2
+bus_b[5] => WideAnd3.IN2
+bus_b[5] => WideAnd2.IN2
+bus_b[5] => WideAnd1.IN2
+bus_b[5] => WideAnd0.IN2
+bus_b[6] => WideAnd6.IN1
+bus_b[6] => WideAnd5.IN1
+bus_b[6] => WideAnd4.IN1
+bus_b[6] => WideAnd3.IN1
+bus_b[6] => WideAnd2.IN1
+bus_b[6] => WideAnd1.IN1
+bus_b[6] => WideAnd0.IN1
+bus_b[7] => WideAnd6.IN0
+bus_b[7] => WideAnd5.IN0
+bus_b[7] => WideAnd4.IN0
+bus_b[7] => WideAnd3.IN0
+bus_b[7] => WideAnd2.IN0
+bus_b[7] => WideAnd1.IN0
+bus_b[7] => a[7].IN1
+bus_b[7] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN0
+bus_a[8] => comb~0.IN1
+bus_b[0] => WideAnd0.IN8
+bus_b[1] => WideAnd1.IN7
+bus_b[1] => WideAnd0.IN7
+bus_b[2] => WideAnd2.IN6
+bus_b[2] => WideAnd1.IN6
+bus_b[2] => WideAnd0.IN6
+bus_b[3] => WideAnd3.IN5
+bus_b[3] => WideAnd2.IN5
+bus_b[3] => WideAnd1.IN5
+bus_b[3] => WideAnd0.IN5
+bus_b[4] => WideAnd4.IN4
+bus_b[4] => WideAnd3.IN4
+bus_b[4] => WideAnd2.IN4
+bus_b[4] => WideAnd1.IN4
+bus_b[4] => WideAnd0.IN4
+bus_b[5] => WideAnd5.IN3
+bus_b[5] => WideAnd4.IN3
+bus_b[5] => WideAnd3.IN3
+bus_b[5] => WideAnd2.IN3
+bus_b[5] => WideAnd1.IN3
+bus_b[5] => WideAnd0.IN3
+bus_b[6] => WideAnd6.IN2
+bus_b[6] => WideAnd5.IN2
+bus_b[6] => WideAnd4.IN2
+bus_b[6] => WideAnd3.IN2
+bus_b[6] => WideAnd2.IN2
+bus_b[6] => WideAnd1.IN2
+bus_b[6] => WideAnd0.IN2
+bus_b[7] => WideAnd7.IN1
+bus_b[7] => WideAnd6.IN1
+bus_b[7] => WideAnd5.IN1
+bus_b[7] => WideAnd4.IN1
+bus_b[7] => WideAnd3.IN1
+bus_b[7] => WideAnd2.IN1
+bus_b[7] => WideAnd1.IN1
+bus_b[7] => WideAnd0.IN1
+bus_b[8] => WideAnd7.IN0
+bus_b[8] => WideAnd6.IN0
+bus_b[8] => WideAnd5.IN0
+bus_b[8] => WideAnd4.IN0
+bus_b[8] => WideAnd3.IN0
+bus_b[8] => WideAnd2.IN0
+bus_b[8] => WideAnd1.IN0
+bus_b[8] => a[8].IN1
+bus_b[8] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN0
+bus_a[9] => comb~0.IN1
+bus_b[0] => WideAnd0.IN9
+bus_b[1] => WideAnd1.IN8
+bus_b[1] => WideAnd0.IN8
+bus_b[2] => WideAnd2.IN7
+bus_b[2] => WideAnd1.IN7
+bus_b[2] => WideAnd0.IN7
+bus_b[3] => WideAnd3.IN6
+bus_b[3] => WideAnd2.IN6
+bus_b[3] => WideAnd1.IN6
+bus_b[3] => WideAnd0.IN6
+bus_b[4] => WideAnd4.IN5
+bus_b[4] => WideAnd3.IN5
+bus_b[4] => WideAnd2.IN5
+bus_b[4] => WideAnd1.IN5
+bus_b[4] => WideAnd0.IN5
+bus_b[5] => WideAnd5.IN4
+bus_b[5] => WideAnd4.IN4
+bus_b[5] => WideAnd3.IN4
+bus_b[5] => WideAnd2.IN4
+bus_b[5] => WideAnd1.IN4
+bus_b[5] => WideAnd0.IN4
+bus_b[6] => WideAnd6.IN3
+bus_b[6] => WideAnd5.IN3
+bus_b[6] => WideAnd4.IN3
+bus_b[6] => WideAnd3.IN3
+bus_b[6] => WideAnd2.IN3
+bus_b[6] => WideAnd1.IN3
+bus_b[6] => WideAnd0.IN3
+bus_b[7] => WideAnd7.IN2
+bus_b[7] => WideAnd6.IN2
+bus_b[7] => WideAnd5.IN2
+bus_b[7] => WideAnd4.IN2
+bus_b[7] => WideAnd3.IN2
+bus_b[7] => WideAnd2.IN2
+bus_b[7] => WideAnd1.IN2
+bus_b[7] => WideAnd0.IN2
+bus_b[8] => WideAnd8.IN1
+bus_b[8] => WideAnd7.IN1
+bus_b[8] => WideAnd6.IN1
+bus_b[8] => WideAnd5.IN1
+bus_b[8] => WideAnd4.IN1
+bus_b[8] => WideAnd3.IN1
+bus_b[8] => WideAnd2.IN1
+bus_b[8] => WideAnd1.IN1
+bus_b[8] => WideAnd0.IN1
+bus_b[9] => WideAnd8.IN0
+bus_b[9] => WideAnd7.IN0
+bus_b[9] => WideAnd6.IN0
+bus_b[9] => WideAnd5.IN0
+bus_b[9] => WideAnd4.IN0
+bus_b[9] => WideAnd3.IN0
+bus_b[9] => WideAnd2.IN0
+bus_b[9] => WideAnd1.IN0
+bus_b[9] => a[9].IN1
+bus_b[9] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN1
+bus_a[9] => a[10].IN0
+bus_a[10] => comb~0.IN1
+bus_b[0] => WideAnd0.IN10
+bus_b[1] => WideAnd1.IN9
+bus_b[1] => WideAnd0.IN9
+bus_b[2] => WideAnd2.IN8
+bus_b[2] => WideAnd1.IN8
+bus_b[2] => WideAnd0.IN8
+bus_b[3] => WideAnd3.IN7
+bus_b[3] => WideAnd2.IN7
+bus_b[3] => WideAnd1.IN7
+bus_b[3] => WideAnd0.IN7
+bus_b[4] => WideAnd4.IN6
+bus_b[4] => WideAnd3.IN6
+bus_b[4] => WideAnd2.IN6
+bus_b[4] => WideAnd1.IN6
+bus_b[4] => WideAnd0.IN6
+bus_b[5] => WideAnd5.IN5
+bus_b[5] => WideAnd4.IN5
+bus_b[5] => WideAnd3.IN5
+bus_b[5] => WideAnd2.IN5
+bus_b[5] => WideAnd1.IN5
+bus_b[5] => WideAnd0.IN5
+bus_b[6] => WideAnd6.IN4
+bus_b[6] => WideAnd5.IN4
+bus_b[6] => WideAnd4.IN4
+bus_b[6] => WideAnd3.IN4
+bus_b[6] => WideAnd2.IN4
+bus_b[6] => WideAnd1.IN4
+bus_b[6] => WideAnd0.IN4
+bus_b[7] => WideAnd7.IN3
+bus_b[7] => WideAnd6.IN3
+bus_b[7] => WideAnd5.IN3
+bus_b[7] => WideAnd4.IN3
+bus_b[7] => WideAnd3.IN3
+bus_b[7] => WideAnd2.IN3
+bus_b[7] => WideAnd1.IN3
+bus_b[7] => WideAnd0.IN3
+bus_b[8] => WideAnd8.IN2
+bus_b[8] => WideAnd7.IN2
+bus_b[8] => WideAnd6.IN2
+bus_b[8] => WideAnd5.IN2
+bus_b[8] => WideAnd4.IN2
+bus_b[8] => WideAnd3.IN2
+bus_b[8] => WideAnd2.IN2
+bus_b[8] => WideAnd1.IN2
+bus_b[8] => WideAnd0.IN2
+bus_b[9] => WideAnd9.IN1
+bus_b[9] => WideAnd8.IN1
+bus_b[9] => WideAnd7.IN1
+bus_b[9] => WideAnd6.IN1
+bus_b[9] => WideAnd5.IN1
+bus_b[9] => WideAnd4.IN1
+bus_b[9] => WideAnd3.IN1
+bus_b[9] => WideAnd2.IN1
+bus_b[9] => WideAnd1.IN1
+bus_b[9] => WideAnd0.IN1
+bus_b[10] => WideAnd9.IN0
+bus_b[10] => WideAnd8.IN0
+bus_b[10] => WideAnd7.IN0
+bus_b[10] => WideAnd6.IN0
+bus_b[10] => WideAnd5.IN0
+bus_b[10] => WideAnd4.IN0
+bus_b[10] => WideAnd3.IN0
+bus_b[10] => WideAnd2.IN0
+bus_b[10] => WideAnd1.IN0
+bus_b[10] => a[10].IN1
+bus_b[10] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN1
+bus_a[9] => a[10].IN1
+bus_a[10] => a[11].IN0
+bus_a[11] => comb~0.IN1
+bus_b[0] => WideAnd0.IN11
+bus_b[1] => WideAnd1.IN10
+bus_b[1] => WideAnd0.IN10
+bus_b[2] => WideAnd2.IN9
+bus_b[2] => WideAnd1.IN9
+bus_b[2] => WideAnd0.IN9
+bus_b[3] => WideAnd3.IN8
+bus_b[3] => WideAnd2.IN8
+bus_b[3] => WideAnd1.IN8
+bus_b[3] => WideAnd0.IN8
+bus_b[4] => WideAnd4.IN7
+bus_b[4] => WideAnd3.IN7
+bus_b[4] => WideAnd2.IN7
+bus_b[4] => WideAnd1.IN7
+bus_b[4] => WideAnd0.IN7
+bus_b[5] => WideAnd5.IN6
+bus_b[5] => WideAnd4.IN6
+bus_b[5] => WideAnd3.IN6
+bus_b[5] => WideAnd2.IN6
+bus_b[5] => WideAnd1.IN6
+bus_b[5] => WideAnd0.IN6
+bus_b[6] => WideAnd6.IN5
+bus_b[6] => WideAnd5.IN5
+bus_b[6] => WideAnd4.IN5
+bus_b[6] => WideAnd3.IN5
+bus_b[6] => WideAnd2.IN5
+bus_b[6] => WideAnd1.IN5
+bus_b[6] => WideAnd0.IN5
+bus_b[7] => WideAnd7.IN4
+bus_b[7] => WideAnd6.IN4
+bus_b[7] => WideAnd5.IN4
+bus_b[7] => WideAnd4.IN4
+bus_b[7] => WideAnd3.IN4
+bus_b[7] => WideAnd2.IN4
+bus_b[7] => WideAnd1.IN4
+bus_b[7] => WideAnd0.IN4
+bus_b[8] => WideAnd8.IN3
+bus_b[8] => WideAnd7.IN3
+bus_b[8] => WideAnd6.IN3
+bus_b[8] => WideAnd5.IN3
+bus_b[8] => WideAnd4.IN3
+bus_b[8] => WideAnd3.IN3
+bus_b[8] => WideAnd2.IN3
+bus_b[8] => WideAnd1.IN3
+bus_b[8] => WideAnd0.IN3
+bus_b[9] => WideAnd9.IN2
+bus_b[9] => WideAnd8.IN2
+bus_b[9] => WideAnd7.IN2
+bus_b[9] => WideAnd6.IN2
+bus_b[9] => WideAnd5.IN2
+bus_b[9] => WideAnd4.IN2
+bus_b[9] => WideAnd3.IN2
+bus_b[9] => WideAnd2.IN2
+bus_b[9] => WideAnd1.IN2
+bus_b[9] => WideAnd0.IN2
+bus_b[10] => WideAnd10.IN1
+bus_b[10] => WideAnd9.IN1
+bus_b[10] => WideAnd8.IN1
+bus_b[10] => WideAnd7.IN1
+bus_b[10] => WideAnd6.IN1
+bus_b[10] => WideAnd5.IN1
+bus_b[10] => WideAnd4.IN1
+bus_b[10] => WideAnd3.IN1
+bus_b[10] => WideAnd2.IN1
+bus_b[10] => WideAnd1.IN1
+bus_b[10] => WideAnd0.IN1
+bus_b[11] => WideAnd10.IN0
+bus_b[11] => WideAnd9.IN0
+bus_b[11] => WideAnd8.IN0
+bus_b[11] => WideAnd7.IN0
+bus_b[11] => WideAnd6.IN0
+bus_b[11] => WideAnd5.IN0
+bus_b[11] => WideAnd4.IN0
+bus_b[11] => WideAnd3.IN0
+bus_b[11] => WideAnd2.IN0
+bus_b[11] => WideAnd1.IN0
+bus_b[11] => a[11].IN1
+bus_b[11] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ay|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN1
+bus_a[9] => a[10].IN1
+bus_a[10] => a[11].IN1
+bus_a[11] => a[12].IN0
+bus_a[12] => comb~0.IN1
+bus_b[0] => WideAnd0.IN12
+bus_b[1] => WideAnd1.IN11
+bus_b[1] => WideAnd0.IN11
+bus_b[2] => WideAnd2.IN10
+bus_b[2] => WideAnd1.IN10
+bus_b[2] => WideAnd0.IN10
+bus_b[3] => WideAnd3.IN9
+bus_b[3] => WideAnd2.IN9
+bus_b[3] => WideAnd1.IN9
+bus_b[3] => WideAnd0.IN9
+bus_b[4] => WideAnd4.IN8
+bus_b[4] => WideAnd3.IN8
+bus_b[4] => WideAnd2.IN8
+bus_b[4] => WideAnd1.IN8
+bus_b[4] => WideAnd0.IN8
+bus_b[5] => WideAnd5.IN7
+bus_b[5] => WideAnd4.IN7
+bus_b[5] => WideAnd3.IN7
+bus_b[5] => WideAnd2.IN7
+bus_b[5] => WideAnd1.IN7
+bus_b[5] => WideAnd0.IN7
+bus_b[6] => WideAnd6.IN6
+bus_b[6] => WideAnd5.IN6
+bus_b[6] => WideAnd4.IN6
+bus_b[6] => WideAnd3.IN6
+bus_b[6] => WideAnd2.IN6
+bus_b[6] => WideAnd1.IN6
+bus_b[6] => WideAnd0.IN6
+bus_b[7] => WideAnd7.IN5
+bus_b[7] => WideAnd6.IN5
+bus_b[7] => WideAnd5.IN5
+bus_b[7] => WideAnd4.IN5
+bus_b[7] => WideAnd3.IN5
+bus_b[7] => WideAnd2.IN5
+bus_b[7] => WideAnd1.IN5
+bus_b[7] => WideAnd0.IN5
+bus_b[8] => WideAnd8.IN4
+bus_b[8] => WideAnd7.IN4
+bus_b[8] => WideAnd6.IN4
+bus_b[8] => WideAnd5.IN4
+bus_b[8] => WideAnd4.IN4
+bus_b[8] => WideAnd3.IN4
+bus_b[8] => WideAnd2.IN4
+bus_b[8] => WideAnd1.IN4
+bus_b[8] => WideAnd0.IN4
+bus_b[9] => WideAnd9.IN3
+bus_b[9] => WideAnd8.IN3
+bus_b[9] => WideAnd7.IN3
+bus_b[9] => WideAnd6.IN3
+bus_b[9] => WideAnd5.IN3
+bus_b[9] => WideAnd4.IN3
+bus_b[9] => WideAnd3.IN3
+bus_b[9] => WideAnd2.IN3
+bus_b[9] => WideAnd1.IN3
+bus_b[9] => WideAnd0.IN3
+bus_b[10] => WideAnd10.IN2
+bus_b[10] => WideAnd9.IN2
+bus_b[10] => WideAnd8.IN2
+bus_b[10] => WideAnd7.IN2
+bus_b[10] => WideAnd6.IN2
+bus_b[10] => WideAnd5.IN2
+bus_b[10] => WideAnd4.IN2
+bus_b[10] => WideAnd3.IN2
+bus_b[10] => WideAnd2.IN2
+bus_b[10] => WideAnd1.IN2
+bus_b[10] => WideAnd0.IN2
+bus_b[11] => WideAnd11.IN1
+bus_b[11] => WideAnd10.IN1
+bus_b[11] => WideAnd9.IN1
+bus_b[11] => WideAnd8.IN1
+bus_b[11] => WideAnd7.IN1
+bus_b[11] => WideAnd6.IN1
+bus_b[11] => WideAnd5.IN1
+bus_b[11] => WideAnd4.IN1
+bus_b[11] => WideAnd3.IN1
+bus_b[11] => WideAnd2.IN1
+bus_b[11] => WideAnd1.IN1
+bus_b[11] => WideAnd0.IN1
+bus_b[12] => WideAnd11.IN0
+bus_b[12] => WideAnd10.IN0
+bus_b[12] => WideAnd9.IN0
+bus_b[12] => WideAnd8.IN0
+bus_b[12] => WideAnd7.IN0
+bus_b[12] => WideAnd6.IN0
+bus_b[12] => WideAnd5.IN0
+bus_b[12] => WideAnd4.IN0
+bus_b[12] => WideAnd3.IN0
+bus_b[12] => WideAnd2.IN0
+bus_b[12] => WideAnd1.IN0
+bus_b[12] => a[12].IN1
+bus_b[12] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_xb
+a[0] => x[0].IN1
+a[1] => x[1].IN1
+a[2] => x[2].IN1
+a[3] => x[3].IN1
+a[4] => x[4].IN1
+a[5] => x[5].IN1
+a[6] => x[6].IN1
+a[7] => x[7].IN1
+b[0] => y[0].IN1
+b[1] => y[1].IN1
+b[2] => y[2].IN1
+b[3] => y[3].IN1
+b[4] => y[4].IN1
+b[5] => y[5].IN1
+b[6] => y[6].IN1
+b[7] => y[7].IN1
+out[0] <= tree_builder:tree_builder.bus1
+out[1] <= adder_b:fast_adder_final.out
+out[2] <= adder_b:fast_adder_final.out
+out[3] <= adder_b:fast_adder_final.out
+out[4] <= adder_b:fast_adder_final.out
+out[5] <= adder_b:fast_adder_final.out
+out[6] <= adder_b:fast_adder_final.out
+out[7] <= adder_b:fast_adder_final.out
+out[8] <= adder_b:fast_adder_final.out
+out[9] <= adder_b:fast_adder_final.out
+out[10] <= adder_b:fast_adder_final.out
+out[11] <= adder_b:fast_adder_final.out
+out[12] <= adder_b:fast_adder_final.out
+out[13] <= adder_b:fast_adder_final.out
+out[14] <= adder_b:fast_adder_final.out
+out[15] <= adder_b:fast_adder_final.car_out
+
+
+|mul_16bit|mul_8bit:mul8_xb|tree_builder:tree_builder
+x[0] => bus8~0.IN0
+x[0] => bus7~0.IN0
+x[0] => bus6~0.IN0
+x[0] => bus5~0.IN0
+x[0] => bus4~0.IN0
+x[0] => bus3~0.IN0
+x[0] => bus2~0.IN0
+x[0] => bus1~0.IN0
+x[1] => bus7~2.IN0
+x[1] => bus7~1.IN0
+x[1] => bus6~1.IN0
+x[1] => bus5~1.IN0
+x[1] => bus4~1.IN0
+x[1] => bus3~1.IN0
+x[1] => bus2~1.IN0
+x[1] => bus1~1.IN1
+x[2] => bus6~4.IN0
+x[2] => bus6~3.IN0
+x[2] => bus6~2.IN0
+x[2] => bus5~2.IN0
+x[2] => bus4~2.IN0
+x[2] => bus3~2.IN0
+x[2] => bus2~2.IN0
+x[2] => bus1~2.IN1
+x[3] => bus5~6.IN0
+x[3] => bus5~5.IN0
+x[3] => bus5~4.IN0
+x[3] => bus5~3.IN0
+x[3] => bus4~3.IN0
+x[3] => bus3~3.IN0
+x[3] => bus2~3.IN0
+x[3] => bus1~3.IN1
+x[4] => bus4~8.IN0
+x[4] => bus4~7.IN0
+x[4] => bus4~6.IN0
+x[4] => bus4~5.IN0
+x[4] => bus4~4.IN0
+x[4] => bus3~4.IN0
+x[4] => bus2~4.IN0
+x[4] => bus1~4.IN1
+x[5] => bus3~10.IN0
+x[5] => bus3~9.IN0
+x[5] => bus3~8.IN0
+x[5] => bus3~7.IN0
+x[5] => bus3~6.IN0
+x[5] => bus3~5.IN0
+x[5] => bus2~5.IN0
+x[5] => bus1~5.IN1
+x[6] => bus2~12.IN0
+x[6] => bus2~11.IN0
+x[6] => bus2~10.IN0
+x[6] => bus2~9.IN0
+x[6] => bus2~8.IN0
+x[6] => bus2~7.IN0
+x[6] => bus2~6.IN0
+x[6] => bus1~6.IN1
+x[7] => bus1~14.IN0
+x[7] => bus1~13.IN0
+x[7] => bus1~12.IN0
+x[7] => bus1~11.IN0
+x[7] => bus1~10.IN0
+x[7] => bus1~9.IN0
+x[7] => bus1~8.IN0
+x[7] => bus1~7.IN1
+y[0] => bus1~7.IN0
+y[0] => bus1~6.IN0
+y[0] => bus1~5.IN0
+y[0] => bus1~4.IN0
+y[0] => bus1~3.IN0
+y[0] => bus1~2.IN0
+y[0] => bus1~1.IN0
+y[0] => bus1~0.IN1
+y[1] => bus2~6.IN1
+y[1] => bus2~5.IN1
+y[1] => bus2~4.IN1
+y[1] => bus2~3.IN1
+y[1] => bus2~2.IN1
+y[1] => bus2~1.IN1
+y[1] => bus2~0.IN1
+y[1] => bus1~8.IN1
+y[2] => bus3~5.IN1
+y[2] => bus3~4.IN1
+y[2] => bus3~3.IN1
+y[2] => bus3~2.IN1
+y[2] => bus3~1.IN1
+y[2] => bus3~0.IN1
+y[2] => bus2~7.IN1
+y[2] => bus1~9.IN1
+y[3] => bus4~4.IN1
+y[3] => bus4~3.IN1
+y[3] => bus4~2.IN1
+y[3] => bus4~1.IN1
+y[3] => bus4~0.IN1
+y[3] => bus3~6.IN1
+y[3] => bus2~8.IN1
+y[3] => bus1~10.IN1
+y[4] => bus5~3.IN1
+y[4] => bus5~2.IN1
+y[4] => bus5~1.IN1
+y[4] => bus5~0.IN1
+y[4] => bus4~5.IN1
+y[4] => bus3~7.IN1
+y[4] => bus2~9.IN1
+y[4] => bus1~11.IN1
+y[5] => bus6~2.IN1
+y[5] => bus6~1.IN1
+y[5] => bus6~0.IN1
+y[5] => bus5~4.IN1
+y[5] => bus4~6.IN1
+y[5] => bus3~8.IN1
+y[5] => bus2~10.IN1
+y[5] => bus1~12.IN1
+y[6] => bus7~1.IN1
+y[6] => bus7~0.IN1
+y[6] => bus6~3.IN1
+y[6] => bus5~5.IN1
+y[6] => bus4~7.IN1
+y[6] => bus3~9.IN1
+y[6] => bus2~11.IN1
+y[6] => bus1~13.IN1
+y[7] => bus8~0.IN1
+y[7] => bus7~2.IN1
+y[7] => bus6~4.IN1
+y[7] => bus5~6.IN1
+y[7] => bus4~8.IN1
+y[7] => bus3~10.IN1
+y[7] => bus2~12.IN1
+y[7] => bus1~14.IN1
+bus1[0] <= bus1~0.DB_MAX_OUTPUT_PORT_TYPE
+bus1[1] <= bus1~1.DB_MAX_OUTPUT_PORT_TYPE
+bus1[2] <= bus1~2.DB_MAX_OUTPUT_PORT_TYPE
+bus1[3] <= bus1~3.DB_MAX_OUTPUT_PORT_TYPE
+bus1[4] <= bus1~4.DB_MAX_OUTPUT_PORT_TYPE
+bus1[5] <= bus1~5.DB_MAX_OUTPUT_PORT_TYPE
+bus1[6] <= bus1~6.DB_MAX_OUTPUT_PORT_TYPE
+bus1[7] <= bus1~7.DB_MAX_OUTPUT_PORT_TYPE
+bus1[8] <= bus1~8.DB_MAX_OUTPUT_PORT_TYPE
+bus1[9] <= bus1~9.DB_MAX_OUTPUT_PORT_TYPE
+bus1[10] <= bus1~10.DB_MAX_OUTPUT_PORT_TYPE
+bus1[11] <= bus1~11.DB_MAX_OUTPUT_PORT_TYPE
+bus1[12] <= bus1~12.DB_MAX_OUTPUT_PORT_TYPE
+bus1[13] <= bus1~13.DB_MAX_OUTPUT_PORT_TYPE
+bus1[14] <= bus1~14.DB_MAX_OUTPUT_PORT_TYPE
+bus2[0] <= bus2~0.DB_MAX_OUTPUT_PORT_TYPE
+bus2[1] <= bus2~1.DB_MAX_OUTPUT_PORT_TYPE
+bus2[2] <= bus2~2.DB_MAX_OUTPUT_PORT_TYPE
+bus2[3] <= bus2~3.DB_MAX_OUTPUT_PORT_TYPE
+bus2[4] <= bus2~4.DB_MAX_OUTPUT_PORT_TYPE
+bus2[5] <= bus2~5.DB_MAX_OUTPUT_PORT_TYPE
+bus2[6] <= bus2~6.DB_MAX_OUTPUT_PORT_TYPE
+bus2[7] <= bus2~7.DB_MAX_OUTPUT_PORT_TYPE
+bus2[8] <= bus2~8.DB_MAX_OUTPUT_PORT_TYPE
+bus2[9] <= bus2~9.DB_MAX_OUTPUT_PORT_TYPE
+bus2[10] <= bus2~10.DB_MAX_OUTPUT_PORT_TYPE
+bus2[11] <= bus2~11.DB_MAX_OUTPUT_PORT_TYPE
+bus2[12] <= bus2~12.DB_MAX_OUTPUT_PORT_TYPE
+bus3[0] <= bus3~0.DB_MAX_OUTPUT_PORT_TYPE
+bus3[1] <= bus3~1.DB_MAX_OUTPUT_PORT_TYPE
+bus3[2] <= bus3~2.DB_MAX_OUTPUT_PORT_TYPE
+bus3[3] <= bus3~3.DB_MAX_OUTPUT_PORT_TYPE
+bus3[4] <= bus3~4.DB_MAX_OUTPUT_PORT_TYPE
+bus3[5] <= bus3~5.DB_MAX_OUTPUT_PORT_TYPE
+bus3[6] <= bus3~6.DB_MAX_OUTPUT_PORT_TYPE
+bus3[7] <= bus3~7.DB_MAX_OUTPUT_PORT_TYPE
+bus3[8] <= bus3~8.DB_MAX_OUTPUT_PORT_TYPE
+bus3[9] <= bus3~9.DB_MAX_OUTPUT_PORT_TYPE
+bus3[10] <= bus3~10.DB_MAX_OUTPUT_PORT_TYPE
+bus4[0] <= bus4~0.DB_MAX_OUTPUT_PORT_TYPE
+bus4[1] <= bus4~1.DB_MAX_OUTPUT_PORT_TYPE
+bus4[2] <= bus4~2.DB_MAX_OUTPUT_PORT_TYPE
+bus4[3] <= bus4~3.DB_MAX_OUTPUT_PORT_TYPE
+bus4[4] <= bus4~4.DB_MAX_OUTPUT_PORT_TYPE
+bus4[5] <= bus4~5.DB_MAX_OUTPUT_PORT_TYPE
+bus4[6] <= bus4~6.DB_MAX_OUTPUT_PORT_TYPE
+bus4[7] <= bus4~7.DB_MAX_OUTPUT_PORT_TYPE
+bus4[8] <= bus4~8.DB_MAX_OUTPUT_PORT_TYPE
+bus5[0] <= bus5~0.DB_MAX_OUTPUT_PORT_TYPE
+bus5[1] <= bus5~1.DB_MAX_OUTPUT_PORT_TYPE
+bus5[2] <= bus5~2.DB_MAX_OUTPUT_PORT_TYPE
+bus5[3] <= bus5~3.DB_MAX_OUTPUT_PORT_TYPE
+bus5[4] <= bus5~4.DB_MAX_OUTPUT_PORT_TYPE
+bus5[5] <= bus5~5.DB_MAX_OUTPUT_PORT_TYPE
+bus5[6] <= bus5~6.DB_MAX_OUTPUT_PORT_TYPE
+bus6[0] <= bus6~0.DB_MAX_OUTPUT_PORT_TYPE
+bus6[1] <= bus6~1.DB_MAX_OUTPUT_PORT_TYPE
+bus6[2] <= bus6~2.DB_MAX_OUTPUT_PORT_TYPE
+bus6[3] <= bus6~3.DB_MAX_OUTPUT_PORT_TYPE
+bus6[4] <= bus6~4.DB_MAX_OUTPUT_PORT_TYPE
+bus7[0] <= bus7~0.DB_MAX_OUTPUT_PORT_TYPE
+bus7[1] <= bus7~1.DB_MAX_OUTPUT_PORT_TYPE
+bus7[2] <= bus7~2.DB_MAX_OUTPUT_PORT_TYPE
+bus8[0] <= bus8~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|half_adder_single:half_adder_b1
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_b
+x[0] => x[0]~2.IN1
+x[1] => x[1]~1.IN1
+x[2] => x[2]~0.IN1
+y[0] => y[0]~2.IN1
+y[1] => y[1]~1.IN1
+y[2] => y[2]~0.IN1
+z[0] => z[0]~2.IN1
+z[1] => z[1]~1.IN1
+z[2] => z[2]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|half_adder_single:half_adder_b2
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|half_adder_single:half_adder_b3
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|half_adder_single:half_adder_c1
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|half_adder_single:half_adder_c2
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c1
+x[0] => x[0]~6.IN1
+x[1] => x[1]~5.IN1
+x[2] => x[2]~4.IN1
+x[3] => x[3]~3.IN1
+x[4] => x[4]~2.IN1
+x[5] => x[5]~1.IN1
+x[6] => x[6]~0.IN1
+y[0] => y[0]~6.IN1
+y[1] => y[1]~5.IN1
+y[2] => y[2]~4.IN1
+y[3] => y[3]~3.IN1
+y[4] => y[4]~2.IN1
+y[5] => y[5]~1.IN1
+y[6] => y[6]~0.IN1
+z[0] => z[0]~6.IN1
+z[1] => z[1]~5.IN1
+z[2] => z[2]~4.IN1
+z[3] => z[3]~3.IN1
+z[4] => z[4]~2.IN1
+z[5] => z[5]~1.IN1
+z[6] => z[6]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_out
+out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_out
+out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_out
+out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
+cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
+cary_out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_cary
+cary_out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[3].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[4].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[5].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[6].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c2
+x[0] => x[0]~4.IN1
+x[1] => x[1]~3.IN1
+x[2] => x[2]~2.IN1
+x[3] => x[3]~1.IN1
+x[4] => x[4]~0.IN1
+y[0] => y[0]~4.IN1
+y[1] => y[1]~3.IN1
+y[2] => y[2]~2.IN1
+y[3] => y[3]~1.IN1
+y[4] => y[4]~0.IN1
+z[0] => z[0]~4.IN1
+z[1] => z[1]~3.IN1
+z[2] => z[2]~2.IN1
+z[3] => z[3]~1.IN1
+z[4] => z[4]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_out
+out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
+cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[3].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[4].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|half_adder_single:half_adder_d1
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_d
+x[0] => x[0]~8.IN1
+x[1] => x[1]~7.IN1
+x[2] => x[2]~6.IN1
+x[3] => x[3]~5.IN1
+x[4] => x[4]~4.IN1
+x[5] => x[5]~3.IN1
+x[6] => x[6]~2.IN1
+x[7] => x[7]~1.IN1
+x[8] => x[8]~0.IN1
+y[0] => y[0]~8.IN1
+y[1] => y[1]~7.IN1
+y[2] => y[2]~6.IN1
+y[3] => y[3]~5.IN1
+y[4] => y[4]~4.IN1
+y[5] => y[5]~3.IN1
+y[6] => y[6]~2.IN1
+y[7] => y[7]~1.IN1
+y[8] => y[8]~0.IN1
+z[0] => z[0]~8.IN1
+z[1] => z[1]~7.IN1
+z[2] => z[2]~6.IN1
+z[3] => z[3]~5.IN1
+z[4] => z[4]~4.IN1
+z[5] => z[5]~3.IN1
+z[6] => z[6]~2.IN1
+z[7] => z[7]~1.IN1
+z[8] => z[8]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_out
+out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_out
+out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_out
+out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_out
+out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_out
+out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
+cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
+cary_out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_cary
+cary_out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_cary
+cary_out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_cary
+cary_out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[3].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[4].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[5].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[6].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[7].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[8].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|half_adder_single:half_adder_e1
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_e
+x[0] => x[0]~10.IN1
+x[1] => x[1]~9.IN1
+x[2] => x[2]~8.IN1
+x[3] => x[3]~7.IN1
+x[4] => x[4]~6.IN1
+x[5] => x[5]~5.IN1
+x[6] => x[6]~4.IN1
+x[7] => x[7]~3.IN1
+x[8] => x[8]~2.IN1
+x[9] => x[9]~1.IN1
+x[10] => x[10]~0.IN1
+y[0] => y[0]~10.IN1
+y[1] => y[1]~9.IN1
+y[2] => y[2]~8.IN1
+y[3] => y[3]~7.IN1
+y[4] => y[4]~6.IN1
+y[5] => y[5]~5.IN1
+y[6] => y[6]~4.IN1
+y[7] => y[7]~3.IN1
+y[8] => y[8]~2.IN1
+y[9] => y[9]~1.IN1
+y[10] => y[10]~0.IN1
+z[0] => z[0]~10.IN1
+z[1] => z[1]~9.IN1
+z[2] => z[2]~8.IN1
+z[3] => z[3]~7.IN1
+z[4] => z[4]~6.IN1
+z[5] => z[5]~5.IN1
+z[6] => z[6]~4.IN1
+z[7] => z[7]~3.IN1
+z[8] => z[8]~2.IN1
+z[9] => z[9]~1.IN1
+z[10] => z[10]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_out
+out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_out
+out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_out
+out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_out
+out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_out
+out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_out
+out[9] <= full_adder_single:ASSIGN_GEN[9].fa_single.fa_out
+out[10] <= full_adder_single:ASSIGN_GEN[10].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
+cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
+cary_out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_cary
+cary_out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_cary
+cary_out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_cary
+cary_out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_cary
+cary_out[9] <= full_adder_single:ASSIGN_GEN[9].fa_single.fa_cary
+cary_out[10] <= full_adder_single:ASSIGN_GEN[10].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[3].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[4].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[5].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[6].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[7].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[8].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final
+a[0] => bus2~0.IN0
+a[0] => bus1~0.IN0
+a[1] => bus2~1.IN0
+a[1] => bus1~1.IN0
+a[2] => bus2~2.IN0
+a[2] => bus1~2.IN0
+a[3] => bus2~3.IN0
+a[3] => bus1~3.IN0
+a[4] => bus2~4.IN0
+a[4] => bus1~4.IN0
+a[5] => bus2~5.IN0
+a[5] => bus1~5.IN0
+a[6] => bus2~6.IN0
+a[6] => bus1~6.IN0
+a[7] => bus2~7.IN0
+a[7] => bus1~7.IN0
+a[8] => bus2~8.IN0
+a[8] => bus1~8.IN0
+a[9] => bus2~9.IN0
+a[9] => bus1~9.IN0
+a[10] => bus2~10.IN0
+a[10] => bus1~10.IN0
+a[11] => bus2~11.IN0
+a[11] => bus1~11.IN0
+a[12] => bus2~12.IN0
+a[12] => bus1~12.IN0
+a[13] => bus2[13].IN0
+a[13] => bus1[13].IN0
+b[0] => bus2~0.IN1
+b[0] => bus1~0.IN1
+b[1] => bus2~1.IN1
+b[1] => bus1~1.IN1
+b[2] => bus2~2.IN1
+b[2] => bus1~2.IN1
+b[3] => bus2~3.IN1
+b[3] => bus1~3.IN1
+b[4] => bus2~4.IN1
+b[4] => bus1~4.IN1
+b[5] => bus2~5.IN1
+b[5] => bus1~5.IN1
+b[6] => bus2~6.IN1
+b[6] => bus1~6.IN1
+b[7] => bus2~7.IN1
+b[7] => bus1~7.IN1
+b[8] => bus2~8.IN1
+b[8] => bus1~8.IN1
+b[9] => bus2~9.IN1
+b[9] => bus1~9.IN1
+b[10] => bus2~10.IN1
+b[10] => bus1~10.IN1
+b[11] => bus2~11.IN1
+b[11] => bus1~11.IN1
+b[12] => bus2~12.IN1
+b[12] => bus1~12.IN1
+b[13] => bus2[13].IN1
+b[13] => bus1[13].IN1
+out[0] <= out~14.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out~15.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~16.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out~17.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out~18.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out~19.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out~20.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out~21.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out~22.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out~23.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out~24.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out~25.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out~26.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out~27.DB_MAX_OUTPUT_PORT_TYPE
+car => car~0.IN11
+car_out <= car_out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN0
+bus_a[2] => comb~0.IN1
+bus_b[0] => WideAnd0.IN2
+bus_b[1] => WideAnd1.IN1
+bus_b[1] => WideAnd0.IN1
+bus_b[2] => WideAnd1.IN0
+bus_b[2] => a[2].IN1
+bus_b[2] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN0
+bus_a[3] => comb~0.IN1
+bus_b[0] => WideAnd0.IN3
+bus_b[1] => WideAnd1.IN2
+bus_b[1] => WideAnd0.IN2
+bus_b[2] => WideAnd2.IN1
+bus_b[2] => WideAnd1.IN1
+bus_b[2] => WideAnd0.IN1
+bus_b[3] => WideAnd2.IN0
+bus_b[3] => WideAnd1.IN0
+bus_b[3] => a[3].IN1
+bus_b[3] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN0
+bus_a[4] => comb~0.IN1
+bus_b[0] => WideAnd0.IN4
+bus_b[1] => WideAnd1.IN3
+bus_b[1] => WideAnd0.IN3
+bus_b[2] => WideAnd2.IN2
+bus_b[2] => WideAnd1.IN2
+bus_b[2] => WideAnd0.IN2
+bus_b[3] => WideAnd3.IN1
+bus_b[3] => WideAnd2.IN1
+bus_b[3] => WideAnd1.IN1
+bus_b[3] => WideAnd0.IN1
+bus_b[4] => WideAnd3.IN0
+bus_b[4] => WideAnd2.IN0
+bus_b[4] => WideAnd1.IN0
+bus_b[4] => a[4].IN1
+bus_b[4] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN0
+bus_a[5] => comb~0.IN1
+bus_b[0] => WideAnd0.IN5
+bus_b[1] => WideAnd1.IN4
+bus_b[1] => WideAnd0.IN4
+bus_b[2] => WideAnd2.IN3
+bus_b[2] => WideAnd1.IN3
+bus_b[2] => WideAnd0.IN3
+bus_b[3] => WideAnd3.IN2
+bus_b[3] => WideAnd2.IN2
+bus_b[3] => WideAnd1.IN2
+bus_b[3] => WideAnd0.IN2
+bus_b[4] => WideAnd4.IN1
+bus_b[4] => WideAnd3.IN1
+bus_b[4] => WideAnd2.IN1
+bus_b[4] => WideAnd1.IN1
+bus_b[4] => WideAnd0.IN1
+bus_b[5] => WideAnd4.IN0
+bus_b[5] => WideAnd3.IN0
+bus_b[5] => WideAnd2.IN0
+bus_b[5] => WideAnd1.IN0
+bus_b[5] => a[5].IN1
+bus_b[5] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN0
+bus_a[6] => comb~0.IN1
+bus_b[0] => WideAnd0.IN6
+bus_b[1] => WideAnd1.IN5
+bus_b[1] => WideAnd0.IN5
+bus_b[2] => WideAnd2.IN4
+bus_b[2] => WideAnd1.IN4
+bus_b[2] => WideAnd0.IN4
+bus_b[3] => WideAnd3.IN3
+bus_b[3] => WideAnd2.IN3
+bus_b[3] => WideAnd1.IN3
+bus_b[3] => WideAnd0.IN3
+bus_b[4] => WideAnd4.IN2
+bus_b[4] => WideAnd3.IN2
+bus_b[4] => WideAnd2.IN2
+bus_b[4] => WideAnd1.IN2
+bus_b[4] => WideAnd0.IN2
+bus_b[5] => WideAnd5.IN1
+bus_b[5] => WideAnd4.IN1
+bus_b[5] => WideAnd3.IN1
+bus_b[5] => WideAnd2.IN1
+bus_b[5] => WideAnd1.IN1
+bus_b[5] => WideAnd0.IN1
+bus_b[6] => WideAnd5.IN0
+bus_b[6] => WideAnd4.IN0
+bus_b[6] => WideAnd3.IN0
+bus_b[6] => WideAnd2.IN0
+bus_b[6] => WideAnd1.IN0
+bus_b[6] => a[6].IN1
+bus_b[6] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN0
+bus_a[7] => comb~0.IN1
+bus_b[0] => WideAnd0.IN7
+bus_b[1] => WideAnd1.IN6
+bus_b[1] => WideAnd0.IN6
+bus_b[2] => WideAnd2.IN5
+bus_b[2] => WideAnd1.IN5
+bus_b[2] => WideAnd0.IN5
+bus_b[3] => WideAnd3.IN4
+bus_b[3] => WideAnd2.IN4
+bus_b[3] => WideAnd1.IN4
+bus_b[3] => WideAnd0.IN4
+bus_b[4] => WideAnd4.IN3
+bus_b[4] => WideAnd3.IN3
+bus_b[4] => WideAnd2.IN3
+bus_b[4] => WideAnd1.IN3
+bus_b[4] => WideAnd0.IN3
+bus_b[5] => WideAnd5.IN2
+bus_b[5] => WideAnd4.IN2
+bus_b[5] => WideAnd3.IN2
+bus_b[5] => WideAnd2.IN2
+bus_b[5] => WideAnd1.IN2
+bus_b[5] => WideAnd0.IN2
+bus_b[6] => WideAnd6.IN1
+bus_b[6] => WideAnd5.IN1
+bus_b[6] => WideAnd4.IN1
+bus_b[6] => WideAnd3.IN1
+bus_b[6] => WideAnd2.IN1
+bus_b[6] => WideAnd1.IN1
+bus_b[6] => WideAnd0.IN1
+bus_b[7] => WideAnd6.IN0
+bus_b[7] => WideAnd5.IN0
+bus_b[7] => WideAnd4.IN0
+bus_b[7] => WideAnd3.IN0
+bus_b[7] => WideAnd2.IN0
+bus_b[7] => WideAnd1.IN0
+bus_b[7] => a[7].IN1
+bus_b[7] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN0
+bus_a[8] => comb~0.IN1
+bus_b[0] => WideAnd0.IN8
+bus_b[1] => WideAnd1.IN7
+bus_b[1] => WideAnd0.IN7
+bus_b[2] => WideAnd2.IN6
+bus_b[2] => WideAnd1.IN6
+bus_b[2] => WideAnd0.IN6
+bus_b[3] => WideAnd3.IN5
+bus_b[3] => WideAnd2.IN5
+bus_b[3] => WideAnd1.IN5
+bus_b[3] => WideAnd0.IN5
+bus_b[4] => WideAnd4.IN4
+bus_b[4] => WideAnd3.IN4
+bus_b[4] => WideAnd2.IN4
+bus_b[4] => WideAnd1.IN4
+bus_b[4] => WideAnd0.IN4
+bus_b[5] => WideAnd5.IN3
+bus_b[5] => WideAnd4.IN3
+bus_b[5] => WideAnd3.IN3
+bus_b[5] => WideAnd2.IN3
+bus_b[5] => WideAnd1.IN3
+bus_b[5] => WideAnd0.IN3
+bus_b[6] => WideAnd6.IN2
+bus_b[6] => WideAnd5.IN2
+bus_b[6] => WideAnd4.IN2
+bus_b[6] => WideAnd3.IN2
+bus_b[6] => WideAnd2.IN2
+bus_b[6] => WideAnd1.IN2
+bus_b[6] => WideAnd0.IN2
+bus_b[7] => WideAnd7.IN1
+bus_b[7] => WideAnd6.IN1
+bus_b[7] => WideAnd5.IN1
+bus_b[7] => WideAnd4.IN1
+bus_b[7] => WideAnd3.IN1
+bus_b[7] => WideAnd2.IN1
+bus_b[7] => WideAnd1.IN1
+bus_b[7] => WideAnd0.IN1
+bus_b[8] => WideAnd7.IN0
+bus_b[8] => WideAnd6.IN0
+bus_b[8] => WideAnd5.IN0
+bus_b[8] => WideAnd4.IN0
+bus_b[8] => WideAnd3.IN0
+bus_b[8] => WideAnd2.IN0
+bus_b[8] => WideAnd1.IN0
+bus_b[8] => a[8].IN1
+bus_b[8] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN0
+bus_a[9] => comb~0.IN1
+bus_b[0] => WideAnd0.IN9
+bus_b[1] => WideAnd1.IN8
+bus_b[1] => WideAnd0.IN8
+bus_b[2] => WideAnd2.IN7
+bus_b[2] => WideAnd1.IN7
+bus_b[2] => WideAnd0.IN7
+bus_b[3] => WideAnd3.IN6
+bus_b[3] => WideAnd2.IN6
+bus_b[3] => WideAnd1.IN6
+bus_b[3] => WideAnd0.IN6
+bus_b[4] => WideAnd4.IN5
+bus_b[4] => WideAnd3.IN5
+bus_b[4] => WideAnd2.IN5
+bus_b[4] => WideAnd1.IN5
+bus_b[4] => WideAnd0.IN5
+bus_b[5] => WideAnd5.IN4
+bus_b[5] => WideAnd4.IN4
+bus_b[5] => WideAnd3.IN4
+bus_b[5] => WideAnd2.IN4
+bus_b[5] => WideAnd1.IN4
+bus_b[5] => WideAnd0.IN4
+bus_b[6] => WideAnd6.IN3
+bus_b[6] => WideAnd5.IN3
+bus_b[6] => WideAnd4.IN3
+bus_b[6] => WideAnd3.IN3
+bus_b[6] => WideAnd2.IN3
+bus_b[6] => WideAnd1.IN3
+bus_b[6] => WideAnd0.IN3
+bus_b[7] => WideAnd7.IN2
+bus_b[7] => WideAnd6.IN2
+bus_b[7] => WideAnd5.IN2
+bus_b[7] => WideAnd4.IN2
+bus_b[7] => WideAnd3.IN2
+bus_b[7] => WideAnd2.IN2
+bus_b[7] => WideAnd1.IN2
+bus_b[7] => WideAnd0.IN2
+bus_b[8] => WideAnd8.IN1
+bus_b[8] => WideAnd7.IN1
+bus_b[8] => WideAnd6.IN1
+bus_b[8] => WideAnd5.IN1
+bus_b[8] => WideAnd4.IN1
+bus_b[8] => WideAnd3.IN1
+bus_b[8] => WideAnd2.IN1
+bus_b[8] => WideAnd1.IN1
+bus_b[8] => WideAnd0.IN1
+bus_b[9] => WideAnd8.IN0
+bus_b[9] => WideAnd7.IN0
+bus_b[9] => WideAnd6.IN0
+bus_b[9] => WideAnd5.IN0
+bus_b[9] => WideAnd4.IN0
+bus_b[9] => WideAnd3.IN0
+bus_b[9] => WideAnd2.IN0
+bus_b[9] => WideAnd1.IN0
+bus_b[9] => a[9].IN1
+bus_b[9] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN1
+bus_a[9] => a[10].IN0
+bus_a[10] => comb~0.IN1
+bus_b[0] => WideAnd0.IN10
+bus_b[1] => WideAnd1.IN9
+bus_b[1] => WideAnd0.IN9
+bus_b[2] => WideAnd2.IN8
+bus_b[2] => WideAnd1.IN8
+bus_b[2] => WideAnd0.IN8
+bus_b[3] => WideAnd3.IN7
+bus_b[3] => WideAnd2.IN7
+bus_b[3] => WideAnd1.IN7
+bus_b[3] => WideAnd0.IN7
+bus_b[4] => WideAnd4.IN6
+bus_b[4] => WideAnd3.IN6
+bus_b[4] => WideAnd2.IN6
+bus_b[4] => WideAnd1.IN6
+bus_b[4] => WideAnd0.IN6
+bus_b[5] => WideAnd5.IN5
+bus_b[5] => WideAnd4.IN5
+bus_b[5] => WideAnd3.IN5
+bus_b[5] => WideAnd2.IN5
+bus_b[5] => WideAnd1.IN5
+bus_b[5] => WideAnd0.IN5
+bus_b[6] => WideAnd6.IN4
+bus_b[6] => WideAnd5.IN4
+bus_b[6] => WideAnd4.IN4
+bus_b[6] => WideAnd3.IN4
+bus_b[6] => WideAnd2.IN4
+bus_b[6] => WideAnd1.IN4
+bus_b[6] => WideAnd0.IN4
+bus_b[7] => WideAnd7.IN3
+bus_b[7] => WideAnd6.IN3
+bus_b[7] => WideAnd5.IN3
+bus_b[7] => WideAnd4.IN3
+bus_b[7] => WideAnd3.IN3
+bus_b[7] => WideAnd2.IN3
+bus_b[7] => WideAnd1.IN3
+bus_b[7] => WideAnd0.IN3
+bus_b[8] => WideAnd8.IN2
+bus_b[8] => WideAnd7.IN2
+bus_b[8] => WideAnd6.IN2
+bus_b[8] => WideAnd5.IN2
+bus_b[8] => WideAnd4.IN2
+bus_b[8] => WideAnd3.IN2
+bus_b[8] => WideAnd2.IN2
+bus_b[8] => WideAnd1.IN2
+bus_b[8] => WideAnd0.IN2
+bus_b[9] => WideAnd9.IN1
+bus_b[9] => WideAnd8.IN1
+bus_b[9] => WideAnd7.IN1
+bus_b[9] => WideAnd6.IN1
+bus_b[9] => WideAnd5.IN1
+bus_b[9] => WideAnd4.IN1
+bus_b[9] => WideAnd3.IN1
+bus_b[9] => WideAnd2.IN1
+bus_b[9] => WideAnd1.IN1
+bus_b[9] => WideAnd0.IN1
+bus_b[10] => WideAnd9.IN0
+bus_b[10] => WideAnd8.IN0
+bus_b[10] => WideAnd7.IN0
+bus_b[10] => WideAnd6.IN0
+bus_b[10] => WideAnd5.IN0
+bus_b[10] => WideAnd4.IN0
+bus_b[10] => WideAnd3.IN0
+bus_b[10] => WideAnd2.IN0
+bus_b[10] => WideAnd1.IN0
+bus_b[10] => a[10].IN1
+bus_b[10] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN1
+bus_a[9] => a[10].IN1
+bus_a[10] => a[11].IN0
+bus_a[11] => comb~0.IN1
+bus_b[0] => WideAnd0.IN11
+bus_b[1] => WideAnd1.IN10
+bus_b[1] => WideAnd0.IN10
+bus_b[2] => WideAnd2.IN9
+bus_b[2] => WideAnd1.IN9
+bus_b[2] => WideAnd0.IN9
+bus_b[3] => WideAnd3.IN8
+bus_b[3] => WideAnd2.IN8
+bus_b[3] => WideAnd1.IN8
+bus_b[3] => WideAnd0.IN8
+bus_b[4] => WideAnd4.IN7
+bus_b[4] => WideAnd3.IN7
+bus_b[4] => WideAnd2.IN7
+bus_b[4] => WideAnd1.IN7
+bus_b[4] => WideAnd0.IN7
+bus_b[5] => WideAnd5.IN6
+bus_b[5] => WideAnd4.IN6
+bus_b[5] => WideAnd3.IN6
+bus_b[5] => WideAnd2.IN6
+bus_b[5] => WideAnd1.IN6
+bus_b[5] => WideAnd0.IN6
+bus_b[6] => WideAnd6.IN5
+bus_b[6] => WideAnd5.IN5
+bus_b[6] => WideAnd4.IN5
+bus_b[6] => WideAnd3.IN5
+bus_b[6] => WideAnd2.IN5
+bus_b[6] => WideAnd1.IN5
+bus_b[6] => WideAnd0.IN5
+bus_b[7] => WideAnd7.IN4
+bus_b[7] => WideAnd6.IN4
+bus_b[7] => WideAnd5.IN4
+bus_b[7] => WideAnd4.IN4
+bus_b[7] => WideAnd3.IN4
+bus_b[7] => WideAnd2.IN4
+bus_b[7] => WideAnd1.IN4
+bus_b[7] => WideAnd0.IN4
+bus_b[8] => WideAnd8.IN3
+bus_b[8] => WideAnd7.IN3
+bus_b[8] => WideAnd6.IN3
+bus_b[8] => WideAnd5.IN3
+bus_b[8] => WideAnd4.IN3
+bus_b[8] => WideAnd3.IN3
+bus_b[8] => WideAnd2.IN3
+bus_b[8] => WideAnd1.IN3
+bus_b[8] => WideAnd0.IN3
+bus_b[9] => WideAnd9.IN2
+bus_b[9] => WideAnd8.IN2
+bus_b[9] => WideAnd7.IN2
+bus_b[9] => WideAnd6.IN2
+bus_b[9] => WideAnd5.IN2
+bus_b[9] => WideAnd4.IN2
+bus_b[9] => WideAnd3.IN2
+bus_b[9] => WideAnd2.IN2
+bus_b[9] => WideAnd1.IN2
+bus_b[9] => WideAnd0.IN2
+bus_b[10] => WideAnd10.IN1
+bus_b[10] => WideAnd9.IN1
+bus_b[10] => WideAnd8.IN1
+bus_b[10] => WideAnd7.IN1
+bus_b[10] => WideAnd6.IN1
+bus_b[10] => WideAnd5.IN1
+bus_b[10] => WideAnd4.IN1
+bus_b[10] => WideAnd3.IN1
+bus_b[10] => WideAnd2.IN1
+bus_b[10] => WideAnd1.IN1
+bus_b[10] => WideAnd0.IN1
+bus_b[11] => WideAnd10.IN0
+bus_b[11] => WideAnd9.IN0
+bus_b[11] => WideAnd8.IN0
+bus_b[11] => WideAnd7.IN0
+bus_b[11] => WideAnd6.IN0
+bus_b[11] => WideAnd5.IN0
+bus_b[11] => WideAnd4.IN0
+bus_b[11] => WideAnd3.IN0
+bus_b[11] => WideAnd2.IN0
+bus_b[11] => WideAnd1.IN0
+bus_b[11] => a[11].IN1
+bus_b[11] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_xb|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN1
+bus_a[9] => a[10].IN1
+bus_a[10] => a[11].IN1
+bus_a[11] => a[12].IN0
+bus_a[12] => comb~0.IN1
+bus_b[0] => WideAnd0.IN12
+bus_b[1] => WideAnd1.IN11
+bus_b[1] => WideAnd0.IN11
+bus_b[2] => WideAnd2.IN10
+bus_b[2] => WideAnd1.IN10
+bus_b[2] => WideAnd0.IN10
+bus_b[3] => WideAnd3.IN9
+bus_b[3] => WideAnd2.IN9
+bus_b[3] => WideAnd1.IN9
+bus_b[3] => WideAnd0.IN9
+bus_b[4] => WideAnd4.IN8
+bus_b[4] => WideAnd3.IN8
+bus_b[4] => WideAnd2.IN8
+bus_b[4] => WideAnd1.IN8
+bus_b[4] => WideAnd0.IN8
+bus_b[5] => WideAnd5.IN7
+bus_b[5] => WideAnd4.IN7
+bus_b[5] => WideAnd3.IN7
+bus_b[5] => WideAnd2.IN7
+bus_b[5] => WideAnd1.IN7
+bus_b[5] => WideAnd0.IN7
+bus_b[6] => WideAnd6.IN6
+bus_b[6] => WideAnd5.IN6
+bus_b[6] => WideAnd4.IN6
+bus_b[6] => WideAnd3.IN6
+bus_b[6] => WideAnd2.IN6
+bus_b[6] => WideAnd1.IN6
+bus_b[6] => WideAnd0.IN6
+bus_b[7] => WideAnd7.IN5
+bus_b[7] => WideAnd6.IN5
+bus_b[7] => WideAnd5.IN5
+bus_b[7] => WideAnd4.IN5
+bus_b[7] => WideAnd3.IN5
+bus_b[7] => WideAnd2.IN5
+bus_b[7] => WideAnd1.IN5
+bus_b[7] => WideAnd0.IN5
+bus_b[8] => WideAnd8.IN4
+bus_b[8] => WideAnd7.IN4
+bus_b[8] => WideAnd6.IN4
+bus_b[8] => WideAnd5.IN4
+bus_b[8] => WideAnd4.IN4
+bus_b[8] => WideAnd3.IN4
+bus_b[8] => WideAnd2.IN4
+bus_b[8] => WideAnd1.IN4
+bus_b[8] => WideAnd0.IN4
+bus_b[9] => WideAnd9.IN3
+bus_b[9] => WideAnd8.IN3
+bus_b[9] => WideAnd7.IN3
+bus_b[9] => WideAnd6.IN3
+bus_b[9] => WideAnd5.IN3
+bus_b[9] => WideAnd4.IN3
+bus_b[9] => WideAnd3.IN3
+bus_b[9] => WideAnd2.IN3
+bus_b[9] => WideAnd1.IN3
+bus_b[9] => WideAnd0.IN3
+bus_b[10] => WideAnd10.IN2
+bus_b[10] => WideAnd9.IN2
+bus_b[10] => WideAnd8.IN2
+bus_b[10] => WideAnd7.IN2
+bus_b[10] => WideAnd6.IN2
+bus_b[10] => WideAnd5.IN2
+bus_b[10] => WideAnd4.IN2
+bus_b[10] => WideAnd3.IN2
+bus_b[10] => WideAnd2.IN2
+bus_b[10] => WideAnd1.IN2
+bus_b[10] => WideAnd0.IN2
+bus_b[11] => WideAnd11.IN1
+bus_b[11] => WideAnd10.IN1
+bus_b[11] => WideAnd9.IN1
+bus_b[11] => WideAnd8.IN1
+bus_b[11] => WideAnd7.IN1
+bus_b[11] => WideAnd6.IN1
+bus_b[11] => WideAnd5.IN1
+bus_b[11] => WideAnd4.IN1
+bus_b[11] => WideAnd3.IN1
+bus_b[11] => WideAnd2.IN1
+bus_b[11] => WideAnd1.IN1
+bus_b[11] => WideAnd0.IN1
+bus_b[12] => WideAnd11.IN0
+bus_b[12] => WideAnd10.IN0
+bus_b[12] => WideAnd9.IN0
+bus_b[12] => WideAnd8.IN0
+bus_b[12] => WideAnd7.IN0
+bus_b[12] => WideAnd6.IN0
+bus_b[12] => WideAnd5.IN0
+bus_b[12] => WideAnd4.IN0
+bus_b[12] => WideAnd3.IN0
+bus_b[12] => WideAnd2.IN0
+bus_b[12] => WideAnd1.IN0
+bus_b[12] => a[12].IN1
+bus_b[12] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ab
+a[0] => x[0].IN1
+a[1] => x[1].IN1
+a[2] => x[2].IN1
+a[3] => x[3].IN1
+a[4] => x[4].IN1
+a[5] => x[5].IN1
+a[6] => x[6].IN1
+a[7] => x[7].IN1
+b[0] => y[0].IN1
+b[1] => y[1].IN1
+b[2] => y[2].IN1
+b[3] => y[3].IN1
+b[4] => y[4].IN1
+b[5] => y[5].IN1
+b[6] => y[6].IN1
+b[7] => y[7].IN1
+out[0] <= tree_builder:tree_builder.bus1
+out[1] <= adder_b:fast_adder_final.out
+out[2] <= adder_b:fast_adder_final.out
+out[3] <= adder_b:fast_adder_final.out
+out[4] <= adder_b:fast_adder_final.out
+out[5] <= adder_b:fast_adder_final.out
+out[6] <= adder_b:fast_adder_final.out
+out[7] <= adder_b:fast_adder_final.out
+out[8] <= adder_b:fast_adder_final.out
+out[9] <= adder_b:fast_adder_final.out
+out[10] <= adder_b:fast_adder_final.out
+out[11] <= adder_b:fast_adder_final.out
+out[12] <= adder_b:fast_adder_final.out
+out[13] <= adder_b:fast_adder_final.out
+out[14] <= adder_b:fast_adder_final.out
+out[15] <= adder_b:fast_adder_final.car_out
+
+
+|mul_16bit|mul_8bit:mul8_ab|tree_builder:tree_builder
+x[0] => bus8~0.IN0
+x[0] => bus7~0.IN0
+x[0] => bus6~0.IN0
+x[0] => bus5~0.IN0
+x[0] => bus4~0.IN0
+x[0] => bus3~0.IN0
+x[0] => bus2~0.IN0
+x[0] => bus1~0.IN0
+x[1] => bus7~2.IN0
+x[1] => bus7~1.IN0
+x[1] => bus6~1.IN0
+x[1] => bus5~1.IN0
+x[1] => bus4~1.IN0
+x[1] => bus3~1.IN0
+x[1] => bus2~1.IN0
+x[1] => bus1~1.IN1
+x[2] => bus6~4.IN0
+x[2] => bus6~3.IN0
+x[2] => bus6~2.IN0
+x[2] => bus5~2.IN0
+x[2] => bus4~2.IN0
+x[2] => bus3~2.IN0
+x[2] => bus2~2.IN0
+x[2] => bus1~2.IN1
+x[3] => bus5~6.IN0
+x[3] => bus5~5.IN0
+x[3] => bus5~4.IN0
+x[3] => bus5~3.IN0
+x[3] => bus4~3.IN0
+x[3] => bus3~3.IN0
+x[3] => bus2~3.IN0
+x[3] => bus1~3.IN1
+x[4] => bus4~8.IN0
+x[4] => bus4~7.IN0
+x[4] => bus4~6.IN0
+x[4] => bus4~5.IN0
+x[4] => bus4~4.IN0
+x[4] => bus3~4.IN0
+x[4] => bus2~4.IN0
+x[4] => bus1~4.IN1
+x[5] => bus3~10.IN0
+x[5] => bus3~9.IN0
+x[5] => bus3~8.IN0
+x[5] => bus3~7.IN0
+x[5] => bus3~6.IN0
+x[5] => bus3~5.IN0
+x[5] => bus2~5.IN0
+x[5] => bus1~5.IN1
+x[6] => bus2~12.IN0
+x[6] => bus2~11.IN0
+x[6] => bus2~10.IN0
+x[6] => bus2~9.IN0
+x[6] => bus2~8.IN0
+x[6] => bus2~7.IN0
+x[6] => bus2~6.IN0
+x[6] => bus1~6.IN1
+x[7] => bus1~14.IN0
+x[7] => bus1~13.IN0
+x[7] => bus1~12.IN0
+x[7] => bus1~11.IN0
+x[7] => bus1~10.IN0
+x[7] => bus1~9.IN0
+x[7] => bus1~8.IN0
+x[7] => bus1~7.IN1
+y[0] => bus1~7.IN0
+y[0] => bus1~6.IN0
+y[0] => bus1~5.IN0
+y[0] => bus1~4.IN0
+y[0] => bus1~3.IN0
+y[0] => bus1~2.IN0
+y[0] => bus1~1.IN0
+y[0] => bus1~0.IN1
+y[1] => bus2~6.IN1
+y[1] => bus2~5.IN1
+y[1] => bus2~4.IN1
+y[1] => bus2~3.IN1
+y[1] => bus2~2.IN1
+y[1] => bus2~1.IN1
+y[1] => bus2~0.IN1
+y[1] => bus1~8.IN1
+y[2] => bus3~5.IN1
+y[2] => bus3~4.IN1
+y[2] => bus3~3.IN1
+y[2] => bus3~2.IN1
+y[2] => bus3~1.IN1
+y[2] => bus3~0.IN1
+y[2] => bus2~7.IN1
+y[2] => bus1~9.IN1
+y[3] => bus4~4.IN1
+y[3] => bus4~3.IN1
+y[3] => bus4~2.IN1
+y[3] => bus4~1.IN1
+y[3] => bus4~0.IN1
+y[3] => bus3~6.IN1
+y[3] => bus2~8.IN1
+y[3] => bus1~10.IN1
+y[4] => bus5~3.IN1
+y[4] => bus5~2.IN1
+y[4] => bus5~1.IN1
+y[4] => bus5~0.IN1
+y[4] => bus4~5.IN1
+y[4] => bus3~7.IN1
+y[4] => bus2~9.IN1
+y[4] => bus1~11.IN1
+y[5] => bus6~2.IN1
+y[5] => bus6~1.IN1
+y[5] => bus6~0.IN1
+y[5] => bus5~4.IN1
+y[5] => bus4~6.IN1
+y[5] => bus3~8.IN1
+y[5] => bus2~10.IN1
+y[5] => bus1~12.IN1
+y[6] => bus7~1.IN1
+y[6] => bus7~0.IN1
+y[6] => bus6~3.IN1
+y[6] => bus5~5.IN1
+y[6] => bus4~7.IN1
+y[6] => bus3~9.IN1
+y[6] => bus2~11.IN1
+y[6] => bus1~13.IN1
+y[7] => bus8~0.IN1
+y[7] => bus7~2.IN1
+y[7] => bus6~4.IN1
+y[7] => bus5~6.IN1
+y[7] => bus4~8.IN1
+y[7] => bus3~10.IN1
+y[7] => bus2~12.IN1
+y[7] => bus1~14.IN1
+bus1[0] <= bus1~0.DB_MAX_OUTPUT_PORT_TYPE
+bus1[1] <= bus1~1.DB_MAX_OUTPUT_PORT_TYPE
+bus1[2] <= bus1~2.DB_MAX_OUTPUT_PORT_TYPE
+bus1[3] <= bus1~3.DB_MAX_OUTPUT_PORT_TYPE
+bus1[4] <= bus1~4.DB_MAX_OUTPUT_PORT_TYPE
+bus1[5] <= bus1~5.DB_MAX_OUTPUT_PORT_TYPE
+bus1[6] <= bus1~6.DB_MAX_OUTPUT_PORT_TYPE
+bus1[7] <= bus1~7.DB_MAX_OUTPUT_PORT_TYPE
+bus1[8] <= bus1~8.DB_MAX_OUTPUT_PORT_TYPE
+bus1[9] <= bus1~9.DB_MAX_OUTPUT_PORT_TYPE
+bus1[10] <= bus1~10.DB_MAX_OUTPUT_PORT_TYPE
+bus1[11] <= bus1~11.DB_MAX_OUTPUT_PORT_TYPE
+bus1[12] <= bus1~12.DB_MAX_OUTPUT_PORT_TYPE
+bus1[13] <= bus1~13.DB_MAX_OUTPUT_PORT_TYPE
+bus1[14] <= bus1~14.DB_MAX_OUTPUT_PORT_TYPE
+bus2[0] <= bus2~0.DB_MAX_OUTPUT_PORT_TYPE
+bus2[1] <= bus2~1.DB_MAX_OUTPUT_PORT_TYPE
+bus2[2] <= bus2~2.DB_MAX_OUTPUT_PORT_TYPE
+bus2[3] <= bus2~3.DB_MAX_OUTPUT_PORT_TYPE
+bus2[4] <= bus2~4.DB_MAX_OUTPUT_PORT_TYPE
+bus2[5] <= bus2~5.DB_MAX_OUTPUT_PORT_TYPE
+bus2[6] <= bus2~6.DB_MAX_OUTPUT_PORT_TYPE
+bus2[7] <= bus2~7.DB_MAX_OUTPUT_PORT_TYPE
+bus2[8] <= bus2~8.DB_MAX_OUTPUT_PORT_TYPE
+bus2[9] <= bus2~9.DB_MAX_OUTPUT_PORT_TYPE
+bus2[10] <= bus2~10.DB_MAX_OUTPUT_PORT_TYPE
+bus2[11] <= bus2~11.DB_MAX_OUTPUT_PORT_TYPE
+bus2[12] <= bus2~12.DB_MAX_OUTPUT_PORT_TYPE
+bus3[0] <= bus3~0.DB_MAX_OUTPUT_PORT_TYPE
+bus3[1] <= bus3~1.DB_MAX_OUTPUT_PORT_TYPE
+bus3[2] <= bus3~2.DB_MAX_OUTPUT_PORT_TYPE
+bus3[3] <= bus3~3.DB_MAX_OUTPUT_PORT_TYPE
+bus3[4] <= bus3~4.DB_MAX_OUTPUT_PORT_TYPE
+bus3[5] <= bus3~5.DB_MAX_OUTPUT_PORT_TYPE
+bus3[6] <= bus3~6.DB_MAX_OUTPUT_PORT_TYPE
+bus3[7] <= bus3~7.DB_MAX_OUTPUT_PORT_TYPE
+bus3[8] <= bus3~8.DB_MAX_OUTPUT_PORT_TYPE
+bus3[9] <= bus3~9.DB_MAX_OUTPUT_PORT_TYPE
+bus3[10] <= bus3~10.DB_MAX_OUTPUT_PORT_TYPE
+bus4[0] <= bus4~0.DB_MAX_OUTPUT_PORT_TYPE
+bus4[1] <= bus4~1.DB_MAX_OUTPUT_PORT_TYPE
+bus4[2] <= bus4~2.DB_MAX_OUTPUT_PORT_TYPE
+bus4[3] <= bus4~3.DB_MAX_OUTPUT_PORT_TYPE
+bus4[4] <= bus4~4.DB_MAX_OUTPUT_PORT_TYPE
+bus4[5] <= bus4~5.DB_MAX_OUTPUT_PORT_TYPE
+bus4[6] <= bus4~6.DB_MAX_OUTPUT_PORT_TYPE
+bus4[7] <= bus4~7.DB_MAX_OUTPUT_PORT_TYPE
+bus4[8] <= bus4~8.DB_MAX_OUTPUT_PORT_TYPE
+bus5[0] <= bus5~0.DB_MAX_OUTPUT_PORT_TYPE
+bus5[1] <= bus5~1.DB_MAX_OUTPUT_PORT_TYPE
+bus5[2] <= bus5~2.DB_MAX_OUTPUT_PORT_TYPE
+bus5[3] <= bus5~3.DB_MAX_OUTPUT_PORT_TYPE
+bus5[4] <= bus5~4.DB_MAX_OUTPUT_PORT_TYPE
+bus5[5] <= bus5~5.DB_MAX_OUTPUT_PORT_TYPE
+bus5[6] <= bus5~6.DB_MAX_OUTPUT_PORT_TYPE
+bus6[0] <= bus6~0.DB_MAX_OUTPUT_PORT_TYPE
+bus6[1] <= bus6~1.DB_MAX_OUTPUT_PORT_TYPE
+bus6[2] <= bus6~2.DB_MAX_OUTPUT_PORT_TYPE
+bus6[3] <= bus6~3.DB_MAX_OUTPUT_PORT_TYPE
+bus6[4] <= bus6~4.DB_MAX_OUTPUT_PORT_TYPE
+bus7[0] <= bus7~0.DB_MAX_OUTPUT_PORT_TYPE
+bus7[1] <= bus7~1.DB_MAX_OUTPUT_PORT_TYPE
+bus7[2] <= bus7~2.DB_MAX_OUTPUT_PORT_TYPE
+bus8[0] <= bus8~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|half_adder_single:half_adder_b1
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_b
+x[0] => x[0]~2.IN1
+x[1] => x[1]~1.IN1
+x[2] => x[2]~0.IN1
+y[0] => y[0]~2.IN1
+y[1] => y[1]~1.IN1
+y[2] => y[2]~0.IN1
+z[0] => z[0]~2.IN1
+z[1] => z[1]~1.IN1
+z[2] => z[2]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|half_adder_single:half_adder_b2
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|half_adder_single:half_adder_b3
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|half_adder_single:half_adder_c1
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|half_adder_single:half_adder_c2
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c1
+x[0] => x[0]~6.IN1
+x[1] => x[1]~5.IN1
+x[2] => x[2]~4.IN1
+x[3] => x[3]~3.IN1
+x[4] => x[4]~2.IN1
+x[5] => x[5]~1.IN1
+x[6] => x[6]~0.IN1
+y[0] => y[0]~6.IN1
+y[1] => y[1]~5.IN1
+y[2] => y[2]~4.IN1
+y[3] => y[3]~3.IN1
+y[4] => y[4]~2.IN1
+y[5] => y[5]~1.IN1
+y[6] => y[6]~0.IN1
+z[0] => z[0]~6.IN1
+z[1] => z[1]~5.IN1
+z[2] => z[2]~4.IN1
+z[3] => z[3]~3.IN1
+z[4] => z[4]~2.IN1
+z[5] => z[5]~1.IN1
+z[6] => z[6]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_out
+out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_out
+out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_out
+out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
+cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
+cary_out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_cary
+cary_out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[3].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[4].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[5].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[6].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c2
+x[0] => x[0]~4.IN1
+x[1] => x[1]~3.IN1
+x[2] => x[2]~2.IN1
+x[3] => x[3]~1.IN1
+x[4] => x[4]~0.IN1
+y[0] => y[0]~4.IN1
+y[1] => y[1]~3.IN1
+y[2] => y[2]~2.IN1
+y[3] => y[3]~1.IN1
+y[4] => y[4]~0.IN1
+z[0] => z[0]~4.IN1
+z[1] => z[1]~3.IN1
+z[2] => z[2]~2.IN1
+z[3] => z[3]~1.IN1
+z[4] => z[4]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_out
+out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
+cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[3].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[4].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|half_adder_single:half_adder_d1
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_d
+x[0] => x[0]~8.IN1
+x[1] => x[1]~7.IN1
+x[2] => x[2]~6.IN1
+x[3] => x[3]~5.IN1
+x[4] => x[4]~4.IN1
+x[5] => x[5]~3.IN1
+x[6] => x[6]~2.IN1
+x[7] => x[7]~1.IN1
+x[8] => x[8]~0.IN1
+y[0] => y[0]~8.IN1
+y[1] => y[1]~7.IN1
+y[2] => y[2]~6.IN1
+y[3] => y[3]~5.IN1
+y[4] => y[4]~4.IN1
+y[5] => y[5]~3.IN1
+y[6] => y[6]~2.IN1
+y[7] => y[7]~1.IN1
+y[8] => y[8]~0.IN1
+z[0] => z[0]~8.IN1
+z[1] => z[1]~7.IN1
+z[2] => z[2]~6.IN1
+z[3] => z[3]~5.IN1
+z[4] => z[4]~4.IN1
+z[5] => z[5]~3.IN1
+z[6] => z[6]~2.IN1
+z[7] => z[7]~1.IN1
+z[8] => z[8]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_out
+out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_out
+out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_out
+out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_out
+out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_out
+out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
+cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
+cary_out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_cary
+cary_out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_cary
+cary_out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_cary
+cary_out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[3].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[4].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[5].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[6].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[7].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[8].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|half_adder_single:half_adder_e1
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_e
+x[0] => x[0]~10.IN1
+x[1] => x[1]~9.IN1
+x[2] => x[2]~8.IN1
+x[3] => x[3]~7.IN1
+x[4] => x[4]~6.IN1
+x[5] => x[5]~5.IN1
+x[6] => x[6]~4.IN1
+x[7] => x[7]~3.IN1
+x[8] => x[8]~2.IN1
+x[9] => x[9]~1.IN1
+x[10] => x[10]~0.IN1
+y[0] => y[0]~10.IN1
+y[1] => y[1]~9.IN1
+y[2] => y[2]~8.IN1
+y[3] => y[3]~7.IN1
+y[4] => y[4]~6.IN1
+y[5] => y[5]~5.IN1
+y[6] => y[6]~4.IN1
+y[7] => y[7]~3.IN1
+y[8] => y[8]~2.IN1
+y[9] => y[9]~1.IN1
+y[10] => y[10]~0.IN1
+z[0] => z[0]~10.IN1
+z[1] => z[1]~9.IN1
+z[2] => z[2]~8.IN1
+z[3] => z[3]~7.IN1
+z[4] => z[4]~6.IN1
+z[5] => z[5]~5.IN1
+z[6] => z[6]~4.IN1
+z[7] => z[7]~3.IN1
+z[8] => z[8]~2.IN1
+z[9] => z[9]~1.IN1
+z[10] => z[10]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_out
+out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_out
+out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_out
+out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_out
+out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_out
+out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_out
+out[9] <= full_adder_single:ASSIGN_GEN[9].fa_single.fa_out
+out[10] <= full_adder_single:ASSIGN_GEN[10].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
+cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
+cary_out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_cary
+cary_out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_cary
+cary_out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_cary
+cary_out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_cary
+cary_out[9] <= full_adder_single:ASSIGN_GEN[9].fa_single.fa_cary
+cary_out[10] <= full_adder_single:ASSIGN_GEN[10].fa_single.fa_cary
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[3].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[4].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[5].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[6].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[7].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[8].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final
+a[0] => bus2~0.IN0
+a[0] => bus1~0.IN0
+a[1] => bus2~1.IN0
+a[1] => bus1~1.IN0
+a[2] => bus2~2.IN0
+a[2] => bus1~2.IN0
+a[3] => bus2~3.IN0
+a[3] => bus1~3.IN0
+a[4] => bus2~4.IN0
+a[4] => bus1~4.IN0
+a[5] => bus2~5.IN0
+a[5] => bus1~5.IN0
+a[6] => bus2~6.IN0
+a[6] => bus1~6.IN0
+a[7] => bus2~7.IN0
+a[7] => bus1~7.IN0
+a[8] => bus2~8.IN0
+a[8] => bus1~8.IN0
+a[9] => bus2~9.IN0
+a[9] => bus1~9.IN0
+a[10] => bus2~10.IN0
+a[10] => bus1~10.IN0
+a[11] => bus2~11.IN0
+a[11] => bus1~11.IN0
+a[12] => bus2~12.IN0
+a[12] => bus1~12.IN0
+a[13] => bus2[13].IN0
+a[13] => bus1[13].IN0
+b[0] => bus2~0.IN1
+b[0] => bus1~0.IN1
+b[1] => bus2~1.IN1
+b[1] => bus1~1.IN1
+b[2] => bus2~2.IN1
+b[2] => bus1~2.IN1
+b[3] => bus2~3.IN1
+b[3] => bus1~3.IN1
+b[4] => bus2~4.IN1
+b[4] => bus1~4.IN1
+b[5] => bus2~5.IN1
+b[5] => bus1~5.IN1
+b[6] => bus2~6.IN1
+b[6] => bus1~6.IN1
+b[7] => bus2~7.IN1
+b[7] => bus1~7.IN1
+b[8] => bus2~8.IN1
+b[8] => bus1~8.IN1
+b[9] => bus2~9.IN1
+b[9] => bus1~9.IN1
+b[10] => bus2~10.IN1
+b[10] => bus1~10.IN1
+b[11] => bus2~11.IN1
+b[11] => bus1~11.IN1
+b[12] => bus2~12.IN1
+b[12] => bus1~12.IN1
+b[13] => bus2[13].IN1
+b[13] => bus1[13].IN1
+out[0] <= out~14.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out~15.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~16.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out~17.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out~18.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out~19.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out~20.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out~21.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out~22.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out~23.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out~24.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out~25.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out~26.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out~27.DB_MAX_OUTPUT_PORT_TYPE
+car => car~0.IN11
+car_out <= car_out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN0
+bus_a[2] => comb~0.IN1
+bus_b[0] => WideAnd0.IN2
+bus_b[1] => WideAnd1.IN1
+bus_b[1] => WideAnd0.IN1
+bus_b[2] => WideAnd1.IN0
+bus_b[2] => a[2].IN1
+bus_b[2] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN0
+bus_a[3] => comb~0.IN1
+bus_b[0] => WideAnd0.IN3
+bus_b[1] => WideAnd1.IN2
+bus_b[1] => WideAnd0.IN2
+bus_b[2] => WideAnd2.IN1
+bus_b[2] => WideAnd1.IN1
+bus_b[2] => WideAnd0.IN1
+bus_b[3] => WideAnd2.IN0
+bus_b[3] => WideAnd1.IN0
+bus_b[3] => a[3].IN1
+bus_b[3] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN0
+bus_a[4] => comb~0.IN1
+bus_b[0] => WideAnd0.IN4
+bus_b[1] => WideAnd1.IN3
+bus_b[1] => WideAnd0.IN3
+bus_b[2] => WideAnd2.IN2
+bus_b[2] => WideAnd1.IN2
+bus_b[2] => WideAnd0.IN2
+bus_b[3] => WideAnd3.IN1
+bus_b[3] => WideAnd2.IN1
+bus_b[3] => WideAnd1.IN1
+bus_b[3] => WideAnd0.IN1
+bus_b[4] => WideAnd3.IN0
+bus_b[4] => WideAnd2.IN0
+bus_b[4] => WideAnd1.IN0
+bus_b[4] => a[4].IN1
+bus_b[4] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN0
+bus_a[5] => comb~0.IN1
+bus_b[0] => WideAnd0.IN5
+bus_b[1] => WideAnd1.IN4
+bus_b[1] => WideAnd0.IN4
+bus_b[2] => WideAnd2.IN3
+bus_b[2] => WideAnd1.IN3
+bus_b[2] => WideAnd0.IN3
+bus_b[3] => WideAnd3.IN2
+bus_b[3] => WideAnd2.IN2
+bus_b[3] => WideAnd1.IN2
+bus_b[3] => WideAnd0.IN2
+bus_b[4] => WideAnd4.IN1
+bus_b[4] => WideAnd3.IN1
+bus_b[4] => WideAnd2.IN1
+bus_b[4] => WideAnd1.IN1
+bus_b[4] => WideAnd0.IN1
+bus_b[5] => WideAnd4.IN0
+bus_b[5] => WideAnd3.IN0
+bus_b[5] => WideAnd2.IN0
+bus_b[5] => WideAnd1.IN0
+bus_b[5] => a[5].IN1
+bus_b[5] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN0
+bus_a[6] => comb~0.IN1
+bus_b[0] => WideAnd0.IN6
+bus_b[1] => WideAnd1.IN5
+bus_b[1] => WideAnd0.IN5
+bus_b[2] => WideAnd2.IN4
+bus_b[2] => WideAnd1.IN4
+bus_b[2] => WideAnd0.IN4
+bus_b[3] => WideAnd3.IN3
+bus_b[3] => WideAnd2.IN3
+bus_b[3] => WideAnd1.IN3
+bus_b[3] => WideAnd0.IN3
+bus_b[4] => WideAnd4.IN2
+bus_b[4] => WideAnd3.IN2
+bus_b[4] => WideAnd2.IN2
+bus_b[4] => WideAnd1.IN2
+bus_b[4] => WideAnd0.IN2
+bus_b[5] => WideAnd5.IN1
+bus_b[5] => WideAnd4.IN1
+bus_b[5] => WideAnd3.IN1
+bus_b[5] => WideAnd2.IN1
+bus_b[5] => WideAnd1.IN1
+bus_b[5] => WideAnd0.IN1
+bus_b[6] => WideAnd5.IN0
+bus_b[6] => WideAnd4.IN0
+bus_b[6] => WideAnd3.IN0
+bus_b[6] => WideAnd2.IN0
+bus_b[6] => WideAnd1.IN0
+bus_b[6] => a[6].IN1
+bus_b[6] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN0
+bus_a[7] => comb~0.IN1
+bus_b[0] => WideAnd0.IN7
+bus_b[1] => WideAnd1.IN6
+bus_b[1] => WideAnd0.IN6
+bus_b[2] => WideAnd2.IN5
+bus_b[2] => WideAnd1.IN5
+bus_b[2] => WideAnd0.IN5
+bus_b[3] => WideAnd3.IN4
+bus_b[3] => WideAnd2.IN4
+bus_b[3] => WideAnd1.IN4
+bus_b[3] => WideAnd0.IN4
+bus_b[4] => WideAnd4.IN3
+bus_b[4] => WideAnd3.IN3
+bus_b[4] => WideAnd2.IN3
+bus_b[4] => WideAnd1.IN3
+bus_b[4] => WideAnd0.IN3
+bus_b[5] => WideAnd5.IN2
+bus_b[5] => WideAnd4.IN2
+bus_b[5] => WideAnd3.IN2
+bus_b[5] => WideAnd2.IN2
+bus_b[5] => WideAnd1.IN2
+bus_b[5] => WideAnd0.IN2
+bus_b[6] => WideAnd6.IN1
+bus_b[6] => WideAnd5.IN1
+bus_b[6] => WideAnd4.IN1
+bus_b[6] => WideAnd3.IN1
+bus_b[6] => WideAnd2.IN1
+bus_b[6] => WideAnd1.IN1
+bus_b[6] => WideAnd0.IN1
+bus_b[7] => WideAnd6.IN0
+bus_b[7] => WideAnd5.IN0
+bus_b[7] => WideAnd4.IN0
+bus_b[7] => WideAnd3.IN0
+bus_b[7] => WideAnd2.IN0
+bus_b[7] => WideAnd1.IN0
+bus_b[7] => a[7].IN1
+bus_b[7] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN0
+bus_a[8] => comb~0.IN1
+bus_b[0] => WideAnd0.IN8
+bus_b[1] => WideAnd1.IN7
+bus_b[1] => WideAnd0.IN7
+bus_b[2] => WideAnd2.IN6
+bus_b[2] => WideAnd1.IN6
+bus_b[2] => WideAnd0.IN6
+bus_b[3] => WideAnd3.IN5
+bus_b[3] => WideAnd2.IN5
+bus_b[3] => WideAnd1.IN5
+bus_b[3] => WideAnd0.IN5
+bus_b[4] => WideAnd4.IN4
+bus_b[4] => WideAnd3.IN4
+bus_b[4] => WideAnd2.IN4
+bus_b[4] => WideAnd1.IN4
+bus_b[4] => WideAnd0.IN4
+bus_b[5] => WideAnd5.IN3
+bus_b[5] => WideAnd4.IN3
+bus_b[5] => WideAnd3.IN3
+bus_b[5] => WideAnd2.IN3
+bus_b[5] => WideAnd1.IN3
+bus_b[5] => WideAnd0.IN3
+bus_b[6] => WideAnd6.IN2
+bus_b[6] => WideAnd5.IN2
+bus_b[6] => WideAnd4.IN2
+bus_b[6] => WideAnd3.IN2
+bus_b[6] => WideAnd2.IN2
+bus_b[6] => WideAnd1.IN2
+bus_b[6] => WideAnd0.IN2
+bus_b[7] => WideAnd7.IN1
+bus_b[7] => WideAnd6.IN1
+bus_b[7] => WideAnd5.IN1
+bus_b[7] => WideAnd4.IN1
+bus_b[7] => WideAnd3.IN1
+bus_b[7] => WideAnd2.IN1
+bus_b[7] => WideAnd1.IN1
+bus_b[7] => WideAnd0.IN1
+bus_b[8] => WideAnd7.IN0
+bus_b[8] => WideAnd6.IN0
+bus_b[8] => WideAnd5.IN0
+bus_b[8] => WideAnd4.IN0
+bus_b[8] => WideAnd3.IN0
+bus_b[8] => WideAnd2.IN0
+bus_b[8] => WideAnd1.IN0
+bus_b[8] => a[8].IN1
+bus_b[8] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN0
+bus_a[9] => comb~0.IN1
+bus_b[0] => WideAnd0.IN9
+bus_b[1] => WideAnd1.IN8
+bus_b[1] => WideAnd0.IN8
+bus_b[2] => WideAnd2.IN7
+bus_b[2] => WideAnd1.IN7
+bus_b[2] => WideAnd0.IN7
+bus_b[3] => WideAnd3.IN6
+bus_b[3] => WideAnd2.IN6
+bus_b[3] => WideAnd1.IN6
+bus_b[3] => WideAnd0.IN6
+bus_b[4] => WideAnd4.IN5
+bus_b[4] => WideAnd3.IN5
+bus_b[4] => WideAnd2.IN5
+bus_b[4] => WideAnd1.IN5
+bus_b[4] => WideAnd0.IN5
+bus_b[5] => WideAnd5.IN4
+bus_b[5] => WideAnd4.IN4
+bus_b[5] => WideAnd3.IN4
+bus_b[5] => WideAnd2.IN4
+bus_b[5] => WideAnd1.IN4
+bus_b[5] => WideAnd0.IN4
+bus_b[6] => WideAnd6.IN3
+bus_b[6] => WideAnd5.IN3
+bus_b[6] => WideAnd4.IN3
+bus_b[6] => WideAnd3.IN3
+bus_b[6] => WideAnd2.IN3
+bus_b[6] => WideAnd1.IN3
+bus_b[6] => WideAnd0.IN3
+bus_b[7] => WideAnd7.IN2
+bus_b[7] => WideAnd6.IN2
+bus_b[7] => WideAnd5.IN2
+bus_b[7] => WideAnd4.IN2
+bus_b[7] => WideAnd3.IN2
+bus_b[7] => WideAnd2.IN2
+bus_b[7] => WideAnd1.IN2
+bus_b[7] => WideAnd0.IN2
+bus_b[8] => WideAnd8.IN1
+bus_b[8] => WideAnd7.IN1
+bus_b[8] => WideAnd6.IN1
+bus_b[8] => WideAnd5.IN1
+bus_b[8] => WideAnd4.IN1
+bus_b[8] => WideAnd3.IN1
+bus_b[8] => WideAnd2.IN1
+bus_b[8] => WideAnd1.IN1
+bus_b[8] => WideAnd0.IN1
+bus_b[9] => WideAnd8.IN0
+bus_b[9] => WideAnd7.IN0
+bus_b[9] => WideAnd6.IN0
+bus_b[9] => WideAnd5.IN0
+bus_b[9] => WideAnd4.IN0
+bus_b[9] => WideAnd3.IN0
+bus_b[9] => WideAnd2.IN0
+bus_b[9] => WideAnd1.IN0
+bus_b[9] => a[9].IN1
+bus_b[9] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN1
+bus_a[9] => a[10].IN0
+bus_a[10] => comb~0.IN1
+bus_b[0] => WideAnd0.IN10
+bus_b[1] => WideAnd1.IN9
+bus_b[1] => WideAnd0.IN9
+bus_b[2] => WideAnd2.IN8
+bus_b[2] => WideAnd1.IN8
+bus_b[2] => WideAnd0.IN8
+bus_b[3] => WideAnd3.IN7
+bus_b[3] => WideAnd2.IN7
+bus_b[3] => WideAnd1.IN7
+bus_b[3] => WideAnd0.IN7
+bus_b[4] => WideAnd4.IN6
+bus_b[4] => WideAnd3.IN6
+bus_b[4] => WideAnd2.IN6
+bus_b[4] => WideAnd1.IN6
+bus_b[4] => WideAnd0.IN6
+bus_b[5] => WideAnd5.IN5
+bus_b[5] => WideAnd4.IN5
+bus_b[5] => WideAnd3.IN5
+bus_b[5] => WideAnd2.IN5
+bus_b[5] => WideAnd1.IN5
+bus_b[5] => WideAnd0.IN5
+bus_b[6] => WideAnd6.IN4
+bus_b[6] => WideAnd5.IN4
+bus_b[6] => WideAnd4.IN4
+bus_b[6] => WideAnd3.IN4
+bus_b[6] => WideAnd2.IN4
+bus_b[6] => WideAnd1.IN4
+bus_b[6] => WideAnd0.IN4
+bus_b[7] => WideAnd7.IN3
+bus_b[7] => WideAnd6.IN3
+bus_b[7] => WideAnd5.IN3
+bus_b[7] => WideAnd4.IN3
+bus_b[7] => WideAnd3.IN3
+bus_b[7] => WideAnd2.IN3
+bus_b[7] => WideAnd1.IN3
+bus_b[7] => WideAnd0.IN3
+bus_b[8] => WideAnd8.IN2
+bus_b[8] => WideAnd7.IN2
+bus_b[8] => WideAnd6.IN2
+bus_b[8] => WideAnd5.IN2
+bus_b[8] => WideAnd4.IN2
+bus_b[8] => WideAnd3.IN2
+bus_b[8] => WideAnd2.IN2
+bus_b[8] => WideAnd1.IN2
+bus_b[8] => WideAnd0.IN2
+bus_b[9] => WideAnd9.IN1
+bus_b[9] => WideAnd8.IN1
+bus_b[9] => WideAnd7.IN1
+bus_b[9] => WideAnd6.IN1
+bus_b[9] => WideAnd5.IN1
+bus_b[9] => WideAnd4.IN1
+bus_b[9] => WideAnd3.IN1
+bus_b[9] => WideAnd2.IN1
+bus_b[9] => WideAnd1.IN1
+bus_b[9] => WideAnd0.IN1
+bus_b[10] => WideAnd9.IN0
+bus_b[10] => WideAnd8.IN0
+bus_b[10] => WideAnd7.IN0
+bus_b[10] => WideAnd6.IN0
+bus_b[10] => WideAnd5.IN0
+bus_b[10] => WideAnd4.IN0
+bus_b[10] => WideAnd3.IN0
+bus_b[10] => WideAnd2.IN0
+bus_b[10] => WideAnd1.IN0
+bus_b[10] => a[10].IN1
+bus_b[10] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN1
+bus_a[9] => a[10].IN1
+bus_a[10] => a[11].IN0
+bus_a[11] => comb~0.IN1
+bus_b[0] => WideAnd0.IN11
+bus_b[1] => WideAnd1.IN10
+bus_b[1] => WideAnd0.IN10
+bus_b[2] => WideAnd2.IN9
+bus_b[2] => WideAnd1.IN9
+bus_b[2] => WideAnd0.IN9
+bus_b[3] => WideAnd3.IN8
+bus_b[3] => WideAnd2.IN8
+bus_b[3] => WideAnd1.IN8
+bus_b[3] => WideAnd0.IN8
+bus_b[4] => WideAnd4.IN7
+bus_b[4] => WideAnd3.IN7
+bus_b[4] => WideAnd2.IN7
+bus_b[4] => WideAnd1.IN7
+bus_b[4] => WideAnd0.IN7
+bus_b[5] => WideAnd5.IN6
+bus_b[5] => WideAnd4.IN6
+bus_b[5] => WideAnd3.IN6
+bus_b[5] => WideAnd2.IN6
+bus_b[5] => WideAnd1.IN6
+bus_b[5] => WideAnd0.IN6
+bus_b[6] => WideAnd6.IN5
+bus_b[6] => WideAnd5.IN5
+bus_b[6] => WideAnd4.IN5
+bus_b[6] => WideAnd3.IN5
+bus_b[6] => WideAnd2.IN5
+bus_b[6] => WideAnd1.IN5
+bus_b[6] => WideAnd0.IN5
+bus_b[7] => WideAnd7.IN4
+bus_b[7] => WideAnd6.IN4
+bus_b[7] => WideAnd5.IN4
+bus_b[7] => WideAnd4.IN4
+bus_b[7] => WideAnd3.IN4
+bus_b[7] => WideAnd2.IN4
+bus_b[7] => WideAnd1.IN4
+bus_b[7] => WideAnd0.IN4
+bus_b[8] => WideAnd8.IN3
+bus_b[8] => WideAnd7.IN3
+bus_b[8] => WideAnd6.IN3
+bus_b[8] => WideAnd5.IN3
+bus_b[8] => WideAnd4.IN3
+bus_b[8] => WideAnd3.IN3
+bus_b[8] => WideAnd2.IN3
+bus_b[8] => WideAnd1.IN3
+bus_b[8] => WideAnd0.IN3
+bus_b[9] => WideAnd9.IN2
+bus_b[9] => WideAnd8.IN2
+bus_b[9] => WideAnd7.IN2
+bus_b[9] => WideAnd6.IN2
+bus_b[9] => WideAnd5.IN2
+bus_b[9] => WideAnd4.IN2
+bus_b[9] => WideAnd3.IN2
+bus_b[9] => WideAnd2.IN2
+bus_b[9] => WideAnd1.IN2
+bus_b[9] => WideAnd0.IN2
+bus_b[10] => WideAnd10.IN1
+bus_b[10] => WideAnd9.IN1
+bus_b[10] => WideAnd8.IN1
+bus_b[10] => WideAnd7.IN1
+bus_b[10] => WideAnd6.IN1
+bus_b[10] => WideAnd5.IN1
+bus_b[10] => WideAnd4.IN1
+bus_b[10] => WideAnd3.IN1
+bus_b[10] => WideAnd2.IN1
+bus_b[10] => WideAnd1.IN1
+bus_b[10] => WideAnd0.IN1
+bus_b[11] => WideAnd10.IN0
+bus_b[11] => WideAnd9.IN0
+bus_b[11] => WideAnd8.IN0
+bus_b[11] => WideAnd7.IN0
+bus_b[11] => WideAnd6.IN0
+bus_b[11] => WideAnd5.IN0
+bus_b[11] => WideAnd4.IN0
+bus_b[11] => WideAnd3.IN0
+bus_b[11] => WideAnd2.IN0
+bus_b[11] => WideAnd1.IN0
+bus_b[11] => a[11].IN1
+bus_b[11] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|mul_8bit:mul8_ab|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN1
+bus_a[9] => a[10].IN1
+bus_a[10] => a[11].IN1
+bus_a[11] => a[12].IN0
+bus_a[12] => comb~0.IN1
+bus_b[0] => WideAnd0.IN12
+bus_b[1] => WideAnd1.IN11
+bus_b[1] => WideAnd0.IN11
+bus_b[2] => WideAnd2.IN10
+bus_b[2] => WideAnd1.IN10
+bus_b[2] => WideAnd0.IN10
+bus_b[3] => WideAnd3.IN9
+bus_b[3] => WideAnd2.IN9
+bus_b[3] => WideAnd1.IN9
+bus_b[3] => WideAnd0.IN9
+bus_b[4] => WideAnd4.IN8
+bus_b[4] => WideAnd3.IN8
+bus_b[4] => WideAnd2.IN8
+bus_b[4] => WideAnd1.IN8
+bus_b[4] => WideAnd0.IN8
+bus_b[5] => WideAnd5.IN7
+bus_b[5] => WideAnd4.IN7
+bus_b[5] => WideAnd3.IN7
+bus_b[5] => WideAnd2.IN7
+bus_b[5] => WideAnd1.IN7
+bus_b[5] => WideAnd0.IN7
+bus_b[6] => WideAnd6.IN6
+bus_b[6] => WideAnd5.IN6
+bus_b[6] => WideAnd4.IN6
+bus_b[6] => WideAnd3.IN6
+bus_b[6] => WideAnd2.IN6
+bus_b[6] => WideAnd1.IN6
+bus_b[6] => WideAnd0.IN6
+bus_b[7] => WideAnd7.IN5
+bus_b[7] => WideAnd6.IN5
+bus_b[7] => WideAnd5.IN5
+bus_b[7] => WideAnd4.IN5
+bus_b[7] => WideAnd3.IN5
+bus_b[7] => WideAnd2.IN5
+bus_b[7] => WideAnd1.IN5
+bus_b[7] => WideAnd0.IN5
+bus_b[8] => WideAnd8.IN4
+bus_b[8] => WideAnd7.IN4
+bus_b[8] => WideAnd6.IN4
+bus_b[8] => WideAnd5.IN4
+bus_b[8] => WideAnd4.IN4
+bus_b[8] => WideAnd3.IN4
+bus_b[8] => WideAnd2.IN4
+bus_b[8] => WideAnd1.IN4
+bus_b[8] => WideAnd0.IN4
+bus_b[9] => WideAnd9.IN3
+bus_b[9] => WideAnd8.IN3
+bus_b[9] => WideAnd7.IN3
+bus_b[9] => WideAnd6.IN3
+bus_b[9] => WideAnd5.IN3
+bus_b[9] => WideAnd4.IN3
+bus_b[9] => WideAnd3.IN3
+bus_b[9] => WideAnd2.IN3
+bus_b[9] => WideAnd1.IN3
+bus_b[9] => WideAnd0.IN3
+bus_b[10] => WideAnd10.IN2
+bus_b[10] => WideAnd9.IN2
+bus_b[10] => WideAnd8.IN2
+bus_b[10] => WideAnd7.IN2
+bus_b[10] => WideAnd6.IN2
+bus_b[10] => WideAnd5.IN2
+bus_b[10] => WideAnd4.IN2
+bus_b[10] => WideAnd3.IN2
+bus_b[10] => WideAnd2.IN2
+bus_b[10] => WideAnd1.IN2
+bus_b[10] => WideAnd0.IN2
+bus_b[11] => WideAnd11.IN1
+bus_b[11] => WideAnd10.IN1
+bus_b[11] => WideAnd9.IN1
+bus_b[11] => WideAnd8.IN1
+bus_b[11] => WideAnd7.IN1
+bus_b[11] => WideAnd6.IN1
+bus_b[11] => WideAnd5.IN1
+bus_b[11] => WideAnd4.IN1
+bus_b[11] => WideAnd3.IN1
+bus_b[11] => WideAnd2.IN1
+bus_b[11] => WideAnd1.IN1
+bus_b[11] => WideAnd0.IN1
+bus_b[12] => WideAnd11.IN0
+bus_b[12] => WideAnd10.IN0
+bus_b[12] => WideAnd9.IN0
+bus_b[12] => WideAnd8.IN0
+bus_b[12] => WideAnd7.IN0
+bus_b[12] => WideAnd6.IN0
+bus_b[12] => WideAnd5.IN0
+bus_b[12] => WideAnd4.IN0
+bus_b[12] => WideAnd3.IN0
+bus_b[12] => WideAnd2.IN0
+bus_b[12] => WideAnd1.IN0
+bus_b[12] => a[12].IN1
+bus_b[12] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|full_adder:full_adder
+x[0] => x[0]~15.IN1
+x[1] => x[1]~14.IN1
+x[2] => x[2]~13.IN1
+x[3] => x[3]~12.IN1
+x[4] => x[4]~11.IN1
+x[5] => x[5]~10.IN1
+x[6] => x[6]~9.IN1
+x[7] => x[7]~8.IN1
+x[8] => x[8]~7.IN1
+x[9] => x[9]~6.IN1
+x[10] => x[10]~5.IN1
+x[11] => x[11]~4.IN1
+x[12] => x[12]~3.IN1
+x[13] => x[13]~2.IN1
+x[14] => x[14]~1.IN1
+x[15] => x[15]~0.IN1
+y[0] => y[0]~15.IN1
+y[1] => y[1]~14.IN1
+y[2] => y[2]~13.IN1
+y[3] => y[3]~12.IN1
+y[4] => y[4]~11.IN1
+y[5] => y[5]~10.IN1
+y[6] => y[6]~9.IN1
+y[7] => y[7]~8.IN1
+y[8] => y[8]~7.IN1
+y[9] => y[9]~6.IN1
+y[10] => y[10]~5.IN1
+y[11] => y[11]~4.IN1
+y[12] => y[12]~3.IN1
+y[13] => y[13]~2.IN1
+y[14] => y[14]~1.IN1
+y[15] => y[15]~0.IN1
+z[0] => z[0]~15.IN1
+z[1] => z[1]~14.IN1
+z[2] => z[2]~13.IN1
+z[3] => z[3]~12.IN1
+z[4] => z[4]~11.IN1
+z[5] => z[5]~10.IN1
+z[6] => z[6]~9.IN1
+z[7] => z[7]~8.IN1
+z[8] => z[8]~7.IN1
+z[9] => z[9]~6.IN1
+z[10] => z[10]~5.IN1
+z[11] => z[11]~4.IN1
+z[12] => z[12]~3.IN1
+z[13] => z[13]~2.IN1
+z[14] => z[14]~1.IN1
+z[15] => z[15]~0.IN1
+out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_out
+out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_out
+out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_out
+out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_out
+out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_out
+out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_out
+out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_out
+out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_out
+out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_out
+out[9] <= full_adder_single:ASSIGN_GEN[9].fa_single.fa_out
+out[10] <= full_adder_single:ASSIGN_GEN[10].fa_single.fa_out
+out[11] <= full_adder_single:ASSIGN_GEN[11].fa_single.fa_out
+out[12] <= full_adder_single:ASSIGN_GEN[12].fa_single.fa_out
+out[13] <= full_adder_single:ASSIGN_GEN[13].fa_single.fa_out
+out[14] <= full_adder_single:ASSIGN_GEN[14].fa_single.fa_out
+out[15] <= full_adder_single:ASSIGN_GEN[15].fa_single.fa_out
+cary_out[0] <= full_adder_single:ASSIGN_GEN[0].fa_single.fa_cary
+cary_out[1] <= full_adder_single:ASSIGN_GEN[1].fa_single.fa_cary
+cary_out[2] <= full_adder_single:ASSIGN_GEN[2].fa_single.fa_cary
+cary_out[3] <= full_adder_single:ASSIGN_GEN[3].fa_single.fa_cary
+cary_out[4] <= full_adder_single:ASSIGN_GEN[4].fa_single.fa_cary
+cary_out[5] <= full_adder_single:ASSIGN_GEN[5].fa_single.fa_cary
+cary_out[6] <= full_adder_single:ASSIGN_GEN[6].fa_single.fa_cary
+cary_out[7] <= full_adder_single:ASSIGN_GEN[7].fa_single.fa_cary
+cary_out[8] <= full_adder_single:ASSIGN_GEN[8].fa_single.fa_cary
+cary_out[9] <= full_adder_single:ASSIGN_GEN[9].fa_single.fa_cary
+cary_out[10] <= full_adder_single:ASSIGN_GEN[10].fa_single.fa_cary
+cary_out[11] <= full_adder_single:ASSIGN_GEN[11].fa_single.fa_cary
+cary_out[12] <= full_adder_single:ASSIGN_GEN[12].fa_single.fa_cary
+cary_out[13] <= full_adder_single:ASSIGN_GEN[13].fa_single.fa_cary
+cary_out[14] <= full_adder_single:ASSIGN_GEN[14].fa_single.fa_cary
+cary_out[15] <= full_adder_single:ASSIGN_GEN[15].fa_single.fa_cary
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[0].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[1].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[2].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[3].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[4].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[5].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[6].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[7].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[8].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[9].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[10].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[11].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[12].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[13].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[14].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|full_adder:full_adder|full_adder_single:ASSIGN_GEN[15].fa_single
+xx => w2.IN0
+xx => w1.IN0
+yy => w2.IN1
+yy => w1.IN1
+zz => fa_cary~0.IN1
+zz => fa_out~1.IN1
+fa_out <= fa_out~1.DB_MAX_OUTPUT_PORT_TYPE
+fa_cary <= fa_cary~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|half_adder_single:half_adder
+xx => w2.IN0
+xx => w1~0.IN0
+yy => w2.IN1
+yy => w1~0.IN1
+ha_out <= ha_out~0.DB_MAX_OUTPUT_PORT_TYPE
+ha_cary <= w1~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|adder_b:fast_adder
+a[0] => bus2~0.IN0
+a[0] => bus1~0.IN0
+a[1] => bus2~1.IN0
+a[1] => bus1~1.IN0
+a[2] => bus2~2.IN0
+a[2] => bus1~2.IN0
+a[3] => bus2~3.IN0
+a[3] => bus1~3.IN0
+a[4] => bus2~4.IN0
+a[4] => bus1~4.IN0
+a[5] => bus2~5.IN0
+a[5] => bus1~5.IN0
+a[6] => bus2~6.IN0
+a[6] => bus1~6.IN0
+a[7] => bus2~7.IN0
+a[7] => bus1~7.IN0
+a[8] => bus2~8.IN0
+a[8] => bus1~8.IN0
+a[9] => bus2~9.IN0
+a[9] => bus1~9.IN0
+a[10] => bus2~10.IN0
+a[10] => bus1~10.IN0
+a[11] => bus2~11.IN0
+a[11] => bus1~11.IN0
+a[12] => bus2~12.IN0
+a[12] => bus1~12.IN0
+a[13] => bus2~13.IN0
+a[13] => bus1~13.IN0
+a[14] => bus2[14].IN0
+a[14] => bus1[14].IN0
+b[0] => bus2~0.IN1
+b[0] => bus1~0.IN1
+b[1] => bus2~1.IN1
+b[1] => bus1~1.IN1
+b[2] => bus2~2.IN1
+b[2] => bus1~2.IN1
+b[3] => bus2~3.IN1
+b[3] => bus1~3.IN1
+b[4] => bus2~4.IN1
+b[4] => bus1~4.IN1
+b[5] => bus2~5.IN1
+b[5] => bus1~5.IN1
+b[6] => bus2~6.IN1
+b[6] => bus1~6.IN1
+b[7] => bus2~7.IN1
+b[7] => bus1~7.IN1
+b[8] => bus2~8.IN1
+b[8] => bus1~8.IN1
+b[9] => bus2~9.IN1
+b[9] => bus1~9.IN1
+b[10] => bus2~10.IN1
+b[10] => bus1~10.IN1
+b[11] => bus2~11.IN1
+b[11] => bus1~11.IN1
+b[12] => bus2~12.IN1
+b[12] => bus1~12.IN1
+b[13] => bus2~13.IN1
+b[13] => bus1~13.IN1
+b[14] => bus2[14].IN1
+b[14] => bus1[14].IN1
+out[0] <= out~15.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out~16.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~17.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out~18.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out~19.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out~20.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out~21.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out~22.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out~23.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out~24.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out~25.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out~26.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out~27.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out~28.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= out~29.DB_MAX_OUTPUT_PORT_TYPE
+car => car~0.IN12
+car_out <= car_out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN0
+bus_a[2] => comb~0.IN1
+bus_b[0] => WideAnd0.IN2
+bus_b[1] => WideAnd1.IN1
+bus_b[1] => WideAnd0.IN1
+bus_b[2] => WideAnd1.IN0
+bus_b[2] => a[2].IN1
+bus_b[2] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[4].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN0
+bus_a[3] => comb~0.IN1
+bus_b[0] => WideAnd0.IN3
+bus_b[1] => WideAnd1.IN2
+bus_b[1] => WideAnd0.IN2
+bus_b[2] => WideAnd2.IN1
+bus_b[2] => WideAnd1.IN1
+bus_b[2] => WideAnd0.IN1
+bus_b[3] => WideAnd2.IN0
+bus_b[3] => WideAnd1.IN0
+bus_b[3] => a[3].IN1
+bus_b[3] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[5].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN0
+bus_a[4] => comb~0.IN1
+bus_b[0] => WideAnd0.IN4
+bus_b[1] => WideAnd1.IN3
+bus_b[1] => WideAnd0.IN3
+bus_b[2] => WideAnd2.IN2
+bus_b[2] => WideAnd1.IN2
+bus_b[2] => WideAnd0.IN2
+bus_b[3] => WideAnd3.IN1
+bus_b[3] => WideAnd2.IN1
+bus_b[3] => WideAnd1.IN1
+bus_b[3] => WideAnd0.IN1
+bus_b[4] => WideAnd3.IN0
+bus_b[4] => WideAnd2.IN0
+bus_b[4] => WideAnd1.IN0
+bus_b[4] => a[4].IN1
+bus_b[4] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[6].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN0
+bus_a[5] => comb~0.IN1
+bus_b[0] => WideAnd0.IN5
+bus_b[1] => WideAnd1.IN4
+bus_b[1] => WideAnd0.IN4
+bus_b[2] => WideAnd2.IN3
+bus_b[2] => WideAnd1.IN3
+bus_b[2] => WideAnd0.IN3
+bus_b[3] => WideAnd3.IN2
+bus_b[3] => WideAnd2.IN2
+bus_b[3] => WideAnd1.IN2
+bus_b[3] => WideAnd0.IN2
+bus_b[4] => WideAnd4.IN1
+bus_b[4] => WideAnd3.IN1
+bus_b[4] => WideAnd2.IN1
+bus_b[4] => WideAnd1.IN1
+bus_b[4] => WideAnd0.IN1
+bus_b[5] => WideAnd4.IN0
+bus_b[5] => WideAnd3.IN0
+bus_b[5] => WideAnd2.IN0
+bus_b[5] => WideAnd1.IN0
+bus_b[5] => a[5].IN1
+bus_b[5] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[7].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN0
+bus_a[6] => comb~0.IN1
+bus_b[0] => WideAnd0.IN6
+bus_b[1] => WideAnd1.IN5
+bus_b[1] => WideAnd0.IN5
+bus_b[2] => WideAnd2.IN4
+bus_b[2] => WideAnd1.IN4
+bus_b[2] => WideAnd0.IN4
+bus_b[3] => WideAnd3.IN3
+bus_b[3] => WideAnd2.IN3
+bus_b[3] => WideAnd1.IN3
+bus_b[3] => WideAnd0.IN3
+bus_b[4] => WideAnd4.IN2
+bus_b[4] => WideAnd3.IN2
+bus_b[4] => WideAnd2.IN2
+bus_b[4] => WideAnd1.IN2
+bus_b[4] => WideAnd0.IN2
+bus_b[5] => WideAnd5.IN1
+bus_b[5] => WideAnd4.IN1
+bus_b[5] => WideAnd3.IN1
+bus_b[5] => WideAnd2.IN1
+bus_b[5] => WideAnd1.IN1
+bus_b[5] => WideAnd0.IN1
+bus_b[6] => WideAnd5.IN0
+bus_b[6] => WideAnd4.IN0
+bus_b[6] => WideAnd3.IN0
+bus_b[6] => WideAnd2.IN0
+bus_b[6] => WideAnd1.IN0
+bus_b[6] => a[6].IN1
+bus_b[6] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[8].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN0
+bus_a[7] => comb~0.IN1
+bus_b[0] => WideAnd0.IN7
+bus_b[1] => WideAnd1.IN6
+bus_b[1] => WideAnd0.IN6
+bus_b[2] => WideAnd2.IN5
+bus_b[2] => WideAnd1.IN5
+bus_b[2] => WideAnd0.IN5
+bus_b[3] => WideAnd3.IN4
+bus_b[3] => WideAnd2.IN4
+bus_b[3] => WideAnd1.IN4
+bus_b[3] => WideAnd0.IN4
+bus_b[4] => WideAnd4.IN3
+bus_b[4] => WideAnd3.IN3
+bus_b[4] => WideAnd2.IN3
+bus_b[4] => WideAnd1.IN3
+bus_b[4] => WideAnd0.IN3
+bus_b[5] => WideAnd5.IN2
+bus_b[5] => WideAnd4.IN2
+bus_b[5] => WideAnd3.IN2
+bus_b[5] => WideAnd2.IN2
+bus_b[5] => WideAnd1.IN2
+bus_b[5] => WideAnd0.IN2
+bus_b[6] => WideAnd6.IN1
+bus_b[6] => WideAnd5.IN1
+bus_b[6] => WideAnd4.IN1
+bus_b[6] => WideAnd3.IN1
+bus_b[6] => WideAnd2.IN1
+bus_b[6] => WideAnd1.IN1
+bus_b[6] => WideAnd0.IN1
+bus_b[7] => WideAnd6.IN0
+bus_b[7] => WideAnd5.IN0
+bus_b[7] => WideAnd4.IN0
+bus_b[7] => WideAnd3.IN0
+bus_b[7] => WideAnd2.IN0
+bus_b[7] => WideAnd1.IN0
+bus_b[7] => a[7].IN1
+bus_b[7] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[9].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN0
+bus_a[8] => comb~0.IN1
+bus_b[0] => WideAnd0.IN8
+bus_b[1] => WideAnd1.IN7
+bus_b[1] => WideAnd0.IN7
+bus_b[2] => WideAnd2.IN6
+bus_b[2] => WideAnd1.IN6
+bus_b[2] => WideAnd0.IN6
+bus_b[3] => WideAnd3.IN5
+bus_b[3] => WideAnd2.IN5
+bus_b[3] => WideAnd1.IN5
+bus_b[3] => WideAnd0.IN5
+bus_b[4] => WideAnd4.IN4
+bus_b[4] => WideAnd3.IN4
+bus_b[4] => WideAnd2.IN4
+bus_b[4] => WideAnd1.IN4
+bus_b[4] => WideAnd0.IN4
+bus_b[5] => WideAnd5.IN3
+bus_b[5] => WideAnd4.IN3
+bus_b[5] => WideAnd3.IN3
+bus_b[5] => WideAnd2.IN3
+bus_b[5] => WideAnd1.IN3
+bus_b[5] => WideAnd0.IN3
+bus_b[6] => WideAnd6.IN2
+bus_b[6] => WideAnd5.IN2
+bus_b[6] => WideAnd4.IN2
+bus_b[6] => WideAnd3.IN2
+bus_b[6] => WideAnd2.IN2
+bus_b[6] => WideAnd1.IN2
+bus_b[6] => WideAnd0.IN2
+bus_b[7] => WideAnd7.IN1
+bus_b[7] => WideAnd6.IN1
+bus_b[7] => WideAnd5.IN1
+bus_b[7] => WideAnd4.IN1
+bus_b[7] => WideAnd3.IN1
+bus_b[7] => WideAnd2.IN1
+bus_b[7] => WideAnd1.IN1
+bus_b[7] => WideAnd0.IN1
+bus_b[8] => WideAnd7.IN0
+bus_b[8] => WideAnd6.IN0
+bus_b[8] => WideAnd5.IN0
+bus_b[8] => WideAnd4.IN0
+bus_b[8] => WideAnd3.IN0
+bus_b[8] => WideAnd2.IN0
+bus_b[8] => WideAnd1.IN0
+bus_b[8] => a[8].IN1
+bus_b[8] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[10].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN0
+bus_a[9] => comb~0.IN1
+bus_b[0] => WideAnd0.IN9
+bus_b[1] => WideAnd1.IN8
+bus_b[1] => WideAnd0.IN8
+bus_b[2] => WideAnd2.IN7
+bus_b[2] => WideAnd1.IN7
+bus_b[2] => WideAnd0.IN7
+bus_b[3] => WideAnd3.IN6
+bus_b[3] => WideAnd2.IN6
+bus_b[3] => WideAnd1.IN6
+bus_b[3] => WideAnd0.IN6
+bus_b[4] => WideAnd4.IN5
+bus_b[4] => WideAnd3.IN5
+bus_b[4] => WideAnd2.IN5
+bus_b[4] => WideAnd1.IN5
+bus_b[4] => WideAnd0.IN5
+bus_b[5] => WideAnd5.IN4
+bus_b[5] => WideAnd4.IN4
+bus_b[5] => WideAnd3.IN4
+bus_b[5] => WideAnd2.IN4
+bus_b[5] => WideAnd1.IN4
+bus_b[5] => WideAnd0.IN4
+bus_b[6] => WideAnd6.IN3
+bus_b[6] => WideAnd5.IN3
+bus_b[6] => WideAnd4.IN3
+bus_b[6] => WideAnd3.IN3
+bus_b[6] => WideAnd2.IN3
+bus_b[6] => WideAnd1.IN3
+bus_b[6] => WideAnd0.IN3
+bus_b[7] => WideAnd7.IN2
+bus_b[7] => WideAnd6.IN2
+bus_b[7] => WideAnd5.IN2
+bus_b[7] => WideAnd4.IN2
+bus_b[7] => WideAnd3.IN2
+bus_b[7] => WideAnd2.IN2
+bus_b[7] => WideAnd1.IN2
+bus_b[7] => WideAnd0.IN2
+bus_b[8] => WideAnd8.IN1
+bus_b[8] => WideAnd7.IN1
+bus_b[8] => WideAnd6.IN1
+bus_b[8] => WideAnd5.IN1
+bus_b[8] => WideAnd4.IN1
+bus_b[8] => WideAnd3.IN1
+bus_b[8] => WideAnd2.IN1
+bus_b[8] => WideAnd1.IN1
+bus_b[8] => WideAnd0.IN1
+bus_b[9] => WideAnd8.IN0
+bus_b[9] => WideAnd7.IN0
+bus_b[9] => WideAnd6.IN0
+bus_b[9] => WideAnd5.IN0
+bus_b[9] => WideAnd4.IN0
+bus_b[9] => WideAnd3.IN0
+bus_b[9] => WideAnd2.IN0
+bus_b[9] => WideAnd1.IN0
+bus_b[9] => a[9].IN1
+bus_b[9] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[11].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN1
+bus_a[9] => a[10].IN0
+bus_a[10] => comb~0.IN1
+bus_b[0] => WideAnd0.IN10
+bus_b[1] => WideAnd1.IN9
+bus_b[1] => WideAnd0.IN9
+bus_b[2] => WideAnd2.IN8
+bus_b[2] => WideAnd1.IN8
+bus_b[2] => WideAnd0.IN8
+bus_b[3] => WideAnd3.IN7
+bus_b[3] => WideAnd2.IN7
+bus_b[3] => WideAnd1.IN7
+bus_b[3] => WideAnd0.IN7
+bus_b[4] => WideAnd4.IN6
+bus_b[4] => WideAnd3.IN6
+bus_b[4] => WideAnd2.IN6
+bus_b[4] => WideAnd1.IN6
+bus_b[4] => WideAnd0.IN6
+bus_b[5] => WideAnd5.IN5
+bus_b[5] => WideAnd4.IN5
+bus_b[5] => WideAnd3.IN5
+bus_b[5] => WideAnd2.IN5
+bus_b[5] => WideAnd1.IN5
+bus_b[5] => WideAnd0.IN5
+bus_b[6] => WideAnd6.IN4
+bus_b[6] => WideAnd5.IN4
+bus_b[6] => WideAnd4.IN4
+bus_b[6] => WideAnd3.IN4
+bus_b[6] => WideAnd2.IN4
+bus_b[6] => WideAnd1.IN4
+bus_b[6] => WideAnd0.IN4
+bus_b[7] => WideAnd7.IN3
+bus_b[7] => WideAnd6.IN3
+bus_b[7] => WideAnd5.IN3
+bus_b[7] => WideAnd4.IN3
+bus_b[7] => WideAnd3.IN3
+bus_b[7] => WideAnd2.IN3
+bus_b[7] => WideAnd1.IN3
+bus_b[7] => WideAnd0.IN3
+bus_b[8] => WideAnd8.IN2
+bus_b[8] => WideAnd7.IN2
+bus_b[8] => WideAnd6.IN2
+bus_b[8] => WideAnd5.IN2
+bus_b[8] => WideAnd4.IN2
+bus_b[8] => WideAnd3.IN2
+bus_b[8] => WideAnd2.IN2
+bus_b[8] => WideAnd1.IN2
+bus_b[8] => WideAnd0.IN2
+bus_b[9] => WideAnd9.IN1
+bus_b[9] => WideAnd8.IN1
+bus_b[9] => WideAnd7.IN1
+bus_b[9] => WideAnd6.IN1
+bus_b[9] => WideAnd5.IN1
+bus_b[9] => WideAnd4.IN1
+bus_b[9] => WideAnd3.IN1
+bus_b[9] => WideAnd2.IN1
+bus_b[9] => WideAnd1.IN1
+bus_b[9] => WideAnd0.IN1
+bus_b[10] => WideAnd9.IN0
+bus_b[10] => WideAnd8.IN0
+bus_b[10] => WideAnd7.IN0
+bus_b[10] => WideAnd6.IN0
+bus_b[10] => WideAnd5.IN0
+bus_b[10] => WideAnd4.IN0
+bus_b[10] => WideAnd3.IN0
+bus_b[10] => WideAnd2.IN0
+bus_b[10] => WideAnd1.IN0
+bus_b[10] => a[10].IN1
+bus_b[10] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[12].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN1
+bus_a[9] => a[10].IN1
+bus_a[10] => a[11].IN0
+bus_a[11] => comb~0.IN1
+bus_b[0] => WideAnd0.IN11
+bus_b[1] => WideAnd1.IN10
+bus_b[1] => WideAnd0.IN10
+bus_b[2] => WideAnd2.IN9
+bus_b[2] => WideAnd1.IN9
+bus_b[2] => WideAnd0.IN9
+bus_b[3] => WideAnd3.IN8
+bus_b[3] => WideAnd2.IN8
+bus_b[3] => WideAnd1.IN8
+bus_b[3] => WideAnd0.IN8
+bus_b[4] => WideAnd4.IN7
+bus_b[4] => WideAnd3.IN7
+bus_b[4] => WideAnd2.IN7
+bus_b[4] => WideAnd1.IN7
+bus_b[4] => WideAnd0.IN7
+bus_b[5] => WideAnd5.IN6
+bus_b[5] => WideAnd4.IN6
+bus_b[5] => WideAnd3.IN6
+bus_b[5] => WideAnd2.IN6
+bus_b[5] => WideAnd1.IN6
+bus_b[5] => WideAnd0.IN6
+bus_b[6] => WideAnd6.IN5
+bus_b[6] => WideAnd5.IN5
+bus_b[6] => WideAnd4.IN5
+bus_b[6] => WideAnd3.IN5
+bus_b[6] => WideAnd2.IN5
+bus_b[6] => WideAnd1.IN5
+bus_b[6] => WideAnd0.IN5
+bus_b[7] => WideAnd7.IN4
+bus_b[7] => WideAnd6.IN4
+bus_b[7] => WideAnd5.IN4
+bus_b[7] => WideAnd4.IN4
+bus_b[7] => WideAnd3.IN4
+bus_b[7] => WideAnd2.IN4
+bus_b[7] => WideAnd1.IN4
+bus_b[7] => WideAnd0.IN4
+bus_b[8] => WideAnd8.IN3
+bus_b[8] => WideAnd7.IN3
+bus_b[8] => WideAnd6.IN3
+bus_b[8] => WideAnd5.IN3
+bus_b[8] => WideAnd4.IN3
+bus_b[8] => WideAnd3.IN3
+bus_b[8] => WideAnd2.IN3
+bus_b[8] => WideAnd1.IN3
+bus_b[8] => WideAnd0.IN3
+bus_b[9] => WideAnd9.IN2
+bus_b[9] => WideAnd8.IN2
+bus_b[9] => WideAnd7.IN2
+bus_b[9] => WideAnd6.IN2
+bus_b[9] => WideAnd5.IN2
+bus_b[9] => WideAnd4.IN2
+bus_b[9] => WideAnd3.IN2
+bus_b[9] => WideAnd2.IN2
+bus_b[9] => WideAnd1.IN2
+bus_b[9] => WideAnd0.IN2
+bus_b[10] => WideAnd10.IN1
+bus_b[10] => WideAnd9.IN1
+bus_b[10] => WideAnd8.IN1
+bus_b[10] => WideAnd7.IN1
+bus_b[10] => WideAnd6.IN1
+bus_b[10] => WideAnd5.IN1
+bus_b[10] => WideAnd4.IN1
+bus_b[10] => WideAnd3.IN1
+bus_b[10] => WideAnd2.IN1
+bus_b[10] => WideAnd1.IN1
+bus_b[10] => WideAnd0.IN1
+bus_b[11] => WideAnd10.IN0
+bus_b[11] => WideAnd9.IN0
+bus_b[11] => WideAnd8.IN0
+bus_b[11] => WideAnd7.IN0
+bus_b[11] => WideAnd6.IN0
+bus_b[11] => WideAnd5.IN0
+bus_b[11] => WideAnd4.IN0
+bus_b[11] => WideAnd3.IN0
+bus_b[11] => WideAnd2.IN0
+bus_b[11] => WideAnd1.IN0
+bus_b[11] => a[11].IN1
+bus_b[11] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[13].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN1
+bus_a[9] => a[10].IN1
+bus_a[10] => a[11].IN1
+bus_a[11] => a[12].IN0
+bus_a[12] => comb~0.IN1
+bus_b[0] => WideAnd0.IN12
+bus_b[1] => WideAnd1.IN11
+bus_b[1] => WideAnd0.IN11
+bus_b[2] => WideAnd2.IN10
+bus_b[2] => WideAnd1.IN10
+bus_b[2] => WideAnd0.IN10
+bus_b[3] => WideAnd3.IN9
+bus_b[3] => WideAnd2.IN9
+bus_b[3] => WideAnd1.IN9
+bus_b[3] => WideAnd0.IN9
+bus_b[4] => WideAnd4.IN8
+bus_b[4] => WideAnd3.IN8
+bus_b[4] => WideAnd2.IN8
+bus_b[4] => WideAnd1.IN8
+bus_b[4] => WideAnd0.IN8
+bus_b[5] => WideAnd5.IN7
+bus_b[5] => WideAnd4.IN7
+bus_b[5] => WideAnd3.IN7
+bus_b[5] => WideAnd2.IN7
+bus_b[5] => WideAnd1.IN7
+bus_b[5] => WideAnd0.IN7
+bus_b[6] => WideAnd6.IN6
+bus_b[6] => WideAnd5.IN6
+bus_b[6] => WideAnd4.IN6
+bus_b[6] => WideAnd3.IN6
+bus_b[6] => WideAnd2.IN6
+bus_b[6] => WideAnd1.IN6
+bus_b[6] => WideAnd0.IN6
+bus_b[7] => WideAnd7.IN5
+bus_b[7] => WideAnd6.IN5
+bus_b[7] => WideAnd5.IN5
+bus_b[7] => WideAnd4.IN5
+bus_b[7] => WideAnd3.IN5
+bus_b[7] => WideAnd2.IN5
+bus_b[7] => WideAnd1.IN5
+bus_b[7] => WideAnd0.IN5
+bus_b[8] => WideAnd8.IN4
+bus_b[8] => WideAnd7.IN4
+bus_b[8] => WideAnd6.IN4
+bus_b[8] => WideAnd5.IN4
+bus_b[8] => WideAnd4.IN4
+bus_b[8] => WideAnd3.IN4
+bus_b[8] => WideAnd2.IN4
+bus_b[8] => WideAnd1.IN4
+bus_b[8] => WideAnd0.IN4
+bus_b[9] => WideAnd9.IN3
+bus_b[9] => WideAnd8.IN3
+bus_b[9] => WideAnd7.IN3
+bus_b[9] => WideAnd6.IN3
+bus_b[9] => WideAnd5.IN3
+bus_b[9] => WideAnd4.IN3
+bus_b[9] => WideAnd3.IN3
+bus_b[9] => WideAnd2.IN3
+bus_b[9] => WideAnd1.IN3
+bus_b[9] => WideAnd0.IN3
+bus_b[10] => WideAnd10.IN2
+bus_b[10] => WideAnd9.IN2
+bus_b[10] => WideAnd8.IN2
+bus_b[10] => WideAnd7.IN2
+bus_b[10] => WideAnd6.IN2
+bus_b[10] => WideAnd5.IN2
+bus_b[10] => WideAnd4.IN2
+bus_b[10] => WideAnd3.IN2
+bus_b[10] => WideAnd2.IN2
+bus_b[10] => WideAnd1.IN2
+bus_b[10] => WideAnd0.IN2
+bus_b[11] => WideAnd11.IN1
+bus_b[11] => WideAnd10.IN1
+bus_b[11] => WideAnd9.IN1
+bus_b[11] => WideAnd8.IN1
+bus_b[11] => WideAnd7.IN1
+bus_b[11] => WideAnd6.IN1
+bus_b[11] => WideAnd5.IN1
+bus_b[11] => WideAnd4.IN1
+bus_b[11] => WideAnd3.IN1
+bus_b[11] => WideAnd2.IN1
+bus_b[11] => WideAnd1.IN1
+bus_b[11] => WideAnd0.IN1
+bus_b[12] => WideAnd11.IN0
+bus_b[12] => WideAnd10.IN0
+bus_b[12] => WideAnd9.IN0
+bus_b[12] => WideAnd8.IN0
+bus_b[12] => WideAnd7.IN0
+bus_b[12] => WideAnd6.IN0
+bus_b[12] => WideAnd5.IN0
+bus_b[12] => WideAnd4.IN0
+bus_b[12] => WideAnd3.IN0
+bus_b[12] => WideAnd2.IN0
+bus_b[12] => WideAnd1.IN0
+bus_b[12] => a[12].IN1
+bus_b[12] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[14].add_submodule_a
+bus_a[0] => a[1].IN1
+bus_a[1] => a[2].IN1
+bus_a[2] => a[3].IN1
+bus_a[3] => a[4].IN1
+bus_a[4] => a[5].IN1
+bus_a[5] => a[6].IN1
+bus_a[6] => a[7].IN1
+bus_a[7] => a[8].IN1
+bus_a[8] => a[9].IN1
+bus_a[9] => a[10].IN1
+bus_a[10] => a[11].IN1
+bus_a[11] => a[12].IN1
+bus_a[12] => a[13].IN0
+bus_a[13] => comb~0.IN1
+bus_b[0] => WideAnd0.IN13
+bus_b[1] => WideAnd1.IN12
+bus_b[1] => WideAnd0.IN12
+bus_b[2] => WideAnd2.IN11
+bus_b[2] => WideAnd1.IN11
+bus_b[2] => WideAnd0.IN11
+bus_b[3] => WideAnd3.IN10
+bus_b[3] => WideAnd2.IN10
+bus_b[3] => WideAnd1.IN10
+bus_b[3] => WideAnd0.IN10
+bus_b[4] => WideAnd4.IN9
+bus_b[4] => WideAnd3.IN9
+bus_b[4] => WideAnd2.IN9
+bus_b[4] => WideAnd1.IN9
+bus_b[4] => WideAnd0.IN9
+bus_b[5] => WideAnd5.IN8
+bus_b[5] => WideAnd4.IN8
+bus_b[5] => WideAnd3.IN8
+bus_b[5] => WideAnd2.IN8
+bus_b[5] => WideAnd1.IN8
+bus_b[5] => WideAnd0.IN8
+bus_b[6] => WideAnd6.IN7
+bus_b[6] => WideAnd5.IN7
+bus_b[6] => WideAnd4.IN7
+bus_b[6] => WideAnd3.IN7
+bus_b[6] => WideAnd2.IN7
+bus_b[6] => WideAnd1.IN7
+bus_b[6] => WideAnd0.IN7
+bus_b[7] => WideAnd7.IN6
+bus_b[7] => WideAnd6.IN6
+bus_b[7] => WideAnd5.IN6
+bus_b[7] => WideAnd4.IN6
+bus_b[7] => WideAnd3.IN6
+bus_b[7] => WideAnd2.IN6
+bus_b[7] => WideAnd1.IN6
+bus_b[7] => WideAnd0.IN6
+bus_b[8] => WideAnd8.IN5
+bus_b[8] => WideAnd7.IN5
+bus_b[8] => WideAnd6.IN5
+bus_b[8] => WideAnd5.IN5
+bus_b[8] => WideAnd4.IN5
+bus_b[8] => WideAnd3.IN5
+bus_b[8] => WideAnd2.IN5
+bus_b[8] => WideAnd1.IN5
+bus_b[8] => WideAnd0.IN5
+bus_b[9] => WideAnd9.IN4
+bus_b[9] => WideAnd8.IN4
+bus_b[9] => WideAnd7.IN4
+bus_b[9] => WideAnd6.IN4
+bus_b[9] => WideAnd5.IN4
+bus_b[9] => WideAnd4.IN4
+bus_b[9] => WideAnd3.IN4
+bus_b[9] => WideAnd2.IN4
+bus_b[9] => WideAnd1.IN4
+bus_b[9] => WideAnd0.IN4
+bus_b[10] => WideAnd10.IN3
+bus_b[10] => WideAnd9.IN3
+bus_b[10] => WideAnd8.IN3
+bus_b[10] => WideAnd7.IN3
+bus_b[10] => WideAnd6.IN3
+bus_b[10] => WideAnd5.IN3
+bus_b[10] => WideAnd4.IN3
+bus_b[10] => WideAnd3.IN3
+bus_b[10] => WideAnd2.IN3
+bus_b[10] => WideAnd1.IN3
+bus_b[10] => WideAnd0.IN3
+bus_b[11] => WideAnd11.IN2
+bus_b[11] => WideAnd10.IN2
+bus_b[11] => WideAnd9.IN2
+bus_b[11] => WideAnd8.IN2
+bus_b[11] => WideAnd7.IN2
+bus_b[11] => WideAnd6.IN2
+bus_b[11] => WideAnd5.IN2
+bus_b[11] => WideAnd4.IN2
+bus_b[11] => WideAnd3.IN2
+bus_b[11] => WideAnd2.IN2
+bus_b[11] => WideAnd1.IN2
+bus_b[11] => WideAnd0.IN2
+bus_b[12] => WideAnd12.IN1
+bus_b[12] => WideAnd11.IN1
+bus_b[12] => WideAnd10.IN1
+bus_b[12] => WideAnd9.IN1
+bus_b[12] => WideAnd8.IN1
+bus_b[12] => WideAnd7.IN1
+bus_b[12] => WideAnd6.IN1
+bus_b[12] => WideAnd5.IN1
+bus_b[12] => WideAnd4.IN1
+bus_b[12] => WideAnd3.IN1
+bus_b[12] => WideAnd2.IN1
+bus_b[12] => WideAnd1.IN1
+bus_b[12] => WideAnd0.IN1
+bus_b[13] => WideAnd12.IN0
+bus_b[13] => WideAnd11.IN0
+bus_b[13] => WideAnd10.IN0
+bus_b[13] => WideAnd9.IN0
+bus_b[13] => WideAnd8.IN0
+bus_b[13] => WideAnd7.IN0
+bus_b[13] => WideAnd6.IN0
+bus_b[13] => WideAnd5.IN0
+bus_b[13] => WideAnd4.IN0
+bus_b[13] => WideAnd3.IN0
+bus_b[13] => WideAnd2.IN0
+bus_b[13] => WideAnd1.IN0
+bus_b[13] => a[13].IN1
+bus_b[13] => WideAnd0.IN0
+cary_1 <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+cary_2 => a[0].IN1
+
+
+|mul_16bit|carry_adder:carry_adder
+x[0] => WideAnd5.IN0
+x[0] => WideAnd4.IN0
+x[0] => WideAnd3.IN0
+x[0] => WideAnd2.IN0
+x[0] => WideAnd1.IN0
+x[0] => WideAnd0.IN0
+x[0] => out~1.IN0
+x[0] => out~0.IN0
+x[1] => WideAnd5.IN1
+x[1] => WideAnd4.IN1
+x[1] => WideAnd3.IN1
+x[1] => WideAnd2.IN1
+x[1] => WideAnd1.IN1
+x[1] => WideAnd0.IN1
+x[1] => out~2.IN1
+x[2] => WideAnd5.IN2
+x[2] => WideAnd4.IN2
+x[2] => WideAnd3.IN2
+x[2] => WideAnd2.IN2
+x[2] => WideAnd1.IN2
+x[2] => out~4.IN1
+x[3] => WideAnd5.IN3
+x[3] => WideAnd4.IN3
+x[3] => WideAnd3.IN3
+x[3] => WideAnd2.IN3
+x[3] => out~6.IN1
+x[4] => WideAnd5.IN4
+x[4] => WideAnd4.IN4
+x[4] => WideAnd3.IN4
+x[4] => out~8.IN1
+x[5] => WideAnd5.IN5
+x[5] => WideAnd4.IN5
+x[5] => out~10.IN1
+x[6] => WideAnd5.IN6
+x[6] => out~12.IN1
+cary => overflow~0.IN0
+cary => out~11.IN0
+cary => out~9.IN0
+cary => out~7.IN0
+cary => out~5.IN0
+cary => out~3.IN0
+cary => out~1.IN1
+cary => out~0.IN1
+out[0] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out~2.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~4.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out~6.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out~8.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out~10.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out~12.DB_MAX_OUTPUT_PORT_TYPE
+overflow <= overflow~0.DB_MAX_OUTPUT_PORT_TYPE
 
 

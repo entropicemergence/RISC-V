@@ -1,3 +1,84 @@
+
+
+
+
+	module mul_16bit (ax, by, out);
+		localparam manti=16;
+		localparam n_bit = manti*2;
+		
+		input [manti-1:0]ax;
+		input [manti-1:0]by;
+		output [n_bit-1:0]out;
+		
+		wire [31:0]x_y_a_b;
+		wire [15:0]a_y;
+		
+		wire [15:0]x_b;
+//		wire [15:0]a_b;
+		
+		mul_8bit mul8_xy (.a(ax[7:0]), .b(by[7:0]), .out(x_y_a_b[15:0]));
+		mul_8bit mul8_ay (.a(ax[15:8]), .b(by[7:0]), .out(a_y[15:0]));
+
+		mul_8bit mul8_xb (.a(ax[7:0]), .b(by[15:8]), .out(x_b[15:0]));
+		mul_8bit mul8_ab (.a(ax[15:8]), .b(by[15:8]), .out(x_y_a_b[31:16]));
+		
+		
+		
+		wire [15:0]bus1_out;
+		wire [15:0]bus1_cary;
+		
+		full_adder #(.unit(16)) full_adder (.x(x_y_a_b[23:8]) , .y(a_y[15:0]), .z(x_b[15:0]), .out(bus1_out[15:0]), .cary_out(bus1_cary[15:0]));
+		
+		wire [15:0]bus2;
+		
+		assign bus2[14:0]=bus1_out[15:0];
+		assign bus2[15]=x_y_a_b[24];
+		
+		wire cary_1;
+		half_adder_single half_adder (.xx(bus1_cary[0]) , .yy(bus2[0]), .ha_out(out[9]), .ha_cary(cary_1));
+		
+		wire cary_2;
+		adder_b #(.n_bit(14)) fast_adder (.a(bus1_cary[15:1]), .b(bus2[15:1]), .car(cary_1), .out(out[24:10]) , .car_out(cary_2));
+		
+		wire overflow;
+		carry_adder #(.unit(7)) carry_adder (.x(x_y_a_b[31:25]), .cary(cary_2), .out(out[31:25]), .overflow(overflow));
+		
+		assign out[7:0]=x_y_a_b[7:0];
+		assign out[8]=bus1_out[0];
+		
+		
+	endmodule
+
+
+
+	module carry_adder #(	parameter unit=8)
+		(x, cary, out, overflow);
+		input [unit-1:0]x;
+		input cary;
+		output [unit-1:0]out;
+		output overflow;
+		
+		
+		assign out[0]=x[0]^cary;
+		assign out[1]=(x[0]&cary)^x[1];
+		
+		genvar i;
+		generate
+		for(i = 0;i < (unit-2); i = i + 1) begin : ASSIGN_GEN
+			assign out[i+2] = (( &x[i+1:0]) & cary) ^ x[i+2];
+		end
+		
+		assign overflow = (&x[unit-1:0]) & cary;
+		
+		endgenerate
+		
+		
+		
+	endmodule
+
+
+
+
 	module tree_builder #( 	parameter tree_width=15,
 							parameter manti=8)
 		(x , y, bus1, bus2, bus3, bus4, bus5, bus6, bus7, bus8);
@@ -31,30 +112,7 @@
 	endmodule
 
 	
-	module mul_16bit (ax, by, out);
-		localparam manti=16;
-		localparam n_bit = manti*2;
-		
-		input [manti-1:0]ax;
-		input [manti-1:0]by;
-		output [n_bit-1:0]out;
-		
-		wire [15:0]x_y;
-		wire [15:0]a_y;
-		
-		wire [15:0]x_b;
-		wire [15:0]a_b;
-		
-		mul_8bit mul8_xy (.a(ax[7:0]), .b(by[7:0]), .out(x_y[15:0]));
-		mul_8bit mul8_ay (.a(ax[15:8]), .b(by[7:0]), .out(a_y[15:0]));
 
-		mul_8bit mul8_xb (.a(ax[7:0]), .b(by[15:8]), .out(x_b[15:0]));
-		mul_8bit mul8_ab (.a(ax[15:8]), .b(by[15:8]), .out(a_b[15:0]));
-		
-		
-//		half_adder_single half_adder_b1 (.xx(bus1[6]) , .yy(bus2[5]), .ha_out(bus_b_1[6]), .ha_cary(bus_b_2[6]));
-//		full_adder #(.unit(3)) full_adder_b (.x(bus1[9:7]) , .y(bus2[8:6]), .z(bus3[7:5]), .out(bus_b_1[9:7]), .cary_out(bus_b_2[9:7]));
-	endmodule
 
 	module mul_8bit (a, b, out); 
 		localparam manti=8;
