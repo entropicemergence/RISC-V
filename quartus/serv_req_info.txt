@@ -1,0 +1,22 @@
+<internal_error>
+	<executable>quartus.exe</executable>
+	<sub_system>RNP</sub_system>
+	<file>/quartus/rtlv/rnp/rnp_netlist.cpp</file>
+	<line>865</line>
+	<callstack>
+	0x0da513d9: RTLV_RNP + 0x113d9 (?start@RNP_ROOT@@QAI_NPAVRVD_WORKSPACE@@_N@Z + 0x10299)
+	0x0da7300e: RTLV_RNP + 0x3300e (?start@RNP_ROOT@@QAI_NPAVRVD_WORKSPACE@@_N@Z + 0x31ece)
+	0x0da752c1: RTLV_RNP + 0x352c1 (?start@RNP_ROOT@@QAI_NPAVRVD_WORKSPACE@@_N@Z + 0x34181)
+	0x0da72505: RTLV_RNP + 0x32505 (?start@RNP_ROOT@@QAI_NPAVRVD_WORKSPACE@@_N@Z + 0x313c5)
+	0x0da4ce75: RTLV_RNP + 0xce75 (?start@RNP_ROOT@@QAI_NPAVRVD_WORKSPACE@@_N@Z + 0xbd35)
+	0x0da4277f: RTLV_RNP + 0x277f (?start@RNP_ROOT@@QAI_NPAVRVD_WORKSPACE@@_N@Z + 0x163f)
+	0x0da411f6: RTLV_RNP + 0x11f6 (?start@RNP_ROOT@@QAI_NPAVRVD_WORKSPACE@@_N@Z + 0xb6)
+	0x0ca9a14b:
+	</callstack>
+	<error>m_dest_col_point_map[dest_column].set_coor_x</error>
+	<date>Sun Feb 19 10:25:24 2023</date>
+	<version>Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition</version>
+	<full_error>m_dest_col_point_map[dest_column].set_coor_x
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition </full_error>
+</internal_error>
+

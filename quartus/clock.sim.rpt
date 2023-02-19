@@ -1,5 +1,5 @@
 Simulator report for clock
-Fri Feb 17 19:33:52 2023
+Sun Feb 19 11:26:10 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+---------------+
 ; Simulation Start Time       ; 0 ps          ;
 ; Simulation End Time         ; 10.0 us       ;
-; Simulation Netlist Size     ; 96 nodes      ;
+; Simulation Netlist Size     ; 223 nodes     ;
 ; Simulation Coverage         ;     100.00 %  ;
-; Total Number of Transitions ; 28880         ;
+; Total Number of Transitions ; 81200         ;
 ; Simulation Breakpoints      ; 0             ;
 ; Family                      ; Cyclone III   ;
 ; Device                      ; EP3C120F780I7 ;
@@ -97,9 +97,9 @@ Please use Quartus II to view the waveform report data.
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
 ; Total coverage as a percentage                      ;     100.00 % ;
-; Total nodes checked                                 ; 96           ;
-; Total output ports checked                          ; 96           ;
-; Total output ports with complete 1/0-value coverage ; 96           ;
+; Total nodes checked                                 ; 223          ;
+; Total output ports checked                          ; 223          ;
+; Total output ports with complete 1/0-value coverage ; 223          ;
 ; Total output ports with no 1/0-value coverage       ; 0            ;
 ; Total output ports with no 1-value coverage         ; 0            ;
 ; Total output ports with no 0-value coverage         ; 0            ;
@@ -107,108 +107,235 @@ Please use Quartus II to view the waveform report data.
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                                                                            ;
-+------------------------------------------------------------------+------------------------------------------------------------------+------------------+
-; Node Name                                                        ; Output Port Name                                                 ; Output Port Type ;
-+------------------------------------------------------------------+------------------------------------------------------------------+------------------+
-; |full_adder|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out~16  ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~16  ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~16  ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out~16  ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out~16  ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[5].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[5].fa_single|fa_out~16  ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[6].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[6].fa_single|fa_out~16  ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[7].fa_single|fa_out~16  ; |full_adder|full_adder_single:ASSIGN_GEN[7].fa_single|fa_out~16  ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~78 ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~78 ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~78 ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[3].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[3].fa_single|fa_cary~78 ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[4].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[4].fa_single|fa_cary~78 ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[5].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[5].fa_single|fa_cary~78 ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[6].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[6].fa_single|fa_cary~78 ; combout          ;
-; |full_adder|full_adder_single:ASSIGN_GEN[7].fa_single|fa_cary~78 ; |full_adder|full_adder_single:ASSIGN_GEN[7].fa_single|fa_cary~78 ; combout          ;
-; |full_adder|out[0]~output                                        ; |full_adder|out[0]~output                                        ; o                ;
-; |full_adder|out[0]                                               ; |full_adder|out[0]                                               ; padout           ;
-; |full_adder|out[1]~output                                        ; |full_adder|out[1]~output                                        ; o                ;
-; |full_adder|out[1]                                               ; |full_adder|out[1]                                               ; padout           ;
-; |full_adder|out[2]~output                                        ; |full_adder|out[2]~output                                        ; o                ;
-; |full_adder|out[2]                                               ; |full_adder|out[2]                                               ; padout           ;
-; |full_adder|out[3]~output                                        ; |full_adder|out[3]~output                                        ; o                ;
-; |full_adder|out[3]                                               ; |full_adder|out[3]                                               ; padout           ;
-; |full_adder|out[4]~output                                        ; |full_adder|out[4]~output                                        ; o                ;
-; |full_adder|out[4]                                               ; |full_adder|out[4]                                               ; padout           ;
-; |full_adder|out[5]~output                                        ; |full_adder|out[5]~output                                        ; o                ;
-; |full_adder|out[5]                                               ; |full_adder|out[5]                                               ; padout           ;
-; |full_adder|out[6]~output                                        ; |full_adder|out[6]~output                                        ; o                ;
-; |full_adder|out[6]                                               ; |full_adder|out[6]                                               ; padout           ;
-; |full_adder|out[7]~output                                        ; |full_adder|out[7]~output                                        ; o                ;
-; |full_adder|out[7]                                               ; |full_adder|out[7]                                               ; padout           ;
-; |full_adder|cary_out[0]~output                                   ; |full_adder|cary_out[0]~output                                   ; o                ;
-; |full_adder|cary_out[0]                                          ; |full_adder|cary_out[0]                                          ; padout           ;
-; |full_adder|cary_out[1]~output                                   ; |full_adder|cary_out[1]~output                                   ; o                ;
-; |full_adder|cary_out[1]                                          ; |full_adder|cary_out[1]                                          ; padout           ;
-; |full_adder|cary_out[2]~output                                   ; |full_adder|cary_out[2]~output                                   ; o                ;
-; |full_adder|cary_out[2]                                          ; |full_adder|cary_out[2]                                          ; padout           ;
-; |full_adder|cary_out[3]~output                                   ; |full_adder|cary_out[3]~output                                   ; o                ;
-; |full_adder|cary_out[3]                                          ; |full_adder|cary_out[3]                                          ; padout           ;
-; |full_adder|cary_out[4]~output                                   ; |full_adder|cary_out[4]~output                                   ; o                ;
-; |full_adder|cary_out[4]                                          ; |full_adder|cary_out[4]                                          ; padout           ;
-; |full_adder|cary_out[5]~output                                   ; |full_adder|cary_out[5]~output                                   ; o                ;
-; |full_adder|cary_out[5]                                          ; |full_adder|cary_out[5]                                          ; padout           ;
-; |full_adder|cary_out[6]~output                                   ; |full_adder|cary_out[6]~output                                   ; o                ;
-; |full_adder|cary_out[6]                                          ; |full_adder|cary_out[6]                                          ; padout           ;
-; |full_adder|cary_out[7]~output                                   ; |full_adder|cary_out[7]~output                                   ; o                ;
-; |full_adder|cary_out[7]                                          ; |full_adder|cary_out[7]                                          ; padout           ;
-; |full_adder|z[0]~input                                           ; |full_adder|z[0]~input                                           ; o                ;
-; |full_adder|z[0]                                                 ; |full_adder|z[0]                                                 ; padout           ;
-; |full_adder|x[0]~input                                           ; |full_adder|x[0]~input                                           ; o                ;
-; |full_adder|x[0]                                                 ; |full_adder|x[0]                                                 ; padout           ;
-; |full_adder|y[0]~input                                           ; |full_adder|y[0]~input                                           ; o                ;
-; |full_adder|y[0]                                                 ; |full_adder|y[0]                                                 ; padout           ;
-; |full_adder|z[1]~input                                           ; |full_adder|z[1]~input                                           ; o                ;
-; |full_adder|z[1]                                                 ; |full_adder|z[1]                                                 ; padout           ;
-; |full_adder|x[1]~input                                           ; |full_adder|x[1]~input                                           ; o                ;
-; |full_adder|x[1]                                                 ; |full_adder|x[1]                                                 ; padout           ;
-; |full_adder|y[1]~input                                           ; |full_adder|y[1]~input                                           ; o                ;
-; |full_adder|y[1]                                                 ; |full_adder|y[1]                                                 ; padout           ;
-; |full_adder|z[2]~input                                           ; |full_adder|z[2]~input                                           ; o                ;
-; |full_adder|z[2]                                                 ; |full_adder|z[2]                                                 ; padout           ;
-; |full_adder|x[2]~input                                           ; |full_adder|x[2]~input                                           ; o                ;
-; |full_adder|x[2]                                                 ; |full_adder|x[2]                                                 ; padout           ;
-; |full_adder|y[2]~input                                           ; |full_adder|y[2]~input                                           ; o                ;
-; |full_adder|y[2]                                                 ; |full_adder|y[2]                                                 ; padout           ;
-; |full_adder|z[3]~input                                           ; |full_adder|z[3]~input                                           ; o                ;
-; |full_adder|z[3]                                                 ; |full_adder|z[3]                                                 ; padout           ;
-; |full_adder|x[3]~input                                           ; |full_adder|x[3]~input                                           ; o                ;
-; |full_adder|x[3]                                                 ; |full_adder|x[3]                                                 ; padout           ;
-; |full_adder|y[3]~input                                           ; |full_adder|y[3]~input                                           ; o                ;
-; |full_adder|y[3]                                                 ; |full_adder|y[3]                                                 ; padout           ;
-; |full_adder|z[4]~input                                           ; |full_adder|z[4]~input                                           ; o                ;
-; |full_adder|z[4]                                                 ; |full_adder|z[4]                                                 ; padout           ;
-; |full_adder|x[4]~input                                           ; |full_adder|x[4]~input                                           ; o                ;
-; |full_adder|x[4]                                                 ; |full_adder|x[4]                                                 ; padout           ;
-; |full_adder|y[4]~input                                           ; |full_adder|y[4]~input                                           ; o                ;
-; |full_adder|y[4]                                                 ; |full_adder|y[4]                                                 ; padout           ;
-; |full_adder|z[5]~input                                           ; |full_adder|z[5]~input                                           ; o                ;
-; |full_adder|z[5]                                                 ; |full_adder|z[5]                                                 ; padout           ;
-; |full_adder|x[5]~input                                           ; |full_adder|x[5]~input                                           ; o                ;
-; |full_adder|x[5]                                                 ; |full_adder|x[5]                                                 ; padout           ;
-; |full_adder|y[5]~input                                           ; |full_adder|y[5]~input                                           ; o                ;
-; |full_adder|y[5]                                                 ; |full_adder|y[5]                                                 ; padout           ;
-; |full_adder|z[6]~input                                           ; |full_adder|z[6]~input                                           ; o                ;
-; |full_adder|z[6]                                                 ; |full_adder|z[6]                                                 ; padout           ;
-; |full_adder|x[6]~input                                           ; |full_adder|x[6]~input                                           ; o                ;
-; |full_adder|x[6]                                                 ; |full_adder|x[6]                                                 ; padout           ;
-; |full_adder|y[6]~input                                           ; |full_adder|y[6]~input                                           ; o                ;
-; |full_adder|y[6]                                                 ; |full_adder|y[6]                                                 ; padout           ;
-; |full_adder|z[7]~input                                           ; |full_adder|z[7]~input                                           ; o                ;
-; |full_adder|z[7]                                                 ; |full_adder|z[7]                                                 ; padout           ;
-; |full_adder|x[7]~input                                           ; |full_adder|x[7]~input                                           ; o                ;
-; |full_adder|x[7]                                                 ; |full_adder|x[7]                                                 ; padout           ;
-; |full_adder|y[7]~input                                           ; |full_adder|y[7]~input                                           ; o                ;
-; |full_adder|y[7]                                                 ; |full_adder|y[7]                                                 ; padout           ;
-+------------------------------------------------------------------+------------------------------------------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                    ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                    ; Output Port Name                                                                             ; Output Port Type ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; |mul_8bit|tree_builder:tree_builder|bus1[0]                                                  ; |mul_8bit|tree_builder:tree_builder|bus1[0]                                                  ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out~696                                                   ; |mul_8bit|adder_b:fast_adder_final|out~696                                                   ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus2[0]                                                  ; |mul_8bit|tree_builder:tree_builder|bus2[0]                                                  ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus1[1]                                                  ; |mul_8bit|tree_builder:tree_builder|bus1[1]                                                  ; combout          ;
+; |mul_8bit|half_adder_single:half_adder_e1|ha_out~30                                          ; |mul_8bit|half_adder_single:half_adder_e1|ha_out~30                                          ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus3[0]                                                  ; |mul_8bit|tree_builder:tree_builder|bus3[0]                                                  ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[1]~697                                                ; |mul_8bit|adder_b:fast_adder_final|out[1]~697                                                ; combout          ;
+; |mul_8bit|half_adder_single:half_adder_d1|ha_out~30                                          ; |mul_8bit|half_adder_single:half_adder_d1|ha_out~30                                          ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus3[1]                                                  ; |mul_8bit|tree_builder:tree_builder|bus3[1]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out           ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out           ; combout          ;
+; |mul_8bit|half_adder_single:half_adder_e1|ha_cary                                            ; |mul_8bit|half_adder_single:half_adder_e1|ha_cary                                            ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|carw[2]~1                                                 ; |mul_8bit|adder_b:fast_adder_final|carw[2]~1                                                 ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[2]~698                                                ; |mul_8bit|adder_b:fast_adder_final|out[2]~698                                                ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a|cary_1~485 ; |mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a|cary_1~485 ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a|cary_1~486 ; |mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a|cary_1~486 ; combout          ;
+; |mul_8bit|half_adder_single:half_adder_d1|ha_cary                                            ; |mul_8bit|half_adder_single:half_adder_d1|ha_cary                                            ; combout          ;
+; |mul_8bit|half_adder_single:half_adder_c1|ha_out~30                                          ; |mul_8bit|half_adder_single:half_adder_c1|ha_out~30                                          ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus3[2]                                                  ; |mul_8bit|tree_builder:tree_builder|bus3[2]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~18        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~18        ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~19        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~19        ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[3]~699                                                ; |mul_8bit|adder_b:fast_adder_final|out[3]~699                                                ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[4]~700                                                ; |mul_8bit|adder_b:fast_adder_final|out[4]~700                                                ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus1[5]                                                  ; |mul_8bit|tree_builder:tree_builder|bus1[5]                                                  ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus2[4]                                                  ; |mul_8bit|tree_builder:tree_builder|bus2[4]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out          ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out          ; combout          ;
+; |mul_8bit|half_adder_single:half_adder_c1|ha_cary                                            ; |mul_8bit|half_adder_single:half_adder_c1|ha_cary                                            ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus5[1]                                                  ; |mul_8bit|tree_builder:tree_builder|bus5[1]                                                  ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus4[2]                                                  ; |mul_8bit|tree_builder:tree_builder|bus4[2]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~13        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~13        ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~14        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~14        ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out           ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out           ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[4]~701                                                ; |mul_8bit|adder_b:fast_adder_final|out[4]~701                                                ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[5]~702                                                ; |mul_8bit|adder_b:fast_adder_final|out[5]~702                                                ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~75       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~75       ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus5[2]                                                  ; |mul_8bit|tree_builder:tree_builder|bus5[2]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~76       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~76       ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out~90       ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out~90       ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus7[0]                                                  ; |mul_8bit|tree_builder:tree_builder|bus7[0]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~3       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~3       ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~23        ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~23        ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out~20        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out~20        ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~66        ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~66        ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[5]~703                                                ; |mul_8bit|adder_b:fast_adder_final|out[5]~703                                                ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[6]~704                                                ; |mul_8bit|adder_b:fast_adder_final|out[6]~704                                                ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~3       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~3       ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus1[7]                                                  ; |mul_8bit|tree_builder:tree_builder|bus1[7]                                                  ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus2[6]                                                  ; |mul_8bit|tree_builder:tree_builder|bus2[6]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out           ; |mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single|fa_out           ; combout          ;
+; |mul_8bit|half_adder_single:half_adder_b1|ha_cary                                            ; |mul_8bit|half_adder_single:half_adder_b1|ha_cary                                            ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus5[3]                                                  ; |mul_8bit|tree_builder:tree_builder|bus5[3]                                                  ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus4[4]                                                  ; |mul_8bit|tree_builder:tree_builder|bus4[4]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~66       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~66       ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out~5         ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out~5         ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~91       ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~91       ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out          ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out          ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus6[1]                                                  ; |mul_8bit|tree_builder:tree_builder|bus6[1]                                                  ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus4[3]                                                  ; |mul_8bit|tree_builder:tree_builder|bus4[3]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~11      ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~11      ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out~18        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out~18        ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[3].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[3].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[6]~705                                                ; |mul_8bit|adder_b:fast_adder_final|out[6]~705                                                ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[7]~706                                                ; |mul_8bit|adder_b:fast_adder_final|out[7]~706                                                ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~3       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~3       ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus1[8]                                                  ; |mul_8bit|tree_builder:tree_builder|bus1[8]                                                  ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus2[7]                                                  ; |mul_8bit|tree_builder:tree_builder|bus2[7]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~97        ; |mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[1].fa_single|fa_out~97        ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus5[4]                                                  ; |mul_8bit|tree_builder:tree_builder|bus5[4]                                                  ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus4[5]                                                  ; |mul_8bit|tree_builder:tree_builder|bus4[5]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out~22       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out~22       ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out~5         ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out~5         ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus6[3]                                                  ; |mul_8bit|tree_builder:tree_builder|bus6[3]                                                  ; combout          ;
+; |mul_8bit|half_adder_single:half_adder_b2|ha_cary                                            ; |mul_8bit|half_adder_single:half_adder_b2|ha_cary                                            ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out          ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out          ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus7[1]                                                  ; |mul_8bit|tree_builder:tree_builder|bus7[1]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[3].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[3].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus6[2]                                                  ; |mul_8bit|tree_builder:tree_builder|bus6[2]                                                  ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus8[0]                                                  ; |mul_8bit|tree_builder:tree_builder|bus8[0]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~6       ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~6       ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[5].fa_single|fa_out~18        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[5].fa_single|fa_out~18        ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[4].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[4].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[7]~707                                                ; |mul_8bit|adder_b:fast_adder_final|out[7]~707                                                ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[8]~708                                                ; |mul_8bit|adder_b:fast_adder_final|out[8]~708                                                ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[3].fa_single|fa_cary~3       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[3].fa_single|fa_cary~3       ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus1[9]                                                  ; |mul_8bit|tree_builder:tree_builder|bus1[9]                                                  ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus2[8]                                                  ; |mul_8bit|tree_builder:tree_builder|bus2[8]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~97        ; |mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~97        ; combout          ;
+; |mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[1].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out~12       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out~12       ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[5].fa_single|fa_out~5         ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[5].fa_single|fa_out~5         ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out~87       ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out~87       ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus5[5]                                                  ; |mul_8bit|tree_builder:tree_builder|bus5[5]                                                  ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus7[2]                                                  ; |mul_8bit|tree_builder:tree_builder|bus7[2]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~35       ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[2].fa_single|fa_out~35       ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[4].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[4].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~3       ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~3       ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[6].fa_single|fa_out~21        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[6].fa_single|fa_out~21        ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[5].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[5].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[8]~709                                                ; |mul_8bit|adder_b:fast_adder_final|out[8]~709                                                ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[4].fa_single|fa_cary~3       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[4].fa_single|fa_cary~3       ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus1[10]                                                 ; |mul_8bit|tree_builder:tree_builder|bus1[10]                                                 ; combout          ;
+; |mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[2].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[5].fa_single|fa_out~77       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[5].fa_single|fa_out~77       ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[6].fa_single|fa_out~77        ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[6].fa_single|fa_out~77        ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[5].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[5].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus6[4]                                                  ; |mul_8bit|tree_builder:tree_builder|bus6[4]                                                  ; combout          ;
+; |mul_8bit|half_adder_single:half_adder_b3|ha_cary                                            ; |mul_8bit|half_adder_single:half_adder_b3|ha_cary                                            ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[3].fa_single|fa_cary~3       ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[3].fa_single|fa_cary~3       ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out~93       ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out~93       ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus5[6]                                                  ; |mul_8bit|tree_builder:tree_builder|bus5[6]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[7].fa_single|fa_out~20        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[7].fa_single|fa_out~20        ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out          ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[3].fa_single|fa_out          ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[6].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[6].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[9]~710                                                ; |mul_8bit|adder_b:fast_adder_final|out[9]~710                                                ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[9]~711                                                ; |mul_8bit|adder_b:fast_adder_final|out[9]~711                                                ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[9]~712                                                ; |mul_8bit|adder_b:fast_adder_final|out[9]~712                                                ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[9]~713                                                ; |mul_8bit|adder_b:fast_adder_final|out[9]~713                                                ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[10]~714                                               ; |mul_8bit|adder_b:fast_adder_final|out[10]~714                                               ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[5].fa_single|fa_cary~3       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[5].fa_single|fa_cary~3       ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus1[11]                                                 ; |mul_8bit|tree_builder:tree_builder|bus1[11]                                                 ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus2[10]                                                 ; |mul_8bit|tree_builder:tree_builder|bus2[10]                                                 ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[6].fa_single|fa_out~97       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[6].fa_single|fa_out~97       ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[7].fa_single|fa_out~5         ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[7].fa_single|fa_out~5         ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus4[8]                                                  ; |mul_8bit|tree_builder:tree_builder|bus4[8]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[6].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[6].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus4[7]                                                  ; |mul_8bit|tree_builder:tree_builder|bus4[7]                                                  ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus2[9]                                                  ; |mul_8bit|tree_builder:tree_builder|bus2[9]                                                  ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[4].fa_single|fa_cary~6       ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[4].fa_single|fa_cary~6       ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[8].fa_single|fa_out~18        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[8].fa_single|fa_out~18        ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[7].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[7].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[10]~715                                               ; |mul_8bit|adder_b:fast_adder_final|out[10]~715                                               ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[11]~716                                               ; |mul_8bit|adder_b:fast_adder_final|out[11]~716                                               ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus1[12]                                                 ; |mul_8bit|tree_builder:tree_builder|bus1[12]                                                 ; combout          ;
+; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[6].fa_single|fa_cary~3       ; |mul_8bit|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[6].fa_single|fa_cary~3       ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[8].fa_single|fa_out~77        ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[8].fa_single|fa_out~77        ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[7].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[7].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single|fa_out~79        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single|fa_out~79        ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[8].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[8].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[11]~717                                               ; |mul_8bit|adder_b:fast_adder_final|out[11]~717                                               ; combout          ;
+; |mul_8bit|tree_builder:tree_builder|bus1[13]                                                 ; |mul_8bit|tree_builder:tree_builder|bus1[13]                                                 ; combout          ;
+; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[8].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[8].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single|fa_out~77       ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single|fa_out~77       ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single|fa_cary~3        ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single|fa_cary~3        ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[12]~718                                               ; |mul_8bit|adder_b:fast_adder_final|out[12]~718                                               ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[12]~719                                               ; |mul_8bit|adder_b:fast_adder_final|out[12]~719                                               ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a|cary_1~487 ; |mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a|cary_1~487 ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a|cary_1~488 ; |mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a|cary_1~488 ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a|cary_1~489 ; |mul_8bit|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a|cary_1~489 ; combout          ;
+; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single|fa_cary~3       ; |mul_8bit|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single|fa_cary~3       ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|out[13]                                                   ; |mul_8bit|adder_b:fast_adder_final|out[13]                                                   ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|car_out                                                   ; |mul_8bit|adder_b:fast_adder_final|car_out                                                   ; combout          ;
+; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out          ; |mul_8bit|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[4].fa_single|fa_out          ; combout          ;
+; |mul_8bit|adder_b:fast_adder_final|bus1[8]~184                                               ; |mul_8bit|adder_b:fast_adder_final|bus1[8]~184                                               ; combout          ;
+; |mul_8bit|out[0]~output                                                                      ; |mul_8bit|out[0]~output                                                                      ; o                ;
+; |mul_8bit|out[0]                                                                             ; |mul_8bit|out[0]                                                                             ; padout           ;
+; |mul_8bit|out[1]~output                                                                      ; |mul_8bit|out[1]~output                                                                      ; o                ;
+; |mul_8bit|out[1]                                                                             ; |mul_8bit|out[1]                                                                             ; padout           ;
+; |mul_8bit|out[2]~output                                                                      ; |mul_8bit|out[2]~output                                                                      ; o                ;
+; |mul_8bit|out[2]                                                                             ; |mul_8bit|out[2]                                                                             ; padout           ;
+; |mul_8bit|out[3]~output                                                                      ; |mul_8bit|out[3]~output                                                                      ; o                ;
+; |mul_8bit|out[3]                                                                             ; |mul_8bit|out[3]                                                                             ; padout           ;
+; |mul_8bit|out[4]~output                                                                      ; |mul_8bit|out[4]~output                                                                      ; o                ;
+; |mul_8bit|out[4]                                                                             ; |mul_8bit|out[4]                                                                             ; padout           ;
+; |mul_8bit|out[5]~output                                                                      ; |mul_8bit|out[5]~output                                                                      ; o                ;
+; |mul_8bit|out[5]                                                                             ; |mul_8bit|out[5]                                                                             ; padout           ;
+; |mul_8bit|out[6]~output                                                                      ; |mul_8bit|out[6]~output                                                                      ; o                ;
+; |mul_8bit|out[6]                                                                             ; |mul_8bit|out[6]                                                                             ; padout           ;
+; |mul_8bit|out[7]~output                                                                      ; |mul_8bit|out[7]~output                                                                      ; o                ;
+; |mul_8bit|out[7]                                                                             ; |mul_8bit|out[7]                                                                             ; padout           ;
+; |mul_8bit|out[8]~output                                                                      ; |mul_8bit|out[8]~output                                                                      ; o                ;
+; |mul_8bit|out[8]                                                                             ; |mul_8bit|out[8]                                                                             ; padout           ;
+; |mul_8bit|out[9]~output                                                                      ; |mul_8bit|out[9]~output                                                                      ; o                ;
+; |mul_8bit|out[9]                                                                             ; |mul_8bit|out[9]                                                                             ; padout           ;
+; |mul_8bit|out[10]~output                                                                     ; |mul_8bit|out[10]~output                                                                     ; o                ;
+; |mul_8bit|out[10]                                                                            ; |mul_8bit|out[10]                                                                            ; padout           ;
+; |mul_8bit|out[11]~output                                                                     ; |mul_8bit|out[11]~output                                                                     ; o                ;
+; |mul_8bit|out[11]                                                                            ; |mul_8bit|out[11]                                                                            ; padout           ;
+; |mul_8bit|out[12]~output                                                                     ; |mul_8bit|out[12]~output                                                                     ; o                ;
+; |mul_8bit|out[12]                                                                            ; |mul_8bit|out[12]                                                                            ; padout           ;
+; |mul_8bit|out[13]~output                                                                     ; |mul_8bit|out[13]~output                                                                     ; o                ;
+; |mul_8bit|out[13]                                                                            ; |mul_8bit|out[13]                                                                            ; padout           ;
+; |mul_8bit|out[14]~output                                                                     ; |mul_8bit|out[14]~output                                                                     ; o                ;
+; |mul_8bit|out[14]                                                                            ; |mul_8bit|out[14]                                                                            ; padout           ;
+; |mul_8bit|out[15]~output                                                                     ; |mul_8bit|out[15]~output                                                                     ; o                ;
+; |mul_8bit|out[15]                                                                            ; |mul_8bit|out[15]                                                                            ; padout           ;
+; |mul_8bit|a[0]~input                                                                         ; |mul_8bit|a[0]~input                                                                         ; o                ;
+; |mul_8bit|a[0]                                                                               ; |mul_8bit|a[0]                                                                               ; padout           ;
+; |mul_8bit|b[0]~input                                                                         ; |mul_8bit|b[0]~input                                                                         ; o                ;
+; |mul_8bit|b[0]                                                                               ; |mul_8bit|b[0]                                                                               ; padout           ;
+; |mul_8bit|a[1]~input                                                                         ; |mul_8bit|a[1]~input                                                                         ; o                ;
+; |mul_8bit|a[1]                                                                               ; |mul_8bit|a[1]                                                                               ; padout           ;
+; |mul_8bit|b[1]~input                                                                         ; |mul_8bit|b[1]~input                                                                         ; o                ;
+; |mul_8bit|b[1]                                                                               ; |mul_8bit|b[1]                                                                               ; padout           ;
+; |mul_8bit|a[2]~input                                                                         ; |mul_8bit|a[2]~input                                                                         ; o                ;
+; |mul_8bit|a[2]                                                                               ; |mul_8bit|a[2]                                                                               ; padout           ;
+; |mul_8bit|b[2]~input                                                                         ; |mul_8bit|b[2]~input                                                                         ; o                ;
+; |mul_8bit|b[2]                                                                               ; |mul_8bit|b[2]                                                                               ; padout           ;
+; |mul_8bit|b[3]~input                                                                         ; |mul_8bit|b[3]~input                                                                         ; o                ;
+; |mul_8bit|b[3]                                                                               ; |mul_8bit|b[3]                                                                               ; padout           ;
+; |mul_8bit|a[3]~input                                                                         ; |mul_8bit|a[3]~input                                                                         ; o                ;
+; |mul_8bit|a[3]                                                                               ; |mul_8bit|a[3]                                                                               ; padout           ;
+; |mul_8bit|a[4]~input                                                                         ; |mul_8bit|a[4]~input                                                                         ; o                ;
+; |mul_8bit|a[4]                                                                               ; |mul_8bit|a[4]                                                                               ; padout           ;
+; |mul_8bit|b[4]~input                                                                         ; |mul_8bit|b[4]~input                                                                         ; o                ;
+; |mul_8bit|b[4]                                                                               ; |mul_8bit|b[4]                                                                               ; padout           ;
+; |mul_8bit|a[5]~input                                                                         ; |mul_8bit|a[5]~input                                                                         ; o                ;
+; |mul_8bit|a[5]                                                                               ; |mul_8bit|a[5]                                                                               ; padout           ;
+; |mul_8bit|b[5]~input                                                                         ; |mul_8bit|b[5]~input                                                                         ; o                ;
+; |mul_8bit|b[5]                                                                               ; |mul_8bit|b[5]                                                                               ; padout           ;
+; |mul_8bit|a[6]~input                                                                         ; |mul_8bit|a[6]~input                                                                         ; o                ;
+; |mul_8bit|a[6]                                                                               ; |mul_8bit|a[6]                                                                               ; padout           ;
+; |mul_8bit|b[6]~input                                                                         ; |mul_8bit|b[6]~input                                                                         ; o                ;
+; |mul_8bit|b[6]                                                                               ; |mul_8bit|b[6]                                                                               ; padout           ;
+; |mul_8bit|a[7]~input                                                                         ; |mul_8bit|a[7]~input                                                                         ; o                ;
+; |mul_8bit|a[7]                                                                               ; |mul_8bit|a[7]                                                                               ; padout           ;
+; |mul_8bit|b[7]~input                                                                         ; |mul_8bit|b[7]~input                                                                         ; o                ;
+; |mul_8bit|b[7]                                                                               ; |mul_8bit|b[7]                                                                               ; padout           ;
++----------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
@@ -240,17 +367,17 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Fri Feb 17 19:33:52 2023
+    Info: Processing started: Sun Feb 19 11:26:10 2023
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off clock -c clock
 Info: Using vector source file "D:/SE/RISCV/quartus/clock.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
 Info: Simulation coverage is     100.00 %
-Info: Number of transitions in simulation is 28880
+Info: Number of transitions in simulation is 81200
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 163 megabytes
-    Info: Processing ended: Fri Feb 17 19:33:52 2023
+    Info: Peak virtual memory: 164 megabytes
+    Info: Processing ended: Sun Feb 19 11:26:10 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
