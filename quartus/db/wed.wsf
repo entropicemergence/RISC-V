@@ -234,11 +234,11 @@ VECTOR("D:/SE/RISCV/quartus/register32.vwf")
 VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 {
 	ZOOM{
-		ZBEGIN = 4845769;
-		ZEND = 5162297;
+		ZBEGIN = 11394990;
+		ZEND = 12661102;
 		NUMERATOR = 1334;
-		DENOMINATOR = 316528;
-		TOP_INDEX = 9;
+		DENOMINATOR = 1266112;
+		TOP_INDEX = 0;
 	}
 	CLOCK{
 		PERIOD = 3000000;
@@ -247,10 +247,10 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 	}
 	RANDOM_VALUE{
 		INTERVAL_TYPE = USER;
-		USER_INTERVAL = 20000;
+		USER_INTERVAL = 50000;
 	}
 	LINE{
-		SIGNAL = "cary_out";
+		SIGNAL = "ax";
 		INDEX = 0;
 		FORMAT = T;
 		SCALE = 1;
@@ -258,7 +258,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cary_out[7]";
+		SIGNAL = "ax[15]";
 		INDEX = 1;
 		FORMAT = E;
 		SCALE = 1;
@@ -266,7 +266,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cary_out[6]";
+		SIGNAL = "ax[14]";
 		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
@@ -274,7 +274,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cary_out[5]";
+		SIGNAL = "ax[13]";
 		INDEX = 3;
 		FORMAT = E;
 		SCALE = 1;
@@ -282,7 +282,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cary_out[4]";
+		SIGNAL = "ax[12]";
 		INDEX = 4;
 		FORMAT = E;
 		SCALE = 1;
@@ -290,7 +290,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cary_out[3]";
+		SIGNAL = "ax[11]";
 		INDEX = 5;
 		FORMAT = E;
 		SCALE = 1;
@@ -298,7 +298,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cary_out[2]";
+		SIGNAL = "ax[10]";
 		INDEX = 6;
 		FORMAT = E;
 		SCALE = 1;
@@ -306,7 +306,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cary_out[1]";
+		SIGNAL = "ax[9]";
 		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
@@ -314,7 +314,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "cary_out[0]";
+		SIGNAL = "ax[8]";
 		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
@@ -322,15 +322,15 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "out";
+		SIGNAL = "ax[7]";
 		INDEX = 9;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "out[7]";
+		SIGNAL = "ax[6]";
 		INDEX = 10;
 		FORMAT = E;
 		SCALE = 1;
@@ -338,7 +338,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "out[6]";
+		SIGNAL = "ax[5]";
 		INDEX = 11;
 		FORMAT = E;
 		SCALE = 1;
@@ -346,7 +346,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "out[5]";
+		SIGNAL = "ax[4]";
 		INDEX = 12;
 		FORMAT = E;
 		SCALE = 1;
@@ -354,7 +354,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "out[4]";
+		SIGNAL = "ax[3]";
 		INDEX = 13;
 		FORMAT = E;
 		SCALE = 1;
@@ -362,7 +362,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "out[3]";
+		SIGNAL = "ax[2]";
 		INDEX = 14;
 		FORMAT = E;
 		SCALE = 1;
@@ -370,7 +370,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "out[2]";
+		SIGNAL = "ax[1]";
 		INDEX = 15;
 		FORMAT = E;
 		SCALE = 1;
@@ -378,7 +378,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "out[1]";
+		SIGNAL = "ax[0]";
 		INDEX = 16;
 		FORMAT = E;
 		SCALE = 1;
@@ -386,23 +386,23 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "out[0]";
+		SIGNAL = "by";
 		INDEX = 17;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "x";
-		INDEX = 18;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "x[7]";
+		SIGNAL = "by[15]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "by[14]";
 		INDEX = 19;
 		FORMAT = E;
 		SCALE = 1;
@@ -410,7 +410,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "x[6]";
+		SIGNAL = "by[13]";
 		INDEX = 20;
 		FORMAT = E;
 		SCALE = 1;
@@ -418,7 +418,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "x[5]";
+		SIGNAL = "by[12]";
 		INDEX = 21;
 		FORMAT = E;
 		SCALE = 1;
@@ -426,7 +426,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "x[4]";
+		SIGNAL = "by[11]";
 		INDEX = 22;
 		FORMAT = E;
 		SCALE = 1;
@@ -434,7 +434,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "x[3]";
+		SIGNAL = "by[10]";
 		INDEX = 23;
 		FORMAT = E;
 		SCALE = 1;
@@ -442,7 +442,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "x[2]";
+		SIGNAL = "by[9]";
 		INDEX = 24;
 		FORMAT = E;
 		SCALE = 1;
@@ -450,7 +450,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "x[1]";
+		SIGNAL = "by[8]";
 		INDEX = 25;
 		FORMAT = E;
 		SCALE = 1;
@@ -458,7 +458,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "x[0]";
+		SIGNAL = "by[7]";
 		INDEX = 26;
 		FORMAT = E;
 		SCALE = 1;
@@ -466,15 +466,15 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "y";
+		SIGNAL = "by[6]";
 		INDEX = 27;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "y[7]";
+		SIGNAL = "by[5]";
 		INDEX = 28;
 		FORMAT = E;
 		SCALE = 1;
@@ -482,7 +482,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "y[6]";
+		SIGNAL = "by[4]";
 		INDEX = 29;
 		FORMAT = E;
 		SCALE = 1;
@@ -490,7 +490,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "y[5]";
+		SIGNAL = "by[3]";
 		INDEX = 30;
 		FORMAT = E;
 		SCALE = 1;
@@ -498,7 +498,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "y[4]";
+		SIGNAL = "by[2]";
 		INDEX = 31;
 		FORMAT = E;
 		SCALE = 1;
@@ -506,7 +506,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "y[3]";
+		SIGNAL = "by[1]";
 		INDEX = 32;
 		FORMAT = E;
 		SCALE = 1;
@@ -514,7 +514,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "y[2]";
+		SIGNAL = "by[0]";
 		INDEX = 33;
 		FORMAT = E;
 		SCALE = 1;
@@ -522,15 +522,15 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "y[1]";
+		SIGNAL = "out";
 		INDEX = 34;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "y[0]";
+		SIGNAL = "out[31]";
 		INDEX = 35;
 		FORMAT = E;
 		SCALE = 1;
@@ -538,15 +538,15 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "z";
+		SIGNAL = "out[30]";
 		INDEX = 36;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "z[7]";
+		SIGNAL = "out[29]";
 		INDEX = 37;
 		FORMAT = E;
 		SCALE = 1;
@@ -554,7 +554,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "z[6]";
+		SIGNAL = "out[28]";
 		INDEX = 38;
 		FORMAT = E;
 		SCALE = 1;
@@ -562,7 +562,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "z[5]";
+		SIGNAL = "out[27]";
 		INDEX = 39;
 		FORMAT = E;
 		SCALE = 1;
@@ -570,7 +570,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "z[4]";
+		SIGNAL = "out[26]";
 		INDEX = 40;
 		FORMAT = E;
 		SCALE = 1;
@@ -578,7 +578,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "z[3]";
+		SIGNAL = "out[25]";
 		INDEX = 41;
 		FORMAT = E;
 		SCALE = 1;
@@ -586,7 +586,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "z[2]";
+		SIGNAL = "out[24]";
 		INDEX = 42;
 		FORMAT = E;
 		SCALE = 1;
@@ -594,7 +594,7 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "z[1]";
+		SIGNAL = "out[23]";
 		INDEX = 43;
 		FORMAT = E;
 		SCALE = 1;
@@ -602,8 +602,184 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "z[0]";
+		SIGNAL = "out[22]";
 		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[21]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[20]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[19]";
+		INDEX = 47;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[18]";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[17]";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[16]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[15]";
+		INDEX = 51;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[14]";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[13]";
+		INDEX = 53;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[12]";
+		INDEX = 54;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[11]";
+		INDEX = 55;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[10]";
+		INDEX = 56;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[9]";
+		INDEX = 57;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[8]";
+		INDEX = 58;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[7]";
+		INDEX = 59;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[6]";
+		INDEX = 60;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[5]";
+		INDEX = 61;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[4]";
+		INDEX = 62;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[3]";
+		INDEX = 63;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[2]";
+		INDEX = 64;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[1]";
+		INDEX = 65;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "out[0]";
+		INDEX = 66;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -614,8 +790,8 @@ VECTOR("D:/SE/RISCV/quartus/clock.vwf")
 VECTOR("D:/SE/RISCV/quartus/db/clock.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 10141608;
-		ZEND = 10454103;
+		ZBEGIN = 0;
+		ZEND = 312495;
 		NUMERATOR = 1129;
 		DENOMINATOR = 312495;
 		TOP_INDEX = 0;
