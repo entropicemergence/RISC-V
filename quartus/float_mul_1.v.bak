@@ -1,39 +1,74 @@
+	module shifter_1bit (x, y, select);
+		parameter width=8;
+		
+		input [width+1:0]x;
+		input select;
+		output [width:0]y;
+		
+		wire [width:0]x1;
+		wire [width:0]x2;
+	
+		assign x1[width:0]={width{select}} & x[width+1:1];
+		assign x2[width:0]={width{~select}} & x[width:0];
+		
+		assign y[width:0] = x1[width:0] | x2[width:0];
+		
+	endmodule
 
-	module bfloat_16_mul (a, b, out);
+
+//	module bfloat_16_mul (a, b, out);
+	module bfloat_16_mul (a_sig, a_exp, a_s, b_sig, b_exp, b_s, out_sig, out_exp, out_s, out_temp);
+		
 		localparam sign=1;
 		localparam exponent=8;
 		localparam significand=7+1;
 		localparam bit_size=16;
 		
-		input [bit_size-1:0]a;
-		input [bit_size-1:0]b;
-		output [bit_size-1:0]out;
-
 		
-		wire [7:0]x;
-		wire [7:0]y;
+//		input [bit_size-1:0]a;
+//		input [bit_size-1:0]b;
+//		output [bit_size-1:0]out;
+		
+		input [7:0]a_sig;
+		input [7:0]a_exp;
+		input a_s;
+		input [7:0]b_sig;
+		input [7:0]b_exp;
+		input b_s;
+		output [7:0]out_sig;
+		output [7:0]out_exp;
+		output out_s;
+		
+		output [15:0]out_temp;
+
+//		wire [7:0]x;
+//		wire [7:0]y;
 		wire [15:0]xy;
 		
-		assign x[7]=1;
-		assign y[7]=1;
-		assign x[6:0]=a[6:0];
-		assign y[6:0]=b[6:0];
-		mul_8bit mul8_xy (.a(x[7:0]), .b(y[7:0]), .out(xy[15:0]));
+//		assign x[7]=1;
+//		assign y[7]=1;
+//		assign x[6:0]=a[6:0];
+//		assign y[6:0]=b[6:0];
+//		mul_8bit mul8_xy (.a(x[7:0]), .b(y[7:0]), .out(xy[15:0]));
+
+		mul_8bit mul8_xy (.a(a_sig[7:0]), .b(b_sig[7:0]), .out(xy[15:0]));
+		assign out_temp[15:0]=xy[15:0];
 		
 		
-		wire [7:0]e1;
-		wire [7:0]e2;
 		
 		
-//		assign e1[7:0]=a[14:7];
-//		assign e2[7:0]=b[14:7];
-		
-		adder_b #(.n_bit(7)) fast_adder (.a(a[15:1]), .b(b[15:1]), .car(cary_1), .out(out[24:10]) , .car_out(cary_2));
 		
 		
-		assign out[15]=a[15]^b[15];
 		
-		endmodule
+		
+//		adder_b #(.n_bit(7)) fast_adder (.a(a[14:7]), .b(b[14:7]), .car(cary_1), .out(out[24:10]) , .car_out(cary_2));
+//		adder_b #(.n_bit(7)) fast_adder (.a(a[14:7]), .b(b[14:7]), .car(cary_1), .out(out[24:10]) , .car_out(cary_2));
+		
+		
+//		assign out[15]=a[15]^b[15];
+		assign out_s=a_s^b_s;
+		
+	endmodule
 
 
 

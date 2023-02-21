@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Feb 19 20:45:48 2023
+Analysis & Synthesis Status : Successful - Tue Feb 21 15:27:36 2023
 Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
 Revision Name : clock
-Top-level Entity Name : mul_16bit
+Top-level Entity Name : shifter_1bit
 Family : Cyclone III
-Total logic elements : 754
-    Total combinational functions : 754
+Total logic elements : 4
+    Total combinational functions : 4
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 64
+Total pins : 12
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
