@@ -1,5 +1,5 @@
 Simulator report for clock
-Tue Feb 21 15:26:33 2023
+Wed Feb 22 09:55:19 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+---------------+
 ; Simulation Start Time       ; 0 ps          ;
 ; Simulation End Time         ; 20.0 us       ;
-; Simulation Netlist Size     ; 48 nodes      ;
-; Simulation Coverage         ;      70.21 %  ;
-; Total Number of Transitions ; 2594          ;
+; Simulation Netlist Size     ; 24 nodes      ;
+; Simulation Coverage         ;     100.00 %  ;
+; Total Number of Transitions ; 5806          ;
 ; Simulation Breakpoints      ; 0             ;
 ; Family                      ; Cyclone III   ;
 ; Device                      ; EP3C120F780I7 ;
@@ -96,13 +96,13 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      70.21 % ;
-; Total nodes checked                                 ; 48           ;
-; Total output ports checked                          ; 47           ;
-; Total output ports with complete 1/0-value coverage ; 33           ;
-; Total output ports with no 1/0-value coverage       ; 10           ;
-; Total output ports with no 1-value coverage         ; 12           ;
-; Total output ports with no 0-value coverage         ; 12           ;
+; Total coverage as a percentage                      ;     100.00 % ;
+; Total nodes checked                                 ; 24           ;
+; Total output ports checked                          ; 24           ;
+; Total output ports with complete 1/0-value coverage ; 24           ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 0            ;
+; Total output ports with no 0-value coverage         ; 0            ;
 +-----------------------------------------------------+--------------+
 
 
@@ -112,13 +112,10 @@ The following table displays output ports that toggle between 1 and 0 during sim
 +----------------------------+----------------------------+------------------+
 ; Node Name                  ; Output Port Name           ; Output Port Type ;
 +----------------------------+----------------------------+------------------+
-; |shifter_1bit|y~88         ; |shifter_1bit|y~88         ; combout          ;
-; |shifter_1bit|y~89         ; |shifter_1bit|y~89         ; combout          ;
-; |shifter_1bit|y~90         ; |shifter_1bit|y~90         ; combout          ;
-; |shifter_1bit|y~91         ; |shifter_1bit|y~91         ; combout          ;
-; |shifter_1bit|y~92         ; |shifter_1bit|y~92         ; combout          ;
-; |shifter_1bit|y~93         ; |shifter_1bit|y~93         ; combout          ;
-; |shifter_1bit|y~94         ; |shifter_1bit|y~94         ; combout          ;
+; |shifter_1bit|y~44         ; |shifter_1bit|y~44         ; combout          ;
+; |shifter_1bit|y~45         ; |shifter_1bit|y~45         ; combout          ;
+; |shifter_1bit|y~46         ; |shifter_1bit|y~46         ; combout          ;
+; |shifter_1bit|y~47         ; |shifter_1bit|y~47         ; combout          ;
 ; |shifter_1bit|y[0]~output  ; |shifter_1bit|y[0]~output  ; o                ;
 ; |shifter_1bit|y[0]         ; |shifter_1bit|y[0]         ; padout           ;
 ; |shifter_1bit|y[1]~output  ; |shifter_1bit|y[1]~output  ; o                ;
@@ -127,12 +124,6 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |shifter_1bit|y[2]         ; |shifter_1bit|y[2]         ; padout           ;
 ; |shifter_1bit|y[3]~output  ; |shifter_1bit|y[3]~output  ; o                ;
 ; |shifter_1bit|y[3]         ; |shifter_1bit|y[3]         ; padout           ;
-; |shifter_1bit|y[4]~output  ; |shifter_1bit|y[4]~output  ; o                ;
-; |shifter_1bit|y[4]         ; |shifter_1bit|y[4]         ; padout           ;
-; |shifter_1bit|y[5]~output  ; |shifter_1bit|y[5]~output  ; o                ;
-; |shifter_1bit|y[5]         ; |shifter_1bit|y[5]         ; padout           ;
-; |shifter_1bit|y[6]~output  ; |shifter_1bit|y[6]~output  ; o                ;
-; |shifter_1bit|y[6]         ; |shifter_1bit|y[6]         ; padout           ;
 ; |shifter_1bit|x[1]~input   ; |shifter_1bit|x[1]~input   ; o                ;
 ; |shifter_1bit|x[1]         ; |shifter_1bit|x[1]         ; padout           ;
 ; |shifter_1bit|x[0]~input   ; |shifter_1bit|x[0]~input   ; o                ;
@@ -149,45 +140,19 @@ The following table displays output ports that toggle between 1 and 0 during sim
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+--------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                 ;
-+---------------------------+---------------------------+------------------+
-; Node Name                 ; Output Port Name          ; Output Port Type ;
-+---------------------------+---------------------------+------------------+
-; |shifter_1bit|y~95        ; |shifter_1bit|y~95        ; combout          ;
-; |shifter_1bit|x[9]        ; |shifter_1bit|x[9]        ; padout           ;
-; |shifter_1bit|y[7]~output ; |shifter_1bit|y[7]~output ; o                ;
-; |shifter_1bit|y[7]        ; |shifter_1bit|y[7]        ; padout           ;
-; |shifter_1bit|y[8]~output ; |shifter_1bit|y[8]~output ; o                ;
-; |shifter_1bit|y[8]        ; |shifter_1bit|y[8]        ; padout           ;
-; |shifter_1bit|x[5]~input  ; |shifter_1bit|x[5]~input  ; o                ;
-; |shifter_1bit|x[5]        ; |shifter_1bit|x[5]        ; padout           ;
-; |shifter_1bit|x[7]~input  ; |shifter_1bit|x[7]~input  ; o                ;
-; |shifter_1bit|x[7]        ; |shifter_1bit|x[7]        ; padout           ;
-; |shifter_1bit|x[8]~input  ; |shifter_1bit|x[8]~input  ; o                ;
-; |shifter_1bit|x[8]        ; |shifter_1bit|x[8]        ; padout           ;
-+---------------------------+---------------------------+------------------+
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+--------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                 ;
-+---------------------------+---------------------------+------------------+
-; Node Name                 ; Output Port Name          ; Output Port Type ;
-+---------------------------+---------------------------+------------------+
-; |shifter_1bit|y~95        ; |shifter_1bit|y~95        ; combout          ;
-; |shifter_1bit|x[9]        ; |shifter_1bit|x[9]        ; padout           ;
-; |shifter_1bit|y[7]~output ; |shifter_1bit|y[7]~output ; o                ;
-; |shifter_1bit|y[7]        ; |shifter_1bit|y[7]        ; padout           ;
-; |shifter_1bit|y[8]~output ; |shifter_1bit|y[8]~output ; o                ;
-; |shifter_1bit|y[8]        ; |shifter_1bit|y[8]        ; padout           ;
-; |shifter_1bit|x[6]~input  ; |shifter_1bit|x[6]~input  ; o                ;
-; |shifter_1bit|x[6]        ; |shifter_1bit|x[6]        ; padout           ;
-; |shifter_1bit|x[7]~input  ; |shifter_1bit|x[7]~input  ; o                ;
-; |shifter_1bit|x[7]        ; |shifter_1bit|x[7]        ; padout           ;
-; |shifter_1bit|x[8]~input  ; |shifter_1bit|x[8]~input  ; o                ;
-; |shifter_1bit|x[8]        ; |shifter_1bit|x[8]        ; padout           ;
-+---------------------------+---------------------------+------------------+
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
 
 
 +---------------------+
@@ -203,84 +168,17 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Tue Feb 21 15:26:33 2023
+    Info: Processing started: Wed Feb 22 09:55:19 2023
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off clock -c clock
 Info: Using vector source file "D:/SE/RISCV/quartus/clock.vwf"
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_exp[7]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_exp[6]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_exp[5]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_exp[4]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_exp[3]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_exp[2]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_exp[1]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_exp[0]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_s" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_sig[7]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_sig[6]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_sig[5]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_sig[4]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_sig[3]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_sig[2]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_sig[1]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "a_sig[0]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_exp[7]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_exp[6]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_exp[5]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_exp[4]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_exp[3]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_exp[2]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_exp[1]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_exp[0]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_s" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_sig[7]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_sig[6]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_sig[5]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_sig[4]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_sig[3]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_sig[2]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_sig[1]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "b_sig[0]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_exp[7]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_exp[6]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_exp[5]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_exp[4]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_exp[3]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_exp[2]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_exp[1]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_exp[0]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_s" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_sig[7]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_sig[6]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_sig[5]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_sig[4]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_sig[3]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_sig[2]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_sig[1]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_sig[0]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[15]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[14]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[13]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[12]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[11]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[10]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[9]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[8]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[7]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[6]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[5]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[4]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[3]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[2]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[1]" in design.
-Warning: Ignored node in vector source file. Can't find corresponding node name "out_temp[0]" in design.
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      70.21 %
-Info: Number of transitions in simulation is 2594
-Info: Quartus II Simulator was successful. 0 errors, 67 warnings
+Info: Simulation coverage is     100.00 %
+Info: Number of transitions in simulation is 5806
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 162 megabytes
-    Info: Processing ended: Tue Feb 21 15:26:33 2023
+    Info: Processing ended: Wed Feb 22 09:55:19 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

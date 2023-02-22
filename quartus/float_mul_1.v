@@ -1,17 +1,17 @@
 	module shifter_1bit (x, y, select);
 		parameter width=4;
 		
-		input [width+1:0]x;
+		input [width:0]x;
 		input select;
-		output [width:0]y;
+		output [width-1:0]y;
 		
-		wire [width:0]x1;
-		wire [width:0]x2;
+		wire [width-1:0]x1;
+		wire [width-1:0]x2;
 	
-		assign x1[width:0]={width{select}} & x[width+1:1];
-		assign x2[width:0]={width{~select}} & x[width:0];
+		assign x1[width-1:0]={width{select}} & x[width:1];
+		assign x2[width-1:0]={width{~select}} & x[width-1:0];
 		
-		assign y[width:0] = x1[width:0] | x2[width:0];
+		assign y[width-1:0] = x1[width-1:0] | x2[width-1:0];
 		
 	endmodule
 
@@ -56,9 +56,13 @@
 		
 		
 		
+		shifter_1bit #(.width(8)) shifter_1bit (x[15:7], out_sig[7:0], xy[15]);
 		
+		wire [8:0]exp1;
+		adder_b #(.n_bit(7)) fast_adder (.a(a_exp[7:0]), .b(b_exp[7:0]), .car(xy[15]), .out(exp1[7:0]) , .car_out(exp1[8]));
 		
-		
+
+		assign out_exp[[6:0];
 		
 		
 //		adder_b #(.n_bit(7)) fast_adder (.a(a[14:7]), .b(b[14:7]), .car(cary_1), .out(out[24:10]) , .car_out(cary_2));
