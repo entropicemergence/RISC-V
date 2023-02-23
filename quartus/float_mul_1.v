@@ -1,3 +1,15 @@
+
+
+
+	module bfloat_16_adder ();
+	
+	
+	endmodule
+
+
+	
+	
+	
 	module shifter_1bit (x, y, select);
 		parameter width=4;
 		

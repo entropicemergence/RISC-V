@@ -62,7 +62,7 @@
 		adder_b #(.n_bit(7)) fast_adder (.a(a_exp[7:0]), .b(b_exp[7:0]), .car(xy[15]), .out(exp1[7:0]) , .car_out(exp1[8]));
 		
 
-		assign out_exp[[]
+		assign out_exp[[6:0];
 		
 		
 //		adder_b #(.n_bit(7)) fast_adder (.a(a[14:7]), .b(b[14:7]), .car(cary_1), .out(out[24:10]) , .car_out(cary_2));
