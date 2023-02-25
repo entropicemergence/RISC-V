@@ -1,5 +1,5 @@
 Analysis & Synthesis report for clock
-Wed Feb 22 09:54:04 2023
+Sat Feb 25 07:05:22 2023
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -13,8 +13,32 @@ Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
   7. General Register Statistics
-  8. Parameter Settings for User Entity Instance: Top-level Entity: |shifter_1bit
-  9. Analysis & Synthesis Messages
+  8. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|tree_builder:tree_builder
+  9. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|full_adder:full_adder_b
+ 10. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|full_adder:full_adder_c1
+ 11. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|full_adder:full_adder_c2
+ 12. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|full_adder:full_adder_d
+ 13. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|full_adder:full_adder_e
+ 14. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final
+ 15. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
+ 16. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a
+ 17. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a
+ 18. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a
+ 19. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a
+ 20. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a
+ 21. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a
+ 22. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a
+ 23. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a
+ 24. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a
+ 25. Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a
+ 26. Parameter Settings for User Entity Instance: shifter_1bit:shifter_1bit
+ 27. Parameter Settings for User Entity Instance: adder_b:fast_adder
+ 28. Parameter Settings for User Entity Instance: adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
+ 29. Parameter Settings for User Entity Instance: adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[4].add_submodule_a
+ 30. Parameter Settings for User Entity Instance: adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[5].add_submodule_a
+ 31. Parameter Settings for User Entity Instance: adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[6].add_submodule_a
+ 32. Parameter Settings for User Entity Instance: adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[7].add_submodule_a
+ 33. Analysis & Synthesis Messages
 
 
 
@@ -40,16 +64,16 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +------------------------------------+-----------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 22 09:54:04 2023   ;
+; Analysis & Synthesis Status        ; Successful - Sat Feb 25 07:05:22 2023   ;
 ; Quartus II Version                 ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name                      ; clock                                   ;
-; Top-level Entity Name              ; shifter_1bit                            ;
+; Top-level Entity Name              ; bfloat_16_mul                           ;
 ; Family                             ; Cyclone III                             ;
-; Total logic elements               ; 4                                       ;
-;     Total combinational functions  ; 4                                       ;
+; Total logic elements               ; 169                                     ;
+;     Total combinational functions  ; 169                                     ;
 ;     Dedicated logic registers      ; 0                                       ;
 ; Total registers                    ; 0                                       ;
-; Total pins                         ; 10                                      ;
+; Total pins                         ; 67                                      ;
 ; Total virtual pins                 ; 0                                       ;
 ; Total memory bits                  ; 0                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                       ;
@@ -63,7 +87,7 @@ applicable agreement for further details.
 ; Option                                                         ; Setting            ; Default Value      ;
 +----------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                         ; EP3C120F780I7      ;                    ;
-; Top-level entity name                                          ; shifter_1bit       ; clock              ;
+; Top-level entity name                                          ; bfloat_16_mul      ; clock              ;
 ; Family name                                                    ; Cyclone III        ; Cyclone IV GX      ;
 ; Use Generated Physical Constraints File                        ; Off                ;                    ;
 ; Use smart compilation                                          ; Off                ; Off                ;
@@ -140,46 +164,98 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+-----------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path      ;
 +----------------------------------+-----------------+------------------------+-----------------------------------+
+; adder32_2.v                      ; yes             ; User Verilog HDL File  ; D:/SE/RISCV/quartus/adder32_2.v   ;
 ; float_mul_1.v                    ; yes             ; User Verilog HDL File  ; D:/SE/RISCV/quartus/float_mul_1.v ;
 +----------------------------------+-----------------+------------------------+-----------------------------------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 4            ;
-;                                             ;              ;
-; Total combinational functions               ; 4            ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 0            ;
-;     -- 3 input functions                    ; 4            ;
-;     -- <=2 input functions                  ; 0            ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 4            ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 0            ;
-;     -- Dedicated logic registers            ; 0            ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 10           ;
-; Maximum fan-out node                        ; select~input ;
-; Maximum fan-out                             ; 4            ;
-; Total fan-out                               ; 26           ;
-; Average fan-out                             ; 1.08         ;
-+---------------------------------------------+--------------+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 169            ;
+;                                             ;                ;
+; Total combinational functions               ; 169            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 90             ;
+;     -- 3 input functions                    ; 29             ;
+;     -- <=2 input functions                  ; 50             ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 169            ;
+;     -- arithmetic mode                      ; 0              ;
+;                                             ;                ;
+; Total registers                             ; 0              ;
+;     -- Dedicated logic registers            ; 0              ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 67             ;
+; Maximum fan-out node                        ; a_sig[3]~input ;
+; Maximum fan-out                             ; 18             ;
+; Total fan-out                               ; 639            ;
+; Average fan-out                             ; 2.11           ;
++---------------------------------------------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |shifter_1bit              ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |shifter_1bit       ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                            ;
++-----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                     ; Library Name ;
++-----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
+; |bfloat_16_mul                                            ; 169 (1)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |bfloat_16_mul                                                                                          ; work         ;
+;    |mul_8bit:mul8_xy|                                     ; 160 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy                                                                         ; work         ;
+;       |adder_b:fast_adder_final|                          ; 33 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|adder_b:fast_adder_final                                                ; work         ;
+;          |add_submodule_a:ASSIGN_GEN[13].add_submodule_a| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a ; work         ;
+;       |full_adder:full_adder_b|                           ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_b                                                 ; work         ;
+;          |full_adder_single:ASSIGN_GEN[0].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[1].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[1].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[2].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[2].fa_single       ; work         ;
+;       |full_adder:full_adder_c1|                          ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c1                                                ; work         ;
+;          |full_adder_single:ASSIGN_GEN[0].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[0].fa_single      ; work         ;
+;          |full_adder_single:ASSIGN_GEN[1].fa_single|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[1].fa_single      ; work         ;
+;          |full_adder_single:ASSIGN_GEN[2].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[2].fa_single      ; work         ;
+;          |full_adder_single:ASSIGN_GEN[3].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[3].fa_single      ; work         ;
+;          |full_adder_single:ASSIGN_GEN[4].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[4].fa_single      ; work         ;
+;          |full_adder_single:ASSIGN_GEN[5].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[5].fa_single      ; work         ;
+;          |full_adder_single:ASSIGN_GEN[6].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[6].fa_single      ; work         ;
+;       |full_adder:full_adder_c2|                          ; 14 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c2                                                ; work         ;
+;          |full_adder_single:ASSIGN_GEN[0].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[0].fa_single      ; work         ;
+;          |full_adder_single:ASSIGN_GEN[1].fa_single|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[1].fa_single      ; work         ;
+;          |full_adder_single:ASSIGN_GEN[2].fa_single|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[2].fa_single      ; work         ;
+;          |full_adder_single:ASSIGN_GEN[3].fa_single|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[3].fa_single      ; work         ;
+;          |full_adder_single:ASSIGN_GEN[4].fa_single|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[4].fa_single      ; work         ;
+;       |full_adder:full_adder_d|                           ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_d                                                 ; work         ;
+;          |full_adder_single:ASSIGN_GEN[0].fa_single|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[0].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[1].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[1].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[2].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[2].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[3].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[3].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[4].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[4].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[5].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[5].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[6].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[6].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[7].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[7].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[8].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[8].fa_single       ; work         ;
+;       |full_adder:full_adder_e|                           ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_e                                                 ; work         ;
+;          |full_adder_single:ASSIGN_GEN[0].fa_single|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[10].fa_single|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single      ; work         ;
+;          |full_adder_single:ASSIGN_GEN[1].fa_single|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[2].fa_single|      ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[3].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[3].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[4].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[4].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[5].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[5].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[6].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[6].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[7].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[7].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[8].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[8].fa_single       ; work         ;
+;          |full_adder_single:ASSIGN_GEN[9].fa_single|      ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single       ; work         ;
+;       |half_adder_single:half_adder_b1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|half_adder_single:half_adder_b1                                         ; work         ;
+;       |half_adder_single:half_adder_b2|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|half_adder_single:half_adder_b2                                         ; work         ;
+;       |half_adder_single:half_adder_b3|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|half_adder_single:half_adder_b3                                         ; work         ;
+;       |half_adder_single:half_adder_c1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|half_adder_single:half_adder_c1                                         ; work         ;
+;       |half_adder_single:half_adder_d1|                   ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|half_adder_single:half_adder_d1                                         ; work         ;
+;       |half_adder_single:half_adder_e1|                   ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|half_adder_single:half_adder_e1                                         ; work         ;
+;       |tree_builder:tree_builder|                         ; 41 (41)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|mul_8bit:mul8_xy|tree_builder:tree_builder                                               ; work         ;
+;    |shifter_1bit:shifter_1bit|                            ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bfloat_16_mul|shifter_1bit:shifter_1bit                                                                ; work         ;
++-----------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -198,13 +274,270 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |shifter_1bit ;
-+----------------+-------+-----------------------------------------------------+
-; Parameter Name ; Value ; Type                                                ;
-+----------------+-------+-----------------------------------------------------+
-; width          ; 4     ; Signed Integer                                      ;
-+----------------+-------+-----------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|tree_builder:tree_builder ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; tree_width     ; 15    ; Signed Integer                                                 ;
+; manti          ; 8     ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|full_adder:full_adder_b ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; unit           ; 3     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|full_adder:full_adder_c1 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; unit           ; 7     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|full_adder:full_adder_c2 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; unit           ; 5     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|full_adder:full_adder_d ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; unit           ; 9     ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|full_adder:full_adder_e ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; unit           ; 11    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; n_bit          ; 13    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; n              ; 3     ; Signed Integer                                                                                              ;
+; k              ; 0     ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                                                              ;
+; k              ; 0     ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; n              ; 5     ; Signed Integer                                                                                              ;
+; k              ; 0     ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; n              ; 6     ; Signed Integer                                                                                              ;
+; k              ; 0     ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; n              ; 7     ; Signed Integer                                                                                              ;
+; k              ; 0     ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                                                              ;
+; k              ; 0     ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                        ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+; n              ; 9     ; Signed Integer                                                                                              ;
+; k              ; 0     ; Signed Integer                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; n              ; 10    ; Signed Integer                                                                                               ;
+; k              ; 0     ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; n              ; 11    ; Signed Integer                                                                                               ;
+; k              ; 0     ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; n              ; 12    ; Signed Integer                                                                                               ;
+; k              ; 0     ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+; n              ; 13    ; Signed Integer                                                                                               ;
+; k              ; 0     ; Signed Integer                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shifter_1bit:shifter_1bit ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; width          ; 8     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder_b:fast_adder ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; n_bit          ; 7     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[3].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; n              ; 3     ; Signed Integer                                                                       ;
+; k              ; 0     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[4].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; n              ; 4     ; Signed Integer                                                                       ;
+; k              ; 0     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[5].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; n              ; 5     ; Signed Integer                                                                       ;
+; k              ; 0     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[6].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; n              ; 6     ; Signed Integer                                                                       ;
+; k              ; 0     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[7].add_submodule_a ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; n              ; 7     ; Signed Integer                                                                       ;
+; k              ; 0     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -214,7 +547,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Wed Feb 22 09:54:04 2023
+    Info: Processing started: Sat Feb 25 07:05:20 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off clock -c clock
 Info: Found 1 design units, including 1 entities, in source file clock.bdf
     Info: Found entity 1: clock
@@ -240,26 +573,84 @@ Info: Found 6 design units, including 6 entities, in source file adder32_2.v
     Info: Found entity 5: adder
 Info: Found 1 design units, including 1 entities, in source file modules.v
     Info: Found entity 1: counter
-Info: Found 9 design units, including 9 entities, in source file float_mul_1.v
-    Info: Found entity 1: shifter_1bit
-    Info: Found entity 2: bfloat_16_mul
-    Info: Found entity 3: mul_16bit
-    Info: Found entity 4: carry_adder
-    Info: Found entity 5: tree_builder
-    Info: Found entity 6: mul_8bit
-    Info: Found entity 7: full_adder
-    Info: Found entity 8: full_adder_single
-    Info: Found entity 9: half_adder_single
-Warning (10236): Verilog HDL Implicit Net warning at float_mul_1.v(323): created implicit net for "h2"
-Info: Elaborating entity "shifter_1bit" for the top level hierarchy
-Info: Implemented 14 device resources after synthesis - the final resource count might be different
-    Info: Implemented 6 input pins
-    Info: Implemented 4 output pins
-    Info: Implemented 4 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 231 megabytes
-    Info: Processing ended: Wed Feb 22 09:54:04 2023
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+Info: Found 10 design units, including 10 entities, in source file float_mul_1.v
+    Info: Found entity 1: shifter_general
+    Info: Found entity 2: shifter_1bit
+    Info: Found entity 3: bfloat_16_mul
+    Info: Found entity 4: mul_16bit
+    Info: Found entity 5: carry_adder
+    Info: Found entity 6: tree_builder
+    Info: Found entity 7: mul_8bit
+    Info: Found entity 8: full_adder
+    Info: Found entity 9: full_adder_single
+    Info: Found entity 10: half_adder_single
+Warning (10236): Verilog HDL Implicit Net warning at float_mul_1.v(357): created implicit net for "h2"
+Info: Elaborating entity "bfloat_16_mul" for the top level hierarchy
+Warning (10034): Output port "out_exp[7]" at float_mul_1.v(69) has no driver
+Warning (10034): Output port "out_exp[6]" at float_mul_1.v(69) has no driver
+Warning (10034): Output port "out_exp[5]" at float_mul_1.v(69) has no driver
+Warning (10034): Output port "out_exp[4]" at float_mul_1.v(69) has no driver
+Warning (10034): Output port "out_exp[3]" at float_mul_1.v(69) has no driver
+Warning (10034): Output port "out_exp[2]" at float_mul_1.v(69) has no driver
+Warning (10034): Output port "out_exp[1]" at float_mul_1.v(69) has no driver
+Warning (10034): Output port "out_exp[0]" at float_mul_1.v(69) has no driver
+Info: Elaborating entity "mul_8bit" for hierarchy "mul_8bit:mul8_xy"
+Info: Elaborating entity "tree_builder" for hierarchy "mul_8bit:mul8_xy|tree_builder:tree_builder"
+Info: Elaborating entity "half_adder_single" for hierarchy "mul_8bit:mul8_xy|half_adder_single:half_adder_b1"
+Info: Elaborating entity "full_adder" for hierarchy "mul_8bit:mul8_xy|full_adder:full_adder_b"
+Info: Elaborating entity "full_adder_single" for hierarchy "mul_8bit:mul8_xy|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single"
+Info: Elaborating entity "full_adder" for hierarchy "mul_8bit:mul8_xy|full_adder:full_adder_c1"
+Info: Elaborating entity "full_adder" for hierarchy "mul_8bit:mul8_xy|full_adder:full_adder_c2"
+Info: Elaborating entity "full_adder" for hierarchy "mul_8bit:mul8_xy|full_adder:full_adder_d"
+Info: Elaborating entity "full_adder" for hierarchy "mul_8bit:mul8_xy|full_adder:full_adder_e"
+Info: Elaborating entity "adder_b" for hierarchy "mul_8bit:mul8_xy|adder_b:fast_adder_final"
+Info: Elaborating entity "add_submodule_a" for hierarchy "mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a"
+Info: Elaborating entity "add_submodule_a" for hierarchy "mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a"
+Info: Elaborating entity "shifter_1bit" for hierarchy "shifter_1bit:shifter_1bit"
+Info: Elaborating entity "adder_b" for hierarchy "adder_b:fast_adder"
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "out_exp[0]" is stuck at GND
+    Warning (13410): Pin "out_exp[1]" is stuck at GND
+    Warning (13410): Pin "out_exp[2]" is stuck at GND
+    Warning (13410): Pin "out_exp[3]" is stuck at GND
+    Warning (13410): Pin "out_exp[4]" is stuck at GND
+    Warning (13410): Pin "out_exp[5]" is stuck at GND
+    Warning (13410): Pin "out_exp[6]" is stuck at GND
+    Warning (13410): Pin "out_exp[7]" is stuck at GND
+Warning: Design contains 16 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "a_exp[0]"
+    Warning (15610): No output dependent on input pin "a_exp[1]"
+    Warning (15610): No output dependent on input pin "a_exp[2]"
+    Warning (15610): No output dependent on input pin "a_exp[3]"
+    Warning (15610): No output dependent on input pin "a_exp[4]"
+    Warning (15610): No output dependent on input pin "a_exp[5]"
+    Warning (15610): No output dependent on input pin "a_exp[6]"
+    Warning (15610): No output dependent on input pin "a_exp[7]"
+    Warning (15610): No output dependent on input pin "b_exp[0]"
+    Warning (15610): No output dependent on input pin "b_exp[1]"
+    Warning (15610): No output dependent on input pin "b_exp[2]"
+    Warning (15610): No output dependent on input pin "b_exp[3]"
+    Warning (15610): No output dependent on input pin "b_exp[4]"
+    Warning (15610): No output dependent on input pin "b_exp[5]"
+    Warning (15610): No output dependent on input pin "b_exp[6]"
+    Warning (15610): No output dependent on input pin "b_exp[7]"
+Info: Implemented 236 device resources after synthesis - the final resource count might be different
+    Info: Implemented 34 input pins
+    Info: Implemented 33 output pins
+    Info: Implemented 169 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 232 megabytes
+    Info: Processing ended: Sat Feb 25 07:05:22 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

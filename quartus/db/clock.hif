@@ -185,6 +185,10 @@ k
 PARAMETER_SIGNED_DEC
 USR
 }
+# hierarchies {
+mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
+adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[3].add_submodule_a
+}
 # macro_sequence
 
 # end
@@ -227,6 +231,10 @@ k
 0
 PARAMETER_SIGNED_DEC
 USR
+}
+# hierarchies {
+mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[4].add_submodule_a
+adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[4].add_submodule_a
 }
 # macro_sequence
 
@@ -271,6 +279,10 @@ k
 PARAMETER_SIGNED_DEC
 USR
 }
+# hierarchies {
+mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[5].add_submodule_a
+adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[5].add_submodule_a
+}
 # macro_sequence
 
 # end
@@ -313,6 +325,10 @@ k
 0
 PARAMETER_SIGNED_DEC
 USR
+}
+# hierarchies {
+mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[6].add_submodule_a
+adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[6].add_submodule_a
 }
 # macro_sequence
 
@@ -357,6 +373,10 @@ k
 PARAMETER_SIGNED_DEC
 USR
 }
+# hierarchies {
+mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[7].add_submodule_a
+adder_b:fast_adder|add_submodule_a:ASSIGN_GEN[7].add_submodule_a
+}
 # macro_sequence
 
 # end
@@ -399,6 +419,9 @@ k
 0
 PARAMETER_SIGNED_DEC
 USR
+}
+# hierarchies {
+mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[8].add_submodule_a
 }
 # macro_sequence
 
@@ -443,6 +466,9 @@ k
 PARAMETER_SIGNED_DEC
 USR
 }
+# hierarchies {
+mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[9].add_submodule_a
+}
 # macro_sequence
 
 # end
@@ -485,6 +511,9 @@ k
 0
 PARAMETER_SIGNED_DEC
 USR
+}
+# hierarchies {
+mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[10].add_submodule_a
 }
 # macro_sequence
 
@@ -529,6 +558,9 @@ k
 PARAMETER_SIGNED_DEC
 USR
 }
+# hierarchies {
+mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[11].add_submodule_a
+}
 # macro_sequence
 
 # end
@@ -572,6 +604,9 @@ k
 PARAMETER_SIGNED_DEC
 USR
 }
+# hierarchies {
+mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[12].add_submodule_a
+}
 # macro_sequence
 
 # end
@@ -614,6 +649,9 @@ k
 0
 PARAMETER_SIGNED_DEC
 USR
+}
+# hierarchies {
+mul_8bit:mul8_xy|adder_b:fast_adder_final|add_submodule_a:ASSIGN_GEN[13].add_submodule_a
 }
 # macro_sequence
 
@@ -740,6 +778,9 @@ n_bit
 PARAMETER_SIGNED_DEC
 USR
 }
+# hierarchies {
+mul_8bit:mul8_xy|adder_b:fast_adder_final
+}
 # macro_sequence
 
 # end
@@ -783,7 +824,7 @@ USR
 
 # end
 # entity
-shifter_1bit
+bfloat_16_mul
 # storage
 db|clock.(0).cnf
 db|clock.(0).cnf
@@ -794,7 +835,447 @@ ON
 # case_sensitive
 # source_file
 float_mul_1.v
-40d91f1adcc8a99cc420b5e9d2a29
+9c96589f5c509161d882e8915af3d1a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+mul_8bit
+# storage
+db|clock.(21).cnf
+db|clock.(21).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+9c96589f5c509161d882e8915af3d1a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+mul_8bit:mul8_xy
+}
+# macro_sequence
+
+# end
+# entity
+tree_builder
+# storage
+db|clock.(22).cnf
+db|clock.(22).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+9c96589f5c509161d882e8915af3d1a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+tree_width
+15
+PARAMETER_SIGNED_DEC
+USR
+manti
+8
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+mul_8bit:mul8_xy|tree_builder:tree_builder
+}
+# macro_sequence
+
+# end
+# entity
+half_adder_single
+# storage
+db|clock.(24).cnf
+db|clock.(24).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+9c96589f5c509161d882e8915af3d1a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+mul_8bit:mul8_xy|half_adder_single:half_adder_b1
+mul_8bit:mul8_xy|half_adder_single:half_adder_b2
+mul_8bit:mul8_xy|half_adder_single:half_adder_b3
+mul_8bit:mul8_xy|half_adder_single:half_adder_c1
+mul_8bit:mul8_xy|half_adder_single:half_adder_c2
+mul_8bit:mul8_xy|half_adder_single:half_adder_d1
+mul_8bit:mul8_xy|half_adder_single:half_adder_e1
+}
+# macro_sequence
+
+# end
+# entity
+full_adder
+# storage
+db|clock.(25).cnf
+db|clock.(25).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+9c96589f5c509161d882e8915af3d1a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+unit
+3
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+mul_8bit:mul8_xy|full_adder:full_adder_b
+}
+# macro_sequence
+
+# end
+# entity
+full_adder_single
+# storage
+db|clock.(26).cnf
+db|clock.(26).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+9c96589f5c509161d882e8915af3d1a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+mul_8bit:mul8_xy|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[0].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[1].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_b|full_adder_single:ASSIGN_GEN[2].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[0].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[1].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[2].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[3].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[4].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[5].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_c1|full_adder_single:ASSIGN_GEN[6].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[0].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[1].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[2].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[3].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_c2|full_adder_single:ASSIGN_GEN[4].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[0].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[1].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[2].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[3].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[4].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[5].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[6].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[7].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_d|full_adder_single:ASSIGN_GEN[8].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[0].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[1].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[2].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[3].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[4].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[5].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[6].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[7].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[8].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[9].fa_single
+mul_8bit:mul8_xy|full_adder:full_adder_e|full_adder_single:ASSIGN_GEN[10].fa_single
+}
+# macro_sequence
+
+# end
+# entity
+full_adder
+# storage
+db|clock.(27).cnf
+db|clock.(27).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+9c96589f5c509161d882e8915af3d1a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+unit
+7
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+mul_8bit:mul8_xy|full_adder:full_adder_c1
+}
+# macro_sequence
+
+# end
+# entity
+full_adder
+# storage
+db|clock.(28).cnf
+db|clock.(28).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+9c96589f5c509161d882e8915af3d1a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+unit
+5
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+mul_8bit:mul8_xy|full_adder:full_adder_c2
+}
+# macro_sequence
+
+# end
+# entity
+full_adder
+# storage
+db|clock.(29).cnf
+db|clock.(29).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+9c96589f5c509161d882e8915af3d1a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+unit
+9
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+mul_8bit:mul8_xy|full_adder:full_adder_d
+}
+# macro_sequence
+
+# end
+# entity
+full_adder
+# storage
+db|clock.(30).cnf
+db|clock.(30).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+9c96589f5c509161d882e8915af3d1a
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+unit
+11
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+mul_8bit:mul8_xy|full_adder:full_adder_e
+}
+# macro_sequence
+
+# end
+# entity
+shifter_1bit
+# storage
+db|clock.(31).cnf
+db|clock.(31).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+float_mul_1.v
+9c96589f5c509161d882e8915af3d1a
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -814,12 +1295,54 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # user_parameter {
 width
-4
+8
 PARAMETER_SIGNED_DEC
-DEF
+USR
 }
 # hierarchies {
-|
+shifter_1bit:shifter_1bit
+}
+# macro_sequence
+
+# end
+# entity
+adder_b
+# storage
+db|clock.(32).cnf
+db|clock.(32).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+adder32_2.v
+54d57be97263ebfb1a5af902def3
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+n_bit
+7
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+adder_b:fast_adder
 }
 # macro_sequence
 

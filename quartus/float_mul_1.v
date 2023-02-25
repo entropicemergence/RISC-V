@@ -1,9 +1,10 @@
 	module shifter_general (x, y, shift_amt);
 		parameter width=4;
+		parameter width_s=4;
 		
-//		input [width:0]x;
-//		input select;
-//		output [width-1:0]y;
+		input [width:0]x;
+		input [width:0]y;
+		output [width_s:0]shift_amt;
 //		
 //		wire [width-1:0]x1;
 //		wire [width-1:0]x2;
@@ -18,10 +19,10 @@
 
 
 
-	module bfloat_16_adder ();
-	
-	
-	endmodule
+//	module bfloat_16_adder ();
+//	
+//	
+//	endmodule
 
 
 	
@@ -85,13 +86,13 @@
 		
 		
 		
-		shifter_1bit #(.width(8)) shifter_1bit (x[15:7], out_sig[7:0], xy[15]);
+		shifter_1bit #(.width(8)) shifter_1bit (xy[15:7], out_sig[7:0], xy[15]);
 		
 		wire [8:0]exp1;
 		adder_b #(.n_bit(7)) fast_adder (.a(a_exp[7:0]), .b(b_exp[7:0]), .car(xy[15]), .out(exp1[7:0]) , .car_out(exp1[8]));
 		
 
-		assign out_exp[[6:0];
+//		assign out_exp[6:0];
 		
 		
 //		adder_b #(.n_bit(7)) fast_adder (.a(a[14:7]), .b(b[14:7]), .car(cary_1), .out(out[24:10]) , .car_out(cary_2));
