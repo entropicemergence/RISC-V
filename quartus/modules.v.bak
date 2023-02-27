@@ -15,9 +15,7 @@
     endmodule  
     
     
-    
-    
-    
+
 //	module tb_counter;  
 //      reg clk;                     // Declare an internal TB variable called clk to drive clock to the design  
 //      reg rstn;                    // Declare an internal TB variable called rstn to drive active low reset to design  
@@ -48,3 +46,19 @@
 //        #20 $finish;  
 //      end  
 //    endmodule  
+
+
+
+    module memmory_control (input clk,
+                      input rstn,
+                      output reg[3:0] out);
+      
+
+      
+//      always @ (posedge clk) begin  
+//        if (! rstn)  
+//          out <= 0;  
+//        else  
+//          out <= out + 1;  
+//      end  
+    endmodule  
