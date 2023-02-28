@@ -1,3 +1,21 @@
+
+
+
+
+	module matri_engine (x, y, shift_amt);
+		parameter width=4;
+		parameter width_s=4;
+		
+		input [width:0]x;
+		input [width:0]y;
+		output [width_s:0]shift_amt;
+
+		
+	endmodule
+
+
+
+	
 	module shifter_general (x, y, shift_amt);
 		parameter width=4;
 		parameter width_s=4;

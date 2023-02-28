@@ -86,7 +86,7 @@
 		
 		
 		
-		shifter_1bit #(.width(8)) shifter_1bit (x[15:7], out_sig[7:0], xy[15]);
+		shifter_1bit #(.width(8)) shifter_1bit (xy[15:7], out_sig[7:0], xy[15]);
 		
 		wire [8:0]exp1;
 		adder_b #(.n_bit(7)) fast_adder (.a(a_exp[7:0]), .b(b_exp[7:0]), .car(xy[15]), .out(exp1[7:0]) , .car_out(exp1[8]));
